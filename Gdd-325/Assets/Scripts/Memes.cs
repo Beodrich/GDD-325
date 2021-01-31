@@ -14,5 +14,7 @@ public class Memes : MonoBehaviour
     void Update()
     {
         Debug.Log("Cole is a dumb");
+        Debug.Log("This is a test");
+
     }
 }
