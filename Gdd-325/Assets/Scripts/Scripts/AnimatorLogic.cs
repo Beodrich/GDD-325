@@ -2,10 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+[RequireComponent(typeof(Animator))]
+
 public class AnimatorLogic : MonoBehaviour
 {
-    [SerializeField] private string currentState;
+     private string currentState;
     [SerializeField] Animator animator;
+
     // Start is called before the first frame update
     void Start()
     {
