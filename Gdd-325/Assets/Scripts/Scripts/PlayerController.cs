@@ -14,14 +14,14 @@ public class PlayerController : MonoBehaviour
     Rigidbody2D rb2D;
     AnimatorLogic animatorLogic;
     //animation states
-    private const string MonkE_B = "MonkE_B";
-    private const string MonkE_BL = "MonkE_B";
-    private const string MonkE_BR = "MonkE_BR";
-    private const string MonkE_F = "MonkE_F";
-    private const string MonkE_FL = "MonkE_FL";
-    private const string MonkE_FR = "MonkE_FR";
-    private const string MonkE_L = "MonkE_L";
-    private const string MonkE_R = "MonkE_R";
+    private const string Monke_B = "Monke_B";
+    private const string Monke_BL = "Monke_BL";
+    private const string Monke_BR = "Monke_BR";
+    private const string Monke_F = "Monke_F";
+    private const string Monke_FL = "Monke_FL";
+    private const string Monke_FR = "Monke_FR";
+    private const string Monke_L = "Monke_L";
+    private const string Monke_R = "Monke_Right";
 
     private Animation[] playerStates;
 
@@ -40,18 +40,19 @@ public class PlayerController : MonoBehaviour
     {
         h = Input.GetAxisRaw("Horizontal");
         v = Input.GetAxisRaw("Vertical");
-        MovePlayer();
-        ChangeAnimation();
+        //MovePlayer();
+       
     }
 
     private void FixedUpdate()
     {
-        MovePlayer();
-        if (h != 0 || v != 0)
-        {
-            RotatePlayer();
-            ChangeAnimation();
-        }
+       // MovePlayer();
+        //if (h != 0 || v != 0)
+        //{
+        //    RotatePlayer();
+            
+        //}
+        ChangeAnimation();
     }
 
     
@@ -69,8 +70,51 @@ public class PlayerController : MonoBehaviour
         transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
     }
     private void ChangeAnimation() {
-        //function to figure out what animation to play 
-        animatorLogic.ChangeAnimationState(/*throw animation state here*/"hi");
+        Vector2 movement = new Vector2(h, v);
+        if (h != 0 && v != 0)
+        {
+            if (movement.y == 1 && movement.x == -1)
+            {
+                animatorLogic.ChangeAnimationState(Monke_BL);
+            }
+            if (movement.y == 1 && movement.x == 1)
+            {
+                animatorLogic.ChangeAnimationState(Monke_BR);
+            }
+            if (movement.y == -1 && movement.x == -1)
+            {
+                animatorLogic.ChangeAnimationState(Monke_FL);
+            }
+            if (movement.y == -1 && movement.x == 1)
+            {
+                animatorLogic.ChangeAnimationState(Monke_FR);
+            }
+        }
+        else {
+            if (movement.x == -1)
+            {
+                animatorLogic.ChangeAnimationState(Monke_L);
 
+            }
+            if (movement.x == 1)
+            {
+                animatorLogic.ChangeAnimationState(Monke_R);
+
+            }
+            if (movement.y == 1)
+            {
+                animatorLogic.ChangeAnimationState(Monke_B);
+
+            }
+            if (movement.x == -1)
+            {
+                animatorLogic.ChangeAnimationState(Monke_F);
+
+            }
+
+        }
+        //function to figure out what animation to play 
+        //animatorLogic.ChangeAnimationState(/*throw animation state here*/"hi");
+        transform.Translate(movement * movementSpeed * Time.deltaTime);
     }
 }
