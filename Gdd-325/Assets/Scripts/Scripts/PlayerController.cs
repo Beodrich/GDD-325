@@ -45,18 +45,8 @@ public class PlayerController : MonoBehaviour
 
     
 
-    private void MovePlayer()
-    {
-        Vector3 directionVector = new Vector3(h, v, 0);
-        rb2D.velocity = directionVector.normalized * movementSpeed;
-    }
-
-    private void RotatePlayer()
-    {
-        //Atan2 - Return value is the angle between the x-axis and a 2D vector starting at zero and terminating at (x,y).
-        float angle = Mathf.Atan2(v, h) * Mathf.Rad2Deg;
-        transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
-    }
+   
+  
     private void ChangeAnimation() {
         h = Input.GetAxisRaw("Horizontal");
         v = Input.GetAxisRaw("Vertical");
@@ -64,7 +54,7 @@ public class PlayerController : MonoBehaviour
        
         if (h != 0 && v != 0)
         {
-            Debug.Log("H or v mov is not equal to zero");
+            
             if (movement.y == 1 && movement.x == -1)
             {
                 animatorLogic.ChangeAnimationState(Monke_BL);
