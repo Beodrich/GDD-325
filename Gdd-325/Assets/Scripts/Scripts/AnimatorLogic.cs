@@ -16,7 +16,8 @@ public class AnimatorLogic : MonoBehaviour
         animator = GetComponent<Animator>();
     }
 
-
+    //function to change the animation state
+    //@param takes a string of the animation name
     public void ChangeAnimationState(string newState) {
         //if it is already playing the animation just return 
         if (currentState == newState)
