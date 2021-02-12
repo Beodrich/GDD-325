@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 //game components for the game object to have
 [RequireComponent(typeof(Rigidbody2D))]
 [RequireComponent(typeof(AnimatorLogic))]
@@ -14,7 +15,7 @@ public class PlayerController : MonoBehaviour
     Rigidbody2D rb2D;
     AnimatorLogic animatorLogic;
     //animation states
-    private const string Monke_B = "Monke_B";
+    private const string Monke_B = "MonkE_Back";
     private const string Monke_BL = "Monke_BL";
     private const string Monke_BR = "Monke_BR";
     private const string Monke_F = "Monke_F";
@@ -23,10 +24,7 @@ public class PlayerController : MonoBehaviour
     private const string Monke_L = "Monke_L";
     private const string Monke_R = "Monke_Right";
 
-    private Animation[] playerStates;
-
-
-
+   
 
     // Start is called before the first frame update
     void Start()
@@ -38,21 +36,15 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        h = Input.GetAxisRaw("Horizontal");
-        v = Input.GetAxisRaw("Vertical");
-        //MovePlayer();
-       
+
+        ChangeAnimation();
+
     }
 
     private void FixedUpdate()
     {
-       // MovePlayer();
-        //if (h != 0 || v != 0)
-        //{
-        //    RotatePlayer();
-            
-        //}
-        ChangeAnimation();
+      
+       // ChangeAnimation();
     }
 
     
@@ -70,9 +62,13 @@ public class PlayerController : MonoBehaviour
         transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
     }
     private void ChangeAnimation() {
+        h = Input.GetAxisRaw("Horizontal");
+        v = Input.GetAxisRaw("Vertical");
         Vector2 movement = new Vector2(h, v);
+       
         if (h != 0 && v != 0)
         {
+            Debug.Log("H or v mov is not equal to zero");
             if (movement.y == 1 && movement.x == -1)
             {
                 animatorLogic.ChangeAnimationState(Monke_BL);
@@ -106,7 +102,7 @@ public class PlayerController : MonoBehaviour
                 animatorLogic.ChangeAnimationState(Monke_B);
 
             }
-            if (movement.x == -1)
+            if (movement.y == -1)
             {
                 animatorLogic.ChangeAnimationState(Monke_F);
 

@@ -16,11 +16,6 @@ public class AnimatorLogic : MonoBehaviour
         animator = GetComponent<Animator>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     public void ChangeAnimationState(string newState) {
         //if it is already playing the animation just return 
@@ -28,12 +23,12 @@ public class AnimatorLogic : MonoBehaviour
         {
             return;
         }
-        else {
+        
             //play the new state
             animator.Play(newState);
             //set the currentstate to the new state
             currentState = newState;
-            Debug.Log(currentState);
-        }
+            //Debug.Log(currentState);
+        
     }
 }
