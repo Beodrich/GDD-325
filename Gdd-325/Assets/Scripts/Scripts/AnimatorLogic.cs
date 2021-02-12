@@ -29,7 +29,6 @@ public class AnimatorLogic : MonoBehaviour
             animator.Play(newState);
             //set the currentstate to the new state
             currentState = newState;
-            //Debug.Log(currentState);
         
     }
 }
