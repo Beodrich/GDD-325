@@ -26,12 +26,11 @@ public class CopyController : MonoBehaviour
     private const string Monke_R = "Monke_Right";
 
     // spell stuff
+    public Spells mySpell;
+
     public Rigidbody2D fireball;
     public float fireballSpeed = 8f;
-    int timer = 0;
-
-
-
+    int timer = 175;
 
     // Start is called before the first frame update
     void Start()
@@ -46,6 +45,7 @@ public class CopyController : MonoBehaviour
         h = Input.GetAxisRaw("Horizontal");
         v = Input.GetAxisRaw("Vertical");
         Vector2 movement = new Vector2(h, v);
+       
 
         if (h != 0 && v != 0)
         {
@@ -97,25 +97,32 @@ public class CopyController : MonoBehaviour
         //function to figure out what animation to play 
         //animatorLogic.ChangeAnimationState(/*throw animation state here*/"hi");
         transform.Translate(movement * movementSpeed * Time.deltaTime);
-
-        //Vector3 copyMovement = new Vector3(movement.x, movement.y, 0.0f);
-        //float angle = Vector3.Angle(copyMovement.forward, copyMovement.right);
-
-        //Vector3 hello = copyMove(movement);
-
         timer += 1;
         if (Input.GetKeyDown("space") && timer >= 175)
         {
-            //var fireballInst = Instantiate(fireball, transform.position, Quaternion.Euler(hello.Angle(hello.up,hello.right)));
-            //fireballInst.velocity = new Vector2(fireballSpeed, 0);
+            mySpell.CastSpell();
             timer = 0;
         }
+        
+
+       /* void castSpell()
+        {
+            if (Input.GetKeyDown("space") && timer >= 175)
+            {
+                Instantiate(mySpell);
+                timer = 0;
+            }
+        }*/
+
+        /*timer += 1;
+        if (Input.GetKeyDown("space") && timer >= 175)
+        {
+            //var fireballInst = Instantiate(fireball, transform.position, Quaternion.Euler(hello.Angle(hello.up,hello.right)));
+            var fireballInst = Instantiate(fireball, transform.position, Quaternion.Euler(new Vector3(0, 0, 0))) as Rigidbody2D;
+            fireballInst.velocity = transform.forward * fireballSpeed;
+            timer = 0;
+        }*/
 
     }
 
-
-    Vector3 copyMove(Vector2 m)
-    {
-        return new Vector3(m.x, m.y, 0.0f);
-    }
 }
