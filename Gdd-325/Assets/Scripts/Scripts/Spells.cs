@@ -40,14 +40,21 @@ public class Spells : MonoBehaviour
     {
         transform.rotation = Player.transform.rotation;
         //Debug.Log("Hello");
-        var fireballInst = Instantiate(fireball, movement, transform.rotation);
-        fireballInst.velocity = new Vector2(fireballSpeed, 0);
+        var fireballInst = Instantiate(fireball, transform.position, Quaternion.identity);
+        if(movement.x == 0 && movement.y == 0)
+        {
+            // figure out direction
+        }
+        fireballInst.velocity = movement * fireballSpeed;
+
+        //fireballInst.velocity = new Vector2(fireballSpeed, 0) ;
+
         //fireballInst.velocity = transform.forward * fireballSpeed;
 
         // shoot left
         if (movement.x == -1)
         {
-
+            
 
         }
         // shoot right
