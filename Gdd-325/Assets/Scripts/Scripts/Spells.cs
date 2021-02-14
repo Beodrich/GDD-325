@@ -5,10 +5,10 @@ using UnityEngine;
 public class Spells : MonoBehaviour
 {
     public Rigidbody2D fireball;
-    public float fireSpeed; 
+    public float fireSpeed;
     public float fireRate;
     public float fireballSpeed = 8f;
-    public Transform Player; 
+    public Transform Player;
 
     // Start is called before the first frame update
     void Start()
@@ -36,12 +36,58 @@ public class Spells : MonoBehaviour
         }*/
     }
 
-    public void CastSpell()
+    public void CastSpell(Vector3 movement)
     {
         transform.rotation = Player.transform.rotation;
-        Debug.Log("Hello");
-        var fireballInst = Instantiate(fireball, transform.position, transform.rotation);
+        //Debug.Log("Hello");
+        var fireballInst = Instantiate(fireball, movement, transform.rotation);
         fireballInst.velocity = new Vector2(fireballSpeed, 0);
         //fireballInst.velocity = transform.forward * fireballSpeed;
+
+        // shoot left
+        if (movement.x == -1)
+        {
+
+
+        }
+        // shoot right
+        if (movement.x == 1)
+        {
+
+
+        }
+        //shoot up
+        if (movement.y == 1)
+        {
+
+
+        }
+        //shoot down
+        if (movement.y == -1)
+        {
+
+
+        }
+
+        /*if (movement.y == 1 && movement.x == -1)
+        {
+            
+        }
+        if (movement.y == 1 && movement.x == 1)
+        {
+           
+        }
+        if (movement.y == -1 && movement.x == -1)
+        {
+            
+        }
+        if (movement.y == -1 && movement.x == 1)
+        {
+            
+        }
+        else
+        {
+            
+        }*/
     }
 }

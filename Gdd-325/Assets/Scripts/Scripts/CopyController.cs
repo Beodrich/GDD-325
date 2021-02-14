@@ -100,7 +100,7 @@ public class CopyController : MonoBehaviour
         timer += 1;
         if (Input.GetKeyDown("space") && timer >= 175)
         {
-            mySpell.CastSpell();
+            mySpell.CastSpell((Vector3)movement);
             timer = 0;
         }
         
