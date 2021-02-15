@@ -9,6 +9,12 @@ public class Spells : MonoBehaviour
     //public float fireRate;
     public float fireballSpeed = 8f;
     public Transform Player;
+    public Vector2 lastDirection;
+    public float fireDamage = 5f;
+    //public float iceDamage;
+    //public float earthDamage;
+    //public float airDamage;
+    //public float baseDamage;
 
     // Start is called before the first frame update
     void Start()
@@ -39,14 +45,37 @@ public class Spells : MonoBehaviour
 
     public void CastSpell(Vector3 movement)
     {
-        Vector2 lastDirection = new Vector2();
 
         transform.rotation = Player.transform.rotation;
-        //Debug.Log("Hello");
+        Debug.Log(lastDirection);
         var fireballInst = Instantiate(fireball, transform.position, Quaternion.identity);
         if(movement.x == 0 && movement.y == 0)
         {
-            fireballInst.velocity = (lastDirection) * fireballSpeed;
+            // shoot left
+            if (movement.x == -1)
+            {
+                lastDirection.x = -1;
+                lastDirection.y = 0;
+            }
+            // shoot right
+            else if (movement.x == 1)
+            {
+                lastDirection.x = 1;
+                lastDirection.y = 0;
+            }
+            //shoot up
+            else if (movement.y == 1)
+            {
+                lastDirection.x = 0;
+                lastDirection.y = 1;
+            }
+            //shoot down
+            else if (movement.y == -1)
+            {
+                lastDirection.x = 0;
+                lastDirection.y = -1;
+            }
+            fireballInst.velocity = lastDirection * fireballSpeed;
         }
         else
         {
@@ -68,23 +97,18 @@ public class Spells : MonoBehaviour
         {
             lastDirection.x = 1;
             lastDirection.y = 0;
-
         }
         //shoot up
         else if (movement.y == 1)
         {
             lastDirection.x = 0;
             lastDirection.y = 1;
-
-
         }
         //shoot down
         else if (movement.y == -1)
         {
-
             lastDirection.x = 0;
             lastDirection.y = -1;
-
         }
 
         /*if (movement.y == 1 && movement.x == -1)
@@ -107,5 +131,13 @@ public class Spells : MonoBehaviour
         {
             
         }*/
+    }
+
+    void OnTriggerEnter(Collider Enemy)
+    {
+        if (Enemy.gameObject.CompareTag("enemy"))
+        {
+            Enemy.gameObject.SendMessage("OnDamage", fireDamage);
+        }
     }
 }

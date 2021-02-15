@@ -549,7 +549,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1949432898
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -642,3 +642,4 @@ MonoBehaviour:
   fireball: {fileID: 1286619808}
   fireballSpeed: 12
   Player: {fileID: 2133411869}
+  lastDirection: {x: 0, y: 0}
