@@ -15,6 +15,13 @@ public class Spells : MonoBehaviour
     //public float earthDamage;
     //public float airDamage;
     //public float baseDamage;
+    public bool fire = true;
+    //public bool ice;
+    //public bool air;
+    //public bool earth;
+    //public bool base;
+
+    public Golem golem;
 
     // Start is called before the first frame update
     void Start()
@@ -137,7 +144,8 @@ public class Spells : MonoBehaviour
     {
         if (Enemy.gameObject.CompareTag("enemy"))
         {
-            Enemy.gameObject.SendMessage("OnDamage", fireDamage);
+            //Enemy.gameObject.SendMessage("OnDamage", fireDamage);
+            golem.TakeDamage();
         }
     }
 }
