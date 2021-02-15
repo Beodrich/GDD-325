@@ -45,6 +45,7 @@ public class CopyController : MonoBehaviour
         h = Input.GetAxisRaw("Horizontal");
         v = Input.GetAxisRaw("Vertical");
         Vector2 movement = new Vector2(h, v);
+        Vector2 lastDirection = new Vector2();
        
 
         if (h != 0 && v != 0)
@@ -56,18 +57,26 @@ public class CopyController : MonoBehaviour
                 // do this
                 //else
                 animatorLogic.ChangeAnimationState(Monke_BL);
+                lastDirection.x = -1;
+                lastDirection.y = 1;
             }
             if (movement.y == 1 && movement.x == 1)
             {
                 animatorLogic.ChangeAnimationState(Monke_BR);
+                lastDirection.x = 1;
+                lastDirection.y = 1;
             }
             if (movement.y == -1 && movement.x == -1)
             {
                 animatorLogic.ChangeAnimationState(Monke_FL);
+                lastDirection.x = -1;
+                lastDirection.y = -1;
             }
             if (movement.y == -1 && movement.x == 1)
             {
                 animatorLogic.ChangeAnimationState(Monke_FR);
+                lastDirection.x = 1;
+                lastDirection.y = -1;
             }
         }
         else
@@ -75,21 +84,29 @@ public class CopyController : MonoBehaviour
             if (movement.x == -1)
             {
                 animatorLogic.ChangeAnimationState(Monke_L);
+                lastDirection.x = -1;
+                lastDirection.y = 0;
 
             }
             if (movement.x == 1)
             {
                 animatorLogic.ChangeAnimationState(Monke_R);
+                lastDirection.x = 1;
+                lastDirection.y = 0;
 
             }
             if (movement.y == 1)
             {
                 animatorLogic.ChangeAnimationState(Monke_B);
+                lastDirection.y = 1;
+                lastDirection.x = 0;
 
             }
             if (movement.y == -1)
             {
                 animatorLogic.ChangeAnimationState(Monke_F);
+                lastDirection.y = 1;
+                lastDirection.x = 0;
 
             }
 

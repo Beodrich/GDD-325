@@ -19,6 +19,7 @@ public class Spells : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        /*
         transform.rotation = Player.transform.rotation;
         if (Input.GetKeyDown("space") && Time.time > fireRate)
         {
@@ -30,7 +31,7 @@ public class Spells : MonoBehaviour
             //target = target1.transform.position;
 
         }
-        /*if (cloneProj.transform.position == target)
+        if (cloneProj.transform.position == target)
         {
             Destroy(cloneProj.gameObject);
         }*/
@@ -38,14 +39,19 @@ public class Spells : MonoBehaviour
 
     public void CastSpell(Vector3 movement)
     {
+        Vector2 lastDirection = new Vector2();
+
         transform.rotation = Player.transform.rotation;
         //Debug.Log("Hello");
         var fireballInst = Instantiate(fireball, transform.position, Quaternion.identity);
         if(movement.x == 0 && movement.y == 0)
         {
-            // figure out direction
+            fireballInst.velocity = (lastDirection) * fireballSpeed;
         }
-        fireballInst.velocity = movement * fireballSpeed;
+        else
+        {
+            fireballInst.velocity = movement * fireballSpeed;
+        }
 
         //fireballInst.velocity = new Vector2(fireballSpeed, 0) ;
 
@@ -54,25 +60,30 @@ public class Spells : MonoBehaviour
         // shoot left
         if (movement.x == -1)
         {
-            
-
+            lastDirection.x = -1;
+            lastDirection.y = 0;
         }
         // shoot right
-        if (movement.x == 1)
+        else if (movement.x == 1)
         {
-
+            lastDirection.x = 1;
+            lastDirection.y = 0;
 
         }
         //shoot up
-        if (movement.y == 1)
+        else if (movement.y == 1)
         {
+            lastDirection.x = 0;
+            lastDirection.y = 1;
 
 
         }
         //shoot down
-        if (movement.y == -1)
+        else if (movement.y == -1)
         {
 
+            lastDirection.x = 0;
+            lastDirection.y = -1;
 
         }
 
