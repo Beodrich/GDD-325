@@ -5,8 +5,8 @@ using UnityEngine;
 public class Spells : MonoBehaviour
 {
     public Rigidbody2D fireball;
-    public float fireSpeed;
-    public float fireRate;
+    //public float fireSpeed;
+    //public float fireRate;
     public float fireballSpeed = 8f;
     public Transform Player;
 
