@@ -31,7 +31,7 @@ public class CopyController : MonoBehaviour
     // spell stuff
     public Spells mySpell;
 
-    public Rigidbody2D fireball;
+    public GameObject fireball;
     public float fireballSpeed = 8f;
     int timer = 175;
 

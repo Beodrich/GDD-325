@@ -4,12 +4,13 @@ using UnityEngine;
 
 public class Spells : MonoBehaviour
 {
-    public Rigidbody2D fireball;
+    public GameObject fireball;
+    //public Transform wand;
     //public float fireSpeed;
     //public float fireRate;
     public float fireballSpeed = 8f;
     public Transform Player;
-    public Vector2 lastDirection;
+    private Vector2 lastDirection;
     public float fireDamage = 5f;
     //public float iceDamage;
     //public float earthDamage;
@@ -56,7 +57,8 @@ public class Spells : MonoBehaviour
         transform.rotation = Player.transform.rotation;
         Debug.Log(lastDirection);
         var fireballInst = Instantiate(fireball, transform.position, Quaternion.identity);
-        if(movement.x == 0 && movement.y == 0)
+        //var fireballInst = Instantiate(fireball, wand.position, Quaternion.identity);
+        if (movement.x == 0 && movement.y == 0)
         {
             // shoot left
             if (movement.x == -1)
@@ -82,11 +84,11 @@ public class Spells : MonoBehaviour
                 lastDirection.x = 0;
                 lastDirection.y = -1;
             }
-            fireballInst.velocity = lastDirection * fireballSpeed;
+            //fireballInst.velocity = lastDirection * fireballSpeed;
         }
         else
         {
-            fireballInst.velocity = movement * fireballSpeed;
+            //fireballInst.velocity = movement * fireballSpeed;
         }
 
         //fireballInst.velocity = new Vector2(fireballSpeed, 0) ;
