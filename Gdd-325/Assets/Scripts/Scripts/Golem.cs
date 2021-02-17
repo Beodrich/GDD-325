@@ -8,13 +8,9 @@ public class Golem : MonoBehaviour
     [SerializeField] private float attackDamage;
     [SerializeField] private float health = 10.0f;
     [SerializeField] private Sprite[] golemState;
-    [SerializeField] private Vector3[] spawnPoints;
     public Spells spells;
 
-    public Vector3 getRandomSpawnPoint() {
-        int random = Random.Range(0, 4);
-        return this.spawnPoints[random];
-    }
+   
     public Sprite getGolemState()
     {
 
