@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class Spells : MonoBehaviour
 {
-    public GameObject fireball;
+    //public GameObject fireball;
+    public Rigidbody2D fireball;
     //public Transform wand;
     //public float fireSpeed;
     //public float fireRate;
@@ -22,7 +23,7 @@ public class Spells : MonoBehaviour
     //public bool earth;
     //public bool base;
 
-    public Golem golem;
+    private Golem golem;
 
     // Start is called before the first frame update
     void Start()
@@ -84,11 +85,11 @@ public class Spells : MonoBehaviour
                 lastDirection.x = 0;
                 lastDirection.y = -1;
             }
-            //fireballInst.velocity = lastDirection * fireballSpeed;
+            fireballInst.velocity = lastDirection * fireballSpeed;
         }
         else
         {
-            //fireballInst.velocity = movement * fireballSpeed;
+            fireballInst.velocity = movement * fireballSpeed;
         }
 
         //fireballInst.velocity = new Vector2(fireballSpeed, 0) ;
@@ -142,11 +143,12 @@ public class Spells : MonoBehaviour
         }*/
     }
 
-    void OnTriggerEnter(Collider Enemy)
+    void OnTriggerEnter2D(Collider2D Enemy)
     {
-        if (Enemy.gameObject.CompareTag("enemy"))
+        if (Enemy.gameObject.tag == ("enemy"))
         {
             //Enemy.gameObject.SendMessage("OnDamage", fireDamage);
+            Debug.Log("That Hurt");
             golem.TakeDamage();
         }
     }
