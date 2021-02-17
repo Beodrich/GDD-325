@@ -35,9 +35,41 @@ public class SpawnLogic : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (waveCountDown <= 0) {
-            
+        if (waveCountDown <= 0)
+        {
+            if (state != SpawnState.SPAWNING)
+            {
+                //Start spawning wave
+                StartCoroutine(SpawnWave(waves[nextWave]));
+
+            }
+
+        }
+        else {
+            waveCountDown -= Time.deltaTime;
         
         }
+    }
+    IEnumerator SpawnWave(Wave _wave) {
+
+        state = SpawnState.SPAWNING;
+
+        //Spawn
+        for (int i = 0; i < _wave.count; ++i) 
+        {
+
+            SpawnEnemy(_wave.enemy);
+            yield return new WaitForSeconds(1f / _wave.rate);//this can be changed
+        }
+
+        state = SpawnState.WAITING;
+
+        yield break;
+    
+    }
+    void SpawnEnemy(Transform _enemy) {
+
+        //spawn Enemy
+        Debug.Log("Spawning Enemy: " + _enemy.name);
     }
 }

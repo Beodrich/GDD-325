@@ -306,7 +306,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 826320736}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9e5bfe44ceb58d14eb034600a33e615d, type: 3}
   m_Name: 
@@ -373,7 +373,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cdbd63275c83973498d4d8de0b01d7da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  golem: {fileID: 0}
+  waves:
+  - name: 
+    enemy: {fileID: 0}
+    count: 0
+    rate: 0
+  timeBetweenWaves: 5
+  waveCountDown: 0
 --- !u!4 &1813497611
 Transform:
   m_ObjectHideFlags: 0
