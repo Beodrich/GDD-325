@@ -13,6 +13,7 @@ public class Spells : MonoBehaviour
     public Transform Player;
     private Vector2 lastDirection;
     public float fireDamage = 5f;
+    public Transform shotPoint;
     //public float iceDamage;
     //public float earthDamage;
     //public float airDamage;
@@ -58,7 +59,7 @@ public class Spells : MonoBehaviour
         transform.rotation = Player.transform.rotation;
         //Debug.Log(lastDirection);
         var fireballInst = Instantiate(fireball, transform.position, Quaternion.identity);
-        //var fireballInst = Instantiate(fireball, wand.position, Quaternion.identity);
+        //var fireballInst = Instantiate(fireball, shotPoint.position, Quaternion.identity);
         if (movement.x == 0 && movement.y == 0)
         {
             // shoot left
