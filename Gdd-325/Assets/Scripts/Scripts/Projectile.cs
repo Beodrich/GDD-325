@@ -7,8 +7,7 @@ public class Projectile : MonoBehaviour
     public float speed;
     public float lifeTime;
     public float distance;
-    //public List<Golem> golemList;
-    public Golem golem;
+    public int damage;
     public LayerMask whatIsSolid;
 
     //public GameObject destroySpell;
@@ -25,7 +24,7 @@ public class Projectile : MonoBehaviour
             if (hit.collider.CompareTag("enemy"))
             {
                 Debug.Log("Enemy Take Damage");
-                this.golem.TakeDamage();
+                hit.collider.GetComponent<Enemy>().TakeDamage(damage);
             }
             DestroyProjectile();
         }
