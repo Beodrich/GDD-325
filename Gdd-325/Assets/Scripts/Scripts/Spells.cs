@@ -56,7 +56,7 @@ public class Spells : MonoBehaviour
     {
 
         transform.rotation = Player.transform.rotation;
-        Debug.Log(lastDirection);
+        //Debug.Log(lastDirection);
         var fireballInst = Instantiate(fireball, transform.position, Quaternion.identity);
         //var fireballInst = Instantiate(fireball, wand.position, Quaternion.identity);
         if (movement.x == 0 && movement.y == 0)
@@ -143,7 +143,7 @@ public class Spells : MonoBehaviour
         }*/
     }
 
-    void OnTriggerEnter2D(Collider2D Enemy)
+/*    void OnTriggerEnter2D(Collider2D Enemy)
     {
         if (Enemy.gameObject.tag == ("enemy"))
         {
@@ -151,5 +151,5 @@ public class Spells : MonoBehaviour
             Debug.Log("That Hurt");
             golem.TakeDamage();
         }
-    }
+    }*/
 }

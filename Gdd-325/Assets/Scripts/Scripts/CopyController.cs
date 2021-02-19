@@ -121,9 +121,9 @@ public class CopyController : MonoBehaviour
 
     }
 
-    public void OnDamage(int damge)
+    public void OnDamage(int damage)
     {
-        health -= damge;
+        health -= damage;
         if (health <= 0)
         {
             Destroy(gameObject);

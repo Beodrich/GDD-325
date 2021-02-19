@@ -7,13 +7,15 @@ public class Projectile : MonoBehaviour
     public float speed;
     public float lifeTime;
     public float distance;
+    //public List<Golem> golemList;
+    public Golem golem;
     public LayerMask whatIsSolid;
 
     //public GameObject destroySpell;
 
     private void Start()
     {
-        Invoke("DestroyProjectile", lifeTime);
+        //Invoke("DestroyProjectile", lifeTime);
     }
     private void Update()
     {
@@ -23,6 +25,7 @@ public class Projectile : MonoBehaviour
             if (hit.collider.CompareTag("enemy"))
             {
                 Debug.Log("Enemy Take Damage");
+                this.golem.TakeDamage();
             }
             DestroyProjectile();
         }
@@ -32,6 +35,6 @@ public class Projectile : MonoBehaviour
     private void DestroyProjectile()
     {
         //Instantiate(destroySpell,transform.position,Quaternion.identity);
-        //Destroy(gameObject);
+        Destroy(gameObject);
     }
 }

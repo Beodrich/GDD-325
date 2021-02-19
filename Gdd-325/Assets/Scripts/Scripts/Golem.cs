@@ -18,7 +18,7 @@ public class Golem : MonoBehaviour
     }
     void Update()
     {
-        Debug.Log(health);
+        //Debug.Log(health);
     }
 
     public void TakeDamage()
