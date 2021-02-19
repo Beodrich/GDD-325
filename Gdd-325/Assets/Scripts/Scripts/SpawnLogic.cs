@@ -20,8 +20,10 @@ public class SpawnLogic : MonoBehaviour
     public Wave[] waves;
     private int nextWave = 0;
 
+    public Transform[] spawnPoints;
+
     public float timeBetweenWaves = 5f;
-    public float waveCountDown;
+    private float waveCountDown;
 
     private float searchCountDown=1f;
     private SpawnState state = SpawnState.COUNTING;
@@ -30,6 +32,11 @@ public class SpawnLogic : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        if (spawnPoints.Length == 0)
+        {
+            Debug.LogError("No spawn points referenced.");
+
+        }
         waveCountDown = timeBetweenWaves;
         
     }
@@ -42,9 +49,7 @@ public class SpawnLogic : MonoBehaviour
             //check if enemies are still alive
             if (!EnemyIsAlive())
             {
-                //begin a new round
-                Debug.Log("Wave Completed!");
-                return;
+                WaveCompleted();
 
 
             }
@@ -66,6 +71,22 @@ public class SpawnLogic : MonoBehaviour
         else {
             waveCountDown -= Time.deltaTime;
         
+        }
+    }
+    void WaveCompleted() {
+        //begin a new round
+        Debug.Log("Wave Completed!");
+
+        state = SpawnState.COUNTING;
+        waveCountDown = timeBetweenWaves;
+        if (nextWave + 1 > waves.Length - 1)
+        {
+            nextWave = 0;
+            Debug.Log("ALL WAVES COMPLETE! LOOPING");
+        }
+        else
+        {
+            nextWave++;
         }
     }
     bool EnemyIsAlive() {
@@ -102,7 +123,9 @@ public class SpawnLogic : MonoBehaviour
     void SpawnEnemy(Transform _enemy) {
 
         //spawn Enemy
-        Instantiate(_enemy, transform.position, transform.rotation);
-        Debug.Log("Spawning Enemy: " + _enemy.name);
+        Transform randomSpawnPoint = spawnPoints[Random.Range(0, spawnPoints.Length)];
+
+        Instantiate(_enemy, randomSpawnPoint.position, randomSpawnPoint.rotation);
+        Debug.Log("Spawning Enemy: " + _enemy.name + " At spawn point " + randomSpawnPoint.name);
     }
 }
