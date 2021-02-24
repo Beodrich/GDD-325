@@ -23,6 +23,7 @@ public class Spells : MonoBehaviour
     //public float airDamage;
     //public float baseDamage;
 
+
     SpellState spell = SpellState.None;
 
     private Golem golem;
@@ -45,33 +46,12 @@ public class Spells : MonoBehaviour
     void Update()
     {
 
-
-
-
-
-        /*
-        transform.rotation = Player.transform.rotation;
-        if (Input.GetKeyDown("space") && Time.time > fireRate)
-        {
-            Debug.Log("Hello");
-            fireRate = Time.time + fireSpeed;
-            var fireballInst = Instantiate(fireball, transform.position, transform.rotation);
-            fireballInst.velocity = new Vector2(fireballSpeed, 0);
-            //fireballInst.velocity = transform.forward * fireballSpeed;
-            //target = target1.transform.position;
-
-        }
-        if (cloneProj.transform.position == target)
-        {
-            Destroy(cloneProj.gameObject);
-        }*/
     }
 
     public void CastSpell(Vector3 movement)
     {
 
         transform.rotation = Player.transform.rotation;
-        //Debug.Log(lastDirection);
         var fireballInst = Instantiate(fireball, transform.position, Quaternion.identity);
         //var fireballInst = Instantiate(fireball, shotPoint.position, Quaternion.identity);
         if (movement.x == 0 && movement.y == 0)
@@ -157,14 +137,4 @@ public class Spells : MonoBehaviour
             
         }*/
     }
-
-/*    void OnTriggerEnter2D(Collider2D Enemy)
-    {
-        if (Enemy.gameObject.tag == ("enemy"))
-        {
-            //Enemy.gameObject.SendMessage("OnDamage", fireDamage);
-            Debug.Log("That Hurt");
-            golem.TakeDamage();
-        }
-    }*/
 }

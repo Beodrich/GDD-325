@@ -26,7 +26,6 @@ public class Golem : MonoBehaviour
             //Instantiate(deathEffect, transform.position, Quaternion.identity);
             Destroy(gameObject);
         }
-        GetComponent<AIPath>
     }
 
     public void TakeDamage(SpellState spell)
