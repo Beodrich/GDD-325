@@ -8,6 +8,7 @@ public class Golem : MonoBehaviour
     [SerializeField] private float attackDamage;
     [SerializeField] private float health = 10.0f;
     [SerializeField] private Sprite[] golemState;
+   
     public Spells spells;
 
    
@@ -15,6 +16,7 @@ public class Golem : MonoBehaviour
     {
         return golemState[0];
     }
+    
     void Update()
     {
         //Debug.Log(health);
@@ -27,8 +29,10 @@ public class Golem : MonoBehaviour
 
     public void TakeDamage()
     {
+        //change the state 
         if (spells.fire == true)
         {
+           
             health -= 5;
         }
         /*

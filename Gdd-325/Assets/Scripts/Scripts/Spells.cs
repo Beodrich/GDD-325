@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class Spells : MonoBehaviour
 {
+    public enum SpellState { 
+     Fire, Air, Earth,Ice,None
+    
+    };
     //public GameObject fireball;
     public Rigidbody2D fireball;
     //public Transform wand;
@@ -18,13 +22,18 @@ public class Spells : MonoBehaviour
     //public float earthDamage;
     //public float airDamage;
     //public float baseDamage;
-    public bool fire = true;
-    //public bool ice;
-    //public bool air;
-    //public bool earth;
-    //public bool base;
+
+    SpellState spell = SpellState.None;
 
     private Golem golem;
+   public void SetSpellState(SpellState state) {
+
+        this.spell = state;
+    }
+    public SpellState getSpellState() {
+        return this.spell;
+    
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -35,6 +44,11 @@ public class Spells : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+
+
+
+
         /*
         transform.rotation = Player.transform.rotation;
         if (Input.GetKeyDown("space") && Time.time > fireRate)
