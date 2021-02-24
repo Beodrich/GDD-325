@@ -946,7 +946,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movementSpeed: 5
   mySpell: {fileID: 2133411870}
-  fireball: {fileID: 205501397520874561, guid: f56b7a8c3c682c24181cdab5dbdcece8, type: 3}
+  fireball: {fileID: 5071889481588455886, guid: c46e57132fb12224b8b6f41698586323, type: 3}
   fireballSpeed: 10
 --- !u!61 &2133411864
 BoxCollider2D:
@@ -991,7 +991,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7696c1e6453ef4d4899ec3f7a0cc0951, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fireball: {fileID: 205501397520874561, guid: f56b7a8c3c682c24181cdab5dbdcece8, type: 3}
+  fireball: {fileID: 5071889481588455886, guid: c46e57132fb12224b8b6f41698586323, type: 3}
   fireballSpeed: 12
   Player: {fileID: 2133411869}
   fireDamage: 5
