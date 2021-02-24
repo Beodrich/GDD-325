@@ -127,5 +127,6 @@ public class SpawnLogic : MonoBehaviour
 
         Instantiate(_enemy, randomSpawnPoint.position, randomSpawnPoint.rotation);
         Debug.Log("Spawning Enemy: " + _enemy.name + " At spawn point " + randomSpawnPoint.name);
+        _enemy.gameObject.SetActive(true);
     }
 }

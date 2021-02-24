@@ -594,75 +594,92 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5629556909283941815, guid: 373fcb3bcde2fb14c8b3ba515e8acc3e, type: 3}
   m_PrefabInstance: {fileID: 1666017342}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1813497609
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1813497611}
-  - component: {fileID: 1813497610}
-  m_Layer: 0
-  m_Name: SpawnControl
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1813497610
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1813497609}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cdbd63275c83973498d4d8de0b01d7da, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  waves:
-  - name: MonkE Invasion
-    enemy: {fileID: 6096335824018694118, guid: 0f1ada5e37928e9498a00cfee3c550e1, type: 3}
-    count: 5
-    rate: 1
-  - name: Going MonkE Brain
-    enemy: {fileID: 6096335824018694118, guid: 0f1ada5e37928e9498a00cfee3c550e1, type: 3}
-    count: 3
-    rate: 2
-  - name: MonkE Flip
-    enemy: {fileID: 6096335824018694118, guid: 0f1ada5e37928e9498a00cfee3c550e1, type: 3}
-    count: 4
-    rate: 1.5
-  spawnPoints:
-  - {fileID: 1011220042}
-  - {fileID: 1636444998}
-  - {fileID: 1745317513}
-  - {fileID: 1930123881}
-  - {fileID: 1606597395}
-  - {fileID: 1285833928}
-  timeBetweenWaves: 5
---- !u!4 &1813497611
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1813497609}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -11.57, y: 3.55, z: -2.7396364}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1930123881 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5629556909283941815, guid: 373fcb3bcde2fb14c8b3ba515e8acc3e, type: 3}
   m_PrefabInstance: {fileID: 365617219}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &2729049940576939710
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2729049941047798196, guid: d0ae4664e91e6cf489cee704caae8fa9, type: 3}
+      propertyPath: spawnPoints.Array.data[0]
+      value: 
+      objectReference: {fileID: 1011220042}
+    - target: {fileID: 2729049941047798196, guid: d0ae4664e91e6cf489cee704caae8fa9, type: 3}
+      propertyPath: spawnPoints.Array.data[1]
+      value: 
+      objectReference: {fileID: 1636444998}
+    - target: {fileID: 2729049941047798196, guid: d0ae4664e91e6cf489cee704caae8fa9, type: 3}
+      propertyPath: spawnPoints.Array.data[2]
+      value: 
+      objectReference: {fileID: 1745317513}
+    - target: {fileID: 2729049941047798196, guid: d0ae4664e91e6cf489cee704caae8fa9, type: 3}
+      propertyPath: spawnPoints.Array.data[3]
+      value: 
+      objectReference: {fileID: 1930123881}
+    - target: {fileID: 2729049941047798196, guid: d0ae4664e91e6cf489cee704caae8fa9, type: 3}
+      propertyPath: spawnPoints.Array.data[4]
+      value: 
+      objectReference: {fileID: 1606597395}
+    - target: {fileID: 2729049941047798196, guid: d0ae4664e91e6cf489cee704caae8fa9, type: 3}
+      propertyPath: spawnPoints.Array.data[5]
+      value: 
+      objectReference: {fileID: 1285833928}
+    - target: {fileID: 2729049941047798197, guid: d0ae4664e91e6cf489cee704caae8fa9, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2729049941047798197, guid: d0ae4664e91e6cf489cee704caae8fa9, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -11.57
+      objectReference: {fileID: 0}
+    - target: {fileID: 2729049941047798197, guid: d0ae4664e91e6cf489cee704caae8fa9, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.55
+      objectReference: {fileID: 0}
+    - target: {fileID: 2729049941047798197, guid: d0ae4664e91e6cf489cee704caae8fa9, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -2.7396364
+      objectReference: {fileID: 0}
+    - target: {fileID: 2729049941047798197, guid: d0ae4664e91e6cf489cee704caae8fa9, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2729049941047798197, guid: d0ae4664e91e6cf489cee704caae8fa9, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2729049941047798197, guid: d0ae4664e91e6cf489cee704caae8fa9, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2729049941047798197, guid: d0ae4664e91e6cf489cee704caae8fa9, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2729049941047798197, guid: d0ae4664e91e6cf489cee704caae8fa9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2729049941047798197, guid: d0ae4664e91e6cf489cee704caae8fa9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2729049941047798197, guid: d0ae4664e91e6cf489cee704caae8fa9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2729049941047798199, guid: d0ae4664e91e6cf489cee704caae8fa9, type: 3}
+      propertyPath: m_Name
+      value: SpawnControl
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d0ae4664e91e6cf489cee704caae8fa9, type: 3}
 --- !u!1001 &5629556908818097149
 PrefabInstance:
   m_ObjectHideFlags: 0

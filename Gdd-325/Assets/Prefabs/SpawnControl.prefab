@@ -1,0 +1,66 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2729049941047798199
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2729049941047798197}
+  - component: {fileID: 2729049941047798196}
+  m_Layer: 0
+  m_Name: SpawnControl
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2729049941047798197
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2729049941047798199}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -11.57, y: 3.55, z: -2.7396364}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2729049941047798196
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2729049941047798199}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cdbd63275c83973498d4d8de0b01d7da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waves:
+  - name: MonkE Invasion
+    enemy: {fileID: 6096335824018694118, guid: 0f1ada5e37928e9498a00cfee3c550e1, type: 3}
+    count: 5
+    rate: 1
+  - name: Going MonkE Brain
+    enemy: {fileID: 6096335824018694118, guid: 0f1ada5e37928e9498a00cfee3c550e1, type: 3}
+    count: 3
+    rate: 2
+  - name: MonkE Flip
+    enemy: {fileID: 6096335824018694118, guid: 0f1ada5e37928e9498a00cfee3c550e1, type: 3}
+    count: 4
+    rate: 1.5
+  spawnPoints:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  timeBetweenWaves: 5
