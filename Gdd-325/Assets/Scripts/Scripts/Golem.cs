@@ -13,12 +13,16 @@ public class Golem : MonoBehaviour
    
     public Sprite getGolemState()
     {
-
         return golemState[0];
     }
     void Update()
     {
         //Debug.Log(health);
+        if (health <= 0)
+        {
+            //Instantiate(deathEffect, transform.position, Quaternion.identity);
+            Destroy(gameObject);
+        }
     }
 
     public void TakeDamage()

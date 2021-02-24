@@ -24,7 +24,7 @@ public class Projectile : MonoBehaviour
             if (hit.collider.CompareTag("enemy"))
             {
                 Debug.Log("Enemy Take Damage");
-                hit.collider.GetComponent<Enemy>().TakeDamage(damage);
+                hit.collider.GetComponent<Golem>().TakeDamage();
             }
             DestroyProjectile();
         }
