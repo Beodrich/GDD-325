@@ -45,6 +45,8 @@ public class SpawnLogic : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //FOR DEBUG ONLY- GET RID OF THIS LINE IN FINAL BUILD
+        Debug.Log("There are " + GameObject.FindGameObjectsWithTag("enemy").Length + " golems left in the current wave ");
         text.text = this.waves[nextWave].name;
         if (state == SpawnState.WAITING) {
             //check if enemies are still alive
@@ -97,7 +99,10 @@ public class SpawnLogic : MonoBehaviour
             searchCountDown = 1f;
             if (GameObject.FindGameObjectsWithTag("enemy").Length==0)
             {
-                return false;
+               
+               
+                
+                    return false;
 
             }
         }
