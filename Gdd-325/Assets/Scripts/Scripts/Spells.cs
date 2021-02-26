@@ -16,7 +16,7 @@ public class Spells : MonoBehaviour
     public float fireballSpeed = 8f;
     public Transform Player;
     private Vector2 lastDirection;
-    public float fireDamage = 5f;
+    //public float fireDamage = 5f;
     public Transform shotPoint;
     //public float iceDamage;
     //public float earthDamage;
@@ -24,7 +24,7 @@ public class Spells : MonoBehaviour
     //public float baseDamage;
 
 
-    SpellState spell = SpellState.None;
+    public SpellState spell = SpellState.Fire;
 
     private Golem golem;
    public void SetSpellState(SpellState state) {

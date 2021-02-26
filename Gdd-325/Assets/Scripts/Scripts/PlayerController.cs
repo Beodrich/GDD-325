@@ -23,8 +23,14 @@ public class PlayerController : MonoBehaviour
     private const string Monke_FR = "Monke_FR";
     private const string Monke_L = "Monke_L";
     private const string Monke_R = "Monke_Right";
-    
-   
+
+    // spell stuff
+    public Spells mySpell;
+
+    public Rigidbody2D fireball;
+    public float fireballSpeed = 8f;
+    int timer = 175;
+
 
     // Start is called before the first frame update
     void Start()
@@ -36,17 +42,23 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        h = Input.GetAxisRaw("Horizontal");
+        v = Input.GetAxisRaw("Vertical");
+        Vector2 movement = new Vector2(h, v);
+
 
         ChangeAnimation();
 
+        transform.Translate(movement * movementSpeed * Time.deltaTime);
+        timer += 1;
+        if (Input.GetKeyDown("space") && timer >= 175)
+        {
+            mySpell.CastSpell((Vector3)movement);
+            timer = 0;
+        }
+
     }
 
-   
-
-    
-
-   
-  
     private void ChangeAnimation() {
         h = Input.GetAxisRaw("Horizontal");
         v = Input.GetAxisRaw("Vertical");

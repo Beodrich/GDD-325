@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 5278976977336758316}
   - component: {fileID: 5278976977336758317}
   - component: {fileID: 5278976977336758311}
+  - component: {fileID: 2556271149891266898}
   m_Layer: 0
   m_Name: MonkE
   m_TagString: enemy
@@ -153,6 +154,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed: 5
+  mySpell: {fileID: 0}
+  fireball: {fileID: 0}
+  fireballSpeed: 8
 --- !u!61 &5278976977336758311
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -179,3 +183,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 8.372045, y: 16.17}
   m_EdgeRadius: 0
+--- !u!114 &2556271149891266898
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5278976977336758318}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7696c1e6453ef4d4899ec3f7a0cc0951, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fireball: {fileID: 5071889481588455886, guid: c46e57132fb12224b8b6f41698586323, type: 3}
+  fireballSpeed: 8
+  Player: {fileID: 5278976977336758304}
+  fireDamage: 5
+  shotPoint: {fileID: 5278976977336758304}

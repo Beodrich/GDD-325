@@ -10,7 +10,7 @@ public class Golem : MonoBehaviour
     [SerializeField] private float health = 10.0f;
     [SerializeField] private Sprite[] golemState;
    
-    public Spells spells;
+    //public Spells spells;
 
    
     public Sprite getGolemState()
