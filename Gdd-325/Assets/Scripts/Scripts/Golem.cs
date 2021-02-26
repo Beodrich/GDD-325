@@ -24,7 +24,7 @@ public class Golem : MonoBehaviour
         if (health <= 0)
         {
             //Instantiate(deathEffect, transform.position, Quaternion.identity);
-            Destroy(gameObject);
+            Destroy(this.gameObject);
         }
     }
 
@@ -32,7 +32,7 @@ public class Golem : MonoBehaviour
     {
         if(fire)
         {
-            health -= 5;
+            this.health -= 5;
         }
     }
 /*    public void TakeDamage(SpellState spell)

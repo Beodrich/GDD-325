@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SpawnLogic : MonoBehaviour
 {
@@ -27,7 +28,7 @@ public class SpawnLogic : MonoBehaviour
 
     private float searchCountDown=1f;
     private SpawnState state = SpawnState.COUNTING;
-
+    public Text text;
 
     // Start is called before the first frame update
     void Start()
@@ -44,7 +45,7 @@ public class SpawnLogic : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        text.text = this.waves[nextWave].name;
         if (state == SpawnState.WAITING) {
             //check if enemies are still alive
             if (!EnemyIsAlive())
@@ -94,7 +95,7 @@ public class SpawnLogic : MonoBehaviour
         if (searchCountDown <= 0f)
         {
             searchCountDown = 1f;
-            if (GameObject.FindGameObjectsWithTag("enemy") == null)
+            if (GameObject.FindGameObjectsWithTag("enemy").Length==0)
             {
                 return false;
 
@@ -125,8 +126,9 @@ public class SpawnLogic : MonoBehaviour
         //spawn Enemy
         Transform randomSpawnPoint = spawnPoints[Random.Range(0, spawnPoints.Length)];
 
-        Instantiate(_enemy, randomSpawnPoint.position, randomSpawnPoint.rotation);
-        Debug.Log("Spawning Enemy: " + _enemy.name + " At spawn point " + randomSpawnPoint.name);
-        _enemy.gameObject.SetActive(true);
+        var newGolem=Instantiate(_enemy, randomSpawnPoint.position, randomSpawnPoint.rotation);
+        _enemy.tag = "enemy";
+        Debug.Log("Spawning Enemy: " + newGolem.name + " At spawn point " + randomSpawnPoint.name);
+        newGolem.gameObject.SetActive(true);
     }
 }
