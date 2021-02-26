@@ -127,7 +127,7 @@ public class SpawnLogic : MonoBehaviour
         Transform randomSpawnPoint = spawnPoints[Random.Range(0, spawnPoints.Length)];
 
         var newGolem=Instantiate(_enemy, randomSpawnPoint.position, randomSpawnPoint.rotation);
-        _enemy.tag = "enemy";
+        newGolem.tag = "enemy";
         Debug.Log("Spawning Enemy: " + newGolem.name + " At spawn point " + randomSpawnPoint.name);
         newGolem.gameObject.SetActive(true);
     }
