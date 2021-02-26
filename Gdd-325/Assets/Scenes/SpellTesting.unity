@@ -500,6 +500,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 5278976977336758316, guid: a3efbba7d81282f49bef76e2f718d23f, type: 3}
+      propertyPath: m_BodyType
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5278976977336758316, guid: a3efbba7d81282f49bef76e2f718d23f, type: 3}
       propertyPath: m_Constraints
       value: 4
       objectReference: {fileID: 0}
@@ -510,7 +514,11 @@ PrefabInstance:
     - target: {fileID: 5278976977336758317, guid: a3efbba7d81282f49bef76e2f718d23f, type: 3}
       propertyPath: fireball
       value: 
-      objectReference: {fileID: 5071889481588455886, guid: c46e57132fb12224b8b6f41698586323, type: 3}
+      objectReference: {fileID: 0}
+    - target: {fileID: 5278976977336758318, guid: a3efbba7d81282f49bef76e2f718d23f, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 6299887599777486951, guid: a3efbba7d81282f49bef76e2f718d23f, type: 3}
       propertyPath: m_BodyType
       value: 0
