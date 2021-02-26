@@ -25,7 +25,7 @@ public class PlayerController : MonoBehaviour
     private const string Monke_R = "Monke_Right";
 
     // spell stuff
-    public Spells mySpell;
+    private Spells mySpell;
 
     public Rigidbody2D fireball;
     public float fireballSpeed = 8f;
@@ -37,6 +37,7 @@ public class PlayerController : MonoBehaviour
     {
         rb2D = GetComponent<Rigidbody2D>();
         animatorLogic = GetComponent<AnimatorLogic>();
+        mySpell = GetComponent<Spells>();
     }
 
     // Update is called once per frame
@@ -49,7 +50,7 @@ public class PlayerController : MonoBehaviour
 
         ChangeAnimation();
 
-        transform.Translate(movement * movementSpeed * Time.deltaTime);
+        //transform.Translate(movement * movementSpeed * Time.deltaTime);
         timer += 1;
         if (Input.GetKeyDown("space") && timer >= 175)
         {

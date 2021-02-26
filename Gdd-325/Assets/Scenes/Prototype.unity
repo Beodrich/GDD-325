@@ -1136,8 +1136,16 @@ PrefabInstance:
       value: Golem
       objectReference: {fileID: 0}
     - target: {fileID: 5259785711543859236, guid: 0f1ada5e37928e9498a00cfee3c550e1, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5259785711543859236, guid: 0f1ada5e37928e9498a00cfee3c550e1, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5259785711543859236, guid: 0f1ada5e37928e9498a00cfee3c550e1, type: 3}
+      propertyPath: m_TagString
+      value: enemy
       objectReference: {fileID: 0}
     - target: {fileID: 5259785711543859237, guid: 0f1ada5e37928e9498a00cfee3c550e1, type: 3}
       propertyPath: target
@@ -1211,6 +1219,10 @@ PrefabInstance:
     - target: {fileID: 5278976977336758318, guid: a3efbba7d81282f49bef76e2f718d23f, type: 3}
       propertyPath: m_Name
       value: MonkE
+      objectReference: {fileID: 0}
+    - target: {fileID: 5278976977336758318, guid: a3efbba7d81282f49bef76e2f718d23f, type: 3}
+      propertyPath: m_TagString
+      value: Player
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a3efbba7d81282f49bef76e2f718d23f, type: 3}
