@@ -328,7 +328,6 @@ MonoBehaviour:
   attackDamage: 5
   health: 10
   golemState: []
-  spells: {fileID: 0}
 --- !u!212 &650260450
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -500,6 +499,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5278976977336758316, guid: a3efbba7d81282f49bef76e2f718d23f, type: 3}
+      propertyPath: m_Constraints
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 5278976977336758317, guid: a3efbba7d81282f49bef76e2f718d23f, type: 3}
       propertyPath: mySpell
       value: 
@@ -575,27 +578,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5278976977336758318, guid: a3efbba7d81282f49bef76e2f718d23f, type: 3}
   m_PrefabInstance: {fileID: 1707889975}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &1707889977 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5278976977336758304, guid: a3efbba7d81282f49bef76e2f718d23f, type: 3}
-  m_PrefabInstance: {fileID: 1707889975}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1707889978
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1707889976}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7696c1e6453ef4d4899ec3f7a0cc0951, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fireball: {fileID: 5071889481588455886, guid: c46e57132fb12224b8b6f41698586323, type: 3}
-  fireballSpeed: 8
-  Player: {fileID: 1707889977}
-  shotPoint: {fileID: 1707889977}
 --- !u!114 &1707889979 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2556271149891266898, guid: a3efbba7d81282f49bef76e2f718d23f, type: 3}
@@ -709,7 +691,6 @@ MonoBehaviour:
   attackDamage: 5
   health: 10
   golemState: []
-  spells: {fileID: 0}
 --- !u!61 &1822780611
 BoxCollider2D:
   m_ObjectHideFlags: 0
