@@ -28,7 +28,14 @@ public class Golem : MonoBehaviour
         }
     }
 
-    public void TakeDamage(SpellState spell)
+    public void TakeDamage()
+    {
+        if(fire)
+        {
+            health -= 5;
+        }
+    }
+/*    public void TakeDamage(SpellState spell)
     {
         switch (spell) {
             case SpellState.Fire:
@@ -47,18 +54,8 @@ public class Golem : MonoBehaviour
             default://none case
                     //code here
                 break;
-
-
-
-
-
-
         }
-
-
-
-
-    }
+    }*/
 
     public void PlayerDamaged()
     {

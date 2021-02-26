@@ -22,6 +22,7 @@ public class Spells : MonoBehaviour
     //public float earthDamage;
     //public float airDamage;
     //public float baseDamage;
+    public static bool fire = true;
 
 
     public SpellState spell = SpellState.Fire;
