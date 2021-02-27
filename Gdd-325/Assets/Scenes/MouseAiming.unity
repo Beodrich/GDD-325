@@ -130,17 +130,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1694314300733262468, guid: 0f1ada5e37928e9498a00cfee3c550e1, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5259785711543859234, guid: 0f1ada5e37928e9498a00cfee3c550e1, type: 3}
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5259785711543859234, guid: 0f1ada5e37928e9498a00cfee3c550e1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -8.233253
+      value: 7.71
       objectReference: {fileID: 0}
     - target: {fileID: 5259785711543859234, guid: 0f1ada5e37928e9498a00cfee3c550e1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.1092377
+      value: -2.14
       objectReference: {fileID: 0}
     - target: {fileID: 5259785711543859234, guid: 0f1ada5e37928e9498a00cfee3c550e1, type: 3}
       propertyPath: m_LocalPosition.z
@@ -365,7 +369,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   offset: -90
-  projectile: {fileID: 0}
+  projectile: {fileID: 5552362797186324757, guid: ab061fb9cf7d81e4da3f9110bf2dd4ea, type: 3}
   shotPoint: {fileID: 1963996353}
   startTimeBTWShots: 0.25
 --- !u!1001 &1621407877
@@ -375,13 +379,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2556271149891266898, guid: a3efbba7d81282f49bef76e2f718d23f, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5278976977336758304, guid: a3efbba7d81282f49bef76e2f718d23f, type: 3}
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5278976977336758304, guid: a3efbba7d81282f49bef76e2f718d23f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.6
+      value: -2.77
       objectReference: {fileID: 0}
     - target: {fileID: 5278976977336758304, guid: a3efbba7d81282f49bef76e2f718d23f, type: 3}
       propertyPath: m_LocalPosition.y
@@ -435,6 +443,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MonkE
       objectReference: {fileID: 0}
+    - target: {fileID: 5278976977336758318, guid: a3efbba7d81282f49bef76e2f718d23f, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a3efbba7d81282f49bef76e2f718d23f, type: 3}
 --- !u!114 &1621407878 stripped
@@ -443,7 +455,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 1621407877}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7696c1e6453ef4d4899ec3f7a0cc0951, type: 3}
   m_Name: 
