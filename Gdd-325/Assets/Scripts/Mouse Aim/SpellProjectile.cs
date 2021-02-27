@@ -9,11 +9,15 @@ public class SpellProjectile : MonoBehaviour
     public float distance;
     public LayerMask whatIsSolid;
 
-    public GameObject destroyEffect;
+    private Animator animator;
 
+    public GameObject destroyEffect;
+    
     private void Start()
     {
+        animator = GetComponent<Animator>();
         Invoke("DestroySpell", lifeTime);
+
     }
 
     private void Update()
@@ -24,6 +28,7 @@ public class SpellProjectile : MonoBehaviour
             if(hit.collider.CompareTag("enemy"))
             {
                 Debug.Log("Taking Damage");
+                hit.collider.GetComponent<Golem>().TakeDamage();
             }
             DestroySpell();
         }
@@ -34,7 +39,8 @@ public class SpellProjectile : MonoBehaviour
 
     void DestroySpell()
     {
-        Instantiate(destroyEffect, transform.position, Quaternion.identity);
+        //Instantiate(destroyEffect, transform.position, Quaternion.identity);
+        animator.SetBool("Explode", true);
         Destroy(gameObject);
     }
 }

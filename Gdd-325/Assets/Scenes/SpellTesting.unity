@@ -133,7 +133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 38544892}
   m_Layer: 0
-  m_Name: SpellEndPointPosition
+  m_Name: SpellShootPos
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -147,7 +147,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 38544891}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 8.59, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 142164987}
@@ -184,50 +184,6 @@ Transform:
   - {fileID: 38544892}
   m_Father: {fileID: 1707889984}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &367869818
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 367869820}
-  - component: {fileID: 367869819}
-  m_Layer: 0
-  m_Name: Testing
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &367869819
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 367869818}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b0408a0c5a7a7c543b7774b6d103616a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerAimWeapon: {fileID: 1707889977}
---- !u!4 &367869820
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 367869818}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 13.735412, y: -0.8768346, z: -7.4652953}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &454576105
 GameObject:
@@ -509,6 +465,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1132205665}
   - component: {fileID: 1132205666}
+  - component: {fileID: 1132205667}
   m_Layer: 0
   m_Name: Wand
   m_TagString: Untagged
@@ -524,7 +481,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1132205664}
   m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 5.46, y: -0, z: 0}
+  m_LocalPosition: {x: 6.2, y: -0, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 142164987}
@@ -581,6 +538,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1132205667
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1132205664}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf3d6f352e5199d48848872282b1cbf8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  offset: -90
+  projectile: {fileID: 5552362797186324757, guid: ab061fb9cf7d81e4da3f9110bf2dd4ea, type: 3}
+  shotPoint: {fileID: 38544892}
+  startTimeBTWShots: 0.25
 --- !u!1 &1335653204
 GameObject:
   m_ObjectHideFlags: 0
@@ -687,6 +660,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2556271149891266898, guid: a3efbba7d81282f49bef76e2f718d23f, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5278976977336758304, guid: a3efbba7d81282f49bef76e2f718d23f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 11.03
@@ -800,7 +777,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 1707889975}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1707889976}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7696c1e6453ef4d4899ec3f7a0cc0951, type: 3}
   m_Name: 
