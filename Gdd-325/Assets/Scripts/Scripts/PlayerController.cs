@@ -30,14 +30,20 @@ public class PlayerController : MonoBehaviour
     public Rigidbody2D fireball;
     public float fireballSpeed = 8f;
     int timer = 175;
-
-
+    
+    //heath
+    public float heath=10f;
+    public Text text;
+    private bool canTakeDamage = true;
+    private float timeUntilCanTakeDamge = 0f;
+    public float maxTime = 5f;
     // Start is called before the first frame update
     void Start()
     {
         rb2D = GetComponent<Rigidbody2D>();
         animatorLogic = GetComponent<AnimatorLogic>();
         mySpell = GetComponent<Spells>();
+        text.text= "Current HP is at :" + heath.ToString();
     }
 
     // Update is called once per frame
@@ -56,6 +62,20 @@ public class PlayerController : MonoBehaviour
         {
             mySpell.CastSpell((Vector3)movement);
             timer = 0;
+        }
+        //invisibility frame timer
+        Debug.Log("Can Take Damage: " + canTakeDamage);
+        if (canTakeDamage == false)
+        {
+            if (timeUntilCanTakeDamge >= maxTime)
+            {
+                canTakeDamage = true;
+                timeUntilCanTakeDamge = 0f;
+            }
+            else
+            {
+                timeUntilCanTakeDamge += Time.deltaTime;
+            }
         }
 
     }
@@ -111,5 +131,22 @@ public class PlayerController : MonoBehaviour
         //function to figure out what animation to play 
         //animatorLogic.ChangeAnimationState(/*throw animation state here*/"hi");
         transform.Translate(movement * movementSpeed * Time.deltaTime);
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag=="enemy") {
+            TakeDamage();
+        }
+    }
+    void TakeDamage() {
+        if (canTakeDamage)
+        {
+            heath -= 1;
+            canTakeDamage = false;
+        }
+        text.text = "Current HP is at :"+ heath.ToString();
+        if (heath <= 0) {
+            Debug.Log("You are dead");
+        }
     }
 }
