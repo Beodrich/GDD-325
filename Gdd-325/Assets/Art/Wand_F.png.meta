@@ -1,0 +1,648 @@
+fileFormatVersion: 2
+guid: 81803d73ee2f92b439cada6cf4377601
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1191440427300677512
+    second: Wand_F_0
+  - first:
+      213: 5934602380136668820
+    second: Wand_F_1
+  - first:
+      213: -597119976807343300
+    second: Wand_F_2
+  - first:
+      213: -3497003390806729622
+    second: Wand_F_3
+  - first:
+      213: 751994660251318928
+    second: Wand_F_4
+  - first:
+      213: -1791354127955694892
+    second: Wand_F_5
+  - first:
+      213: -2777899512358662826
+    second: Wand_F_6
+  - first:
+      213: -8659899105542132991
+    second: Wand_F_7
+  - first:
+      213: -6266142366076134533
+    second: Wand_F_8
+  - first:
+      213: -2080330228755040436
+    second: Wand_F_9
+  - first:
+      213: -6704226733386365671
+    second: Wand_F_10
+  - first:
+      213: -3719375173032090999
+    second: Wand_F_11
+  - first:
+      213: 6420436682709942934
+    second: Wand_F_12
+  - first:
+      213: -4434313972442597858
+    second: Wand_F_13
+  - first:
+      213: 1325837371745690986
+    second: Wand_F_14
+  - first:
+      213: -9066843337996900990
+    second: Wand_F_15
+  - first:
+      213: 8313462362296595942
+    second: Wand_F_16
+  - first:
+      213: 2138488298003581172
+    second: Wand_F_17
+  - first:
+      213: 5878967358300520013
+    second: Wand_F_18
+  - first:
+      213: -2529703986877906966
+    second: Wand_F_19
+  - first:
+      213: -3488710238908686216
+    second: Wand_F_20
+  - first:
+      213: -7199195000660744493
+    second: Wand_F_21
+  - first:
+      213: -3583990869638144969
+    second: Wand_F_22
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Wand_F_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 300
+        width: 300
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 134, y: -31}
+        - {x: 103, y: -31}
+        - {x: 29, y: -63}
+        - {x: -121, y: -211}
+        - {x: -134, y: -224}
+        - {x: -134, y: -260}
+        - {x: -121, y: -291}
+        - {x: -73, y: -291}
+        - {x: 127, y: -148}
+        - {x: 141, y: -102}
+        - {x: 141, y: -58}
+      - - {x: 429, y: -31}
+        - {x: 428, y: -33}
+        - {x: 422, y: -43}
+        - {x: 414, y: -38}
+        - {x: 403, y: -40}
+        - {x: 399, y: -45}
+        - {x: 396, y: -54}
+        - {x: 395, y: -52}
+        - {x: 363, y: -37}
+        - {x: 168, y: -222}
+        - {x: 168, y: -257}
+        - {x: 173, y: -282}
+        - {x: 184, y: -291}
+        - {x: 231, y: -291}
+        - {x: 442, y: -177}
+        - {x: 442, y: -32}
+        - {x: 432, y: -31}
+      - - {x: -169, y: -27}
+        - {x: -202, y: -27}
+        - {x: -290, y: -62}
+        - {x: -442, y: -222}
+        - {x: -442, y: -258}
+        - {x: -418, y: -287}
+        - {x: -379, y: -287}
+        - {x: -175, y: -142}
+        - {x: -167, y: -109}
+        - {x: -167, y: -36}
+      - - {x: 342, y: -58}
+        - {x: 339, y: -60}
+        - {x: 339, y: -70}
+        - {x: 340, y: -72}
+        - {x: 348, y: -72}
+        - {x: 350, y: -67}
+        - {x: 350, y: -60}
+        - {x: 346, y: -58}
+      - - {x: 51, y: -53}
+        - {x: 45, y: -53}
+        - {x: 43, y: -54}
+        - {x: 43, y: -63}
+        - {x: 52, y: -63}
+        - {x: 53, y: -60}
+        - {x: 53, y: -55}
+      - - {x: 69, y: -51}
+        - {x: 65, y: -51}
+        - {x: 64, y: -54}
+        - {x: 64, y: -57}
+        - {x: 66, y: -58}
+        - {x: 70, y: -58}
+        - {x: 71, y: -55}
+        - {x: 71, y: -52}
+      - - {x: -241, y: -47}
+        - {x: -244, y: -50}
+        - {x: -244, y: -52}
+        - {x: -242, y: -54}
+        - {x: -240, y: -54}
+        - {x: -237, y: -51}
+        - {x: -237, y: -49}
+        - {x: -239, y: -47}
+      - - {x: 103, y: -39}
+        - {x: 101, y: -40}
+        - {x: 100, y: -41}
+        - {x: 100, y: -49}
+        - {x: 103, y: -53}
+        - {x: 106, y: -53}
+        - {x: 109, y: -52}
+        - {x: 114, y: -48}
+        - {x: 114, y: -41}
+        - {x: 113, y: -39}
+      - - {x: 112, y: -48}
+        - {x: 112, y: -49}
+        - {x: 114, y: -51}
+        - {x: 116, y: -51}
+        - {x: 119, y: -48}
+        - {x: 118, y: -45}
+        - {x: 115, y: -45}
+      - - {x: 414, y: -48}
+        - {x: 414, y: -49}
+        - {x: 416, y: -51}
+        - {x: 418, y: -51}
+        - {x: 421, y: -48}
+        - {x: 420, y: -45}
+        - {x: 417, y: -45}
+      - - {x: -196, y: -34}
+        - {x: -199, y: -36}
+        - {x: -199, y: -46}
+        - {x: -196, y: -47}
+        - {x: -190, y: -47}
+        - {x: -189, y: -46}
+        - {x: -189, y: -39}
+        - {x: -191, y: -34}
+      - - {x: 381, y: -37}
+        - {x: 379, y: -39}
+        - {x: 379, y: -43}
+        - {x: 382, y: -46}
+        - {x: 386, y: -46}
+        - {x: 388, y: -44}
+        - {x: 388, y: -40}
+        - {x: 385, y: -37}
+      - - {x: 49, y: -25}
+        - {x: 47, y: -29}
+        - {x: 47, y: -39}
+        - {x: 49, y: -40}
+        - {x: 56, y: -40}
+        - {x: 58, y: -34}
+        - {x: 58, y: -25}
+      - - {x: 65, y: -31}
+        - {x: 63, y: -33}
+        - {x: 63, y: -36}
+        - {x: 65, y: -38}
+        - {x: 68, y: -38}
+        - {x: 70, y: -36}
+        - {x: 70, y: -33}
+        - {x: 68, y: -31}
+      - - {x: 366, y: -31}
+        - {x: 365, y: -32}
+        - {x: 365, y: -38}
+        - {x: 372, y: -38}
+        - {x: 373, y: -36}
+        - {x: 373, y: -31}
+      - - {x: -243, y: -27}
+        - {x: -245, y: -29}
+        - {x: -245, y: -32}
+        - {x: -243, y: -34}
+        - {x: -240, y: -34}
+        - {x: -238, y: -32}
+        - {x: -238, y: -29}
+        - {x: -240, y: -27}
+      - - {x: 410, y: -21}
+        - {x: 402, y: -21}
+        - {x: 399, y: -22}
+        - {x: 399, y: -32}
+        - {x: 403, y: -34}
+        - {x: 410, y: -34}
+        - {x: 413, y: -30}
+        - {x: 413, y: -25}
+      - - {x: -231, y: -19}
+        - {x: -233, y: -21}
+        - {x: -233, y: -26}
+        - {x: -231, y: -28}
+        - {x: -227, y: -28}
+        - {x: -224, y: -27}
+        - {x: -224, y: -22}
+        - {x: -225, y: -19}
+      - - {x: 77, y: -28}
+        - {x: 80, y: -27}
+        - {x: 80, y: -24}
+        - {x: 77, y: -23}
+        - {x: 75, y: -25}
+      - - {x: 68, y: -14}
+        - {x: 62, y: -14}
+        - {x: 61, y: -17}
+        - {x: 61, y: -21}
+        - {x: 63, y: -24}
+        - {x: 76, y: -24}
+        - {x: 78, y: -21}
+        - {x: 78, y: -19}
+        - {x: 76, y: -17}
+      - - {x: 397, y: -15}
+        - {x: 394, y: -15}
+        - {x: 392, y: -18}
+        - {x: 392, y: -21}
+        - {x: 394, y: -23}
+        - {x: 399, y: -23}
+        - {x: 401, y: -21}
+        - {x: 401, y: -17}
+      - - {x: 371, y: -16}
+        - {x: 369, y: -18}
+        - {x: 369, y: -20}
+        - {x: 371, y: -22}
+        - {x: 374, y: -22}
+        - {x: 376, y: -20}
+        - {x: 376, y: -18}
+        - {x: 374, y: -16}
+      - - {x: -239, y: -14}
+        - {x: -239, y: -17}
+        - {x: -238, y: -20}
+        - {x: -234, y: -20}
+        - {x: -230, y: -19}
+        - {x: -230, y: -15}
+        - {x: -232, y: -13}
+        - {x: -237, y: -12}
+      - - {x: -215, y: -4}
+        - {x: -216, y: -6}
+        - {x: -216, y: -13}
+        - {x: -211, y: -18}
+        - {x: -207, y: -19}
+        - {x: -201, y: -19}
+        - {x: -199, y: -17}
+        - {x: -199, y: -7}
+        - {x: -200, y: -4}
+      - - {x: 9, y: 271}
+        - {x: -134, y: 99}
+        - {x: -134, y: 11}
+        - {x: -56, y: 11}
+        - {x: 141, y: 137}
+        - {x: 141, y: 271}
+      - - {x: -173, y: 273}
+        - {x: -182, y: 273}
+        - {x: -189, y: 268}
+        - {x: -204, y: 247}
+        - {x: -209, y: 247}
+        - {x: -207, y: 247}
+        - {x: -203, y: 252}
+        - {x: -203, y: 258}
+        - {x: -204, y: 266}
+        - {x: -205, y: 273}
+        - {x: -234, y: 273}
+        - {x: -442, y: 108}
+        - {x: -442, y: 29}
+        - {x: -418, y: 13}
+        - {x: -381, y: 13}
+        - {x: -181, y: 150}
+        - {x: -167, y: 187}
+        - {x: -167, y: 257}
+      - - {x: 335, y: 273}
+        - {x: 168, y: 80}
+        - {x: 168, y: 20}
+        - {x: 181, y: 13}
+        - {x: 228, y: 13}
+        - {x: 394, y: 85}
+        - {x: 442, y: 167}
+        - {x: 442, y: 273}
+      - - {x: 69, y: 267}
+        - {x: 62, y: 267}
+        - {x: 59, y: 266}
+        - {x: 59, y: 247}
+        - {x: 64, y: 244}
+        - {x: 71, y: 244}
+        - {x: 71, y: 264}
+      - - {x: 411, y: 256}
+        - {x: 413, y: 253}
+        - {x: 418, y: 253}
+        - {x: 421, y: 254}
+        - {x: 421, y: 263}
+        - {x: 420, y: 266}
+        - {x: 413, y: 266}
+        - {x: 411, y: 264}
+      - - {x: -242, y: 272}
+        - {x: -243, y: 268}
+        - {x: -243, y: 262}
+        - {x: -238, y: 257}
+        - {x: -231, y: 257}
+        - {x: -228, y: 262}
+        - {x: -228, y: 270}
+        - {x: -233, y: 272}
+      - - {x: -262, y: 269}
+        - {x: -265, y: 268}
+        - {x: -265, y: 259}
+        - {x: -258, y: 259}
+        - {x: -257, y: 261}
+        - {x: -257, y: 268}
+        - {x: -258, y: 269}
+      - - {x: 96, y: 283}
+        - {x: 91, y: 278}
+        - {x: 91, y: 274}
+        - {x: 92, y: 271}
+        - {x: 96, y: 265}
+        - {x: 102, y: 265}
+        - {x: 105, y: 266}
+        - {x: 105, y: 282}
+        - {x: 103, y: 283}
+      - - {x: 366, y: 273}
+        - {x: 365, y: 270}
+        - {x: 365, y: 267}
+        - {x: 367, y: 266}
+        - {x: 371, y: 266}
+        - {x: 373, y: 268}
+        - {x: 373, y: 273}
+      - - {x: -193, y: 273}
+        - {x: -193, y: 271}
+        - {x: -190, y: 268}
+        - {x: -188, y: 268}
+        - {x: -185, y: 271}
+        - {x: -187, y: 276}
+        - {x: -190, y: 276}
+      - - {x: -229, y: 295}
+        - {x: -229, y: 279}
+        - {x: -228, y: 278}
+        - {x: -223, y: 278}
+        - {x: -220, y: 282}
+        - {x: -220, y: 291}
+        - {x: -221, y: 295}
+      - - {x: 121, y: 287}
+        - {x: 119, y: 285}
+        - {x: 119, y: 280}
+        - {x: 121, y: 278}
+        - {x: 123, y: 278}
+        - {x: 126, y: 279}
+        - {x: 126, y: 285}
+        - {x: 125, y: 287}
+      - - {x: 70, y: 292}
+        - {x: 67, y: 287}
+        - {x: 67, y: 283}
+        - {x: 70, y: 279}
+        - {x: 81, y: 279}
+        - {x: 82, y: 280}
+        - {x: 82, y: 288}
+        - {x: 81, y: 292}
+      - - {x: 373, y: 295}
+        - {x: 370, y: 291}
+        - {x: 370, y: 282}
+        - {x: 374, y: 280}
+        - {x: 381, y: 280}
+        - {x: 383, y: 283}
+        - {x: 383, y: 292}
+        - {x: 377, y: 295}
+      - - {x: 47, y: 295}
+        - {x: 46, y: 291}
+        - {x: 46, y: 285}
+        - {x: 49, y: 284}
+        - {x: 51, y: 284}
+        - {x: 54, y: 287}
+        - {x: 54, y: 293}
+        - {x: 52, y: 295}
+      - - {x: 349, y: 296}
+        - {x: 347, y: 292}
+        - {x: 347, y: 287}
+        - {x: 348, y: 286}
+        - {x: 355, y: 286}
+        - {x: 357, y: 287}
+        - {x: 357, y: 295}
+        - {x: 354, y: 296}
+      - - {x: 415, y: 300}
+        - {x: 415, y: 297}
+        - {x: 418, y: 294}
+        - {x: 422, y: 294}
+        - {x: 426, y: 298}
+        - {x: 426, y: 300}
+      - - {x: 85, y: 300}
+        - {x: 85, y: 298}
+        - {x: 87, y: 296}
+        - {x: 89, y: 296}
+        - {x: 92, y: 299}
+        - {x: 92, y: 300}
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87814bf6e37277fe0800000000000000
+      internalID: -1191440427300677512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wand_F_1
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 300
+        width: 300
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49edb3ffb61fb5250800000000000000
+      internalID: 5934602380136668820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wand_F_2
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 300
+        width: 300
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3bdb167b8a96b7f0800000000000000
+      internalID: -597119976807343300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wand_F_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 300
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6cd0a8a1f5287fc0800000000000000
+      internalID: -3497003390806729622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wand_F_4
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 0
+        width: 300
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09a3545c82f9f6a00800000000000000
+      internalID: 751994660251318928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wand_F_5
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 0
+        width: 300
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4da654069e4d327e0800000000000000
+      internalID: -1791354127955694892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
