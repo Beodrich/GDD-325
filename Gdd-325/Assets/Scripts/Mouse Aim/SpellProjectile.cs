@@ -10,8 +10,6 @@ public class SpellProjectile : MonoBehaviour
     public LayerMask whatIsSolid;
 
     private Animator animator;
-
-    public GameObject destroyEffect;
     
     private void Start()
     {
@@ -30,17 +28,16 @@ public class SpellProjectile : MonoBehaviour
                 Debug.Log("Taking Damage");
                 hit.collider.GetComponent<Golem>().TakeDamage();
             }
-            DestroySpell();
+            DestroySpell(hit.collider.GetComponent<Golem>().getPosition());
         }
-
-
         transform.Translate(Vector2.up* speed * Time.deltaTime);
     }
 
-    void DestroySpell()
+    void DestroySpell(Transform destroyPoint)
     {
         //Instantiate(destroyEffect, transform.position, Quaternion.identity);
-        animator.SetBool("Explode", true);
+        //this.transform.position = destroyPoint.position;
+        //animator.SetBool("Explode", true);
         Destroy(gameObject);
     }
 }
