@@ -654,6 +654,87 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 10.452293, y: 53.98648}
   m_EdgeRadius: 0
+--- !u!1001 &702516878
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4212257572519284704, guid: bb19457e7eb5aba4ba9c379659960c4e, type: 3}
+      propertyPath: m_Name
+      value: shooting enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 4212257572519284706, guid: bb19457e7eb5aba4ba9c379659960c4e, type: 3}
+      propertyPath: m_RootOrder
+      value: 19
+      objectReference: {fileID: 0}
+    - target: {fileID: 4212257572519284706, guid: bb19457e7eb5aba4ba9c379659960c4e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.6980028
+      objectReference: {fileID: 0}
+    - target: {fileID: 4212257572519284706, guid: bb19457e7eb5aba4ba9c379659960c4e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.074608
+      objectReference: {fileID: 0}
+    - target: {fileID: 4212257572519284706, guid: bb19457e7eb5aba4ba9c379659960c4e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4212257572519284706, guid: bb19457e7eb5aba4ba9c379659960c4e, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4212257572519284706, guid: bb19457e7eb5aba4ba9c379659960c4e, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4212257572519284706, guid: bb19457e7eb5aba4ba9c379659960c4e, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4212257572519284706, guid: bb19457e7eb5aba4ba9c379659960c4e, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4212257572519284706, guid: bb19457e7eb5aba4ba9c379659960c4e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4212257572519284706, guid: bb19457e7eb5aba4ba9c379659960c4e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4212257572519284706, guid: bb19457e7eb5aba4ba9c379659960c4e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4212257572519284717, guid: bb19457e7eb5aba4ba9c379659960c4e, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1912999291}
+    - target: {fileID: 4212257572519284717, guid: bb19457e7eb5aba4ba9c379659960c4e, type: 3}
+      propertyPath: projectile
+      value: 
+      objectReference: {fileID: 3929160876877843608, guid: d222094d6d8c1604d93750d395cd3e7b, type: 3}
+    - target: {fileID: 4212257572519284717, guid: bb19457e7eb5aba4ba9c379659960c4e, type: 3}
+      propertyPath: timeBtwShots
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4212257572519284717, guid: bb19457e7eb5aba4ba9c379659960c4e, type: 3}
+      propertyPath: retreatDistance
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4212257572519284717, guid: bb19457e7eb5aba4ba9c379659960c4e, type: 3}
+      propertyPath: stoppingDistance
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 4212257572519284717, guid: bb19457e7eb5aba4ba9c379659960c4e, type: 3}
+      propertyPath: startTimeBtwShots
+      value: 2
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: bb19457e7eb5aba4ba9c379659960c4e, type: 3}
 --- !u!1 &790046882
 GameObject:
   m_ObjectHideFlags: 0
@@ -867,7 +948,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 20
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -1269,6 +1350,10 @@ PrefabInstance:
     - target: {fileID: 2729049941047798199, guid: d0ae4664e91e6cf489cee704caae8fa9, type: 3}
       propertyPath: m_Name
       value: SpawnControl
+      objectReference: {fileID: 0}
+    - target: {fileID: 2729049941047798199, guid: d0ae4664e91e6cf489cee704caae8fa9, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d0ae4664e91e6cf489cee704caae8fa9, type: 3}
