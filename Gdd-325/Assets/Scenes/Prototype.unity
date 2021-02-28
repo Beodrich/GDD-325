@@ -1626,7 +1626,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 5278976975423765851}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1912999285}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7696c1e6453ef4d4899ec3f7a0cc0951, type: 3}
   m_Name: 
@@ -1870,6 +1870,10 @@ PrefabInstance:
     - target: {fileID: 5278976977336758318, guid: a3efbba7d81282f49bef76e2f718d23f, type: 3}
       propertyPath: m_TagString
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 8012488505370320806, guid: a3efbba7d81282f49bef76e2f718d23f, type: 3}
+      propertyPath: startTimeBTWShots
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a3efbba7d81282f49bef76e2f718d23f, type: 3}

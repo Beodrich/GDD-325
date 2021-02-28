@@ -28,12 +28,13 @@ public class SpellProjectile : MonoBehaviour
                 Debug.Log("Taking Damage");
                 hit.collider.GetComponent<Golem>().TakeDamage();
             }
-            DestroySpell(hit.collider.GetComponent<Golem>().getPosition());
+            //DestroySpell(hit.collider.GetComponent<Golem>().getPosition());
+            DestroySpell();
         }
         transform.Translate(Vector2.up* speed * Time.deltaTime);
     }
 
-    void DestroySpell(Transform destroyPoint)
+    void DestroySpell()
     {
         //Instantiate(destroyEffect, transform.position, Quaternion.identity);
         //this.transform.position = destroyPoint.position;

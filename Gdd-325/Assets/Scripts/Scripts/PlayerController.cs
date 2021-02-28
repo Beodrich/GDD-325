@@ -25,11 +25,11 @@ public class PlayerController : MonoBehaviour
     private const string Monke_R = "Monke_Right";
 
     // spell stuff
-    private Spells mySpell;
+    //private Spells mySpell;
 
-    public Rigidbody2D fireball;
-    public float fireballSpeed = 8f;
-    int timer = 175;
+    //public Rigidbody2D fireball;
+    //public float fireballSpeed = 8f;
+    //int timer = 175;
     
     //heath
     public float heath=10f;
@@ -42,8 +42,8 @@ public class PlayerController : MonoBehaviour
     {
         rb2D = GetComponent<Rigidbody2D>();
         animatorLogic = GetComponent<AnimatorLogic>();
-        mySpell = GetComponent<Spells>();
-        text.text= "Current HP is at :" + heath.ToString();
+        //mySpell = GetComponent<Spells>();
+        //text.text= "Current HP is at :" + heath.ToString();
     }
 
     // Update is called once per frame
@@ -57,12 +57,12 @@ public class PlayerController : MonoBehaviour
         ChangeAnimation();
 
         //transform.Translate(movement * movementSpeed * Time.deltaTime);
-        timer += 1;
+       /* timer += 1;
         if (Input.GetKeyDown("space") && timer >= 175)
         {
             mySpell.CastSpell((Vector3)movement);
             timer = 0;
-        }
+        }*/
         //invisibility frame timer
         Debug.Log("Can Take Damage: " + canTakeDamage);
         if (canTakeDamage == false)
