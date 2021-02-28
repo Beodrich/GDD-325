@@ -28,6 +28,11 @@ public class Golem : MonoBehaviour
         }
     }
 
+    public Transform getPosition()
+    {
+        return this.transform;
+    }
+
     public void TakeDamage()
     {
         if(fire)
