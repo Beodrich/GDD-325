@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5654664293995324676}
   - component: {fileID: 5654664293995324675}
   - component: {fileID: 4962081482703207883}
+  - component: {fileID: 7421048620755512334}
   m_Layer: 0
   m_Name: Fireball
   m_TagString: Untagged
@@ -121,3 +122,17 @@ MonoBehaviour:
   whatIsSolid:
     serializedVersion: 2
     m_Bits: 64
+--- !u!136 &7421048620755512334
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5654664293995324674}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.915
+  m_Height: 3.52
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
