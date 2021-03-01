@@ -32,7 +32,7 @@ public class PlayerController : MonoBehaviour
     //int timer = 175;
     
     //heath
-    public float heath=10f;
+    public static float health=10f;
     public Text text;
     private bool canTakeDamage = true;
     private float timeUntilCanTakeDamge = 0f;
@@ -171,11 +171,11 @@ public class PlayerController : MonoBehaviour
     void TakeDamage() {
         if (canTakeDamage)
         {
-            heath -= 1;
+            health -= 1;
             canTakeDamage = false;
         }
-        text.text = "Current HP is at :"+ heath.ToString();
-        if (heath <= 0) {
+        text.text = "Current HP is at :"+ health.ToString();
+        if (health <= 0) {
             Debug.Log("You are dead");
         }
     }

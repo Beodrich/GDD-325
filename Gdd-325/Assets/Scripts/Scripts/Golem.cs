@@ -64,6 +64,6 @@ public class Golem : MonoBehaviour
 
     public void PlayerDamaged()
     {
-        CopyController.health -= 10;
+        PlayerController.health -= 10;
     }
 }
