@@ -37,11 +37,13 @@ public class PlayerController : MonoBehaviour
     private bool canTakeDamage = true;
     private float timeUntilCanTakeDamge = 0f;
     public float maxTime = 5f;
+    private Camera camera;
     // Start is called before the first frame update
     void Start()
     {
         rb2D = GetComponent<Rigidbody2D>();
         animatorLogic = GetComponent<AnimatorLogic>();
+        camera = GameObject.Find("Main Camera").GetComponent<Camera>();
         //mySpell = GetComponent<Spells>();
         //text.text= "Current HP is at :" + heath.ToString();
     }
@@ -52,9 +54,11 @@ public class PlayerController : MonoBehaviour
         h = Input.GetAxisRaw("Horizontal");
         v = Input.GetAxisRaw("Vertical");
         Vector2 movement = new Vector2(h, v);
+        transform.Translate(movement * movementSpeed * Time.deltaTime);
+        var mousePos = Input.mousePosition;
+       // var charPos = Camera.WorldToScreenPoint((Vector3)this.gameObject.transform.position);
 
-
-        ChangeAnimation();
+        ChangeAnimation(mousePos);
 
         //transform.Translate(movement * movementSpeed * Time.deltaTime);
        /* timer += 1;
@@ -80,57 +84,83 @@ public class PlayerController : MonoBehaviour
 
     }
 
-    private void ChangeAnimation() {
-        h = Input.GetAxisRaw("Horizontal");
-        v = Input.GetAxisRaw("Vertical");
-        Vector2 movement = new Vector2(h, v);
-       
-        if (h != 0 && v != 0)
+    private void ChangeAnimation(Vector2 mousePos) {
+        var player= camera.WorldToScreenPoint(gameObject.transform.position);
+        var playerDirection = mousePos - (Vector2)player;
+        playerDirection = playerDirection.normalized;
+        Debug.Log(playerDirection);
+        Debug.Log("In the if statment");
+        //Vector2 movement = new Vector2(h, v);
+        //up direction
+        /*if (playerDirection.x == 0 && playerDirection.y == 1.0 || playerDirection.x == -0.1f && playerDirection.y == 1.0f) {
+            animatorLogic.ChangeAnimationState(Monke_B);
+            Debug.Log("Monke going up");
+        
+        
+        
+        }
+        //down
+        if (playerDirection.x == 0 && playerDirection.y == -1.0 )
         {
-            
-            if (movement.y == 1 && movement.x == -1)
-            {
-                animatorLogic.ChangeAnimationState(Monke_BL);
-            }
-            if (movement.y == 1 && movement.x == 1)
-            {
-                animatorLogic.ChangeAnimationState(Monke_BR);
-            }
-            if (movement.y == -1 && movement.x == -1)
-            {
-                animatorLogic.ChangeAnimationState(Monke_FL);
-            }
-            if (movement.y == -1 && movement.x == 1)
-            {
-                animatorLogic.ChangeAnimationState(Monke_FR);
-            }
-        }
-        else {
-            if (movement.x == -1)
-            {
-                animatorLogic.ChangeAnimationState(Monke_L);
+            animatorLogic.ChangeAnimationState(Monke_F);
+            Debug.Log("Monke going Down");
 
-            }
-            if (movement.x == 1)
-            {
-                animatorLogic.ChangeAnimationState(Monke_R);
 
-            }
-            if (movement.y == 1)
-            {
-                animatorLogic.ChangeAnimationState(Monke_B);
 
-            }
-            if (movement.y == -1)
-            {
-                animatorLogic.ChangeAnimationState(Monke_F);
+        }*/
 
-            }
+
+        if (playerDirection.x <= -0.9f)
+        {
+            animatorLogic.ChangeAnimationState(Monke_L);
 
         }
+        else if (playerDirection.x >= 0.9f)
+        {
+            animatorLogic.ChangeAnimationState(Monke_R);
+
+        }
+        else if (playerDirection.y >= 0.9f)
+        {
+            animatorLogic.ChangeAnimationState(Monke_B);
+
+        }
+       else if (playerDirection.y <=-0.9f)
+        {
+            animatorLogic.ChangeAnimationState(Monke_F);
+
+        }
+
+
+        else if (playerDirection.y >= 0.5f && playerDirection.x <= -0.5f)
+        {
+            animatorLogic.ChangeAnimationState(Monke_BL);
+            Debug.Log("In the Back left thing");
+        }
+        else if (playerDirection.y >= 0.5f && playerDirection.x >=0.5f)
+        {
+            animatorLogic.ChangeAnimationState(Monke_BR);
+            Debug.Log("In the Back right");
+        }
+        else if (playerDirection.y <= -0.5f && playerDirection.x <= -0.5f)
+        {
+            animatorLogic.ChangeAnimationState(Monke_FL);
+            Debug.Log("In the front left");
+        }
+        else if (playerDirection.y <= -0.5f && playerDirection.x >= 0.5f)
+        {
+            animatorLogic.ChangeAnimationState(Monke_FR);
+            Debug.Log("In the front right thing");
+        }
+        else { 
+            //stop 
+        }
+
+
+        
+
         //function to figure out what animation to play 
-        //animatorLogic.ChangeAnimationState(/*throw animation state here*/"hi");
-        transform.Translate(movement * movementSpeed * Time.deltaTime);
+
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
