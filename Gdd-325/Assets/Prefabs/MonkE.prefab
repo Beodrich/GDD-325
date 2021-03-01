@@ -96,7 +96,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   offset: -90
-  projectile: {fileID: 5552362797186324757, guid: ab061fb9cf7d81e4da3f9110bf2dd4ea, type: 3}
+  projectile: {fileID: 5654664293995324674, guid: 340971ca4d662bc4bb5e648833c94f7d, type: 3}
   shotPoint: {fileID: 5644029052568913060}
   startTimeBTWShots: 0.25
 --- !u!1 &5278976977336758318
@@ -255,7 +255,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed: 5
-  heath: 10
   text: {fileID: 0}
   maxTime: 5
 --- !u!61 &5278976977336758311
