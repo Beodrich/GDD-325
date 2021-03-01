@@ -372,6 +372,7 @@ GameObject:
   - component: {fileID: 343065553}
   - component: {fileID: 343065552}
   - component: {fileID: 343065551}
+  - component: {fileID: 343065555}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -464,6 +465,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &343065555
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 343065550}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 595ecc12d2b837b4793c94bccf7d77b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &374016374
 GameObject:
   m_ObjectHideFlags: 0
@@ -625,7 +638,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 595386887}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 343065555}
+        m_TargetAssemblyTypeName: TitleMenu, Assembly-CSharp
+        m_MethodName: QuitGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &595386887
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -746,7 +771,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 606534864}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 343065555}
+        m_TargetAssemblyTypeName: TitleMenu, Assembly-CSharp
+        m_MethodName: PlayGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &606534864
 MonoBehaviour:
   m_ObjectHideFlags: 0
