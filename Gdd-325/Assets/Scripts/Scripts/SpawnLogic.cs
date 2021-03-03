@@ -78,6 +78,7 @@ public class SpawnLogic : MonoBehaviour
     }
     void WaveCompleted() {
         //begin a new round
+        //if we want to add a shop system we might want to do it in this function
         Debug.Log("Wave Completed!");
 
         state = SpawnState.COUNTING;
