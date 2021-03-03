@@ -45,23 +45,24 @@ public class Golem : MonoBehaviour
         }
     }
 
+    // Calling Damage over time and assigning amount of damage and how long it burns for
     public void DamageOverTime(float damage, float damageTime)
     {
         StartCoroutine(DamageOverTimeCoroutine(damage, damageTime));
     }
 
+    // Damage Over Time
     IEnumerator DamageOverTimeCoroutine(float damageAmount, float time)
     {
         float amountDamaged = 0;
         float damagePerLoop = damageAmount / time;
         while(amountDamaged < damageAmount)
         {
-
+            health -= damagePerLoop;
+            Debug.Log(health.ToString());
+            amountDamaged += damagePerLoop;
             yield return new WaitForSeconds(1f);
         }
-
-
-        
     }
 
 
