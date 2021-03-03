@@ -23,28 +23,35 @@ public class PlayerController : MonoBehaviour
     private const string Monke_FR = "Monke_FR";
     private const string Monke_L = "Monke_L";
     private const string Monke_R = "Monke_Right";
-
-    // spell stuff
-    //private Spells mySpell;
-
-    //public Rigidbody2D fireball;
-    //public float fireballSpeed = 8f;
-    //int timer = 175;
     
     //heath
-    public static float health=10f;
+    public float health=10f;
     public Text text;
     private bool canTakeDamage = true;
     private float timeUntilCanTakeDamge = 0f;
     public float maxTime = 5f;
     private Camera camera;
+
+    // spell
+    //[SerializeField]
+    private bool fire;
+
+    public bool isFire()
+    {
+        return fire;
+    }
+
+    public void setFire(bool FIRE)
+    {
+        this.fire = FIRE;
+    }
+
     // Start is called before the first frame update
     void Start()
     {
         rb2D = GetComponent<Rigidbody2D>();
         animatorLogic = GetComponent<AnimatorLogic>();
         camera = GameObject.Find("Main Camera").GetComponent<Camera>();
-        //mySpell = GetComponent<Spells>();
         //text.text= "Current HP is at :" + heath.ToString();
     }
 

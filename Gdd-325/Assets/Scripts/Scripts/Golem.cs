@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using static Spells;
 
 public class Golem : MonoBehaviour
 {
@@ -9,10 +8,15 @@ public class Golem : MonoBehaviour
     [SerializeField] private float attackDamage;
     [SerializeField] private float health = 10.0f;
     [SerializeField] private Sprite[] golemState;
-   
-    //public Spells spells;
+    private PlayerController player;
+    public float fireDamage;
+    public float fireDuration;
 
-   
+
+    private void Start()
+    {
+        player = GameObject.Find("MonkE").GetComponent<PlayerController>();
+    }
     public Sprite getGolemState()
     {
         return golemState[0];
@@ -35,11 +39,32 @@ public class Golem : MonoBehaviour
 
     public void TakeDamage()
     {
-        if(fire)
+        if(player.isFire())
         {
-            this.health -= 5;
+            DamageOverTime(fireDamage,fireDuration);
         }
     }
+
+    public void DamageOverTime(float damage, float damageTime)
+    {
+        StartCoroutine(DamageOverTimeCoroutine(damage, damageTime));
+    }
+
+    IEnumerator DamageOverTimeCoroutine(float damageAmount, float time)
+    {
+        float amountDamaged = 0;
+        float damagePerLoop = damageAmount / time;
+        while(amountDamaged < damageAmount)
+        {
+
+            yield return new WaitForSeconds(1f);
+        }
+
+
+        
+    }
+
+
 /*    public void TakeDamage(SpellState spell)
     {
         switch (spell) {
@@ -64,6 +89,6 @@ public class Golem : MonoBehaviour
 
     public void PlayerDamaged()
     {
-        PlayerController.health -= 10;
+        player.health -= 10;
     }
 }
