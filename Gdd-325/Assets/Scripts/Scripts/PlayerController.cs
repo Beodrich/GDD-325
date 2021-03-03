@@ -26,7 +26,7 @@ public class PlayerController : MonoBehaviour
     
     //heath
     public float health=10f;
-    public Text text;
+    [SerializeField]private Text healthText;
     private bool canTakeDamage = true;
     private float timeUntilCanTakeDamge = 0f;
     public float maxTime = 5f;
@@ -52,7 +52,7 @@ public class PlayerController : MonoBehaviour
         rb2D = GetComponent<Rigidbody2D>();
         animatorLogic = GetComponent<AnimatorLogic>();
         camera = GameObject.Find("Main Camera").GetComponent<Camera>();
-        //text.text= "Current HP is at :" + heath.ToString();
+        healthText.text= "Current HP is at :" + health.ToString();
     }
 
     // Update is called once per frame
@@ -181,7 +181,7 @@ public class PlayerController : MonoBehaviour
             health -= 1;
             canTakeDamage = false;
         }
-        text.text = "Current HP is at :"+ health.ToString();
+        healthText.text = "Current HP is at :"+ health.ToString();
         if (health <= 0) {
             Debug.Log("You are dead");
         }

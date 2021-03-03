@@ -28,7 +28,7 @@ public class SpawnLogic : MonoBehaviour
 
     private float searchCountDown=1f;
     private SpawnState state = SpawnState.COUNTING;
-    public Text text;
+   [SerializeField] private Text waveNameText;
 
     // Start is called before the first frame update
     void Start()
@@ -47,7 +47,7 @@ public class SpawnLogic : MonoBehaviour
     {
         //FOR DEBUG ONLY- GET RID OF THIS LINE IN FINAL BUILD
        // Debug.Log("There are " + GameObject.FindGameObjectsWithTag("enemy").Length + " golems left in the current wave ");
-        text.text = this.waves[nextWave].name;
+        waveNameText.text = this.waves[nextWave].name;
         if (state == SpawnState.WAITING) {
             //check if enemies are still alive
             if (!EnemyIsAlive())
