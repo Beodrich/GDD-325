@@ -1428,11 +1428,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2729049941047798196, guid: d0ae4664e91e6cf489cee704caae8fa9, type: 3}
       propertyPath: waves.Array.data[0].name
-      value: 'Shooting Golems '
+      value: Normal Golems
       objectReference: {fileID: 0}
     - target: {fileID: 2729049941047798196, guid: d0ae4664e91e6cf489cee704caae8fa9, type: 3}
       propertyPath: waves.Array.data[0].rate
-      value: 1.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2729049941047798196, guid: d0ae4664e91e6cf489cee704caae8fa9, type: 3}
       propertyPath: waves.Array.data[1].name
@@ -1444,11 +1444,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2729049941047798196, guid: d0ae4664e91e6cf489cee704caae8fa9, type: 3}
       propertyPath: waves.Array.data[2].name
-      value: Normal Golems
+      value: 'Shooting Golems '
       objectReference: {fileID: 0}
     - target: {fileID: 2729049941047798196, guid: d0ae4664e91e6cf489cee704caae8fa9, type: 3}
       propertyPath: waves.Array.data[2].rate
-      value: 1
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 2729049941047798196, guid: d0ae4664e91e6cf489cee704caae8fa9, type: 3}
       propertyPath: spawnPoints.Array.data[0]
@@ -1476,12 +1476,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2729049941047798196, guid: d0ae4664e91e6cf489cee704caae8fa9, type: 3}
       propertyPath: waves.Array.data[0].count
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2729049941047798196, guid: d0ae4664e91e6cf489cee704caae8fa9, type: 3}
       propertyPath: waves.Array.data[0].enemy
       value: 
-      objectReference: {fileID: 1936634236}
+      objectReference: {fileID: 1580444126}
     - target: {fileID: 2729049941047798196, guid: d0ae4664e91e6cf489cee704caae8fa9, type: 3}
       propertyPath: waves.Array.data[1].count
       value: 3
@@ -1492,12 +1492,12 @@ PrefabInstance:
       objectReference: {fileID: 459279308}
     - target: {fileID: 2729049941047798196, guid: d0ae4664e91e6cf489cee704caae8fa9, type: 3}
       propertyPath: waves.Array.data[2].count
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 2729049941047798196, guid: d0ae4664e91e6cf489cee704caae8fa9, type: 3}
       propertyPath: waves.Array.data[2].enemy
       value: 
-      objectReference: {fileID: 1580444126}
+      objectReference: {fileID: 1936634236}
     - target: {fileID: 2729049941047798197, guid: d0ae4664e91e6cf489cee704caae8fa9, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -2150,15 +2150,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5278976977336758305, guid: a3efbba7d81282f49bef76e2f718d23f, type: 3}
       propertyPath: m_Color.b
-      value: 0.8773585
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5278976977336758305, guid: a3efbba7d81282f49bef76e2f718d23f, type: 3}
       propertyPath: m_Color.g
-      value: 0.030276505
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5278976977336758305, guid: a3efbba7d81282f49bef76e2f718d23f, type: 3}
       propertyPath: m_Color.r
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5278976977336758311, guid: a3efbba7d81282f49bef76e2f718d23f, type: 3}
       propertyPath: m_IsTrigger
