@@ -65,7 +65,11 @@ public class PlayerController : MonoBehaviour
         var mousePos = Input.mousePosition;
        // var charPos = Camera.WorldToScreenPoint((Vector3)this.gameObject.transform.position);
 
-        ChangeAnimation(mousePos);
+        if (PauseMenu.GameIsPaused == false)
+        {
+            ChangeAnimation(mousePos);
+        }
+        
 
         //transform.Translate(movement * movementSpeed * Time.deltaTime);
        /* timer += 1;
