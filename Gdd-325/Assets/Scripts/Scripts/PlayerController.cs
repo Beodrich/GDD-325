@@ -34,7 +34,7 @@ public class PlayerController : MonoBehaviour
 
     // spell
     //[SerializeField]
-    private bool fire;
+    private bool fire = true;
 
     public bool isFire()
     {
