@@ -23,7 +23,22 @@ public class PlayerController : MonoBehaviour
     private const string Monke_FR = "Monke_FR";
     private const string Monke_L = "Monke_L";
     private const string Monke_R = "Monke_Right";
-    
+    //attack animations
+    private const string Monke_BA = "MonkE_BackAttack";
+    private const string Monke_BLA = "MonkE_BackLeftAttack";
+    private const string Monke_BRA = "MonkE_BackRightAttack";
+    private const string Monke_FA = "MonkE_FrontAttack";
+    private const string Monke_FLA = "MonkE_FrontLeftAttack";
+    private const string Monke_FRA = "MonkE_FrontRightAttack";
+    private const string Monke_LA = "MonkE_LeftAttack";
+    private const string Monke_RA = "MonkE_RightAttack";
+
+
+
+
+
+
+
     //heath
     public float health=10f;
     [SerializeField]private Text healthText;
@@ -79,7 +94,7 @@ public class PlayerController : MonoBehaviour
             timer = 0;
         }*/
         //invisibility frame timer
-        Debug.Log("Can Take Damage: " + canTakeDamage);
+        //Debug.Log("Can Take Damage: " + canTakeDamage);
         if (canTakeDamage == false)
         {
             if (timeUntilCanTakeDamge >= maxTime)
@@ -99,8 +114,8 @@ public class PlayerController : MonoBehaviour
         var player= camera.WorldToScreenPoint(gameObject.transform.position);
         var playerDirection = mousePos - (Vector2)player;
         playerDirection = playerDirection.normalized;
-        Debug.Log(playerDirection);
-        Debug.Log("In the if statment");
+        //Debug.Log(playerDirection);
+        //Debug.Log("In the if statment");
         //Vector2 movement = new Vector2(h, v);
         //up direction
         /*if (playerDirection.x == 0 && playerDirection.y == 1.0 || playerDirection.x == -0.1f && playerDirection.y == 1.0f) {
@@ -123,47 +138,110 @@ public class PlayerController : MonoBehaviour
 
         if (playerDirection.x <= -0.9f)
         {
-            animatorLogic.ChangeAnimationState(Monke_L);
+            if (!WeaponWand.isShoot)
+            {
+
+
+                animatorLogic.ChangeAnimationState(Monke_L);
+            }
+            else
+            {
+                animatorLogic.ChangeAnimationState(Monke_LA);
+
+
+            }
 
         }
         else if (playerDirection.x >= 0.9f)
         {
-            animatorLogic.ChangeAnimationState(Monke_R);
+            if (!WeaponWand.isShoot)
+            {
+                animatorLogic.ChangeAnimationState(Monke_R);
+            }
+            else
+            {
+                animatorLogic.ChangeAnimationState(Monke_RA);
+
+            }
 
         }
         else if (playerDirection.y >= 0.9f)
         {
-            animatorLogic.ChangeAnimationState(Monke_B);
+            if (!WeaponWand.isShoot)
+            {
+                animatorLogic.ChangeAnimationState(Monke_B);
+            }
+            else
+            {
+                animatorLogic.ChangeAnimationState(Monke_BA);
+            }
 
         }
-       else if (playerDirection.y <=-0.9f)
+        else if (playerDirection.y <= -0.9f)
         {
-            animatorLogic.ChangeAnimationState(Monke_F);
+            if (!WeaponWand.isShoot)
+            {
+                animatorLogic.ChangeAnimationState(Monke_F);
+            }
+            else
+            {
+
+                animatorLogic.ChangeAnimationState(Monke_LA);
+            }
 
         }
 
 
         else if (playerDirection.y >= 0.5f && playerDirection.x <= -0.5f)
         {
-            animatorLogic.ChangeAnimationState(Monke_BL);
-            Debug.Log("In the Back left thing");
+            if (!WeaponWand.isShoot)
+            {
+                animatorLogic.ChangeAnimationState(Monke_BL);
+            }
+            else
+            {
+                animatorLogic.ChangeAnimationState(Monke_BLA);
+
+            }
         }
-        else if (playerDirection.y >= 0.5f && playerDirection.x >=0.5f)
+
+        else if (playerDirection.y >= 0.5f && playerDirection.x >= 0.5f)
         {
-            animatorLogic.ChangeAnimationState(Monke_BR);
-            Debug.Log("In the Back right");
+            if (!WeaponWand.isShoot)
+            {
+                animatorLogic.ChangeAnimationState(Monke_BR);
+            }
+            else {
+
+                animatorLogic.ChangeAnimationState(Monke_BRA);
+            }
+
         }
         else if (playerDirection.y <= -0.5f && playerDirection.x <= -0.5f)
         {
-            animatorLogic.ChangeAnimationState(Monke_FL);
-            Debug.Log("In the front left");
+            if (!WeaponWand.isShoot)
+            {
+                animatorLogic.ChangeAnimationState(Monke_FL);
+            }
+            else {
+
+                animatorLogic.ChangeAnimationState(Monke_FLA);
+            }
+
         }
         else if (playerDirection.y <= -0.5f && playerDirection.x >= 0.5f)
         {
-            animatorLogic.ChangeAnimationState(Monke_FR);
-            Debug.Log("In the front right thing");
+            if (!WeaponWand.isShoot)
+            {
+                animatorLogic.ChangeAnimationState(Monke_FR);
+            }
+            else {
+                animatorLogic.ChangeAnimationState(Monke_FRA);
+            
+            }
         }
-        else { 
+        else
+        {
             //stop 
         }
 

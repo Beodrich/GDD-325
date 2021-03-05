@@ -8,12 +8,13 @@ public class WeaponWand : MonoBehaviour
 
     public GameObject projectile;
     public Transform shotPoint;
-
+    public static bool isShoot = false;
     private float timeBTWShots;
     public float startTimeBTWShots = 0.25f;
 
     void Update()
     {
+        Debug.Log(isShoot);
         Vector3 difference = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
         float rotZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.Euler(0f, 0f, rotZ + offset);
@@ -24,6 +25,9 @@ public class WeaponWand : MonoBehaviour
             {
                 Instantiate(projectile, shotPoint.position, transform.rotation);
                 timeBTWShots = startTimeBTWShots;
+                isShoot = true;
+                StartCoroutine(WaitForAttackAnimation());
+                
             }
         }
         else
@@ -32,5 +36,10 @@ public class WeaponWand : MonoBehaviour
         }
 
        
+    }
+    IEnumerator WaitForAttackAnimation() {
+        yield return new WaitForSeconds(3f);
+        isShoot = false;
+    
     }
 }
