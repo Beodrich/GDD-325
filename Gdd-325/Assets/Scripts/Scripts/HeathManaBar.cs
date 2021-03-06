@@ -5,22 +5,27 @@ using UnityEngine.UI;
 public class HeathManaBar : MonoBehaviour
 {
     private PlayerController player;
+    private WeaponWand wand;
     public Image lifeBar;
-    public Image manaBar;
+    public static Image manaBar;
     public Text lifeText;
     public Text manaText;
 
-    private float mana;//change were we get this variable 
+    private static float mana;//change were we get this variable 
     private float maxHeath = 10;
 
     private static float currentLife;
-    private float currentMana;
+    private static float currentMana;
     private float calculateLife;
     // Start is called before the first frame update
     void Start()
     {
         player = GameObject.Find("MonkE").GetComponent<PlayerController>();
+        wand = GameObject.Find("FireWand").GetComponent<WeaponWand>();
+        manaBar = GameObject.Find("manaImage").GetComponent<Image>();
         currentLife = player.health;
+        mana = WeaponWand.Mana;
+        currentMana = mana;
     }
 
     // Update is called once per frame
@@ -38,12 +43,18 @@ public class HeathManaBar : MonoBehaviour
         if (currentMana < 0) {
             currentMana = 0;//reset it to 0
         }
-        manaText.text = currentMana.ToString();
+        manaText.text = "" + (int)currentMana;
+       
+
     }
     public static void Damage(float damage)
     {
 
         currentLife -= damage;
 
+    }
+    public static void reduceMana(float m) {
+        currentMana -= m;
+        manaBar.fillAmount -= m / mana;
     }
 }

@@ -11,7 +11,7 @@ public class WeaponWand : MonoBehaviour
     public static bool isShoot = false;
     private float timeBTWShots;
     public float startTimeBTWShots = 0.25f;
-
+    public static float Mana = 10f;
     void Update()
     {
         Debug.Log(isShoot);
@@ -21,9 +21,11 @@ public class WeaponWand : MonoBehaviour
 
         if(timeBTWShots <= 0)
         {
-            if (Input.GetMouseButtonDown(0))
+            if (Input.GetMouseButtonDown(0)&& Mana>0)
             {
                 Instantiate(projectile, shotPoint.position, transform.rotation);
+                Mana -= 1;
+                HeathManaBar.reduceMana(1);
                 timeBTWShots = startTimeBTWShots;
                 isShoot = true;
                 StartCoroutine(WaitForAttackAnimation());
@@ -41,5 +43,8 @@ public class WeaponWand : MonoBehaviour
         yield return new WaitForSeconds(3f);
         isShoot = false;
     
+    }
+    public void updateMana(float amount) {
+        Mana -= amount;
     }
 }

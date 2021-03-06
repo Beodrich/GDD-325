@@ -192,7 +192,7 @@ GameObject:
   - component: {fileID: 69619188}
   - component: {fileID: 69619189}
   m_Layer: 5
-  m_Name: Image
+  m_Name: manaImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -245,11 +245,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
+  m_Sprite: {fileID: -542107932812136220, guid: 5b9bb1ec05233d34695d43f440fa519e, type: 3}
+  m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
-  m_FillMethod: 4
+  m_FillMethod: 0
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
@@ -1024,11 +1024,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4212257572519284717, guid: bb19457e7eb5aba4ba9c379659960c4e, type: 3}
       propertyPath: retreatDistance
-      value: 10
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4212257572519284717, guid: bb19457e7eb5aba4ba9c379659960c4e, type: 3}
       propertyPath: stoppingDistance
-      value: 10
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4212257572519284717, guid: bb19457e7eb5aba4ba9c379659960c4e, type: 3}
       propertyPath: startTimeBtwShots
@@ -1814,19 +1814,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2729049941047798196, guid: d0ae4664e91e6cf489cee704caae8fa9, type: 3}
       propertyPath: waves.Array.data[0].name
-      value: Normal Golems
-      objectReference: {fileID: 0}
-    - target: {fileID: 2729049941047798196, guid: d0ae4664e91e6cf489cee704caae8fa9, type: 3}
-      propertyPath: waves.Array.data[0].rate
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2729049941047798196, guid: d0ae4664e91e6cf489cee704caae8fa9, type: 3}
-      propertyPath: waves.Array.data[1].name
       value: 'Shooting Golems '
       objectReference: {fileID: 0}
     - target: {fileID: 2729049941047798196, guid: d0ae4664e91e6cf489cee704caae8fa9, type: 3}
-      propertyPath: waves.Array.data[1].rate
+      propertyPath: waves.Array.data[0].rate
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2729049941047798196, guid: d0ae4664e91e6cf489cee704caae8fa9, type: 3}
+      propertyPath: waves.Array.data[1].name
+      value: Normal Golems
+      objectReference: {fileID: 0}
+    - target: {fileID: 2729049941047798196, guid: d0ae4664e91e6cf489cee704caae8fa9, type: 3}
+      propertyPath: waves.Array.data[1].rate
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2729049941047798196, guid: d0ae4664e91e6cf489cee704caae8fa9, type: 3}
       propertyPath: waves.Array.data[2].name
@@ -1862,20 +1862,20 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2729049941047798196, guid: d0ae4664e91e6cf489cee704caae8fa9, type: 3}
       propertyPath: waves.Array.data[0].count
-      value: 1000
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2729049941047798196, guid: d0ae4664e91e6cf489cee704caae8fa9, type: 3}
       propertyPath: waves.Array.data[0].enemy
       value: 
-      objectReference: {fileID: 1580444126}
+      objectReference: {fileID: 1936634236}
     - target: {fileID: 2729049941047798196, guid: d0ae4664e91e6cf489cee704caae8fa9, type: 3}
       propertyPath: waves.Array.data[1].count
-      value: 10
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 2729049941047798196, guid: d0ae4664e91e6cf489cee704caae8fa9, type: 3}
       propertyPath: waves.Array.data[1].enemy
       value: 
-      objectReference: {fileID: 1936634236}
+      objectReference: {fileID: 1580444126}
     - target: {fileID: 2729049941047798196, guid: d0ae4664e91e6cf489cee704caae8fa9, type: 3}
       propertyPath: waves.Array.data[2].count
       value: 3
@@ -2362,7 +2362,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lifeBar: {fileID: 321085358}
-  manaBar: {fileID: 69619189}
   lifeText: {fileID: 992793850}
   manaText: {fileID: 345806582}
 --- !u!1 &1794644852
@@ -2499,7 +2498,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!114 &1936634239
 MonoBehaviour:
   m_ObjectHideFlags: 0
