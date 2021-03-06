@@ -12,6 +12,9 @@ public class Golem : MonoBehaviour
     public float fireDamage;
     public float fireDuration;
 
+    //public float iceDuration;
+    public float iceSlowed;
+
 
     private void Start()
     {
@@ -41,16 +44,23 @@ public class Golem : MonoBehaviour
     {
         if(player.isFire())
         {
+            health -= 2;
             DamageOverTime(fireDamage,fireDuration);
+        }
+        if (player.isIce())
+        {
+            health -= 3;
+            SlowGolem(iceSlowed);
         }
     }
 
+    // FIRE
     // Calling Damage over time and assigning amount of damage and how long it burns for
     public void DamageOverTime(float damage, float damageTime)
     {
         StartCoroutine(DamageOverTimeCoroutine(damage, damageTime));
     }
-
+    //FIRE
     // Damage Over Time
     IEnumerator DamageOverTimeCoroutine(float damageAmount, float time)
     {
@@ -62,6 +72,16 @@ public class Golem : MonoBehaviour
             Debug.Log(health.ToString());
             amountDamaged += damagePerLoop;
             yield return new WaitForSeconds(1f);
+        }
+    }
+    //ICE
+    // Calling Slow Golem and assigning time the golem is slowed for
+    public void SlowGolem(float slowAmount)
+    {
+        moveSpeed *= slowAmount;
+        if (moveSpeed <= 2.5f)
+        {
+            moveSpeed = 2.5f;
         }
     }
 

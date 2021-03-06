@@ -49,7 +49,10 @@ public class PlayerController : MonoBehaviour
 
     // spell
     //[SerializeField]
-    private bool fire = true;
+    private bool fire;
+    private bool ice;
+    private bool earth;
+    private bool wind;
 
     public bool isFire()
     {
@@ -60,6 +63,35 @@ public class PlayerController : MonoBehaviour
     {
         this.fire = FIRE;
     }
+    public bool isIce()
+    {
+        return ice;
+    }
+
+    public void setIce(bool ICE)
+    {
+        this.ice = ICE;
+    }
+    public bool isWind()
+    {
+        return wind;
+    }
+
+    public void setWind(bool WIND)
+    {
+        this.wind = WIND;
+    }
+    public bool isEarth()
+    {
+        return earth;
+    }
+
+    public void setEarth(bool EARTH)
+    {
+        this.earth = EARTH;
+    }
+
+
 
     // Start is called before the first frame update
     void Start()
@@ -67,7 +99,7 @@ public class PlayerController : MonoBehaviour
         rb2D = GetComponent<Rigidbody2D>();
         animatorLogic = GetComponent<AnimatorLogic>();
         camera = GameObject.Find("Main Camera").GetComponent<Camera>();
-        healthText.text= "Current HP is at :" + health.ToString();
+        //healthText.text= "Current HP is at :" + health.ToString();
     }
 
     // Update is called once per frame
