@@ -261,6 +261,7 @@ public class PlayerController : MonoBehaviour
         if (canTakeDamage)
         {
             health -= 1;
+            HeathManaBar.Damage(1);//update the heath bar
             canTakeDamage = false;
         }
         healthText.text = "Current HP is at :"+ health.ToString();
