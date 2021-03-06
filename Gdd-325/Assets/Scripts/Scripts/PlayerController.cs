@@ -46,7 +46,7 @@ public class PlayerController : MonoBehaviour
     private float timeUntilCanTakeDamge = 0f;
     public float maxTime = 5f;
     private Camera camera;
-
+   
     // spell
     //[SerializeField]
     private bool fire;
@@ -292,9 +292,13 @@ public class PlayerController : MonoBehaviour
     void TakeDamage() {
         if (canTakeDamage)
         {
-            health -= 1;
-            HeathManaBar.Damage(1);//update the heath bar
-            canTakeDamage = false;
+            
+            
+                health -= 1;
+                HeathManaBar.Damage(1);//update the heath bar
+                canTakeDamage = false;
+            
+            
         }
         healthText.text = "Current HP is at :"+ health.ToString();
         if (health <= 0) {
