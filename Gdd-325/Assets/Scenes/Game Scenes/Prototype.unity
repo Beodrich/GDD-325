@@ -1423,6 +1423,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 241302628}
     - target: {fileID: 2729049941047798196, guid: d0ae4664e91e6cf489cee704caae8fa9, type: 3}
+      propertyPath: waves.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2729049941047798196, guid: d0ae4664e91e6cf489cee704caae8fa9, type: 3}
       propertyPath: spawnPoints.Array.size
       value: 4
       objectReference: {fileID: 0}
@@ -1481,7 +1485,7 @@ PrefabInstance:
     - target: {fileID: 2729049941047798196, guid: d0ae4664e91e6cf489cee704caae8fa9, type: 3}
       propertyPath: waves.Array.data[0].enemy
       value: 
-      objectReference: {fileID: 1580444126}
+      objectReference: {fileID: 5259785711543859234, guid: b7bac0f4bfd6ace46bd343deef218775, type: 3}
     - target: {fileID: 2729049941047798196, guid: d0ae4664e91e6cf489cee704caae8fa9, type: 3}
       propertyPath: waves.Array.data[1].count
       value: 10
@@ -1720,11 +1724,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &1580444126 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5259785711543859234, guid: 0f1ada5e37928e9498a00cfee3c550e1, type: 3}
-  m_PrefabInstance: {fileID: 5259785712513618428}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1623033404
 PrefabInstance:
   m_ObjectHideFlags: 0
