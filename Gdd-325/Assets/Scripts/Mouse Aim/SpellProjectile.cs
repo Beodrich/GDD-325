@@ -8,6 +8,8 @@ public class SpellProjectile : MonoBehaviour
     public float lifeTime;
     public float distance;
     public LayerMask whatIsSolid;
+    private bool isHit;
+    private bool isNotHit;
 
     private Animator animator;
     
@@ -15,6 +17,8 @@ public class SpellProjectile : MonoBehaviour
     {
         animator = GetComponent<Animator>();
         Invoke("DestroySpell", lifeTime);
+        isHit = false;
+        isNotHit = true;
 
     }
 
@@ -24,21 +28,32 @@ public class SpellProjectile : MonoBehaviour
         if (hit.collider != null)
         {
             if(hit.collider.CompareTag("enemy"))
-            {
-                Debug.Log("Taking Damage");
-                hit.collider.GetComponent<Golem>().TakeDamage();
+            {  
+                if (isNotHit)
+                {
+                    Debug.Log("Taking Damage");
+                    animator.SetBool("Explosion", true);
+                    hit.collider.GetComponent<Golem>().TakeDamage();
+                    isHit = true;
+                    isNotHit = false;
+                }
+                else
+                {
+                    //animator.SetBool("Explosion", false);
+                }
             }
             //DestroySpell(hit.collider.GetComponent<Golem>().getPosition());
             DestroySpell();
         }
-        transform.Translate(Vector2.up* speed * Time.deltaTime);
+        if (!isHit)
+        {
+            transform.Translate(Vector2.up * speed * Time.deltaTime);
+        }
     }
-
+        
     void DestroySpell()
     {
-        //Instantiate(destroyEffect, transform.position, Quaternion.identity);
-        //this.transform.position = destroyPoint.position;
-        //animator.SetBool("Explode", true);
-        Destroy(gameObject);
+        Destroy(gameObject, 0.55f);
+        //animator.SetBool("Explosion", true);
     }
 }
