@@ -225,7 +225,7 @@ public class PlayerController : MonoBehaviour
             else
             {
 
-                animatorLogic.ChangeAnimationState(Monke_LA);
+                animatorLogic.ChangeAnimationState(Monke_FA);
             }
 
         }
