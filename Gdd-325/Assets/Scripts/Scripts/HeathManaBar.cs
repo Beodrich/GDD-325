@@ -15,7 +15,7 @@ public class HeathManaBar : MonoBehaviour
     private float maxHeath = 10;
 
     private static float currentLife;
-    private static float currentMana;
+    public static float currentMana;
     private float calculateLife;
     // Start is called before the first frame update
     void Start()
@@ -38,7 +38,7 @@ public class HeathManaBar : MonoBehaviour
         if (currentMana < mana) {
             manaBar.fillAmount = Mathf.MoveTowards(manaBar.fillAmount, 1f, Time.deltaTime * 0.01f);
             currentMana = Mathf.MoveTowards(currentMana / mana, 1f, Time.deltaTime * 0.01f)*mana;
-        
+            
         }
         if (currentMana < 0) {
             currentMana = 0;//reset it to 0

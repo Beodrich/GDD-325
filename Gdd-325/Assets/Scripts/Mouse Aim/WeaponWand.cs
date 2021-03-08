@@ -36,8 +36,9 @@ public class WeaponWand : MonoBehaviour
         {
             timeBTWShots -= Time.deltaTime;
         }
+        Mana = HeathManaBar.currentMana;
 
-       
+
     }
     IEnumerator WaitForAttackAnimation() {
         yield return new WaitForSeconds(3f);
