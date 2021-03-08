@@ -15,4 +15,9 @@ public class TitleMenu : MonoBehaviour
     {
         Application.Quit();
     }
+
+    public void LoadMenu()
+    {
+        SceneManager.LoadScene("TitleScene");
+    }
 }

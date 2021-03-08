@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+
 //game components for the game object to have
 [RequireComponent(typeof(Rigidbody2D))]
 [RequireComponent(typeof(AnimatorLogic))]
@@ -105,6 +107,11 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (health <= 0)
+        {
+            SceneManager.LoadScene("YouLose");
+        }
+
         h = Input.GetAxisRaw("Horizontal");
         v = Input.GetAxisRaw("Vertical");
         Vector2 movement = new Vector2(h, v);
