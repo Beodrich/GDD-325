@@ -81,6 +81,7 @@ GameObject:
   - component: {fileID: 5278976977336758311}
   - component: {fileID: 2556271149891266898}
   - component: {fileID: -5172666851828732762}
+  - component: {fileID: 7344305773908303544}
   m_Layer: 0
   m_Name: MonkE
   m_TagString: Player
@@ -278,6 +279,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26a08955171fa5a4ea09edbd9bfe10db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &7344305773908303544
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5278976977336758318}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2039c462651345a438fb9e6a75e60a91, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Firewand: {fileID: 656000341083130051}
+  Fire: {fileID: 0}
+  Icewand: {fileID: 3716214135970668919}
+  Ice: {fileID: 0}
 --- !u!1 &5512674645715056014
 GameObject:
   m_ObjectHideFlags: 0
