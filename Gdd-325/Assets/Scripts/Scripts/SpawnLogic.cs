@@ -28,6 +28,7 @@ public class SpawnLogic : MonoBehaviour
 
     private float searchCountDown=1f;
     private SpawnState state = SpawnState.COUNTING;
+    public static float countOfGolems;
    [SerializeField] private Text waveNameText;
     [SerializeField] private Text numOfGolemText;
 
@@ -40,6 +41,7 @@ public class SpawnLogic : MonoBehaviour
 
         }
         waveCountDown = timeBetweenWaves;
+        countOfGolems = this.waves[nextWave].count;
         
     }
 
@@ -49,7 +51,7 @@ public class SpawnLogic : MonoBehaviour
         //FOR DEBUG ONLY- GET RID OF THIS LINE IN FINAL BUILD
        // Debug.Log("There are " + GameObject.FindGameObjectsWithTag("enemy").Length + " golems left in the current wave ");
         waveNameText.text = "Current Wave: "+ this.waves[nextWave].name;
-        numOfGolemText.text =  this.waves[nextWave].count + " Golems";
+        numOfGolemText.text =  countOfGolems + " Golems";
         if (state == SpawnState.WAITING) {
             //check if enemies are still alive
             if (!EnemyIsAlive())
@@ -89,10 +91,12 @@ public class SpawnLogic : MonoBehaviour
         {
             nextWave = 0;
             Debug.Log("ALL WAVES COMPLETE! LOOPING");
+            countOfGolems = this.waves[nextWave].count;
         }
         else
         {
             nextWave++;
+            countOfGolems = this.waves[nextWave].count;
         }
     }
     bool EnemyIsAlive() {

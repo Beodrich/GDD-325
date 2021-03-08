@@ -32,6 +32,7 @@ public class Golem : MonoBehaviour
         {
             //Instantiate(deathEffect, transform.position, Quaternion.identity);
             Destroy(this.gameObject);
+            SpawnLogic.countOfGolems -= 1;
         }
     }
 
