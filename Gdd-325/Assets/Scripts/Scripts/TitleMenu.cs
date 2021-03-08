@@ -8,7 +8,7 @@ public class TitleMenu : MonoBehaviour
     public void PlayGame()
     {
         // loads the scene at index 1
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene("Game");
     }
 
     public void QuitGame()

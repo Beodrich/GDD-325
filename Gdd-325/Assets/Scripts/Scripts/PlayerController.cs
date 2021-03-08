@@ -43,7 +43,7 @@ public class PlayerController : MonoBehaviour
 
     //heath
     public float health=10f;
-    [SerializeField]private Text healthText;
+    //[SerializeField]private Text healthText;
     private bool canTakeDamage = true;
     private float timeUntilCanTakeDamge = 0f;
     public float maxTime = 5f;
@@ -307,7 +307,7 @@ public class PlayerController : MonoBehaviour
             
             
         }
-        healthText.text = "Current HP is at :"+ health.ToString();
+        //healthText.text = "Current HP is at :"+ health.ToString();
         if (health <= 0) {
             Debug.Log("You are dead");
         }

@@ -21,8 +21,9 @@ public class WeaponWand : MonoBehaviour
 
         if(timeBTWShots <= 0)
         {
-            if (Input.GetMouseButtonDown(0)&& Mana>0)
+            if (Input.GetMouseButtonDown(0)) //&& Mana>0)
             {
+                Debug.Log("Hello I am shooting");
                 Instantiate(projectile, shotPoint.position, transform.rotation);
                 Mana -= 1;
                 HeathManaBar.reduceMana(1);
