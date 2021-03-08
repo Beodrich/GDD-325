@@ -42,8 +42,13 @@ public class SpellProjectile : MonoBehaviour
                     //animator.SetBool("Explosion", false);
                 }
             }
+
+            if (hit.collider.CompareTag("wall"))
+            {
+                DestroySpell();
+            }
             //DestroySpell(hit.collider.GetComponent<Golem>().getPosition());
-            DestroySpell();
+            //DestroySpell();
         }
         if (!isHit)
         {
