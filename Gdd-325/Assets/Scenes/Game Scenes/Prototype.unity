@@ -503,7 +503,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -305.48325, y: 250}
+  m_AnchoredPosition: {x: -305.48325, y: 221.5}
   m_SizeDelta: {x: 265.0335, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &241302628
@@ -877,7 +877,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -305.48325, y: 281.2}
+  m_AnchoredPosition: {x: -305.48325, y: 250.9}
   m_SizeDelta: {x: 265.0335, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &381180248
@@ -2696,6 +2696,7 @@ MonoBehaviour:
   golemState: []
   fireDamage: 5
   fireDuration: 1
+  iceSlowed: 0
 --- !u!4 &1951428471 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5629556909283941815, guid: 373fcb3bcde2fb14c8b3ba515e8acc3e, type: 3}
