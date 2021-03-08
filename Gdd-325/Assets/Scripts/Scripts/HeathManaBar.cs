@@ -21,7 +21,7 @@ public class HeathManaBar : MonoBehaviour
     void Start()
     {
         player = GameObject.Find("MonkE").GetComponent<PlayerController>();
-        wand = GameObject.Find("FireWand").GetComponent<WeaponWand>();
+        //wand = GameObject.Find("FireWand").GetComponent<WeaponWand>();
         manaBar = GameObject.Find("manaImage").GetComponent<Image>();
         currentLife = player.health;
         mana = WeaponWand.Mana;
@@ -52,6 +52,9 @@ public class HeathManaBar : MonoBehaviour
 
         currentLife -= damage;
 
+    }
+    public static void restoreLife(float amount) {
+        currentLife += amount;
     }
     public static void reduceMana(float m) {
         currentMana -= m;
