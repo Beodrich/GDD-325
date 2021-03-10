@@ -9,6 +9,7 @@ public class TitleMenu : MonoBehaviour
     {
         // loads the scene at index 1
         SceneManager.LoadScene("Game");
+        PauseMenu.GameIsPaused = false;
     }
 
     public void QuitGame()

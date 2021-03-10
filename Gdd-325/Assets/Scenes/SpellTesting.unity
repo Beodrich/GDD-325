@@ -464,7 +464,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45e9b8bf7c45b1f42ba583ffb50c0f53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 5
   attackDamage: 5
   health: 10
   golemState: []
@@ -543,6 +542,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 720070061829446603, guid: a3efbba7d81282f49bef76e2f718d23f, type: 3}
+      propertyPath: projectile
+      value: 
+      objectReference: {fileID: 1552088827084958692, guid: 61d2dd5de0ce4d649a89a74d38bf0a58, type: 3}
     - target: {fileID: 5278976977336758304, guid: a3efbba7d81282f49bef76e2f718d23f, type: 3}
       propertyPath: m_RootOrder
       value: 5

@@ -1,10 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Pathfinding;
 
 public class Golem : MonoBehaviour
 {
-    [SerializeField] private float moveSpeed;
+    private AIPath golemPath;
     [SerializeField] private float attackDamage;
     [SerializeField] private float health = 10.0f;
     [SerializeField] private Sprite[] golemState;
@@ -13,12 +14,17 @@ public class Golem : MonoBehaviour
     public float fireDuration;
 
     //public float iceDuration;
-    public float iceSlowed;
+    public float iceSlowed = 0.5f;
+    private float initialIceTime = 0;
+    public float maxIceTime = 3;
+    private bool startIce = false;
 
 
     private void Start()
     {
         player = GameObject.Find("MonkE").GetComponent<PlayerController>();
+        //moveSpeed = GetComponent<AIPath>().maxSpeed;
+        golemPath = GetComponent<AIPath>();
     }
     public Sprite getGolemState()
     {
@@ -34,6 +40,12 @@ public class Golem : MonoBehaviour
             Destroy(this.gameObject);
             SpawnLogic.countOfGolems -= 1;
         }
+        if (startIce)
+        {
+            SlowGolem(iceSlowed, maxIceTime);
+        }
+
+
     }
 
     public Transform getPosition()
@@ -50,8 +62,10 @@ public class Golem : MonoBehaviour
         }
         if (player.isIce())
         {
+            Debug.Log("Slow!");
             health -= 3;
-            SlowGolem(iceSlowed);
+            startIce = true;
+            
         }
     }
 
@@ -77,12 +91,24 @@ public class Golem : MonoBehaviour
     }
     //ICE
     // Calling Slow Golem and assigning time the golem is slowed for
-    public void SlowGolem(float slowAmount)
+    public void SlowGolem(float slowAmount, float maxTime)
     {
-        moveSpeed *= slowAmount;
-        if (moveSpeed <= 2.5f)
+        Debug.Log(initialIceTime);
+
+        if (initialIceTime >= maxTime)
         {
-            moveSpeed = 2.5f;
+            initialIceTime = 0f;
+            golemPath.maxSpeed = 5;
+            startIce = false;
+        }
+        else
+        {
+            initialIceTime += Time.deltaTime;
+            golemPath.maxSpeed *= slowAmount;
+            if (golemPath.maxSpeed < 2.5f)
+            {
+                golemPath.maxSpeed = 2.5f;
+            }
         }
     }
 
