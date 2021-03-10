@@ -290,9 +290,9 @@ public class PlayerController : MonoBehaviour
         //function to figure out what animation to play 
 
     }
-    private void OnTriggerEnter2D(Collider2D collision)
+   private void OnCollisionEnter2D(Collision2D other)
     {
-        if (collision.tag=="enemy") {
+        if (other.gameObject.tag=="enemy") {
             TakeDamage();
         }
     }
