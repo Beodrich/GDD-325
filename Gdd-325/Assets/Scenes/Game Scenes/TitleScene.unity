@@ -738,6 +738,89 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 374016374}
   m_CullTransparentMesh: 1
+--- !u!1 &377825753
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 377825754}
+  - component: {fileID: 377825756}
+  - component: {fileID: 377825755}
+  m_Layer: 5
+  m_Name: Weapon Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &377825754
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 377825753}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 609414359}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 139.79999, y: -24.2136}
+  m_SizeDelta: {x: 279.6, y: 183.8131}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &377825755
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 377825753}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 14
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: "Spells\nFire Wand - This wand does damage over time plus an initial damage.
+    \nIce Wand - This wand slows its enemies for a short period of time plus initual
+    damage.\nWind Wand - This wand pushes away enemies with a gust of wind plus initual
+    damage.\nEarth Wand -This wand builds a wall for a short period to block enemies
+    and damages any enemy that runs collides with the wall."
+--- !u!222 &377825756
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 377825753}
+  m_CullTransparentMesh: 1
 --- !u!1 &595386884
 GameObject:
   m_ObjectHideFlags: 0
@@ -1110,8 +1193,9 @@ RectTransform:
   m_Children:
   - {fileID: 1707484827}
   - {fileID: 2032493813}
-  - {fileID: 827018034}
   - {fileID: 1560862132}
+  - {fileID: 377825754}
+  - {fileID: 827018034}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1431,11 +1515,11 @@ RectTransform:
   m_Children:
   - {fileID: 1007158948}
   m_Father: {fileID: 609414359}
-  m_RootOrder: 2
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 8.7, y: -78}
+  m_AnchoredPosition: {x: -77, y: -108}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &827018035
@@ -1909,12 +1993,12 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 609414359}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 10.4717, y: -9.8051}
-  m_SizeDelta: {x: 324.1695, y: 106.3898}
+  m_AnchoredPosition: {x: -158, y: -9.121597}
+  m_SizeDelta: {x: 214.7103, y: 153.6332}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1560862133
 MonoBehaviour:
@@ -1949,10 +2033,12 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Our Control Scheme is for movement you use the wasd keys. W for walking
-    up, A for walking left, S for walking down, and D for walking right. \n\nFor
-    Combat, you will use your mouse to shoot spells at golems, which is a point and
-    click scheme. "
+  m_Text: 'Basic Controls
+
+    Our Control Scheme is for movement you use the wasd
+    keys. W for walking up, A for walking left, S for walking down, and D for walking
+    right. For Combat, you will use your mouse to shoot spells at golems, which is
+    a point and click scheme. '
 --- !u!222 &1560862134
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2997,7 +3083,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 8.7, y: 79}
+  m_AnchoredPosition: {x: 8.7, y: 104}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2032493814
