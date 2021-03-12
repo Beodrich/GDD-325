@@ -44,7 +44,7 @@ public class HeathManaBar : MonoBehaviour
             currentMana = 0;//reset it to 0
         }
         manaText.text = "" + (int)currentMana;
-       
+        Debug.Log("The amount of actual mana left is " + WeaponWand.Mana + " the current amount of mana(mana bar) is " + currentMana);
 
     }
     public static void Damage(float damage)
