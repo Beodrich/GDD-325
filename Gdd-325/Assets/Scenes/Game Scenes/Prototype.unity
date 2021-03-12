@@ -776,13 +776,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45e9b8bf7c45b1f42ba583ffb50c0f53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 0
   attackDamage: 0
   health: 1
   golemState: []
   fireDamage: 0
   fireDuration: 0
   iceSlowed: 0
+  maxIceTime: 3
 --- !u!1 &345806581
 GameObject:
   m_ObjectHideFlags: 0
@@ -2048,27 +2048,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2729049941047798196, guid: d0ae4664e91e6cf489cee704caae8fa9, type: 3}
       propertyPath: waves.Array.data[0].name
-      value: 'Shooting Golems '
-      objectReference: {fileID: 0}
-    - target: {fileID: 2729049941047798196, guid: d0ae4664e91e6cf489cee704caae8fa9, type: 3}
-      propertyPath: waves.Array.data[0].rate
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 2729049941047798196, guid: d0ae4664e91e6cf489cee704caae8fa9, type: 3}
-      propertyPath: waves.Array.data[1].name
       value: Normal Golems
       objectReference: {fileID: 0}
     - target: {fileID: 2729049941047798196, guid: d0ae4664e91e6cf489cee704caae8fa9, type: 3}
-      propertyPath: waves.Array.data[1].rate
+      propertyPath: waves.Array.data[0].rate
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2729049941047798196, guid: d0ae4664e91e6cf489cee704caae8fa9, type: 3}
-      propertyPath: waves.Array.data[2].name
+      propertyPath: waves.Array.data[1].name
       value: Crawling Golems
       objectReference: {fileID: 0}
     - target: {fileID: 2729049941047798196, guid: d0ae4664e91e6cf489cee704caae8fa9, type: 3}
-      propertyPath: waves.Array.data[2].rate
+      propertyPath: waves.Array.data[1].rate
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2729049941047798196, guid: d0ae4664e91e6cf489cee704caae8fa9, type: 3}
+      propertyPath: waves.Array.data[2].name
+      value: 'Shooting Golems '
+      objectReference: {fileID: 0}
+    - target: {fileID: 2729049941047798196, guid: d0ae4664e91e6cf489cee704caae8fa9, type: 3}
+      propertyPath: waves.Array.data[2].rate
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2729049941047798196, guid: d0ae4664e91e6cf489cee704caae8fa9, type: 3}
       propertyPath: spawnPoints.Array.data[0]
@@ -2096,28 +2096,28 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2729049941047798196, guid: d0ae4664e91e6cf489cee704caae8fa9, type: 3}
       propertyPath: waves.Array.data[0].count
-      value: 2
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 2729049941047798196, guid: d0ae4664e91e6cf489cee704caae8fa9, type: 3}
       propertyPath: waves.Array.data[0].enemy
       value: 
-      objectReference: {fileID: 322326252}
+      objectReference: {fileID: 1580444126}
     - target: {fileID: 2729049941047798196, guid: d0ae4664e91e6cf489cee704caae8fa9, type: 3}
       propertyPath: waves.Array.data[1].count
-      value: 1000
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2729049941047798196, guid: d0ae4664e91e6cf489cee704caae8fa9, type: 3}
       propertyPath: waves.Array.data[1].enemy
       value: 
-      objectReference: {fileID: 1580444126}
+      objectReference: {fileID: 459279308}
     - target: {fileID: 2729049941047798196, guid: d0ae4664e91e6cf489cee704caae8fa9, type: 3}
       propertyPath: waves.Array.data[2].count
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2729049941047798196, guid: d0ae4664e91e6cf489cee704caae8fa9, type: 3}
       propertyPath: waves.Array.data[2].enemy
       value: 
-      objectReference: {fileID: 459279308}
+      objectReference: {fileID: 322326252}
     - target: {fileID: 2729049941047798197, guid: d0ae4664e91e6cf489cee704caae8fa9, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -2857,13 +2857,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45e9b8bf7c45b1f42ba583ffb50c0f53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 0
   attackDamage: 0
   health: 5
   golemState: []
   fireDamage: 5
   fireDuration: 1
   iceSlowed: 0
+  maxIceTime: 3
 --- !u!4 &1951428471 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5629556909283941815, guid: 373fcb3bcde2fb14c8b3ba515e8acc3e, type: 3}
