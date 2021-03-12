@@ -14,13 +14,15 @@ public class PlayerAimWeapon : MonoBehaviour
     }
     private void Update()
     {
-        Vector3 mousePos = new Vector2(Camera.main.ScreenToWorldPoint(Input.mousePosition).x,
+        if (!PauseMenu.GameIsPaused)
+        {
+            Vector3 mousePos = new Vector2(Camera.main.ScreenToWorldPoint(Input.mousePosition).x,
                                Camera.main.ScreenToWorldPoint(Input.mousePosition).y);
 
-        Vector3 aimDirection = (mousePos - transform.position).normalized;
-        float angle = Mathf.Atan2(aimDirection.y, aimDirection.x) * Mathf.Rad2Deg;
-        aimTransform.eulerAngles = new Vector3(0, 0, angle);
-
+            Vector3 aimDirection = (mousePos - transform.position).normalized;
+            float angle = Mathf.Atan2(aimDirection.y, aimDirection.x) * Mathf.Rad2Deg;
+            aimTransform.eulerAngles = new Vector3(0, 0, angle);
+        }
     }
 
         /*Vector3 localScale = Vector3.one;

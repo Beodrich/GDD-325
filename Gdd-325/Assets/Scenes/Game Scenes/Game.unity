@@ -130,6 +130,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1717193873917464829, guid: 3ee7e047c8add784b9625bb9020a9bbe, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2507443139553024147, guid: 3ee7e047c8add784b9625bb9020a9bbe, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -217,6 +221,18 @@ PrefabInstance:
     - target: {fileID: 2507443139553024175, guid: 3ee7e047c8add784b9625bb9020a9bbe, type: 3}
       propertyPath: m_Name
       value: PauseMenuCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 2507443139658022905, guid: 3ee7e047c8add784b9625bb9020a9bbe, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4686251717239335877, guid: 3ee7e047c8add784b9625bb9020a9bbe, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7239211387107367984, guid: 3ee7e047c8add784b9625bb9020a9bbe, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3ee7e047c8add784b9625bb9020a9bbe, type: 3}
