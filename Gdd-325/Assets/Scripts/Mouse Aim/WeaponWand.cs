@@ -5,7 +5,7 @@ using UnityEngine;
 public class WeaponWand : MonoBehaviour
 {
     public float offset;
-    [SerializeField] AudioSource fireShoot;
+    [SerializeField] AudioSource spellShoot;
     public GameObject projectile;
     public Transform shotPoint;
     public static bool isShoot = false;
@@ -33,7 +33,7 @@ public class WeaponWand : MonoBehaviour
                 timeBTWShots = startTimeBTWShots;
                 isShoot = true;
                 StartCoroutine(WaitForAttackAnimation());
-                fireShoot.Play();
+                spellShoot.Play();
                 
             }
         }
