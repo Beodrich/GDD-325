@@ -1,0 +1,468 @@
+fileFormatVersion: 2
+guid: 112800eee72f57044ae75016edd8b792
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -766611610353219198
+    second: walkMonkEFinal_F_0
+  - first:
+      213: 5253766110934873520
+    second: walkMonkEFinal_F_1
+  - first:
+      213: -4091482398221954944
+    second: walkMonkEFinal_F_2
+  - first:
+      213: 3586231421056501616
+    second: walkMonkEFinal_F_3
+  - first:
+      213: 6419608047749613753
+    second: walkMonkEFinal_F_4
+  - first:
+      213: -8475813634171566511
+    second: walkMonkEFinal_F_5
+  - first:
+      213: 864335307092642792
+    second: walkMonkEFinal_F_6
+  - first:
+      213: -745969051815916734
+    second: walkMonkEFinal_F_7
+  - first:
+      213: 3308794595854184840
+    second: walkMonkEFinal_F_8
+  - first:
+      213: -426626043439377431
+    second: walkMonkEFinal_F_9
+  - first:
+      213: -5485345920618438124
+    second: walkMonkEFinal_F_10
+  - first:
+      213: -1904588222688125837
+    second: walkMonkEFinal_F_11
+  - first:
+      213: 3494057431128289187
+    second: walkMonkEFinal_F_12
+  - first:
+      213: -7062102677872359654
+    second: walkMonkEFinal_F_13
+  - first:
+      213: 8786556836631192625
+    second: walkMonkEFinal_F_14
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: walkMonkEFinal_F_0
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 2732
+        width: 701
+        height: 1652
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 289c4345dc27c55f0800000000000000
+      internalID: -766611610353219198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walkMonkEFinal_F_1
+      rect:
+        serializedVersion: 2
+        x: 905
+        y: 2773
+        width: 702
+        height: 1584
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b53247317029e840800000000000000
+      internalID: 5253766110934873520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walkMonkEFinal_F_2
+      rect:
+        serializedVersion: 2
+        x: 1639
+        y: 2767
+        width: 709
+        height: 1566
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0809739bf622837c0800000000000000
+      internalID: -4091482398221954944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walkMonkEFinal_F_3
+      rect:
+        serializedVersion: 2
+        x: 2389
+        y: 2788
+        width: 694
+        height: 1522
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 077ca6e0a7ad4c130800000000000000
+      internalID: 3586231421056501616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walkMonkEFinal_F_4
+      rect:
+        serializedVersion: 2
+        x: 3110
+        y: 2794
+        width: 688
+        height: 1539
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b8ca53c187071950800000000000000
+      internalID: 6419608047749613753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walkMonkEFinal_F_5
+      rect:
+        serializedVersion: 2
+        x: 3851
+        y: 2784
+        width: 677
+        height: 1526
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1568ac0186cdf5a80800000000000000
+      internalID: -8475813634171566511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walkMonkEFinal_F_6
+      rect:
+        serializedVersion: 2
+        x: 4572
+        y: 2749
+        width: 674
+        height: 1591
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ebc512e16cbefb00800000000000000
+      internalID: 864335307092642792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walkMonkEFinal_F_7
+      rect:
+        serializedVersion: 2
+        x: 5319
+        y: 2758
+        width: 653
+        height: 1576
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24bc3158919c5a5f0800000000000000
+      internalID: -745969051815916734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walkMonkEFinal_F_8
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 1185
+        width: 659
+        height: 1523
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 881fe9877233bed20800000000000000
+      internalID: 3308794595854184840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walkMonkEFinal_F_9
+      rect:
+        serializedVersion: 2
+        x: 898
+        y: 1185
+        width: 650
+        height: 1526
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e39dd4bfd1541af0800000000000000
+      internalID: -426626043439377431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walkMonkEFinal_F_10
+      rect:
+        serializedVersion: 2
+        x: 1683
+        y: 1171
+        width: 656
+        height: 1502
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4126663a2f220e3b0800000000000000
+      internalID: -5485345920618438124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walkMonkEFinal_F_11
+      rect:
+        serializedVersion: 2
+        x: 2442
+        y: 1197
+        width: 661
+        height: 1476
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37c18473a1b8195e0800000000000000
+      internalID: -1904588222688125837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walkMonkEFinal_F_12
+      rect:
+        serializedVersion: 2
+        x: 3166
+        y: 1170
+        width: 653
+        height: 1474
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3af2737a8b26d7030800000000000000
+      internalID: 3494057431128289187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walkMonkEFinal_F_13
+      rect:
+        serializedVersion: 2
+        x: 3901
+        y: 1150
+        width: 662
+        height: 1494
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a174516f70f5efd90800000000000000
+      internalID: -7062102677872359654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walkMonkEFinal_F_14
+      rect:
+        serializedVersion: 2
+        x: 4668
+        y: 1156
+        width: 694
+        height: 1555
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 134ae26c3ee10f970800000000000000
+      internalID: 8786556836631192625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
