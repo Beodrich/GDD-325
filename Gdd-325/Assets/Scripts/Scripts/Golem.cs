@@ -8,6 +8,7 @@ public class Golem : MonoBehaviour
     private AIPath golemPath;
     [SerializeField] private float attackDamage;
     [SerializeField] private float health = 10.0f;
+    private float maxHeath;
     [SerializeField] private Sprite[] golemState;
     private PlayerController player;
     public float fireDamage;
@@ -18,13 +19,14 @@ public class Golem : MonoBehaviour
     private float initialIceTime = 0;
     public float maxIceTime = 3;
     private bool startIce = false;
-
+  
 
     private void Start()
     {
         player = GameObject.Find("MonkE").GetComponent<PlayerController>();
         //moveSpeed = GetComponent<AIPath>().maxSpeed;
         golemPath = GetComponent<AIPath>();
+       
     }
     public Sprite getGolemState()
     {
@@ -84,6 +86,8 @@ public class Golem : MonoBehaviour
         while(amountDamaged < damageAmount)
         {
             health -= damagePerLoop;
+            
+            
             Debug.Log(health.ToString());
             amountDamaged += damagePerLoop;
             yield return new WaitForSeconds(1f);
@@ -138,5 +142,8 @@ public class Golem : MonoBehaviour
     public void PlayerDamaged()
     {
         player.health -= 10;
+    }
+    public float getGolemHp() {
+        return health;
     }
 }
