@@ -11,7 +11,7 @@ public class WeaponWand : MonoBehaviour
     public static bool isShoot = false;
     private float timeBTWShots;
     public float startTimeBTWShots = 0.25f;
-    public static float Mana = 10f;
+    public static float Mana = 30f;
     void Update()
     {
         //Debug.Log(isShoot);

@@ -13,19 +13,21 @@ public class Golem : MonoBehaviour
     private PlayerController player;
     public float fireDamage;
     public float fireDuration;
-
+    public float golemInitFireDamage = 2f;
+    public float golemInitIceDamage = 4f;
     //public float iceDuration;
     public float iceSlowed = 0.5f;
     private float initialIceTime = 0;
     public float maxIceTime = 3;
     private bool startIce = false;
-  
+   
 
     private void Start()
     {
         player = GameObject.Find("MonkE").GetComponent<PlayerController>();
         //moveSpeed = GetComponent<AIPath>().maxSpeed;
         golemPath = GetComponent<AIPath>();
+        
        
     }
     public Sprite getGolemState()
@@ -59,13 +61,12 @@ public class Golem : MonoBehaviour
     {
         if(player.isFire())
         {
-            health -= 2;
+            health -= golemInitFireDamage;
             DamageOverTime(fireDamage,fireDuration);
         }
         if (player.isIce())
         {
-            Debug.Log("Slow!");
-            health -= 3;
+            health -= golemInitIceDamage;
             startIce = true;
             
         }
@@ -141,9 +142,17 @@ public class Golem : MonoBehaviour
 
     public void PlayerDamaged()
     {
-        player.health -= 10;
+        player.TakeDamage(attackDamage);
     }
     public float getGolemHp() {
         return health;
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Player") {
+            PlayerDamaged();
+        
+        
+        }
     }
 }

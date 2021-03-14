@@ -9,12 +9,16 @@ public class EnemyProjectile : MonoBehaviour
     private Transform player;
     private Vector2 target;
     private ShootingEnemy enemy;
+    private PlayerController playerController;
+    [SerializeField] private float shootDamage = 5;
     // Start is called before the first frame update
     void Start()
     {
         player = GameObject.Find("MonkE").transform;
         target = new Vector2(player.position.x, player.position.y);
         enemy = GameObject.Find("shooting enemy 1(Clone)").GetComponent<ShootingEnemy>();
+        playerController = GameObject.Find("MonkE").GetComponent<PlayerController>();
+
     }
 
     // Update is called once per frame
@@ -37,6 +41,7 @@ public class EnemyProjectile : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player")) {
+            playerController.TakeDamage(shootDamage);
             DestroyProjectile();
         }
     }

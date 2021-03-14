@@ -290,19 +290,14 @@ public class PlayerController : MonoBehaviour
         //function to figure out what animation to play 
 
     }
-   private void OnCollisionEnter2D(Collision2D other)
-    {
-        if (other.gameObject.tag=="enemy") {
-            TakeDamage();
-        }
-    }
-    void TakeDamage() {
+   
+    public void TakeDamage(float amount) {
         if (canTakeDamage)
         {
             
             
-                health -= 1;
-                HeathManaBar.Damage(1);//update the heath bar
+                health -= amount;
+                HeathManaBar.Damage(amount);//update the heath bar
                 canTakeDamage = false;
             
             
@@ -313,11 +308,5 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.gameObject.tag == "enemy")
-        {
-            TakeDamage();
-        }
-    }
+   
 }

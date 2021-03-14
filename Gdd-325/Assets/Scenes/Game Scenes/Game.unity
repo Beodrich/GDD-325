@@ -395,12 +395,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45e9b8bf7c45b1f42ba583ffb50c0f53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackDamage: 0
-  health: 5
+  attackDamage: 1
+  health: 10
   golemState: []
-  fireDamage: 0
-  fireDuration: 0
-  iceSlowed: 0
+  fireDamage: 5
+  fireDuration: 2
+  golemInitFireDamage: 2
+  golemInitIceDamage: 4
+  iceSlowed: 0.75
   maxIceTime: 3
 --- !u!114 &214378934
 MonoBehaviour:
@@ -1619,19 +1621,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2729049941047798196, guid: d0ae4664e91e6cf489cee704caae8fa9, type: 3}
       propertyPath: waves.Array.data[0].name
-      value: 'Shooting Golems '
-      objectReference: {fileID: 0}
-    - target: {fileID: 2729049941047798196, guid: d0ae4664e91e6cf489cee704caae8fa9, type: 3}
-      propertyPath: waves.Array.data[0].rate
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 2729049941047798196, guid: d0ae4664e91e6cf489cee704caae8fa9, type: 3}
-      propertyPath: waves.Array.data[1].name
       value: Crawling Golems
       objectReference: {fileID: 0}
     - target: {fileID: 2729049941047798196, guid: d0ae4664e91e6cf489cee704caae8fa9, type: 3}
-      propertyPath: waves.Array.data[1].rate
+      propertyPath: waves.Array.data[0].rate
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2729049941047798196, guid: d0ae4664e91e6cf489cee704caae8fa9, type: 3}
+      propertyPath: waves.Array.data[1].name
+      value: 'Shooting Golems '
+      objectReference: {fileID: 0}
+    - target: {fileID: 2729049941047798196, guid: d0ae4664e91e6cf489cee704caae8fa9, type: 3}
+      propertyPath: waves.Array.data[1].rate
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2729049941047798196, guid: d0ae4664e91e6cf489cee704caae8fa9, type: 3}
       propertyPath: waves.Array.data[2].name
@@ -1667,20 +1669,20 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2729049941047798196, guid: d0ae4664e91e6cf489cee704caae8fa9, type: 3}
       propertyPath: waves.Array.data[0].count
-      value: 2
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 2729049941047798196, guid: d0ae4664e91e6cf489cee704caae8fa9, type: 3}
       propertyPath: waves.Array.data[0].enemy
       value: 
-      objectReference: {fileID: 214378932}
+      objectReference: {fileID: 2061506954}
     - target: {fileID: 2729049941047798196, guid: d0ae4664e91e6cf489cee704caae8fa9, type: 3}
       propertyPath: waves.Array.data[1].count
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2729049941047798196, guid: d0ae4664e91e6cf489cee704caae8fa9, type: 3}
       propertyPath: waves.Array.data[1].enemy
       value: 
-      objectReference: {fileID: 2061506954}
+      objectReference: {fileID: 214378932}
     - target: {fileID: 2729049941047798196, guid: d0ae4664e91e6cf489cee704caae8fa9, type: 3}
       propertyPath: waves.Array.data[2].count
       value: 10
@@ -1897,8 +1899,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Sel: {fileID: 2035964324}
-  Min: {x: -35, y: -30}
-  Max: {x: 22, y: 27}
+  Min: {x: -17, y: -19.5}
+  Max: {x: 4.4, y: 17.5}
 --- !u!1001 &1210529417
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2125,7 +2127,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1768121403876751354, guid: 0f1ada5e37928e9498a00cfee3c550e1, type: 3}
       propertyPath: health
-      value: 5
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 1768121403876751354, guid: 0f1ada5e37928e9498a00cfee3c550e1, type: 3}
       propertyPath: iceSlowed
@@ -2137,11 +2139,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1768121403876751354, guid: 0f1ada5e37928e9498a00cfee3c550e1, type: 3}
       propertyPath: attackDamage
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1768121403876751354, guid: 0f1ada5e37928e9498a00cfee3c550e1, type: 3}
       propertyPath: fireDuration
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5136067518437835886, guid: 0f1ada5e37928e9498a00cfee3c550e1, type: 3}
       propertyPath: m_Simulated
@@ -2274,6 +2276,36 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1265374575}
   m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1971458113
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1971458114}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1971458114
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1971458113}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 21.1, y: -10.157408, z: -6.6170154}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1980764426
 GameObject:
@@ -2459,6 +2491,22 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1768121403876751354, guid: e5af84247acab834b987f38306537842, type: 3}
+      propertyPath: health
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1768121403876751354, guid: e5af84247acab834b987f38306537842, type: 3}
+      propertyPath: iceSlowed
+      value: 0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 1768121403876751354, guid: e5af84247acab834b987f38306537842, type: 3}
+      propertyPath: fireDamage
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1768121403876751354, guid: e5af84247acab834b987f38306537842, type: 3}
+      propertyPath: attackDamage
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1768121403876751354, guid: e5af84247acab834b987f38306537842, type: 3}
       propertyPath: fireDuration
       value: 2
       objectReference: {fileID: 0}
@@ -2518,6 +2566,10 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 2035964333}
+    - target: {fileID: 5259785711543859238, guid: e5af84247acab834b987f38306537842, type: 3}
+      propertyPath: maxSpeed
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e5af84247acab834b987f38306537842, type: 3}
 --- !u!4 &2061506954 stripped
@@ -2864,8 +2916,16 @@ PrefabInstance:
       value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5278976977336758317, guid: a3efbba7d81282f49bef76e2f718d23f, type: 3}
+      propertyPath: health
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 5278976977336758317, guid: a3efbba7d81282f49bef76e2f718d23f, type: 3}
       propertyPath: maxTime
-      value: 4
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5278976977336758317, guid: a3efbba7d81282f49bef76e2f718d23f, type: 3}
+      propertyPath: movementSpeed
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5278976977336758318, guid: a3efbba7d81282f49bef76e2f718d23f, type: 3}
       propertyPath: m_Name
