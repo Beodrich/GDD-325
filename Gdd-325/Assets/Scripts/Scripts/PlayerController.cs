@@ -153,26 +153,7 @@ public class PlayerController : MonoBehaviour
         var player= camera.WorldToScreenPoint(gameObject.transform.position);
         var playerDirection = mousePos - (Vector2)player;
         playerDirection = playerDirection.normalized;
-        //Debug.Log(playerDirection);
-        //Debug.Log("In the if statment");
-        //Vector2 movement = new Vector2(h, v);
-        //up direction
-        /*if (playerDirection.x == 0 && playerDirection.y == 1.0 || playerDirection.x == -0.1f && playerDirection.y == 1.0f) {
-            animatorLogic.ChangeAnimationState(Monke_B);
-            Debug.Log("Monke going up");
-        
-        
-        
-        }
-        //down
-        if (playerDirection.x == 0 && playerDirection.y == -1.0 )
-        {
-            animatorLogic.ChangeAnimationState(Monke_F);
-            Debug.Log("Monke going Down");
-
-
-
-        }*/
+     
 
 
         if (playerDirection.x <= -0.9f)
