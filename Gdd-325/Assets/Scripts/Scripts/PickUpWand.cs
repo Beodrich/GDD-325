@@ -8,8 +8,10 @@ public class PickUpWand : MonoBehaviour
     public GameObject Fire;
     public GameObject Icewand;
     public GameObject Ice;
-    //public GameObject Windwand;
-    //public GameObject Earthwand;
+    public GameObject Windwand;
+    public GameObject Wind;
+    public GameObject Earthwand;
+    public GameObject Earth;
 
     private PlayerController player;
 
@@ -28,8 +30,14 @@ public class PickUpWand : MonoBehaviour
             Fire.SetActive(false);
             Ice.SetActive(true);
             Icewand.SetActive(false);
-            player.setFire(true);
-            player.setIce(false);
+            Windwand.SetActive(false);
+            Wind.SetActive(true);
+            Earthwand.SetActive(false);
+            Earth.SetActive(true);
+            player.setFire(false);
+            player.setIce(true);
+            player.setWind(false);
+            player.setEarth(false);
         }
         if (col.gameObject == Ice)
         {
@@ -37,9 +45,44 @@ public class PickUpWand : MonoBehaviour
             Icewand.SetActive(true);
             Fire.SetActive(true);
             Firewand.SetActive(false);
+            Windwand.SetActive(false);
+            Wind.SetActive(true);
+            Earthwand.SetActive(false);
+            Earth.SetActive(true);
             player.setFire(false);
             player.setIce(true);
+            player.setWind(false);
+            player.setEarth(false);
         }
-        // same for wind and earth wand
+        if(col.gameObject == Wind)
+        {
+            Ice.SetActive(true);
+            Icewand.SetActive(false);
+            Fire.SetActive(true);
+            Firewand.SetActive(false);
+            Windwand.SetActive(true);
+            Wind.SetActive(false);
+            Earthwand.SetActive(false);
+            Earth.SetActive(true);
+            player.setFire(false);
+            player.setIce(false);
+            player.setWind(true);
+            player.setEarth(false);
+        }
+        if(col.gameObject == Earth)
+        {
+            Ice.SetActive(true);
+            Icewand.SetActive(false);
+            Fire.SetActive(true);
+            Firewand.SetActive(false);
+            Windwand.SetActive(false);
+            Wind.SetActive(true);
+            Earthwand.SetActive(true);
+            Earth.SetActive(false);
+            player.setFire(false);
+            player.setIce(false);
+            player.setWind(false);
+            player.setEarth(true);
+        }
     }
 }

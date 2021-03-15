@@ -12,6 +12,13 @@ public class WeaponWand : MonoBehaviour
     private float timeBTWShots;
     public float startTimeBTWShots = 0.25f;
     public static float Mana = 30f;
+    private PlayerController player;
+
+    private void Start()
+    {
+        player = GameObject.Find("MonkE").GetComponent<PlayerController>();
+    }
+
     void Update()
     {
         //Debug.Log(isShoot);
@@ -21,10 +28,26 @@ public class WeaponWand : MonoBehaviour
             float rotZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;
             transform.rotation = Quaternion.Euler(0f, 0f, rotZ + offset);
         }
-       
-        if(timeBTWShots <= 0)
+
+        if (player.isEarth())
         {
-            if (Input.GetMouseButtonDown(0) && Mana>0.5)
+
+        }    
+        else if (player.isWind())
+        {
+
+        }
+        else
+        {
+            shootSpells();
+        }
+    }
+
+    public void shootSpells()
+    {
+        if (timeBTWShots <= 0)
+        {
+            if (Input.GetMouseButtonDown(0) && Mana > 0.5)
             {
                 //Debug.Log("Hello I am shooting");
                 Instantiate(projectile, shotPoint.position, transform.rotation);
@@ -34,7 +57,7 @@ public class WeaponWand : MonoBehaviour
                 isShoot = true;
                 StartCoroutine(WaitForAttackAnimation());
                 spellShoot.Play();
-                
+
             }
         }
         else
@@ -42,8 +65,6 @@ public class WeaponWand : MonoBehaviour
             timeBTWShots -= Time.deltaTime;
         }
         Mana = HeathManaBar.currentMana;
-
-
     }
     IEnumerator WaitForAttackAnimation() {
         yield return new WaitForSeconds(1.5f);
