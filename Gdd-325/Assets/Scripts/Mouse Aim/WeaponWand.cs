@@ -13,6 +13,7 @@ public class WeaponWand : MonoBehaviour
     public float startTimeBTWShots = 0.25f;
     public static float Mana = 30f;
     private PlayerController player;
+    public Rigidbody2D Wind;
 
     private void Start()
     {
@@ -35,7 +36,7 @@ public class WeaponWand : MonoBehaviour
         }    
         else if (player.isWind())
         {
-
+            WindSpell();
         }
         else
         {
@@ -49,7 +50,30 @@ public class WeaponWand : MonoBehaviour
         {
             if (Input.GetMouseButtonDown(0) && Mana > 0.5)
             {
-                //Debug.Log("Hello I am shooting");
+                Instantiate(Wind, shotPoint.position, transform.rotation);
+                Mana -= 1;
+                HeathManaBar.reduceMana(1);
+                timeBTWShots = startTimeBTWShots;
+                isShoot = true;
+                StartCoroutine(WaitForAttackAnimation());
+                spellShoot.Play();
+
+            }
+        }
+        else
+        {
+            timeBTWShots -= Time.deltaTime;
+        }
+        Mana = HeathManaBar.currentMana;
+    }
+
+    public void WindSpell()
+    {
+        if (timeBTWShots <= 0)
+        {
+            if (Input.GetMouseButtonDown(0) && Mana > 0.5)
+            {
+                print("Its Windy");
                 Instantiate(projectile, shotPoint.position, transform.rotation);
                 Mana -= 1;
                 HeathManaBar.reduceMana(1);
@@ -66,6 +90,7 @@ public class WeaponWand : MonoBehaviour
         }
         Mana = HeathManaBar.currentMana;
     }
+
     IEnumerator WaitForAttackAnimation() {
         yield return new WaitForSeconds(1.5f);
         isShoot = false;

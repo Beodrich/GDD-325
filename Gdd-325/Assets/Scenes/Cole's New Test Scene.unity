@@ -2749,6 +2749,18 @@ PrefabInstance:
       propertyPath: spellShoot
       value: 
       objectReference: {fileID: 1086666752}
+    - target: {fileID: 2486995918962668676, guid: a3efbba7d81282f49bef76e2f718d23f, type: 3}
+      propertyPath: Wind
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2988241350330308618, guid: a3efbba7d81282f49bef76e2f718d23f, type: 3}
+      propertyPath: Wind
+      value: 
+      objectReference: {fileID: 1758474662728603035, guid: 366f1c695b9a46b4f951e4a369789343, type: 3}
+    - target: {fileID: 2988241350330308618, guid: a3efbba7d81282f49bef76e2f718d23f, type: 3}
+      propertyPath: projectile
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 5278976977336758304, guid: a3efbba7d81282f49bef76e2f718d23f, type: 3}
       propertyPath: m_RootOrder
       value: 2
