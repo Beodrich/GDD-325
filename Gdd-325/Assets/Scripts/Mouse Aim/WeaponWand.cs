@@ -46,7 +46,7 @@ public class WeaponWand : MonoBehaviour
 
     }
     IEnumerator WaitForAttackAnimation() {
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(1.5f);
         isShoot = false;
     
     }

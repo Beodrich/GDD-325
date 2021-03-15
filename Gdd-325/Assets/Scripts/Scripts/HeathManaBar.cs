@@ -12,7 +12,7 @@ public class HeathManaBar : MonoBehaviour
     public Text manaText;
 
     private static float mana;//change were we get this variable 
-    private float maxHeath = 10;
+    private float maxHeath = 20;
 
     private static float currentLife;
     public static float currentMana;
