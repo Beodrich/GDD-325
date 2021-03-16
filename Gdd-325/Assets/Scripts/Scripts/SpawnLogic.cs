@@ -29,6 +29,8 @@ public class SpawnLogic : MonoBehaviour
     private float searchCountDown=1f;
     private SpawnState state = SpawnState.COUNTING;
     public static float countOfGolems;
+
+    private bool inBetweenRounds = false;
    [SerializeField] private Text waveNameText;
     [SerializeField] private Text numOfGolemText;
 
@@ -67,7 +69,7 @@ public class SpawnLogic : MonoBehaviour
 
         if (waveCountDown <= 0)
         {
-            if (state != SpawnState.SPAWNING)
+            if (state != SpawnState.SPAWNING && !inBetweenRounds)
             {
                 //Start spawning wave
                 StartCoroutine(SpawnWave(waves[nextWave]));
@@ -83,6 +85,15 @@ public class SpawnLogic : MonoBehaviour
     void WaveCompleted() {
         //begin a new round
         //if we want to add a shop system we might want to do it in this function
+        if (!Shop.hasBoughItem)
+        {
+            Debug.Log("In between rounds");
+            inBetweenRounds = true;
+            return;
+        }
+        else {
+            inBetweenRounds = false;
+        }
         Debug.Log("Wave Completed!");
 
         state = SpawnState.COUNTING;

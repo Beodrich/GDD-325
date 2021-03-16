@@ -42,7 +42,7 @@ public class PlayerController : MonoBehaviour
 
 
     //heath
-    public float health=10f;
+    public float health=1f;
     //[SerializeField]private Text healthText;
     private bool canTakeDamage = true;
     private float timeUntilCanTakeDamge = 0f;

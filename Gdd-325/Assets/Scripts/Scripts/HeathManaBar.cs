@@ -12,7 +12,7 @@ public class HeathManaBar : MonoBehaviour
     public Text manaText;
 
     private static float mana;//change were we get this variable 
-    private float maxHeath = 20;
+    private static  float maxHeath;
 
     private static float currentLife;
     public static float currentMana;
@@ -24,8 +24,11 @@ public class HeathManaBar : MonoBehaviour
         //wand = GameObject.Find("FireWand").GetComponent<WeaponWand>();
         manaBar = GameObject.Find("manaImage").GetComponent<Image>();
         currentLife = player.health;
+        maxHeath = currentLife;
         mana = WeaponWand.Mana;
         currentMana = mana;
+
+        Debug.Log("player hp is " + player.health + "current life is " + currentLife + "max health is " + maxHeath);
     }
 
     // Update is called once per frame
@@ -44,7 +47,7 @@ public class HeathManaBar : MonoBehaviour
             currentMana = 0;//reset it to 0
         }
         manaText.text = "" + (int)currentMana;
-        Debug.Log("The amount of actual mana left is " + WeaponWand.Mana + " the current amount of mana(mana bar) is " + currentMana);
+       // Debug.Log("The amount of actual mana left is " + WeaponWand.Mana + " the current amount of mana(mana bar) is " + currentMana);
 
     }
     public static void Damage(float damage)
@@ -55,9 +58,20 @@ public class HeathManaBar : MonoBehaviour
     }
     public static void restoreLife(float amount) {
         currentLife += amount;
+        if (currentLife > maxHeath) {
+            currentLife = maxHeath;
+        
+        }
     }
     public static void reduceMana(float m) {
         currentMana -= m;
         manaBar.fillAmount -= m / mana;
+    }
+    public float getMaxHealth() {
+        return maxHeath;
+    
+    }
+    public void setMaxHealth(float amount) {
+        maxHeath += amount;
     }
 }

@@ -11,9 +11,9 @@ public class WeaponWand : MonoBehaviour
     public static bool isShoot = false;
     private float timeBTWShots;
     public float startTimeBTWShots = 0.25f;
-    public static float Mana = 30f;
+    public static float Mana = 20f;
     private PlayerController player;
-    public Rigidbody2D Wind;
+   // public Rigidbody2D Wind;
 
     private void Start()
     {
@@ -50,7 +50,7 @@ public class WeaponWand : MonoBehaviour
         {
             if (Input.GetMouseButtonDown(0) && Mana > 0.5)
             {
-                Instantiate(Wind, shotPoint.position, transform.rotation);
+                //Instantiate(Wind, shotPoint.position, transform.rotation);
                 Mana -= 1;
                 HeathManaBar.reduceMana(1);
                 timeBTWShots = startTimeBTWShots;
