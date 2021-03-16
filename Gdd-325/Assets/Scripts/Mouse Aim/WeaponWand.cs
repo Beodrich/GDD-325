@@ -32,7 +32,7 @@ public class WeaponWand : MonoBehaviour
 
         if (player.isEarth())
         {
-
+            // earth spell
         }    
         else if (player.isWind())
         {
