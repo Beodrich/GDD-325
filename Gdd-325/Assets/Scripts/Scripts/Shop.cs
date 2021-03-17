@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Shop : MonoBehaviour
 {
-    public static bool hasBoughItem=false;
+    public static bool hasBoughItem = false;
     private GameObject shopUI;
     private HeathManaBar bar;
     private PlayerController player;
@@ -17,23 +17,30 @@ public class Shop : MonoBehaviour
     public float skillPoint = 1f;
     private void Awake()
     {
-       // shopUI = GameObject.Find("ShopSystem");
-        //shopUI.SetActive(false);
+        shopUI = GameObject.Find("ShopSystem");
+        shopUI.SetActive(false);
     }
     // Start is called before the first frame update
     void Start()
     {
-       
+
+
+        player = GameObject.Find("MonkE").GetComponent<PlayerController>();
+        bar = GameObject.Find("Canvas").GetComponent<HeathManaBar>();
+
+
+    }
+    private void Update()
+    {
+        if (hasBoughItem) {
+            shopUI.SetActive(false);
         
-            player = GameObject.Find("MonkE").GetComponent<PlayerController>();
-            bar = GameObject.Find("Canvas").GetComponent<HeathManaBar>();
-            
-        
+        }
     }
 
-   
 
-   
+
+
     //restore health and increase it a factor 
     public void buyHealth() {
         if (skillPoint == 1)
@@ -43,6 +50,7 @@ public class Shop : MonoBehaviour
             HeathManaBar.restoreLife(bar.getMaxHealth());
             //Debug.Log("player hp is " + player.health + "current life is " + HeathManaBar.currentLife + "max health is " + HeathManaBar.maxHeath);
             skillPoint = 0;
+            hasBoughItem = true;
         }
 
     }
@@ -55,8 +63,13 @@ public class Shop : MonoBehaviour
             WeaponWand.Mana = HeathManaBar.getMana();
             bar.addManaRechargeRate(manaIncreaseRate);
             skillPoint = 0;
+            hasBoughItem = true;
         }
 
 
+    }
+    public void activateShopUI() {
+        shopUI.SetActive(true);
+    
     }
 }
