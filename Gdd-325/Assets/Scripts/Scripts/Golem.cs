@@ -67,8 +67,7 @@ public class Golem : MonoBehaviour
         if (player.isIce())
         {
             health -= golemInitIceDamage;
-            startIce = true;
-            
+            startIce = true; 
         }
     }
 
