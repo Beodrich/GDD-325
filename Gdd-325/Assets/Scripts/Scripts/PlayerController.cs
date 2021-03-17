@@ -35,12 +35,6 @@ public class PlayerController : MonoBehaviour
     private const string Monke_LA = "MonkE_LeftAttack";
     private const string Monke_RA = "MonkE_RightAttack";
 
-
-
-
-
-
-
     //heath
     public float health=1f;
     //[SerializeField]private Text healthText;

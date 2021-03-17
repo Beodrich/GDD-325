@@ -37,10 +37,6 @@ public class SpellProjectile : MonoBehaviour
                     isHit = true;
                     isNotHit = false;
                 }
-                else
-                {
-                    //animator.SetBool("Explosion", false);
-                }
             }
 
             if (hit.collider.CompareTag("wall"))

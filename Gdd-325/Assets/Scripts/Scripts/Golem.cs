@@ -15,6 +15,8 @@ public class Golem : MonoBehaviour
     public float fireDuration;
     public float golemInitFireDamage = 2f;
     public float golemInitIceDamage = 4f;
+    public float golemInitWindDamage = 4f;
+    public float golemInitEarthDamage = 4f;
     //public float iceDuration;
     public float iceSlowed = 0.5f;
     private float initialIceTime = 0;
@@ -69,6 +71,14 @@ public class Golem : MonoBehaviour
             health -= golemInitIceDamage;
             startIce = true; 
         }
+        if(player.isWind())
+        {
+            //health -= golemInitIceDamage;
+        }
+        if (player.isEarth())
+        {
+            health -= golemInitEarthDamage;
+        }
     }
 
     // FIRE
@@ -97,7 +107,7 @@ public class Golem : MonoBehaviour
     // Calling Slow Golem and assigning time the golem is slowed for
     public void SlowGolem(float slowAmount, float maxTime)
     {
-        Debug.Log(initialIceTime);
+        //Debug.Log(initialIceTime);
 
         if (initialIceTime >= maxTime)
         {

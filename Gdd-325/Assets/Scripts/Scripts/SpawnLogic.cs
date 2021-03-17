@@ -159,7 +159,7 @@ public class SpawnLogic : MonoBehaviour
 
         var newGolem=Instantiate(_enemy, randomSpawnPoint.position, randomSpawnPoint.rotation);
         newGolem.tag = "enemy";
-        Debug.Log("Spawning Enemy: " + newGolem.name + " At spawn point " + randomSpawnPoint.name);
+        //Debug.Log("Spawning Enemy: " + newGolem.name + " At spawn point " + randomSpawnPoint.name);
         newGolem.gameObject.SetActive(true);
     }
 }

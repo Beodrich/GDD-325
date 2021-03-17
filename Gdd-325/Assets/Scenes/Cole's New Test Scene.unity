@@ -250,7 +250,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5629556909283941815, guid: 373fcb3bcde2fb14c8b3ba515e8acc3e, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 5629556909283941815, guid: 373fcb3bcde2fb14c8b3ba515e8acc3e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -391,7 +391,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &195765341
 GameObject:
@@ -485,7 +485,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5629556909283941815, guid: 373fcb3bcde2fb14c8b3ba515e8acc3e, type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 5629556909283941815, guid: 373fcb3bcde2fb14c8b3ba515e8acc3e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -542,7 +542,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5629556909283941815, guid: 373fcb3bcde2fb14c8b3ba515e8acc3e, type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 5629556909283941815, guid: 373fcb3bcde2fb14c8b3ba515e8acc3e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -723,7 +723,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5629556909283941815, guid: 373fcb3bcde2fb14c8b3ba515e8acc3e, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5629556909283941815, guid: 373fcb3bcde2fb14c8b3ba515e8acc3e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1294,6 +1294,10 @@ PrefabInstance:
       value: shooting enemy 1
       objectReference: {fileID: 0}
     - target: {fileID: 4212257572519284704, guid: 13b1e73acc286f74f8b5bba61ae80548, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4212257572519284704, guid: 13b1e73acc286f74f8b5bba61ae80548, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
@@ -1303,7 +1307,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4212257572519284706, guid: 13b1e73acc286f74f8b5bba61ae80548, type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4212257572519284706, guid: 13b1e73acc286f74f8b5bba61ae80548, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1543,7 +1547,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5259785711543859234, guid: e5af84247acab834b987f38306537842, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5259785711543859234, guid: e5af84247acab834b987f38306537842, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1918,7 +1922,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2932838030917070866, guid: a3efbba7d81282f49bef76e2f718d23f, type: 3}
   m_PrefabInstance: {fileID: 1495489839}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1019897101
+--- !u!114 &1019897102
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2348,7 +2352,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1243693912
 PrefabInstance:
@@ -2874,6 +2878,10 @@ PrefabInstance:
       propertyPath: fireShoot
       value: 
       objectReference: {fileID: 1835777302}
+    - target: {fileID: 8685133472428180885, guid: a3efbba7d81282f49bef76e2f718d23f, type: 3}
+      propertyPath: projectile
+      value: 
+      objectReference: {fileID: 5654664293995324674, guid: 340971ca4d662bc4bb5e648833c94f7d, type: 3}
     - target: {fileID: 8685133472428180885, guid: a3efbba7d81282f49bef76e2f718d23f, type: 3}
       propertyPath: spellShoot
       value: 
