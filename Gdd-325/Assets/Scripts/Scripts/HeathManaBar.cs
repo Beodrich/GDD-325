@@ -13,7 +13,7 @@ public class HeathManaBar : MonoBehaviour
 
     private static float mana;//change were we get this variable 
     private static  float maxHeath;
-
+    private float manaRechargeRate = 0.01f;
     private static float currentLife;
     public static float currentMana;
     private float calculateLife;
@@ -39,8 +39,8 @@ public class HeathManaBar : MonoBehaviour
         lifeText.text = "" + (int)currentLife;
 
         if (currentMana < mana) {
-            manaBar.fillAmount = Mathf.MoveTowards(manaBar.fillAmount, 1f, Time.deltaTime * 0.01f);
-            currentMana = Mathf.MoveTowards(currentMana / mana, 1f, Time.deltaTime * 0.01f)*mana;
+            manaBar.fillAmount = Mathf.MoveTowards(manaBar.fillAmount, 1f, Time.deltaTime * manaRechargeRate);
+            currentMana = Mathf.MoveTowards(currentMana / mana, 1f, Time.deltaTime * manaRechargeRate)*mana;
             
         }
         if (currentMana < 0) {
@@ -73,5 +73,27 @@ public class HeathManaBar : MonoBehaviour
     }
     public void setMaxHealth(float amount) {
         maxHeath += amount;
+    }
+    public void addManaRechargeRate(float amount) {
+        manaRechargeRate += amount;
+    
+    }
+    public void setCurrentMana(float amount) {
+        currentMana += amount;
+        if (currentMana > mana) {
+            currentMana = mana;
+        
+        }
+    
+    }
+    public void setMaxMana(float amount) {
+        mana += amount;
+    
+    }
+   public static float getMana()
+    {
+        return mana;
+
+
     }
 }

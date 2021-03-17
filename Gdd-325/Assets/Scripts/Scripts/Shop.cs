@@ -8,34 +8,55 @@ public class Shop : MonoBehaviour
     private GameObject shopUI;
     private HeathManaBar bar;
     private PlayerController player;
-    
+
+
+    //utility variables 
+    public float amountOfHealthThatIsIncreased = 5f;
+    public float amountOfManaThatIsIncreased = 5f;
+    public float manaIncreaseRate = 0.01f;
+    public float skillPoint = 1f;
     private void Awake()
     {
-        shopUI = GameObject.Find("ShopItemTemplete");
-        shopUI.SetActive(false);
+       // shopUI = GameObject.Find("ShopSystem");
+        //shopUI.SetActive(false);
     }
     // Start is called before the first frame update
     void Start()
     {
-        player = GameObject.Find("MonkE").GetComponent<PlayerController>();
-        bar = GameObject.Find("Canvas").GetComponent<HeathManaBar>();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
+       
+        
+            player = GameObject.Find("MonkE").GetComponent<PlayerController>();
+            bar = GameObject.Find("Canvas").GetComponent<HeathManaBar>();
+            
         
     }
 
-    public void BuyMana() { 
-    
-    }
+   
+
+   
     //restore health and increase it a factor 
     public void buyHealth() {
-        bar.setMaxHealth(5);
-        player.health = bar.getMaxHealth();
-        HeathManaBar.restoreLife(bar.getMaxHealth());
-        //Debug.Log("player hp is " + player.health + "current life is " + HeathManaBar.currentLife + "max health is " + HeathManaBar.maxHeath);
+        if (skillPoint == 1)
+        {
+            bar.setMaxHealth(amountOfHealthThatIsIncreased);
+            player.health = bar.getMaxHealth();
+            HeathManaBar.restoreLife(bar.getMaxHealth());
+            //Debug.Log("player hp is " + player.health + "current life is " + HeathManaBar.currentLife + "max health is " + HeathManaBar.maxHeath);
+            skillPoint = 0;
+        }
+
+    }
+    //restore mana, increase by a factor, and increase the mana by a certain factor
+    public void buyMana() {
+        if (skillPoint == 1)
+        {
+            bar.setMaxMana(amountOfManaThatIsIncreased);
+            bar.setCurrentMana(amountOfManaThatIsIncreased);
+            WeaponWand.Mana = HeathManaBar.getMana();
+            bar.addManaRechargeRate(manaIncreaseRate);
+            skillPoint = 0;
+        }
+
 
     }
 }
