@@ -34,6 +34,7 @@ public class SpawnLogic : MonoBehaviour
    [SerializeField] private Text waveNameText;
     [SerializeField] private Text numOfGolemText;
 
+    private Shop shop;
     // Start is called before the first frame update
     void Start()
     {
@@ -44,7 +45,8 @@ public class SpawnLogic : MonoBehaviour
         }
         waveCountDown = timeBetweenWaves;
         countOfGolems = this.waves[nextWave].count;
-        
+
+        shop = GameObject.Find("Canvas").GetComponent<Shop>();
     }
 
     // Update is called once per frame
@@ -54,6 +56,12 @@ public class SpawnLogic : MonoBehaviour
        // Debug.Log("There are " + GameObject.FindGameObjectsWithTag("enemy").Length + " golems left in the current wave ");
         waveNameText.text = "Current Wave: "+ this.waves[nextWave].name;
         numOfGolemText.text =  countOfGolems + " Golems";
+        if (inBetweenRounds) {
+            //do shop system here 
+            shop.activateShopUI();
+        }
+        
+        
         if (state == SpawnState.WAITING) {
             //check if enemies are still alive
             if (!EnemyIsAlive())
