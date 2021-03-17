@@ -95,7 +95,7 @@ public class SpawnLogic : MonoBehaviour
         //if we want to add a shop system we might want to do it in this function
         if (!Shop.hasBoughItem)
         {
-            Debug.Log("In between rounds");
+            //Debug.Log("In between rounds");
             inBetweenRounds = true;
             return;
         }

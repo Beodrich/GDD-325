@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+
 
 public class Shop : MonoBehaviour
 {
@@ -8,17 +10,21 @@ public class Shop : MonoBehaviour
     private GameObject shopUI;
     private HeathManaBar bar;
     private PlayerController player;
-
+    public TextMeshProUGUI healthToolTipText;
+    public TextMeshProUGUI manaToolTipText;
 
     //utility variables 
     public float amountOfHealthThatIsIncreased = 5f;
     public float amountOfManaThatIsIncreased = 5f;
     public float manaIncreaseRate = 0.01f;
     public float skillPoint = 1f;
+    
     private void Awake()
     {
         shopUI = GameObject.Find("ShopSystem");
         shopUI.SetActive(false);
+        //healthToolTipText = GameObject.Find("healthTip").GetComponent<Text>();
+       // manaToolTipText = GameObject.Find("manaTip").GetComponent<Text>();
     }
     // Start is called before the first frame update
     void Start()
@@ -27,14 +33,36 @@ public class Shop : MonoBehaviour
 
         player = GameObject.Find("MonkE").GetComponent<PlayerController>();
         bar = GameObject.Find("Canvas").GetComponent<HeathManaBar>();
-
+        
+        healthToolTipText.enabled = false;
+        manaToolTipText.enabled = false;
 
     }
     private void Update()
     {
-        if (hasBoughItem) {
+        if (hasBoughItem)
+        {
             shopUI.SetActive(false);
-        
+
+        }
+        if (manaToolTip.isOverMana)
+        {
+            manaToolTipText.text = "This will restore the amount of mana you have and increase it by " + amountOfManaThatIsIncreased + " points. You will also increase your basic recharge rate by " + manaIncreaseRate;
+            manaToolTipText.enabled = true;
+
+        }
+        else {
+            manaToolTipText.enabled = false;
+        }
+        if (healthToolTip.isOverHealth)
+        {
+            healthToolTipText.text = "This will restore your hp back to full and also increase it by " + amountOfHealthThatIsIncreased + "points";
+            healthToolTipText.enabled = true;
+
+        }
+        else
+        {
+            healthToolTipText.enabled = false;
         }
     }
 
