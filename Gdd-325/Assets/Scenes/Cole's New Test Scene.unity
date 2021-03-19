@@ -2778,6 +2778,10 @@ PrefabInstance:
       propertyPath: Wind
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 2486995918962668676, guid: a3efbba7d81282f49bef76e2f718d23f, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2988241350330308618, guid: a3efbba7d81282f49bef76e2f718d23f, type: 3}
       propertyPath: Wind
       value: 
@@ -3201,6 +3205,8 @@ MonoBehaviour:
   fireDuration: 2
   golemInitFireDamage: 2
   golemInitIceDamage: 4
+  golemInitWindDamage: 4
+  golemInitEarthDamage: 4
   iceSlowed: 0.75
   maxIceTime: 3
 --- !u!61 &1756732699
@@ -3255,6 +3261,23 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2019096856751232692, guid: a3efbba7d81282f49bef76e2f718d23f, type: 3}
   m_PrefabInstance: {fileID: 1495489839}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1787440279
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1787440274}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3c470f4a8374d148ba3d22535fb8cc7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  offset: -90
+  spellShoot: {fileID: 0}
+  projectile: {fileID: 1246467182731559812, guid: b0fd2466a0ed552449031c61f6044efc, type: 3}
+  shotPoint: {fileID: 418516411}
+  startTimeBTWShots: 0.25
 --- !u!4 &1803298462 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5629556909283941815, guid: 373fcb3bcde2fb14c8b3ba515e8acc3e, type: 3}

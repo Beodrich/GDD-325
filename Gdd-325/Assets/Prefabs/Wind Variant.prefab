@@ -21,33 +21,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!68 &7789036431141245251
-EdgeCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8832736015709631405}
-  m_Enabled: 0
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_EdgeRadius: 0
-  m_Points:
-  - {x: -0.076043844, y: -2.0841913}
-  - {x: -0.915797, y: -0.950782}
-  - {x: -0.9238094, y: 0.7002561}
-  - {x: -0.05099851, y: 1.9105089}
-  - {x: 0.8208029, y: 1.1481823}
-  - {x: 0.9169292, y: -0.45499915}
-  - {x: -0.04554391, y: -2.171033}
-  m_AdjacentStartPoint: {x: 0, y: 0}
-  m_AdjacentEndPoint: {x: 0, y: 0}
-  m_UseAdjacentStartPoint: 0
-  m_UseAdjacentEndPoint: 0
 --- !u!61 &-1653820081269791569
 BoxCollider2D:
   m_ObjectHideFlags: 0
