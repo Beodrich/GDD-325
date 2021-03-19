@@ -37,11 +37,11 @@ public class EarthWeapon : MonoBehaviour
     {
         if (timeBTWShots <= 0)
         {
-            if (Input.GetMouseButtonDown(0) && Mana > 0.5)
+            if (Input.GetMouseButtonDown(0) && Mathf.FloorToInt(Mana) >= 5)
             {
                 Instantiate(projectile, shotPoint.position, transform.rotation);
-                Mana -= 1;
-                HeathManaBar.reduceMana(1);
+                //Mana -= 5;
+                HeathManaBar.reduceMana(5);
                 timeBTWShots = startTimeBTWShots;
                 isShoot = true;
                 StartCoroutine(WaitForAttackAnimation());
