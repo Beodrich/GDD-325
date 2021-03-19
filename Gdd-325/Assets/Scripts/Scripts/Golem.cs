@@ -73,7 +73,7 @@ public class Golem : MonoBehaviour
         }
         if(player.isWind())
         {
-            //health -= golemInitIceDamage;
+            health -= golemInitWindDamage;
         }
         if (player.isEarth())
         {

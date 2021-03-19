@@ -14,6 +14,9 @@ public class WindWeapon : MonoBehaviour
     private PlayerController player;
     public Rigidbody2D Wind;
 
+
+    private Rigidbody2D currentWind;
+
     private void Start()
     {
         player = GameObject.Find("MonkE").GetComponent<PlayerController>();
@@ -42,9 +45,9 @@ public class WindWeapon : MonoBehaviour
         {
             if (Input.GetMouseButtonDown(0) && Mana > 0.5)
             {
-                print("Its Windy");
-                Instantiate(Wind, shotPoint.position, transform.rotation);
-                Wind.AddForce(Vector2.up * 5, ForceMode2D.Impulse);
+                
+                currentWind= Instantiate(Wind, shotPoint.position, transform.rotation);
+                //Wind.AddForce(Vector2.up * 5, ForceMode2D.Impulse);
                 Mana -= 1;
                 HeathManaBar.reduceMana(1);
                 timeBTWShots = startTimeBTWShots;
@@ -70,5 +73,10 @@ public class WindWeapon : MonoBehaviour
     public void updateMana(float amount)
     {
         Mana -= amount;
+    }
+    public Rigidbody2D getWind() {
+
+        return currentWind;
+    
     }
 }

@@ -39,6 +39,22 @@ MonoBehaviour:
   whatIsSolid:
     serializedVersion: 2
     m_Bits: 64
+--- !u!70 &6002954661210179050
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8832736015709631405}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 1.83, y: 3.5199997}
+  m_Direction: 1
 --- !u!1001 &3813785466638358191
 PrefabInstance:
   m_ObjectHideFlags: 0
