@@ -1938,6 +1938,23 @@ MonoBehaviour:
   shotPoint: {fileID: 418516411}
   startTimeBTWShots: 0.25
   Wind: {fileID: 1758474662728603035, guid: 366f1c695b9a46b4f951e4a369789343, type: 3}
+--- !u!114 &1019897103
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1019897100}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf3d6f352e5199d48848872282b1cbf8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  offset: -90
+  spellShoot: {fileID: 0}
+  projectile: {fileID: 8290115048925706913, guid: 4a7f6697cc895d548a19259e7dd5e86e, type: 3}
+  shotPoint: {fileID: 418516411}
+  startTimeBTWShots: 0.25
 --- !u!1 &1057014679
 GameObject:
   m_ObjectHideFlags: 0
