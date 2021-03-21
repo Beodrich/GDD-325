@@ -1039,6 +1039,10 @@ PrefabInstance:
       propertyPath: fireDuration
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 1768121403876751354, guid: 0f1ada5e37928e9498a00cfee3c550e1, type: 3}
+      propertyPath: startDazedTime
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 5136067518437835886, guid: 0f1ada5e37928e9498a00cfee3c550e1, type: 3}
       propertyPath: m_BodyType
       value: 0
@@ -1144,6 +1148,11 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.17, y: 3.15}
   m_EdgeRadius: 0
+--- !u!4 &659897888 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2737406502856697320, guid: a3efbba7d81282f49bef76e2f718d23f, type: 3}
+  m_PrefabInstance: {fileID: 1495489839}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &689754349
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1959,6 +1968,7 @@ MonoBehaviour:
   projectile: {fileID: 8290115048925706913, guid: 4a7f6697cc895d548a19259e7dd5e86e, type: 3}
   shotPoint: {fileID: 418516411}
   startTimeBTWShots: 0.25
+  difference: {x: 0, y: 0, z: 0}
 --- !u!1 &1057014679
 GameObject:
   m_ObjectHideFlags: 0
@@ -2213,7 +2223,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2729049941047798196, guid: d0ae4664e91e6cf489cee704caae8fa9, type: 3}
       propertyPath: waves.Array.data[0].count
-      value: 10
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2729049941047798196, guid: d0ae4664e91e6cf489cee704caae8fa9, type: 3}
       propertyPath: waves.Array.data[0].enemy
@@ -2783,6 +2793,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 656000341083130051, guid: a3efbba7d81282f49bef76e2f718d23f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 720070061829446603, guid: a3efbba7d81282f49bef76e2f718d23f, type: 3}
       propertyPath: fireShoot
       value: 
@@ -2795,12 +2809,28 @@ PrefabInstance:
       propertyPath: spellShoot
       value: 
       objectReference: {fileID: 1086666752}
+    - target: {fileID: 2019096856751232692, guid: a3efbba7d81282f49bef76e2f718d23f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2486995918962668676, guid: a3efbba7d81282f49bef76e2f718d23f, type: 3}
       propertyPath: Wind
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 2486995918962668676, guid: a3efbba7d81282f49bef76e2f718d23f, type: 3}
       propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2737406502856697320, guid: a3efbba7d81282f49bef76e2f718d23f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.34
+      objectReference: {fileID: 0}
+    - target: {fileID: 2737406502856697320, guid: a3efbba7d81282f49bef76e2f718d23f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2932838030917070866, guid: a3efbba7d81282f49bef76e2f718d23f, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2988241350330308618, guid: a3efbba7d81282f49bef76e2f718d23f, type: 3}
@@ -2810,6 +2840,22 @@ PrefabInstance:
     - target: {fileID: 2988241350330308618, guid: a3efbba7d81282f49bef76e2f718d23f, type: 3}
       propertyPath: projectile
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3716214135970668919, guid: a3efbba7d81282f49bef76e2f718d23f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3936334348323953242, guid: a3efbba7d81282f49bef76e2f718d23f, type: 3}
+      propertyPath: attackRange
+      value: 1.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4387838493021876133, guid: a3efbba7d81282f49bef76e2f718d23f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 4387838493021876133, guid: a3efbba7d81282f49bef76e2f718d23f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.84
       objectReference: {fileID: 0}
     - target: {fileID: 5278976977336758304, guid: a3efbba7d81282f49bef76e2f718d23f, type: 3}
       propertyPath: m_RootOrder
@@ -2874,6 +2920,10 @@ PrefabInstance:
     - target: {fileID: 5278976977336758318, guid: a3efbba7d81282f49bef76e2f718d23f, type: 3}
       propertyPath: m_Name
       value: MonkE
+      objectReference: {fileID: 0}
+    - target: {fileID: 6809966469118222710, guid: a3efbba7d81282f49bef76e2f718d23f, type: 3}
+      propertyPath: attackRange
+      value: 1.4
       objectReference: {fileID: 0}
     - target: {fileID: 7344305773908303544, guid: a3efbba7d81282f49bef76e2f718d23f, type: 3}
       propertyPath: Ice
@@ -3230,6 +3280,7 @@ MonoBehaviour:
   golemInitEarthDamage: 4
   iceSlowed: 0.75
   maxIceTime: 3
+  startDazedTime: 0
 --- !u!61 &1756732699
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3405,6 +3456,25 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1835777303
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1835777300}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bd42183527a89f41a54fb8967e0e84f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startTimeBtwAttack: 0.3
+  attackPos: {fileID: 659897888}
+  attackRange: 1.4
+  whatIsEnemies:
+    serializedVersion: 2
+    m_Bits: 64
+  damage: 1
 --- !u!4 &1851602050 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5629556909283941815, guid: 373fcb3bcde2fb14c8b3ba515e8acc3e, type: 3}

@@ -22,15 +22,20 @@ public class Golem : MonoBehaviour
     private float initialIceTime = 0;
     public float maxIceTime = 3;
     private bool startIce = false;
-   
+    private float topSpeed;
+    private float currentSpeed;
+    //for player melee
 
+
+    private float dazedTime;
+    [SerializeField] private float startDazedTime;
     private void Start()
     {
         player = GameObject.Find("MonkE").GetComponent<PlayerController>();
         //moveSpeed = GetComponent<AIPath>().maxSpeed;
         golemPath = GetComponent<AIPath>();
-        
-       
+        topSpeed = golemPath.maxSpeed;
+        currentSpeed = topSpeed;
     }
     public Sprite getGolemState()
     {
@@ -39,6 +44,20 @@ public class Golem : MonoBehaviour
     
     void Update()
     {
+        //for melee
+        if (dazedTime <= 0)
+        {
+            currentSpeed = topSpeed;
+            golemPath.maxSpeed = topSpeed;
+
+
+        }
+        else {
+            currentSpeed = 0;
+            golemPath.maxSpeed = 0;
+            dazedTime -= Time.deltaTime;
+        
+        }
         //Debug.Log(health);
         if (health <= 0)
         {
@@ -79,6 +98,12 @@ public class Golem : MonoBehaviour
         {
             health -= golemInitEarthDamage;
         }
+
+    }
+    public void TakeMeleeDamage(float amount) {
+        health -= amount;
+        dazedTime = startDazedTime;
+    
     }
 
     // FIRE

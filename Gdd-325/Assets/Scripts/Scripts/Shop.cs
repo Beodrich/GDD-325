@@ -47,7 +47,9 @@ public class Shop : MonoBehaviour
         }
         if (manaToolTip.isOverMana)
         {
-            manaToolTipText.text = "This will restore the amount of mana you have and increase it by " + amountOfManaThatIsIncreased + " points. You will also increase your basic recharge rate by " + manaIncreaseRate;
+             manaToolTipText.text = "This will restore the amount of mana you have and increase it by " + amountOfManaThatIsIncreased + " points. You will also increase your basic recharge rate by " + manaIncreaseRate;
+            //manaToolTipText.text = "This will increase the amount of mana you have to " + amountOfManaThatIsIncreased + HeathManaBar.getMana() + "You're basic mana recharge rate will incrase by " + manaIncreaseRate;
+
             manaToolTipText.enabled = true;
 
         }
@@ -56,7 +58,7 @@ public class Shop : MonoBehaviour
         }
         if (healthToolTip.isOverHealth)
         {
-            healthToolTipText.text = "This will restore your hp back to full and also increase it by " + amountOfHealthThatIsIncreased + "points";
+            healthToolTipText.text = "This will restore your hp back to full and also increase it by " + amountOfHealthThatIsIncreased + " points";
             healthToolTipText.enabled = true;
 
         }

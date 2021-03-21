@@ -42,9 +42,9 @@ public class PlayerController : MonoBehaviour
     private float timeUntilCanTakeDamge = 0f;
     public float maxTime = 5f;
     private Camera camera;
-   
+    public Vector2 playerDirection;
     // spell
-    //[SerializeField]
+    
     private bool fire;
     private bool ice;
     private bool earth;
@@ -95,7 +95,7 @@ public class PlayerController : MonoBehaviour
         rb2D = GetComponent<Rigidbody2D>();
         animatorLogic = GetComponent<AnimatorLogic>();
         camera = GameObject.Find("Main Camera").GetComponent<Camera>();
-        //healthText.text= "Current HP is at :" + health.ToString();
+       
     }
 
     // Update is called once per frame
@@ -145,7 +145,7 @@ public class PlayerController : MonoBehaviour
 
     private void ChangeAnimation(Vector2 mousePos) {
         var player= camera.WorldToScreenPoint(gameObject.transform.position);
-        var playerDirection = mousePos - (Vector2)player;
+        playerDirection = mousePos - (Vector2)player;
         playerDirection = playerDirection.normalized;
      
 
@@ -265,6 +265,7 @@ public class PlayerController : MonoBehaviour
         //function to figure out what animation to play 
 
     }
+    
    
     public void TakeDamage(float amount) {
         if (canTakeDamage)
