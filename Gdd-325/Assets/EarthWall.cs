@@ -20,26 +20,83 @@ public class EarthWall : MonoBehaviour
         isNotHit = true;
         enemies = FindObjectsOfType<Golem>();
     }
+
+    private void Update()
+    {
+        /*
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, transform.up, 1);
+
+        if (hit.collider != null)
+        {
+            if (hit.collider.CompareTag("enemy"))
+            {
+                Debug.Log("Earth wall hit");
+                hit.collider.GetComponent<Golem>().TakeDamage();
+            }
+
+            if (hit.collider.CompareTag("wall"))
+            {
+                DestroySpell();
+            }
+        */
+        }
+
+        /* 
+         if (hit.collider != null)
+         {
+             if (hit.collider.CompareTag("enemy") || hit.collider.gameObject.name=="Golem(Clone)")
+             {
+                 Debug.Log("hit");
+                 Debug.Log("isNotHit " + isNotHit);
+                 if (isNotHit)
+                 {
+                     Debug.Log("Taking Damage");
+                     hit.collider.GetComponent<Golem>().TakeDamage();
+                     isHit = true;
+                     isNotHit = false;
+                 }
+             }
+
+             if (hit.collider.CompareTag("wall"))
+             {
+                 DestroySpell();
+             }
+             //DestroySpell(hit.collider.GetComponent<Golem>().getPosition());
+             //DestroySpell();
+         }*/
+    
     
     private void OnCollisionEnter2D(Collision2D other)
     {
-        //if (other.gameObject.CompareTag("enemy"))
-        if (other.collider.gameObject.CompareTag("enemy"))
+        if (other.gameObject.CompareTag("enemy"))
         {
             if (isNotHit)
             {
                 Debug.Log("Taking Damage");
-                other.gameObject.GetComponent<Golem>().TakeDamage();
+                foreach (Golem enemy in enemies)
+                {
+                    other.gameObject.GetComponent<Golem>().TakeDamage();
+                }
                 isNotHit = false;
 
             }
         }
-        if (other.gameObject.CompareTag("wall"))
+            /* if (other.collider.gameObject.CompareTag("enemy"))
+             {
+                 if (isNotHit)
+                 {
+                     Debug.Log("Taking Damage");
+                     other.gameObject.GetComponent<Golem>().TakeDamage();
+                     isNotHit = false;
+
+                 }
+             }*/
+            if (other.gameObject.CompareTag("wall"))
         {
             DestroySpell();
         }
     }
-
+    
     /*
     private void OnTriggerEnter2D(Collider2D col)
     {
@@ -53,7 +110,6 @@ public class EarthWall : MonoBehaviour
         }
     }
     */
-
 
     void DestroySpell()
     {

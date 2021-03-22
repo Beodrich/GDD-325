@@ -5,7 +5,7 @@ using UnityEngine;
 public class EarthWeapon : MonoBehaviour
 {
     public float offset;
-    [SerializeField] AudioSource spellShoot;
+    //[SerializeField] AudioSource spellShoot;
     public GameObject projectile;
     public Transform shotPoint;
     public static bool isShoot = false;
@@ -45,7 +45,7 @@ public class EarthWeapon : MonoBehaviour
                 timeBTWShots = startTimeBTWShots;
                 isShoot = true;
                 StartCoroutine(WaitForAttackAnimation());
-                spellShoot.Play();
+                //spellShoot.Play();
 
             }
         }
