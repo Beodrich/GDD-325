@@ -2229,6 +2229,34 @@ PrefabInstance:
       propertyPath: waves.Array.data[2].enemy
       value: 
       objectReference: {fileID: 214378932}
+    - target: {fileID: 2729049941047798196, guid: d0ae4664e91e6cf489cee704caae8fa9, type: 3}
+      propertyPath: waves.Array.data[0].enemy.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2729049941047798196, guid: d0ae4664e91e6cf489cee704caae8fa9, type: 3}
+      propertyPath: waves.Array.data[1].enemy.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2729049941047798196, guid: d0ae4664e91e6cf489cee704caae8fa9, type: 3}
+      propertyPath: waves.Array.data[2].enemy.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2729049941047798196, guid: d0ae4664e91e6cf489cee704caae8fa9, type: 3}
+      propertyPath: waves.Array.data[0].enemy.Array.data[0]
+      value: 
+      objectReference: {fileID: 1844996410}
+    - target: {fileID: 2729049941047798196, guid: d0ae4664e91e6cf489cee704caae8fa9, type: 3}
+      propertyPath: waves.Array.data[0].enemy.Array.data[1]
+      value: 
+      objectReference: {fileID: 2061506954}
+    - target: {fileID: 2729049941047798196, guid: d0ae4664e91e6cf489cee704caae8fa9, type: 3}
+      propertyPath: waves.Array.data[1].enemy.Array.data[0]
+      value: 
+      objectReference: {fileID: 1844996410}
+    - target: {fileID: 2729049941047798196, guid: d0ae4664e91e6cf489cee704caae8fa9, type: 3}
+      propertyPath: waves.Array.data[2].enemy.Array.data[0]
+      value: 
+      objectReference: {fileID: 1844996410}
     - target: {fileID: 2729049941047798197, guid: d0ae4664e91e6cf489cee704caae8fa9, type: 3}
       propertyPath: m_RootOrder
       value: 10
@@ -2777,7 +2805,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1768121403876751354, guid: 0f1ada5e37928e9498a00cfee3c550e1, type: 3}
       propertyPath: health
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1768121403876751354, guid: 0f1ada5e37928e9498a00cfee3c550e1, type: 3}
       propertyPath: iceSlowed

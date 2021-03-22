@@ -10,7 +10,7 @@ public class SpawnLogic : MonoBehaviour
     [System.Serializable]
     public class Wave {
         public string name;
-        public Transform enemy;
+        public Transform[] enemy;
         public int count;
         public float rate;
 
@@ -142,8 +142,8 @@ public class SpawnLogic : MonoBehaviour
         //Spawn
         for (int i = 0; i < _wave.count; ++i) 
         {
-
-            SpawnEnemy(_wave.enemy);
+            Transform enemy = _wave.enemy[Random.Range(0, _wave.enemy.Length)];
+            SpawnEnemy(enemy);
             yield return new WaitForSeconds(1f / _wave.rate);//this can be changed
         }
 
