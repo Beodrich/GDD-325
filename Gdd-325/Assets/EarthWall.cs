@@ -4,13 +4,12 @@ using UnityEngine;
 
 public class EarthWall : MonoBehaviour
 {
-    public float speed;
     public float lifeTime;
-    public float distance;
     public LayerMask whatIsSolid;
     private bool isHit;
     private bool isNotHit = true;
     private Animator animator;
+    private List<Golem> enemies;
     private void Start()
     {
         animator = GetComponent<Animator>();
@@ -19,38 +18,15 @@ public class EarthWall : MonoBehaviour
         isNotHit = true;
     }
 
-    private void Update()
-    {
-        /*  RaycastHit2D hit = Physics2D.Raycast(transform.position, transform.up, distance);
-          if (hit.collider != null)
-          {
-              if (hit.collider.CompareTag("enemy") || hit.collider.gameObject.name=="Golem(Clone)")
-              {
-                  Debug.Log("hit");
-                  Debug.Log("isNotHit " + isNotHit);
-                  if (isNotHit)
-                  {
-                      Debug.Log("Taking Damage");
-                      hit.collider.GetComponent<Golem>().TakeDamage();
-                      isHit = true;
-                      isNotHit = false;
-                  }
-              }
-
-              if (hit.collider.CompareTag("wall"))
-              {
-                  DestroySpell();
-              }
-              //DestroySpell(hit.collider.GetComponent<Golem>().getPosition());
-              //DestroySpell();
-          }*/
-    }
     private void OnCollisionEnter2D(Collision2D other)
     {
         if (other.gameObject.CompareTag("enemy"))
         {
-            Debug.Log("hit");
-            Debug.Log("isNotHit " + isNotHit);
+            for (int i = 0; i < 100; i++)
+            {
+                // add the enemies that hit the collider to a list them have that
+                // list take damage 
+            }
             if (isNotHit)
             {
                 Debug.Log("Taking Damage");
