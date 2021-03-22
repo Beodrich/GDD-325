@@ -49,7 +49,8 @@ public class WindProjectile : MonoBehaviour
           }*/
         if (!isHit)
         {
-            transform.Translate(Vector2.up * speed * Time.deltaTime);
+            //transform.Translate(Vector2.up * speed * Time.deltaTime);
+
         }
         if (applyWind) {
             StartCoroutine(WindTime());
@@ -60,29 +61,26 @@ public class WindProjectile : MonoBehaviour
     {
         if (other.gameObject.CompareTag("enemy"))
         {
-            Debug.Log("hit");
-            Debug.Log("isNotHit " + isNotHit);
-            if (isNotHit)
-            {
-                Debug.Log("Taking Damage");
-                other.gameObject.GetComponent<Golem>().TakeDamage();
-                isHit = true;
-                isNotHit = false;
-                applyWind = true;
+
+            Debug.Log("Taking Damage");
+            other.gameObject.GetComponent<Golem>().TakeDamage();
+            isHit = true;
+            isNotHit = false;
                 
-            }
         }
         if (other.gameObject.CompareTag("wall"))
         {
             DestroySpell();
         }
 
-
-
-
-
     }
-    
+
+    private void OnTriggerEnter2D(Collider2D col)
+    {
+        // IDEA FROM TETZLAFF
+        // push pack for golem using on trigger and once the wind hits the golem,
+        // use normalized vector dif to push golem back
+    }
 
     void DestroySpell()
     {

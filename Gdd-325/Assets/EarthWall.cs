@@ -70,16 +70,11 @@ public class EarthWall : MonoBehaviour
     {
         if (other.gameObject.CompareTag("enemy"))
         {
-            if (isNotHit)
-            {
-                Debug.Log("Taking Damage");
-                foreach (Golem enemy in enemies)
-                {
-                    other.gameObject.GetComponent<Golem>().TakeDamage();
-                }
-                isNotHit = false;
+            Debug.Log("Taking Damage");
 
-            }
+            other.gameObject.GetComponent<Golem>().TakeDamage();
+            
+
         }
             /* if (other.collider.gameObject.CompareTag("enemy"))
              {

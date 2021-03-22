@@ -13,6 +13,8 @@ public class WindWeapon : MonoBehaviour
     public static float Mana = 20f;
     private PlayerController player;
     public Rigidbody2D Wind;
+    private Vector3 dif;
+    public float speed;
 
 
     private Rigidbody2D currentWind;
@@ -30,6 +32,8 @@ public class WindWeapon : MonoBehaviour
             Vector3 difference = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
             float rotZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;
             transform.rotation = Quaternion.Euler(0f, 0f, rotZ + offset);
+            dif = Vector3.Normalize(difference);
+            
         }
 
 
@@ -47,7 +51,8 @@ public class WindWeapon : MonoBehaviour
             {
                 
                 currentWind= Instantiate(Wind, shotPoint.position, transform.rotation);
-                //Wind.AddForce(Vector2.up * 5, ForceMode2D.Impulse);
+                //currentWind.AddForce(Vector2.up * 5000, ForceMode2D.Impulse);
+                currentWind.velocity = dif * speed; // speed variable
                 Mana -= 1;
                 HeathManaBar.reduceMana(1);
                 timeBTWShots = startTimeBTWShots;

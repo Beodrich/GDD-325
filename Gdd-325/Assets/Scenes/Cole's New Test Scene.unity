@@ -1951,6 +1951,7 @@ MonoBehaviour:
   shotPoint: {fileID: 418516411}
   startTimeBTWShots: 0.25
   Wind: {fileID: 1758474662728603035, guid: 366f1c695b9a46b4f951e4a369789343, type: 3}
+  speed: 15
 --- !u!114 &1019897103
 MonoBehaviour:
   m_ObjectHideFlags: 0
