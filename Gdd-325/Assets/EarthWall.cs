@@ -9,24 +9,23 @@ public class EarthWall : MonoBehaviour
     private bool isHit;
     private bool isNotHit = true;
     private Animator animator;
-    private List<Golem> enemies;
+    Golem[] enemies;
+
+
     private void Start()
     {
         animator = GetComponent<Animator>();
         Invoke("DestroySpell", lifeTime);
         isHit = false;
         isNotHit = true;
+        enemies = FindObjectsOfType<Golem>();
     }
-
+    
     private void OnCollisionEnter2D(Collision2D other)
     {
-        if (other.gameObject.CompareTag("enemy"))
+        //if (other.gameObject.CompareTag("enemy"))
+        if (other.collider.gameObject.CompareTag("enemy"))
         {
-            for (int i = 0; i < 100; i++)
-            {
-                // add the enemies that hit the collider to a list them have that
-                // list take damage 
-            }
             if (isNotHit)
             {
                 Debug.Log("Taking Damage");
@@ -40,6 +39,20 @@ public class EarthWall : MonoBehaviour
             DestroySpell();
         }
     }
+
+    /*
+    private void OnTriggerEnter2D(Collider2D col)
+    {
+        if (col.gameObject.CompareTag("enemy"))
+        {
+            foreach (Golem enemy in enemies)
+            {
+                //Your damage code
+                col.gameObject.GetComponent<Golem>().TakeDamage();
+            }
+        }
+    }
+    */
 
 
     void DestroySpell()
