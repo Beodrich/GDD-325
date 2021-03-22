@@ -25,7 +25,7 @@ public class ShootingEnemy : MonoBehaviour
     {
         //if in a certain range stop moving and shoot for a certian amount of seconds
         float distance = Vector2.Distance(this.transform.position, player.position);
-        Debug.Log(distance);
+        //Debug.Log(distance);
         if (distance < stoppingDistance) {
 
 
