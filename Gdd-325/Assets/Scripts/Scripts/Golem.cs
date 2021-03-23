@@ -9,7 +9,7 @@ public class Golem : MonoBehaviour
     [SerializeField] private float attackDamage;
     [SerializeField] private float health = 10.0f;
     private float maxHeath;
-    [SerializeField] private Sprite[] golemState;
+    [SerializeField] private Transform nextGolemToTransform;
     private PlayerController player;
     public float fireDamage;
     public float fireDuration;
@@ -25,7 +25,7 @@ public class Golem : MonoBehaviour
     private float topSpeed;
     private float currentSpeed;
     //for player melee
-
+    private int length;
 
     private float dazedTime;
     [SerializeField] private float startDazedTime;
@@ -36,12 +36,34 @@ public class Golem : MonoBehaviour
         golemPath = GetComponent<AIPath>();
         topSpeed = golemPath.maxSpeed;
         currentSpeed = topSpeed;
+        //length = nextGolemToTransform.Length;
     }
-    public Sprite getGolemState()
+    public Transform getGolemState()
     {
-        return golemState[0];
+
+
+
+        return null;
+        
+        
     }
+    private void changeGolem() {
+
+
+        if (nextGolemToTransform != null)
+        {
+
+          var newGolem=  Instantiate(nextGolemToTransform, this.transform.position, Quaternion.identity);
+            newGolem.gameObject.SetActive(true);
+
+        }
+        else {
+
+            SpawnLogic.countOfGolems -= 1;
+        }
+        
     
+    }
     void Update()
     {
         //for melee
@@ -63,7 +85,8 @@ public class Golem : MonoBehaviour
         {
             //Instantiate(deathEffect, transform.position, Quaternion.identity);
             Destroy(this.gameObject);
-            SpawnLogic.countOfGolems -= 1;
+            
+            changeGolem();
         }
         if (startIce)
         {
