@@ -13,14 +13,23 @@ public class ShootingEnemy : MonoBehaviour
     public float startTimeBtwShots;
     public GameObject projectile;
     private  bool isClose = false;
-    
+    IAstarAI ai;
+    public float radius;
     // Start is called before the first frame update
     void Start()
     {
         timeBtwShots = startTimeBtwShots;
+        ai = GetComponent<IAstarAI>();
     }
 
     // Update is called once per frame
+
+    Vector2 PickRandomPoint() {
+        Vector2 point = Random.insideUnitCircle * radius;
+        point.y = 0;
+        point += (Vector2)ai.position;
+        return point;
+    }
     void Update()
     {
         //if in a certain range stop moving and shoot for a certian amount of seconds
