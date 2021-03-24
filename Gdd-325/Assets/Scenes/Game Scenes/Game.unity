@@ -996,6 +996,7 @@ MonoBehaviour:
   golemInitEarthDamage: 4
   iceSlowed: 0.75
   maxIceTime: 3
+  animationChangeRange: 0.9
   startDazedTime: 0
 --- !u!114 &214378934
 MonoBehaviour:
@@ -1605,6 +1606,29 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5629556909283941815, guid: 373fcb3bcde2fb14c8b3ba515e8acc3e, type: 3}
   m_PrefabInstance: {fileID: 601566540}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &619870042 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5259785711543859236, guid: e5af84247acab834b987f38306537842, type: 3}
+  m_PrefabInstance: {fileID: 2061506953}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &619870049 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5259785711543859232, guid: e5af84247acab834b987f38306537842, type: 3}
+  m_PrefabInstance: {fileID: 2061506953}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &619870051
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 619870042}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66ad5f5a9e070114f80db07e27898624, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 619870049}
 --- !u!1001 &647895053
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2418,7 +2442,7 @@ PrefabInstance:
     - target: {fileID: 2729049941047798196, guid: d0ae4664e91e6cf489cee704caae8fa9, type: 3}
       propertyPath: waves.Array.data[0].enemy.Array.data[0]
       value: 
-      objectReference: {fileID: 1844996410}
+      objectReference: {fileID: 2061506954}
     - target: {fileID: 2729049941047798196, guid: d0ae4664e91e6cf489cee704caae8fa9, type: 3}
       propertyPath: waves.Array.data[0].enemy.Array.data[1]
       value: 
@@ -4110,6 +4134,10 @@ PrefabInstance:
     - target: {fileID: 1768121403876751354, guid: e5af84247acab834b987f38306537842, type: 3}
       propertyPath: fireDuration
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1768121403876751354, guid: e5af84247acab834b987f38306537842, type: 3}
+      propertyPath: animationChangeRange
+      value: 0.9
       objectReference: {fileID: 0}
     - target: {fileID: 1768121403876751354, guid: e5af84247acab834b987f38306537842, type: 3}
       propertyPath: nextGolemToTransform

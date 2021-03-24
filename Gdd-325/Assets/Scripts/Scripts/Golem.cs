@@ -5,6 +5,7 @@ using Pathfinding;
 
 public class Golem : MonoBehaviour
 {
+    private Rigidbody2D rb;
     private AIPath golemPath;
     [SerializeField] private float attackDamage;
     [SerializeField] private float health = 10.0f;
@@ -27,6 +28,17 @@ public class Golem : MonoBehaviour
     //for player melee
     private int length;
 
+
+    //GOLEM ANIMATIONS
+    private string golem_Right;
+    private string golem_Left;
+    private string golem_Up;
+    private string golem_Down;
+    [Range(0.0F, 1F)]
+    [SerializeField] private float animationChangeRange = 0.9f;
+    private AnimatorLogic anim;
+
+
     private float dazedTime;
     [SerializeField] private float startDazedTime;
     private void Start()
@@ -36,7 +48,15 @@ public class Golem : MonoBehaviour
         golemPath = GetComponent<AIPath>();
         topSpeed = golemPath.maxSpeed;
         currentSpeed = topSpeed;
-        //length = nextGolemToTransform.Length;
+        rb = GetComponent<Rigidbody2D>();
+        if (gameObject.name == "crawler(Clone)") {
+            golem_Right = "Crawler_Right";
+            golem_Down = "Crawler_Down";
+            golem_Left = "Crawler_Left";
+            golem_Up = "Crawler_Up";
+        
+        }
+        anim = GetComponent<AnimatorLogic>();
     }
     public Transform getGolemState()
     {
@@ -74,32 +94,56 @@ public class Golem : MonoBehaviour
 
 
         }
-        else {
+        else
+        {
             currentSpeed = 0;
             golemPath.maxSpeed = 0;
             dazedTime -= Time.deltaTime;
-        
+
         }
         //Debug.Log(health);
         if (health <= 0)
         {
             //Instantiate(deathEffect, transform.position, Quaternion.identity);
             Destroy(this.gameObject);
-            
+
             changeGolem();
         }
         if (startIce)
         {
             SlowGolem(iceSlowed, maxIceTime);
         }
+        //MAKE SURE ANIMATIONS NAMES ARE ALL THE SAME 
+        Vector2 golemVector = golemPath.desiredVelocity.normalized;
+        Debug.Log(golemVector);
+        if (golemVector.x <= -animationChangeRange)
+        {
+            anim.ChangeAnimationState(golem_Left);
 
+        }
+        else if (golemVector.x > animationChangeRange)
+        {
+            anim.ChangeAnimationState(golem_Right);
 
+        }
+         if (golemVector.y > animationChangeRange)
+         {
+
+            anim.ChangeAnimationState(golem_Up);
+
+         }
+        else if (golemVector.y <= -animationChangeRange)
+        {
+            Debug.Log("down");
+            anim.ChangeAnimationState(golem_Down);
+
+        }
     }
 
-    public Transform getPosition()
-    {
+        public Transform getPosition()
+        {
         return this.transform;
-    }
+        }
 
     public void TakeDamage()
     {
