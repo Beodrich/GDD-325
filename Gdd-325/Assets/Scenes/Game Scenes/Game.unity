@@ -637,6 +637,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3ee7e047c8add784b9625bb9020a9bbe, type: 3}
+--- !u!4 &121743213 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2737406502856697320, guid: a3efbba7d81282f49bef76e2f718d23f, type: 3}
+  m_PrefabInstance: {fileID: 2142428388}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &155075993
 GameObject:
   m_ObjectHideFlags: 0
@@ -855,7 +860,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -1203961559477701892, guid: 13b1e73acc286f74f8b5bba61ae80548, type: 3}
       propertyPath: maxSpeed
-      value: 10
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: -1203961559477701892, guid: 13b1e73acc286f74f8b5bba61ae80548, type: 3}
       propertyPath: gravity.x
@@ -880,6 +885,10 @@ PrefabInstance:
     - target: {fileID: 4212257572519284704, guid: 13b1e73acc286f74f8b5bba61ae80548, type: 3}
       propertyPath: m_Name
       value: shooting enemy 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4212257572519284704, guid: 13b1e73acc286f74f8b5bba61ae80548, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4212257572519284704, guid: 13b1e73acc286f74f8b5bba61ae80548, type: 3}
       propertyPath: m_IsActive
@@ -1005,7 +1014,7 @@ MonoBehaviour:
   iceSlowed: 0.75
   maxIceTime: 3
   animationChangeRange: 0.9
-  startDazedTime: 0
+  startDazedTime: 3
 --- !u!114 &214378934
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1054,19 +1063,24 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 214378931}
-  m_BodyType: 1
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 1000000
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!4 &266713969 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3545130173917796489, guid: 04e60accf03549848a01698bdde78b7d, type: 3}
+  m_PrefabInstance: {fileID: 2123181146}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &305357268
 GameObject:
   m_ObjectHideFlags: 0
@@ -1450,12 +1464,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startTimeBtwAttack: 0.3
-  attackPos: {fileID: 0}
-  attackRange: 1.4
+  attackPos: {fileID: 121743213}
+  attackRange: 2.38
   whatIsEnemies:
     serializedVersion: 2
     m_Bits: 64
-  damage: 1
+  damage: 5
 --- !u!82 &440012376
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1955,6 +1969,10 @@ PrefabInstance:
     - target: {fileID: 4727849557814838554, guid: 7bf7a8655606cb54695e5662de0a9c81, type: 3}
       propertyPath: m_Name
       value: enemy hp bar
+      objectReference: {fileID: 0}
+    - target: {fileID: 4727849557814838554, guid: 7bf7a8655606cb54695e5662de0a9c81, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4727849557814838555, guid: 7bf7a8655606cb54695e5662de0a9c81, type: 3}
       propertyPath: m_RootOrder
@@ -4506,7 +4524,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startTimeBtwAttack: 0.3
-  attackPos: {fileID: 0}
+  attackPos: {fileID: 266713969}
   attackRange: 1.4
   whatIsEnemies:
     serializedVersion: 2
@@ -4594,6 +4612,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 173726950599044998, guid: a3efbba7d81282f49bef76e2f718d23f, type: 3}
+      propertyPath: attackRange
+      value: 2.38
+      objectReference: {fileID: 0}
+    - target: {fileID: 656000341083130051, guid: a3efbba7d81282f49bef76e2f718d23f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 720070061829446603, guid: a3efbba7d81282f49bef76e2f718d23f, type: 3}
       propertyPath: fireShoot
       value: 
@@ -4614,6 +4640,14 @@ PrefabInstance:
       propertyPath: projectile
       value: 
       objectReference: {fileID: 8832736015709631405, guid: 366f1c695b9a46b4f951e4a369789343, type: 3}
+    - target: {fileID: 3936334348323953242, guid: a3efbba7d81282f49bef76e2f718d23f, type: 3}
+      propertyPath: damage
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3936334348323953242, guid: a3efbba7d81282f49bef76e2f718d23f, type: 3}
+      propertyPath: attackRange
+      value: 2.38
+      objectReference: {fileID: 0}
     - target: {fileID: 5278976977336758304, guid: a3efbba7d81282f49bef76e2f718d23f, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -4659,6 +4693,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5278976977336758316, guid: a3efbba7d81282f49bef76e2f718d23f, type: 3}
+      propertyPath: m_BodyType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5278976977336758316, guid: a3efbba7d81282f49bef76e2f718d23f, type: 3}
       propertyPath: m_Constraints
       value: 4
       objectReference: {fileID: 0}
@@ -4677,6 +4715,10 @@ PrefabInstance:
     - target: {fileID: 5278976977336758318, guid: a3efbba7d81282f49bef76e2f718d23f, type: 3}
       propertyPath: m_Name
       value: MonkE
+      objectReference: {fileID: 0}
+    - target: {fileID: 6809966469118222710, guid: a3efbba7d81282f49bef76e2f718d23f, type: 3}
+      propertyPath: attackRange
+      value: 2.38
       objectReference: {fileID: 0}
     - target: {fileID: 7344305773908303544, guid: a3efbba7d81282f49bef76e2f718d23f, type: 3}
       propertyPath: Ice
