@@ -15,42 +15,47 @@ public class ShootingEnemy : MonoBehaviour
     private  bool isClose = false;
     IAstarAI ai;
     public float radius;
+    private Vector2 point;
+    private bool canShoot = true;
     // Start is called before the first frame update
     void Start()
     {
         timeBtwShots = startTimeBtwShots;
         ai = GetComponent<IAstarAI>();
+        ai.destination=GameObject.Find("MonkE").transform.position;
+        ai.SearchPath();
+
     }
 
     // Update is called once per frame
 
     Vector2 PickRandomPoint() {
-        Vector2 point = Random.insideUnitCircle * radius;
-        point.y = 0;
+         point = Random.insideUnitCircle * radius;
+        //point.y = 0;
         point += (Vector2)ai.position;
         return point;
     }
     void Update()
     {
-        //if in a certain range stop moving and shoot for a certian amount of seconds
-        float distance = Vector2.Distance(this.transform.position, player.position);
-        //Debug.Log(distance);
-        if (distance < stoppingDistance) {
+        /* //if in a certain range stop moving and shoot for a certian amount of seconds
+         float distance = Vector2.Distance(this.transform.position, player.position);
+         //Debug.Log(distance);
+         if (distance < stoppingDistance) {
 
 
-            GetComponent<AIDestinationSetter>().enabled = false;
-            GetComponent<AIPath>().enabled = false;
-            isClose = false;
-            startTimeBtwShots = 0.5f;
+             GetComponent<AIDestinationSetter>().enabled = false;
+             GetComponent<AIPath>().enabled = false;
+             isClose = false;
+             startTimeBtwShots = 0.5f;
 
-        }
-        else {
-            GetComponent<AIDestinationSetter>().enabled = true;
-            GetComponent<AIPath>().enabled = true;
-            isClose = true;
-            startTimeBtwShots = 2f;
+         }
+         else {
+             GetComponent<AIDestinationSetter>().enabled = true;
+             GetComponent<AIPath>().enabled = true;
+             isClose = true;
+             startTimeBtwShots = 2f;
 
-        }
+         }*/
 
 
 
@@ -71,19 +76,40 @@ public class ShootingEnemy : MonoBehaviour
 
 
         //}
-        if (timeBtwShots <= 0)
+
+        //if ai has reached its path stop it from moving and fire
+        //else choose another path
+        if (!ai.pathPending && (ai.reachedDestination || !ai.hasPath) && !canShoot)
+        {
+            ai.destination = PickRandomPoint();
+            ai.SearchPath();
+            canShoot = true;
+        }
+        if (timeBtwShots <= 0 && canShoot)
         {
             Instantiate(projectile, transform.position ,Quaternion.identity);
-          timeBtwShots = startTimeBtwShots;
+             timeBtwShots = startTimeBtwShots;
+            canShoot = false;
+            
         }
         else {
             timeBtwShots -= Time.deltaTime;
 
         }
+        
     }
-    public bool getIsClose() {
-
-        return isClose;
+    
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(point, radius);
     }
-
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("wall")) {
+            Debug.Log("collison");
+            ai.destination = PickRandomPoint();
+            ai.SearchPath();
+        }
+    }
 }
