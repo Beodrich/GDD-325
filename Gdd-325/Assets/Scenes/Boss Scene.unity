@@ -1034,7 +1034,7 @@ GameObject:
   - component: {fileID: 427028458}
   m_Layer: 0
   m_Name: WallCollider (3)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1222,7 +1222,7 @@ GameObject:
   - component: {fileID: 634365546}
   m_Layer: 0
   m_Name: WallCollider (2)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1558,7 +1558,7 @@ GameObject:
   - component: {fileID: 713131510}
   m_Layer: 0
   m_Name: WallCollider (1)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3076,7 +3076,7 @@ GameObject:
   - component: {fileID: 1121295603}
   m_Layer: 0
   m_Name: WallCollider
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3408,6 +3408,7 @@ GameObject:
   - component: {fileID: 1176676140}
   - component: {fileID: 1176676142}
   - component: {fileID: 1176676141}
+  - component: {fileID: 1176676145}
   m_Layer: 0
   m_Name: Boss
   m_TagString: Boss
@@ -3518,7 +3519,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1000
+  m_Mass: 1000000
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0
@@ -3573,10 +3574,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackDistance: 1.5
+  speed: 10
   player: {fileID: 920747058}
   golemsToSpawn:
   - {fileID: 1627461953}
   rate: 1
+--- !u!114 &1176676145
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1176676135}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66ad5f5a9e070114f80db07e27898624, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 0}
 --- !u!1001 &1186619927
 PrefabInstance:
   m_ObjectHideFlags: 0

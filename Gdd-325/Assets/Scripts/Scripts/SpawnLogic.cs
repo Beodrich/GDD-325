@@ -31,7 +31,9 @@ public class SpawnLogic : MonoBehaviour
     public static float countOfGolems;
 
     private bool inBetweenRounds = false;
-   [SerializeField] private Text waveNameText;
+
+     private bool isSpawning=true;
+    [SerializeField] private Text waveNameText;
     [SerializeField] private Text numOfGolemText;
 
     private Shop shop;
@@ -134,9 +136,9 @@ public class SpawnLogic : MonoBehaviour
             searchCountDown = 1f;
             if (GameObject.FindGameObjectsWithTag("enemy").Length==0)
             {
-               
-               
-                
+
+
+                isSpawning = false;
                     return false;
 
             }
@@ -162,7 +164,7 @@ public class SpawnLogic : MonoBehaviour
     
     }
     void SpawnEnemy(Transform _enemy) {
-
+        isSpawning = true;
         //spawn Enemy
         Transform randomSpawnPoint = spawnPoints[Random.Range(0, spawnPoints.Length)];
 
@@ -176,5 +178,9 @@ public class SpawnLogic : MonoBehaviour
         return spawnPoints;
     
     
+    }
+    public bool getIsSpawning() {
+
+        return isSpawning;
     }
 }
