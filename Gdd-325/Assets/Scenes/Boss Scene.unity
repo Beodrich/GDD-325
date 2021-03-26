@@ -3419,7 +3419,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -4551205165588622491, guid: 6e6e434f5df9a704f869a202ebcc1c38, type: 3}
+  m_Sprite: {fileID: 6732038817613973774, guid: 358895f254a19bb4ea6479c6af6a9723, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -3461,7 +3461,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 7.65, y: 8.71}
+    oldSize: {x: 10.680001, y: 12.02}
     newSize: {x: 7.65, y: 8.71}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -4852,6 +4852,7 @@ MonoBehaviour:
   golemInitEarthDamage: 4
   iceSlowed: 0.75
   maxIceTime: 3
+  animationChangeRange: 0.9
   startDazedTime: 0
 --- !u!61 &1995872455
 BoxCollider2D:
