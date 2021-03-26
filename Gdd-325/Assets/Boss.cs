@@ -2,6 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+enum BossStates { 
+    spawning,
+    rolling,
+    waiting,
+    none
+
+
+}
 public class Boss : MonoBehaviour
 {
     public float attackDistance = 1.5f;
@@ -14,13 +23,20 @@ public class Boss : MonoBehaviour
     Animator ani;
     private bool isAttack = false;
     public Transform player;
-
-    
+    public Transform[] golemsToSpawn;
+    public float rate = 1f;
+    private BossStates state = BossStates.none;
+    private SpawnLogic spawn;
     // Start is called before the first frame update
     void Start()
     {
         animator = GetComponent<Animator>();
         target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
+        spawn = GameObject.Find("SpawnControl").GetComponent<SpawnLogic>();
+    }
+    private void Update()
+    {
+       
     }
 
     public void SetWalk(Animator animator)
@@ -35,4 +51,6 @@ public class Boss : MonoBehaviour
         ani.SetTrigger("BowlingAttack");
         GetComponent<Boss_Follow>().enabled = true;
     }
+
+    
 }

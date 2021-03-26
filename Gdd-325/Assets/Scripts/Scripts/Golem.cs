@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Pathfinding;
 
+[RequireComponent(typeof(AnimatorLogic))]
 public class Golem : MonoBehaviour
 {
     private Rigidbody2D rb;

@@ -102,4 +102,11 @@ public class Shop : MonoBehaviour
         shopUI.SetActive(true);
     
     }
+    public  void dontShowShopText() {
+        shopUI.SetActive(false);
+
+
+
+
+    }
 }

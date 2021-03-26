@@ -66,8 +66,16 @@ public class SpawnLogic : MonoBehaviour
             //check if enemies are still alive
             if (!EnemyIsAlive())
             {
-                WaveCompleted();
+                if (waves[nextWave].name != "Boss")
+                {
+                    WaveCompleted();
+                }
+                else {
+                    state = SpawnState.SPAWNING;
 
+
+
+                }
 
             }
             else {
@@ -102,6 +110,7 @@ public class SpawnLogic : MonoBehaviour
         else {
             inBetweenRounds = false;
         }
+       
         Debug.Log("Wave Completed!");
 
         state = SpawnState.COUNTING;
@@ -161,5 +170,11 @@ public class SpawnLogic : MonoBehaviour
         newGolem.tag = "enemy";
         //Debug.Log("Spawning Enemy: " + newGolem.name + " At spawn point " + randomSpawnPoint.name);
         newGolem.gameObject.SetActive(true);
+    }
+    public Transform[] getSpawnPoints() {
+
+        return spawnPoints;
+    
+    
     }
 }
