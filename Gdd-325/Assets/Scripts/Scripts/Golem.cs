@@ -49,11 +49,20 @@ public class Golem : MonoBehaviour
         topSpeed = golemPath.maxSpeed;
         currentSpeed = topSpeed;
         rb = GetComponent<Rigidbody2D>();
-        if (gameObject.name == "crawler(Clone)") {
+        if (gameObject.name == "crawler(Clone)")
+        {
             golem_Right = "Crawler_Right";
             golem_Down = "Crawler_Down";
             golem_Left = "Crawler_Left";
             golem_Up = "Crawler_Up";
+
+        }
+        else if (gameObject.name == "shooting enemy (Clone)") {
+            golem_Right = "Golem_Shoot_Right";
+            golem_Left = "Golem_Shoot_Left";
+            golem_Down = "Golem_Shoot_Down";
+            golem_Up = "Golem_Shoot_Up";
+        
         
         }
         anim = GetComponent<AnimatorLogic>();
@@ -116,7 +125,7 @@ public class Golem : MonoBehaviour
         //MAKE SURE ANIMATIONS NAMES ARE ALL THE SAME 
         Vector2 golemVector = golemPath.desiredVelocity.normalized;
         Debug.Log(golemVector);
-        /*if (golemVector.x <= -animationChangeRange)
+        if (golemVector.x <= -animationChangeRange)
         {
             anim.ChangeAnimationState(golem_Left);
 
@@ -137,7 +146,7 @@ public class Golem : MonoBehaviour
             Debug.Log("down");
             anim.ChangeAnimationState(golem_Down);
 
-        }*/
+        }
     }
 
         public Transform getPosition()

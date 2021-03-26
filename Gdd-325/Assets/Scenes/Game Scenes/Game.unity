@@ -884,7 +884,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4212257572519284704, guid: 13b1e73acc286f74f8b5bba61ae80548, type: 3}
       propertyPath: m_Name
-      value: shooting enemy 1
+      value: 'shooting enemy '
       objectReference: {fileID: 0}
     - target: {fileID: 4212257572519284704, guid: 13b1e73acc286f74f8b5bba61ae80548, type: 3}
       propertyPath: m_Layer
@@ -892,7 +892,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4212257572519284704, guid: 13b1e73acc286f74f8b5bba61ae80548, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4212257572519284704, guid: 13b1e73acc286f74f8b5bba61ae80548, type: 3}
       propertyPath: m_TagString
@@ -903,12 +903,20 @@ PrefabInstance:
       value: 19
       objectReference: {fileID: 0}
     - target: {fileID: 4212257572519284706, guid: 13b1e73acc286f74f8b5bba61ae80548, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.704
+      objectReference: {fileID: 0}
+    - target: {fileID: 4212257572519284706, guid: 13b1e73acc286f74f8b5bba61ae80548, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.5994
+      objectReference: {fileID: 0}
+    - target: {fileID: 4212257572519284706, guid: 13b1e73acc286f74f8b5bba61ae80548, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -41.02
+      value: -39.9012
       objectReference: {fileID: 0}
     - target: {fileID: 4212257572519284706, guid: 13b1e73acc286f74f8b5bba61ae80548, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.074608
+      value: 1.0236
       objectReference: {fileID: 0}
     - target: {fileID: 4212257572519284706, guid: 13b1e73acc286f74f8b5bba61ae80548, type: 3}
       propertyPath: m_LocalPosition.z
@@ -942,6 +950,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4212257572519284707, guid: 13b1e73acc286f74f8b5bba61ae80548, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -3989994501067244848, guid: f0907d666b35f63428e6bc831338909f, type: 3}
     - target: {fileID: 4212257572519284717, guid: 13b1e73acc286f74f8b5bba61ae80548, type: 3}
       propertyPath: time
       value: 0.5
@@ -1046,7 +1058,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 4.01, y: 2.77}
+    oldSize: {x: 7.5600004, y: 10.240001}
     newSize: {x: 4.01, y: 2.77}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -1076,6 +1088,38 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!95 &214378937
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 214378931}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e8494fc664f249247a8484dd641abee1, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &214378942
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 214378931}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66ad5f5a9e070114f80db07e27898624, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 214378937}
 --- !u!4 &266713969 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3545130173917796489, guid: 04e60accf03549848a01698bdde78b7d, type: 3}
@@ -1992,7 +2036,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4727849557814838555, guid: 7bf7a8655606cb54695e5662de0a9c81, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.06
+      value: 5.3
       objectReference: {fileID: 0}
     - target: {fileID: 4727849557814838555, guid: 7bf7a8655606cb54695e5662de0a9c81, type: 3}
       propertyPath: m_LocalPosition.z

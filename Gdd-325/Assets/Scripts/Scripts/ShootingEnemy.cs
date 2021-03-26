@@ -17,6 +17,7 @@ public class ShootingEnemy : MonoBehaviour
     public float radius;
     private Vector2 point;
     private bool canShoot = true;
+    private bool canMove = true;
     // Start is called before the first frame update
     void Start()
     {
@@ -79,24 +80,62 @@ public class ShootingEnemy : MonoBehaviour
 
         //if ai has reached its path stop it from moving and fire
         //else choose another path
-        if (!ai.pathPending && (ai.reachedDestination || !ai.hasPath) && !canShoot)
-        {
-            ai.destination = PickRandomPoint();
+        /* if (!ai.pathPending &&  !ai.hasPath && !canShoot )
+         {
+             ai.destination = PickRandomPoint();
+             ai.SearchPath();
+             canShoot = true;
+             canMove = true;
+         }*/
+        /*  if (timeBtwShots <= 0 && canShoot )
+          {
+
+              StartCoroutine(ShootTime());
+              timeBtwShots = startTimeBtwShots;
+
+          }
+          else {
+              timeBtwShots -= Time.deltaTime;
+
+          }*/
+        Debug.Log(timeBtwShots);
+        if (ai.reachedDestination) {
+
+            Shoot();
+           
+           
             ai.SearchPath();
-            canShoot = true;
         }
-        if (timeBtwShots <= 0 && canShoot)
+        if (timeBtwShots > 0) {
+            timeBtwShots -= Time.deltaTime;
+        
+        }
+
+
+    }
+    IEnumerator ShootTime() {
+
+        if (timeBtwShots <= 0)
         {
-            Instantiate(projectile, transform.position ,Quaternion.identity);
-             timeBtwShots = startTimeBtwShots;
-            canShoot = false;
-            
+
+
+            Instantiate(projectile, transform.position, Quaternion.identity);
+            timeBtwShots = startTimeBtwShots;
         }
         else {
-            timeBtwShots -= Time.deltaTime;
-
-        }
+           
         
+        
+        }
+            //timeBtwShots -= Time.deltaTime;
+        
+       
+        yield return new WaitForSeconds(2f);
+        ai.destination = PickRandomPoint();
+
+
+
+
     }
     
     private void OnDrawGizmos()
@@ -111,5 +150,12 @@ public class ShootingEnemy : MonoBehaviour
             ai.destination = PickRandomPoint();
             ai.SearchPath();
         }
+    }
+    //shoot
+    public void Shoot() {
+       
+        
+        StartCoroutine(ShootTime());
+    
     }
 }

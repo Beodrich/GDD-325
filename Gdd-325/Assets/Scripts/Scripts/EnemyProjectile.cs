@@ -16,7 +16,7 @@ public class EnemyProjectile : MonoBehaviour
     {
         player = GameObject.Find("MonkE").transform;
         target = new Vector2(player.position.x, player.position.y);
-        enemy = GameObject.Find("shooting enemy 1(Clone)").GetComponent<ShootingEnemy>();
+        enemy = GameObject.Find("shooting enemy (Clone)").GetComponent<ShootingEnemy>();
         playerController = GameObject.Find("MonkE").GetComponent<PlayerController>();
 
     }
