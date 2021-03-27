@@ -6,6 +6,7 @@ using Pathfinding;
 [RequireComponent(typeof(AnimatorLogic))]
 public class Golem : MonoBehaviour
 {
+    
     private Rigidbody2D rb;
     private AIPath golemPath;
     [SerializeField] private float attackDamage;

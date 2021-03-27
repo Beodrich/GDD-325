@@ -3477,7 +3477,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -5.3, y: 13.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1708248856}
   m_Father: {fileID: 0}
   m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3579,6 +3580,14 @@ MonoBehaviour:
   golemsToSpawn:
   - {fileID: 1627461953}
   rate: 1
+  golemInitFireDamage: 2
+  golemInitIceDamage: 3
+  golemInitWindDamage: 4
+  golemInitEarthDamage: 3
+  fireDamage: 1
+  fireDuration: 2
+  startIce: 0
+  initialIceTime: 0
 --- !u!114 &1176676145
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3733,6 +3742,63 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1232672667}
   m_CullTransparentMesh: 1
+--- !u!1001 &1388255582
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1176676137}
+    m_Modifications:
+    - target: {fileID: 4727849557814838554, guid: 3d83bf3fa3bf80544ad98c933300c265, type: 3}
+      propertyPath: m_Name
+      value: enemy hp bar 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4727849557814838555, guid: 3d83bf3fa3bf80544ad98c933300c265, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4727849557814838555, guid: 3d83bf3fa3bf80544ad98c933300c265, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.34
+      objectReference: {fileID: 0}
+    - target: {fileID: 4727849557814838555, guid: 3d83bf3fa3bf80544ad98c933300c265, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 6.81
+      objectReference: {fileID: 0}
+    - target: {fileID: 4727849557814838555, guid: 3d83bf3fa3bf80544ad98c933300c265, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4727849557814838555, guid: 3d83bf3fa3bf80544ad98c933300c265, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4727849557814838555, guid: 3d83bf3fa3bf80544ad98c933300c265, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4727849557814838555, guid: 3d83bf3fa3bf80544ad98c933300c265, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4727849557814838555, guid: 3d83bf3fa3bf80544ad98c933300c265, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4727849557814838555, guid: 3d83bf3fa3bf80544ad98c933300c265, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4727849557814838555, guid: 3d83bf3fa3bf80544ad98c933300c265, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4727849557814838555, guid: 3d83bf3fa3bf80544ad98c933300c265, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 3d83bf3fa3bf80544ad98c933300c265, type: 3}
 --- !u!1 &1399777691
 GameObject:
   m_ObjectHideFlags: 0
@@ -4274,6 +4340,11 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.17, y: 3.15}
   m_EdgeRadius: 0
+--- !u!4 &1708248856 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4727849557814838555, guid: 3d83bf3fa3bf80544ad98c933300c265, type: 3}
+  m_PrefabInstance: {fileID: 1388255582}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1751120149
 GameObject:
   m_ObjectHideFlags: 0
