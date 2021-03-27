@@ -2447,6 +2447,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5278976977336758316, guid: a3efbba7d81282f49bef76e2f718d23f, type: 3}
+      propertyPath: m_Mass
+      value: 10000
+      objectReference: {fileID: 0}
+    - target: {fileID: 5278976977336758316, guid: a3efbba7d81282f49bef76e2f718d23f, type: 3}
       propertyPath: m_Constraints
       value: 4
       objectReference: {fileID: 0}
@@ -2798,6 +2802,17 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &920747090 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5278976977336758317, guid: a3efbba7d81282f49bef76e2f718d23f, type: 3}
+  m_PrefabInstance: {fileID: 920747057}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 920747064}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b136dec4abed9c44b0e203434bc4854, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1033718803 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5259785711543859236, guid: 0f1ada5e37928e9498a00cfee3c550e1, type: 3}
@@ -3407,7 +3422,6 @@ GameObject:
   - component: {fileID: 1176676138}
   - component: {fileID: 1176676140}
   - component: {fileID: 1176676142}
-  - component: {fileID: 1176676141}
   - component: {fileID: 1176676145}
   m_Layer: 0
   m_Name: Boss
@@ -3548,20 +3562,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &1176676141
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1176676135}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 27b8a03452146114aac9ba5480e741ee, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 3
-  stopDistance: 1
 --- !u!114 &1176676142
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3574,12 +3574,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6709961d67142e74c9c3da1d1c5bb7a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spawnPoints:
+  - {fileID: 1092630953}
+  - {fileID: 418835427}
+  - {fileID: 573956415}
+  - {fileID: 1186619928}
+  golem: {fileID: 1627461953}
+  count: 1
+  rate: 1
   attackDistance: 1.5
   speed: 10
   player: {fileID: 920747058}
   golemsToSpawn:
   - {fileID: 1627461953}
-  rate: 1
+  animator: {fileID: 1176676145}
+  rb: {fileID: 1176676139}
+  monkE: {fileID: 920747090}
   golemInitFireDamage: 2
   golemInitIceDamage: 3
   golemInitWindDamage: 4

@@ -28,7 +28,7 @@ public class HeathManaBar : MonoBehaviour
         mana = WeaponWand.Mana;
         currentMana = mana;
 
-        Debug.Log("player hp is " + player.health + "current life is " + currentLife + "max health is " + maxHeath);
+        //Debug.Log("player hp is " + player.health + "current life is " + currentLife + "max health is " + maxHeath);
     }
 
     // Update is called once per frame

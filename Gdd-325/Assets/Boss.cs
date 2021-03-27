@@ -15,22 +15,29 @@ enum BossStates {
 
 public class Boss : MonoBehaviour
 {
+    //spawn logic 
+    [SerializeField] private Transform[] spawnPoints;
+    [SerializeField] private Transform golem;
+    [SerializeField] private float count = 5f;
+    [SerializeField] private float rate;
+    private float searchCountDown = 1f;
     public float attackDistance = 1.5f;
     private Transform target;
 
     private bool canSpawn = false;
     public float speed = 5f;
     private bool isAttack = false;
+    private bool shitMonkE=false;
+    private bool isCurrentlySpawning = false;
     public Transform player;
     public Transform[] golemsToSpawn;
-    public float rate = 1f;
     private BossStates state = BossStates.none;
     private SpawnLogic spawn;
-    private AnimatorLogic animator;
+    [SerializeField]private AnimatorLogic animator;
     private bool canMove=true;
-    private Rigidbody2D rb;
+    [SerializeField]private Rigidbody2D rb;
     private Vector2 direction;
-    private PlayerController monkE;
+    [SerializeField] private PlayerController monkE;
     private bool canDamage = false;
     private float health = 50f;
     //animations states
@@ -39,6 +46,7 @@ public class Boss : MonoBehaviour
     private const string golem_Right_State = "Boss_Right";
     private const string golem_Left_State = "Boss_Left";
     private const string golem_Down_State = "Boss_Move";
+    private Vector2 bossDirection;
     // Player Attack  Damage
     public float golemInitFireDamage = 2, golemInitIceDamage = 3, golemInitWindDamage = 4, golemInitEarthDamage = 3;
     public float fireDamage = 1, fireDuration = 2;
@@ -52,8 +60,9 @@ public class Boss : MonoBehaviour
         
         target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
         spawn = GameObject.Find("SpawnControl").GetComponent<SpawnLogic>();
+        spawn.enabled = false;
         animator = GetComponent<AnimatorLogic>();
-        rb = GetComponent<Rigidbody2D>();
+       // rb = GetComponent<Rigidbody2D>();
         monkE = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
     }
     private void Update()
@@ -67,21 +76,64 @@ public class Boss : MonoBehaviour
             //3 stunned for x seconds
             //4. repeate 1-4 till dead
             //Debug.Log("has finished spawning " + spawn.getIsSpawning());
-            BowlingAttack();
-            
+            BowlingAttack();  
         }
-        if (!canSpawn) {
+
+        if (GameObject.FindGameObjectsWithTag("enemy").Length == 0 && isCurrentlySpawning) {
             canMove = true;
-        
+            canSpawn = false;
+            isCurrentlySpawning = false;
         }
-        if (canDamage)
+
+        if (canSpawn) {
+            canSpawn = false;
+            canMove = false;
+            Invoke("WaitForSpawn", 2f);
+        }
+
+        //if(!canMove) //&& !animator.getAnimator().GetCurrentAnimatorStateInfo(0).IsName("BowlingState"))
+        //{
+        ChangeAnimation();
+        //}
+
+    }
+    private void ChangeAnimation()
+    {
+        bossDirection = monkE.transform.position - this.transform.position;
+        bossDirection = bossDirection.normalized;
+
+        if (shitMonkE)
+        {
+            animator.ChangeAnimationState(golem_Bowling_State);
+        }
+        else
         {
 
-        }
 
-        
+
+
+            if (bossDirection.x <= -0.9f)
+            {
+                animator.ChangeAnimationState(golem_Left_State);
+
+            }
+            else if (bossDirection.x >= 0.9f)
+            {
+                animator.ChangeAnimationState(golem_Right_State);
+
+            }
+            else if (bossDirection.y >= 0.9f)
+            {
+                animator.ChangeAnimationState(golem_Up_State);
+            }
+            else if (bossDirection.y <= -0.9f)
+            {
+                animator.ChangeAnimationState(golem_Down_State);
+            }
+        }
     }
-    private void OnCollisionEnter2D(Collision2D other)
+
+        private void OnCollisionEnter2D(Collision2D other)
     {
         if (other.gameObject.CompareTag("wall")) {
 
@@ -89,23 +141,29 @@ public class Boss : MonoBehaviour
             animator.ChangeAnimationState(golem_Up_State);
             rb.velocity = Vector2.zero;
             StartCoroutine(StunTime());
+            shitMonkE = false;
         }
         else if (other.gameObject.CompareTag("Player"))
         {
             // if the golem hits the player, it damages the player and starts the new wave of enemies
-            animator.ChangeAnimationState(golem_Up_State);
+            //animator.ChangeAnimationState(golem_Up_State);
             rb.velocity = Vector2.zero;
             // damage player
             monkE.TakeDamage(5);
+            monkE.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
             // start new wave
             canSpawn = true;
-
+            shitMonkE = false;
         }
     }
+    void WaitForSpawn() {
 
+        StartCoroutine(SpawnWave());
+    }
     public void BowlingAttack() {
         rb.velocity = direction * speed;
         canMove = false;
+        shitMonkE = true;
         animator.ChangeAnimationState(golem_Bowling_State);
 
     }
@@ -195,8 +253,51 @@ public class Boss : MonoBehaviour
 
         this.canSpawn = value;
     }
+    IEnumerator SpawnWave()
+    {
+        isCurrentlySpawning = true;
+
+        //Debug.Log("Spawning Wave: " + _wave.name);
+        //Spawn
+        for (int i = 0; i <count; ++i)
+        {
+            
+            SpawnEnemy(golem);
+            yield return new WaitForSeconds(1f /rate);//this can be changed
+        }
 
 
+        yield break;
 
+    }
+    void SpawnEnemy(Transform _enemy)
+    {
+        //spawn Enemy
+        Transform randomSpawnPoint = spawnPoints[Random.Range(0, spawnPoints.Length)];
+
+        var newGolem = Instantiate(_enemy, randomSpawnPoint.position, randomSpawnPoint.rotation);
+        newGolem.tag = "enemy";
+        //Debug.Log("Spawning Enemy: " + newGolem.name + " At spawn point " + randomSpawnPoint.name);
+        newGolem.gameObject.SetActive(true);
+    }
+
+    bool isGolemDead() {
+        searchCountDown -= Time.deltaTime;
+        if (searchCountDown <= 0f)
+        {
+            searchCountDown = 1f;
+            if (GameObject.FindGameObjectsWithTag("enemy").Length == 0)
+            {
+                Debug.Log("all golems are not");
+
+                return true;
+
+            }
+        }
+        return false;
+
+    }
 
 }
+
+

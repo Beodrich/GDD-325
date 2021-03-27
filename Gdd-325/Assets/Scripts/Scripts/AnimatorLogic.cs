@@ -30,5 +30,10 @@ public class AnimatorLogic : MonoBehaviour
             //set the currentstate to the new state
             currentState = newState;
         
+    
+    }
+    public Animator getAnimator() {
+        return animator;
+    
     }
 }
