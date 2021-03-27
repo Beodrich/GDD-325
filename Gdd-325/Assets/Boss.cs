@@ -23,7 +23,7 @@ public class Boss : MonoBehaviour
     private float searchCountDown = 1f;
     public float attackDistance = 1.5f;
     private Transform target;
-
+    [SerializeField] AudioSource audio;
     private bool canSpawn = false;
     public float speed = 5f;
     private bool isAttack = false;
@@ -57,7 +57,7 @@ public class Boss : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        audio = GetComponent<AudioSource>();
         target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
         spawn = GameObject.Find("SpawnControl").GetComponent<SpawnLogic>();
         spawn.enabled = false;
@@ -142,6 +142,7 @@ public class Boss : MonoBehaviour
             rb.velocity = Vector2.zero;
             StartCoroutine(StunTime());
             shitMonkE = false;
+            audio.Play();
         }
         else if (other.gameObject.CompareTag("Player"))
         {
@@ -154,6 +155,7 @@ public class Boss : MonoBehaviour
             // start new wave
             canSpawn = true;
             shitMonkE = false;
+            audio.Play();
         }
     }
     void WaitForSpawn() {
