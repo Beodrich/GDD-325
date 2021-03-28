@@ -20,6 +20,7 @@ public class Boss : MonoBehaviour
     [SerializeField] private Transform golem;
     [SerializeField] private float count = 5f;
     [SerializeField] private float rate;
+    [SerializeField] private float stunAmount = 2f;
     private float searchCountDown = 1f;
     public float attackDistance = 1.5f;
     private Transform target;
@@ -39,7 +40,8 @@ public class Boss : MonoBehaviour
     private Vector2 direction;
     [SerializeField] private PlayerController monkE;
     private bool canDamage = false;
-    private float health = 50f;
+    [SerializeField] private float health = 50f;
+    [SerializeField] private float meleeDamage = 10f;
     //animations states
     private const string golem_Bowling_State = "BowlingState";
     private const string golem_Up_State = "Boss_Up";
@@ -52,7 +54,10 @@ public class Boss : MonoBehaviour
     public float fireDamage = 1, fireDuration = 2;
     public bool startIce;
     public float initialIceTime = 0;
-
+    private  float Max_Health;
+    //ui stuff
+    [SerializeField] private GameObject bossText;
+    [SerializeField] private GameObject bar;
 
     // Start is called before the first frame update
     void Start()
@@ -64,6 +69,10 @@ public class Boss : MonoBehaviour
         animator = GetComponent<AnimatorLogic>();
        // rb = GetComponent<Rigidbody2D>();
         monkE = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
+        Max_Health = health;
+        bossText.SetActive(true);
+        bar.SetActive(true);
+
     }
     private void Update()
     {
@@ -90,11 +99,11 @@ public class Boss : MonoBehaviour
             canMove = false;
             Invoke("WaitForSpawn", 2f);
         }
-
-        //if(!canMove) //&& !animator.getAnimator().GetCurrentAnimatorStateInfo(0).IsName("BowlingState"))
-        //{
         ChangeAnimation();
-        //}
+        BossState();
+
+        
+       
 
     }
     private void ChangeAnimation()
@@ -108,9 +117,6 @@ public class Boss : MonoBehaviour
         }
         else
         {
-
-
-
 
             if (bossDirection.x <= -0.9f)
             {
@@ -143,6 +149,7 @@ public class Boss : MonoBehaviour
             StartCoroutine(StunTime());
             shitMonkE = false;
             audio.Play();
+            canDamage = true;
         }
         else if (other.gameObject.CompareTag("Player"))
         {
@@ -156,6 +163,7 @@ public class Boss : MonoBehaviour
             canSpawn = true;
             shitMonkE = false;
             audio.Play();
+            canDamage = false;
         }
     }
     void WaitForSpawn() {
@@ -171,8 +179,9 @@ public class Boss : MonoBehaviour
     }
     IEnumerator StunTime() {
 
-        yield return new WaitForSeconds(4f);
+        yield return new WaitForSeconds(stunAmount);
         canMove = true;
+        canDamage = false;
     
     }
     public float getHP() {
@@ -182,24 +191,33 @@ public class Boss : MonoBehaviour
 
     public void TakeDamage()
     {
-        if (monkE.isFire())
-        {
-            health -= golemInitFireDamage;
-            DamageOverTime(fireDamage, fireDuration);
-        }
-        if (monkE.isIce())
-        {
-            health -= golemInitIceDamage;
-            startIce = true;
-        }
-        if (monkE.isWind())
-        {
-            health -= golemInitWindDamage;
-        }
-        if (monkE.isEarth())
-        {
-            health -= golemInitEarthDamage;
-        }
+   
+            if (monkE.isFire())
+            {
+                health -= golemInitFireDamage;
+                DamageOverTime(fireDamage, fireDuration);
+            }
+            else if (monkE.isIce())
+            {
+                health -= golemInitIceDamage;
+                startIce = true;
+            }
+            else if (monkE.isWind())
+            {
+                health -= golemInitWindDamage;
+            }
+            else if (monkE.isEarth())
+            {
+                health -= golemInitEarthDamage;
+            }
+        CheckForDeath();
+    }
+    public void MeleeDamge() {
+        if (canDamage) { 
+        health -= meleeDamage;
+        CheckForDeath();
+            }
+    
     }
 
     // FIRE
@@ -298,6 +316,53 @@ public class Boss : MonoBehaviour
         }
         return false;
 
+    }
+    void CheckForDeath() {
+
+        if (health <= 0) {
+            //play death animation
+            Destroy(this.gameObject);
+        
+        
+        }
+    
+    }
+
+    public bool isCanDamage()
+    {
+        return canDamage;
+    }
+    void BossState() { 
+        if(health<41 && health > 31)
+            {
+                speed = 12;
+                count = 3;
+                rate = 2;
+            }
+        else if(health<31 && health > 21)
+        {
+            speed = 14;
+            count = 5;
+            rate = 3;
+        }
+        else if (health < 21 && health > 11)
+        {
+            speed = 16;
+            count = 8;
+            rate = 4;
+        }
+        else if(health < 11 && health > 0)
+        {
+                speed = 20;
+                count = 15;
+                rate = 5;
+        }
+
+
+    }
+    public float getMaxHP() {
+
+        return Max_Health;
     }
 
 }

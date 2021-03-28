@@ -59,16 +59,23 @@ public class WindProjectile : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D other)
     {
-        if (other.gameObject.CompareTag("enemy"))
+        if (other.gameObject.CompareTag("enemy") || other.gameObject.CompareTag("Boss"))
         {
 
-            Debug.Log("Taking Damage");
+            //Debug.Log("Taking Damage");
             other.gameObject.GetComponent<Golem>().TakeDamage();
             isHit = true;
             isNotHit = false;
                 
         }
-        if (other.gameObject.CompareTag("wall"))
+        else if (other.gameObject.CompareTag("Boss"))
+        {
+            if (other.gameObject.GetComponent<Boss>().isCanDamage())
+            {
+                other.gameObject.GetComponent<Boss>().TakeDamage();
+            }
+        }
+        else if (other.gameObject.CompareTag("wall"))
         {
             DestroySpell();
         }

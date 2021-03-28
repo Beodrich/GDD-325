@@ -38,8 +38,19 @@ public class SpellProjectile : MonoBehaviour
                     isNotHit = false;
                 }
             }
-
-            if (hit.collider.CompareTag("wall"))
+            else if (hit.collider.CompareTag("Boss"))
+            {
+                if (hit.collider.GetComponent<Boss>().isCanDamage())
+                {
+                    if(isNotHit)
+                    {
+                        hit.collider.GetComponent<Boss>().TakeDamage();
+                        isHit = true;
+                        isNotHit = false;
+                    }
+                }
+            }
+            else if (hit.collider.CompareTag("wall"))
             {
                 DestroySpell();
             }

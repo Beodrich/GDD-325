@@ -70,11 +70,18 @@ public class EarthWall : MonoBehaviour
     {
         if (other.gameObject.CompareTag("enemy"))
         {
-            Debug.Log("Taking Damage");
+           // Debug.Log("Taking Damage");
 
-            other.gameObject.GetComponent<Golem>().TakeDamage();
-            
+            other.gameObject.GetComponent<Golem>().TakeDamage(); 
 
+        }
+        else if (other.gameObject.CompareTag("Boss"))
+        {
+            if ( other.gameObject.GetComponent<Boss>().isCanDamage())
+            {
+                other.gameObject.GetComponent<Boss>().TakeDamage();
+            }
+            Destroy(this.gameObject);
         }
             /* if (other.collider.gameObject.CompareTag("enemy"))
              {
@@ -86,7 +93,7 @@ public class EarthWall : MonoBehaviour
 
                  }
              }*/
-            if (other.gameObject.CompareTag("wall"))
+        else if (other.gameObject.CompareTag("wall"))
         {
             DestroySpell();
         }

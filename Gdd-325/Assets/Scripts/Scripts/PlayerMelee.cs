@@ -12,10 +12,14 @@ public class PlayerMelee : MonoBehaviour
     [SerializeField] private float attackRange=1.4f;
     [SerializeField] private LayerMask whatIsEnemies;
     [SerializeField] private int damage;
+     private HeathManaBar bar;
+
     void Start()
     {
         player = GameObject.Find("MonkE").GetComponent<PlayerController>();
         wand = GetComponent<WeaponWand>();
+        bar = GameObject.Find("Canvas").GetComponent<HeathManaBar>();
+        
     }
 
     // Update is called once per frame
@@ -29,7 +33,22 @@ public class PlayerMelee : MonoBehaviour
                 Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(attackPos.position, attackRange, whatIsEnemies);
                 for (int i = 0; i < enemiesToDamage.Length; i++)
                 {
-                    enemiesToDamage[i].GetComponent<Golem>().TakeMeleeDamage(damage);
+                    var currentGolem = enemiesToDamage[i];
+                    if (currentGolem.name == "Boss")
+                    {
+                        currentGolem.GetComponent<Boss>().MeleeDamge();
+                        bar.setCurrentMana(2f);
+                        
+
+                    }
+                    else
+                    {
+                        enemiesToDamage[i].GetComponent<Golem>().TakeMeleeDamage(damage);
+                        bar.setCurrentMana(2f);
+
+
+
+                    }
                 }
             
             

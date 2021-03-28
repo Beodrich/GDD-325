@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6361519617982955301}
   m_Layer: 0
   m_Name: EarthWallSpell
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
