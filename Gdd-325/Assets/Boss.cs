@@ -99,6 +99,7 @@ public class Boss : MonoBehaviour
             canMove = true;
             canSpawn = false;
             isCurrentlySpawning = false;
+           // StartCoroutine(AfterGolemsDie());
         }
 
         if (canSpawn) {
@@ -190,6 +191,14 @@ public class Boss : MonoBehaviour
         canMove = true;
         canDamage = false;
     
+    }
+    IEnumerator AfterGolemsDie() { 
+    yield  return new WaitForSeconds(3f);
+        canMove = true;
+        canSpawn = false;
+        isCurrentlySpawning = false;
+
+
     }
     public float getHP() {
         return health;
