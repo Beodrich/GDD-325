@@ -31,13 +31,14 @@ public class SpawnLogic : MonoBehaviour
     private SpawnState state = SpawnState.COUNTING;
     public static float countOfGolems;
 
-    private bool inBetweenRounds = false;
+    public static bool inBetweenRounds = false;
 
     private bool isSpawning = true;
     [SerializeField] private Text waveNameText;
     [SerializeField] private Text numOfGolemText;
 
     private Shop shop;
+    [SerializeField] private GameObject boss;
     // Start is called before the first frame update
     void Start()
     {
@@ -55,45 +56,52 @@ public class SpawnLogic : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //FOR DEBUG ONLY- GET RID OF THIS LINE IN FINAL BUILD
-        // Debug.Log("There are " + GameObject.FindGameObjectsWithTag("enemy").Length + " golems left in the current wave ");
-        waveNameText.text = "Current Wave: " + this.waves[nextWave].name;
-        numOfGolemText.text = countOfGolems + " Golems";
-        if (inBetweenRounds)
+        if (this.waves[nextWave].name == "Boss")
         {
-            //do shop system here 
-            shop.activateShopUI();
+            boss.SetActive(true);
         }
-
-
-        if (state == SpawnState.WAITING)
+        else
         {
-            //check if enemies are still alive
-            if (!EnemyIsAlive())
+            //FOR DEBUG ONLY- GET RID OF THIS LINE IN FINAL BUILD
+            // Debug.Log("There are " + GameObject.FindGameObjectsWithTag("enemy").Length + " golems left in the current wave ");
+            waveNameText.text = "Current Wave: " + this.waves[nextWave].name;
+            numOfGolemText.text = countOfGolems + " Golems";
+            if (inBetweenRounds)
             {
-                WaveCompleted();
+                //do shop system here 
+                shop.activateShopUI();
+            }
+
+
+            if (state == SpawnState.WAITING)
+            {
+                //check if enemies are still alive
+                if (!EnemyIsAlive())
+                {
+                    WaveCompleted();
+
+                }
+                else
+                {
+                    return;
+                }
+            }
+
+            if (waveCountDown <= 0)
+            {
+                if (state != SpawnState.SPAWNING && !inBetweenRounds)
+                {
+                    //Start spawning wave
+                    StartCoroutine(SpawnWave(waves[nextWave]));
+
+                }
 
             }
             else
             {
-                return;
-            }
-        }
-
-        if (waveCountDown <= 0)
-        {
-            if (state != SpawnState.SPAWNING && !inBetweenRounds)
-            {
-                //Start spawning wave
-                StartCoroutine(SpawnWave(waves[nextWave]));
+                waveCountDown -= Time.deltaTime;
 
             }
-
-        }
-        else
-        {
-            waveCountDown -= Time.deltaTime;
-
         }
     }
     void WaveCompleted()

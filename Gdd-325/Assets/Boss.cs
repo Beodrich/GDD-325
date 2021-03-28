@@ -35,7 +35,7 @@ public class Boss : MonoBehaviour
     private BossStates state = BossStates.none;
     private SpawnLogic spawn;
     [SerializeField]private AnimatorLogic animator;
-    private bool canMove=true;
+    private bool canMove=false;
     [SerializeField]private Rigidbody2D rb;
     private Vector2 direction;
     [SerializeField] private PlayerController monkE;
@@ -72,7 +72,14 @@ public class Boss : MonoBehaviour
         Max_Health = health;
         bossText.SetActive(true);
         bar.SetActive(true);
+        StartCoroutine(BossIntro());
 
+    }
+    IEnumerator BossIntro() {
+        yield return new WaitForSeconds(5f);
+        canMove = true;
+    
+    
     }
     private void Update()
     {

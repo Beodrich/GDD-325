@@ -12,7 +12,8 @@ public class Shop : MonoBehaviour
     private PlayerController player;
     public TextMeshProUGUI healthToolTipText;
     public TextMeshProUGUI manaToolTipText;
-
+    private float ogMana;
+    private float ogHealth;
     //utility variables 
     public float amountOfHealthThatIsIncreased = 5f;
     public float amountOfManaThatIsIncreased = 5f;
@@ -47,7 +48,7 @@ public class Shop : MonoBehaviour
         }
         if (manaToolTip.isOverMana)
         {
-             manaToolTipText.text = "This will restore the amount of mana you have and increase it by " + amountOfManaThatIsIncreased + " points. You will also increase your basic recharge rate by " + manaIncreaseRate;
+             manaToolTipText.text = "This will increase the max amount of mana  by " + amountOfManaThatIsIncreased + " points. You will also increase your basic recharge rate by " + manaIncreaseRate;
             //manaToolTipText.text = "This will increase the amount of mana you have to " + amountOfManaThatIsIncreased + HeathManaBar.getMana() + "You're basic mana recharge rate will incrase by " + manaIncreaseRate;
 
             manaToolTipText.enabled = true;
@@ -73,28 +74,28 @@ public class Shop : MonoBehaviour
 
     //restore health and increase it a factor 
     public void buyHealth() {
-        if (skillPoint == 1)
-        {
+       
+        
             bar.setMaxHealth(amountOfHealthThatIsIncreased);
             player.health = bar.getMaxHealth();
             HeathManaBar.restoreLife(bar.getMaxHealth());
             //Debug.Log("player hp is " + player.health + "current life is " + HeathManaBar.currentLife + "max health is " + HeathManaBar.maxHeath);
             skillPoint = 0;
             hasBoughItem = true;
-        }
+        
 
     }
     //restore mana, increase by a factor, and increase the mana by a certain factor
     public void buyMana() {
-        if (skillPoint == 1)
-        {
+        
+            
             bar.setMaxMana(amountOfManaThatIsIncreased);
             bar.setCurrentMana(amountOfManaThatIsIncreased);
             WeaponWand.Mana = HeathManaBar.getMana();
             bar.addManaRechargeRate(manaIncreaseRate);
             skillPoint = 0;
             hasBoughItem = true;
-        }
+        
 
 
     }
