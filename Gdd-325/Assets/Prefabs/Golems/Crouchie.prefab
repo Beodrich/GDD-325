@@ -17,9 +17,9 @@ GameObject:
   - component: {fileID: 1694314300733262468}
   - component: {fileID: 5136067518437835886}
   - component: {fileID: 1768121403876751354}
-  - component: {fileID: 7022273869562327962}
+  - component: {fileID: 6678783285151854002}
   m_Layer: 6
-  m_Name: Golem
+  m_Name: Crouchie
   m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -79,7 +79,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -8067545149307462380, guid: a314a786dddaa254181617caa170d0d4, type: 3}
+  m_Sprite: {fileID: -5088509730847787378, guid: dfb2a1c34e6af334ba357535377ceaf7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -100,7 +100,7 @@ Animator:
   m_GameObject: {fileID: 5259785711543859236}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: cd8a3f927c161f641ad1fcae6c9e8df4, type: 2}
+  m_Controller: {fileID: 0}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -150,7 +150,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 2
-  radius: 5.1
+  radius: 3.22
   height: 2
   repathRate: 0.5
   canSearch: 1
@@ -200,8 +200,8 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 7.26, y: 11.290001}
+  m_Offset: {x: 0.17831014, y: -0.24441147}
+  m_Size: {x: 5.476892, y: 7.0558667}
   m_Direction: 0
 --- !u!50 &5136067518437835886
 Rigidbody2D:
@@ -249,7 +249,7 @@ MonoBehaviour:
   maxIceTime: 3
   animationChangeRange: 0.9
   startDazedTime: 0
---- !u!114 &7022273869562327962
+--- !u!114 &6678783285151854002
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

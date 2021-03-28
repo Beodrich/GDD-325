@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Golem_Down
+  m_Name: Golem_Crouch_Right
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -20,7 +20,7 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: -8067545149307462380, guid: a314a786dddaa254181617caa170d0d4, type: 3}
+      value: {fileID: -1970299567162626308, guid: dfb2a1c34e6af334ba357535377ceaf7, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -40,7 +40,7 @@ AnimationClip:
       customType: 23
       isPPtrCurve: 1
     pptrCurveMapping:
-    - {fileID: -8067545149307462380, guid: a314a786dddaa254181617caa170d0d4, type: 3}
+    - {fileID: -1970299567162626308, guid: dfb2a1c34e6af334ba357535377ceaf7, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}

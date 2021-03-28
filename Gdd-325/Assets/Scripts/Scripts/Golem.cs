@@ -12,7 +12,7 @@ public class Golem : MonoBehaviour
     [SerializeField] private float attackDamage;
     [SerializeField] private float health = 10.0f;
     private float maxHeath;
-    [SerializeField] private Transform nextGolemToTransform;
+    [SerializeField] private Transform[] nextGolemToTransform;
     private PlayerController player;
     public float fireDamage;
     public float fireDuration;
@@ -65,7 +65,22 @@ public class Golem : MonoBehaviour
             golem_Down = "Golem_Shoot_Down";
             golem_Up = "Golem_Shoot_Up";
         
-        
+        }
+        else if (gameObject.name == "Crouchie(Clone)")
+        {
+            golem_Right = "Golem_Crouch_Right";
+            golem_Left = "Golem_Crouch_Left";
+            golem_Down = "Golem_Crouch_Down";
+            golem_Up = "Golem_Crouch_Up";
+
+        }
+        else if (gameObject.name == "Golem(Clone)")
+        {
+            golem_Right = "Golem_Right";
+            golem_Left = "Golem_Left";
+            golem_Down = "Golem_Down";
+            golem_Up = "Golem_UP";
+
         }
         anim = GetComponent<AnimatorLogic>();
     }
@@ -84,7 +99,7 @@ public class Golem : MonoBehaviour
         if (nextGolemToTransform != null)
         {
 
-          var newGolem=  Instantiate(nextGolemToTransform, this.transform.position, Quaternion.identity);
+          var newGolem=  Instantiate(nextGolemToTransform[Random.Range(0, nextGolemToTransform.Length)], this.transform.position, Quaternion.identity);
             newGolem.gameObject.SetActive(true);
 
         }
