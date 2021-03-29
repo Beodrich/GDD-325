@@ -21,7 +21,7 @@ public class SpawnLogic : MonoBehaviour
     }
     public Wave[] waves;
     private int nextWave = 0;
-
+    private bool hasPlyedAudio = true;
     public Transform[] spawnPoints;
 
     public float timeBetweenWaves = 5f;
@@ -32,7 +32,7 @@ public class SpawnLogic : MonoBehaviour
     public static float countOfGolems;
 
     public static bool inBetweenRounds = false;
-
+    [SerializeField] private AudioSource audio;
     private bool isSpawning = true;
     [SerializeField] private Text waveNameText;
    // [SerializeField] private Text numOfGolemText;
@@ -120,6 +120,11 @@ public class SpawnLogic : MonoBehaviour
         {
             //Debug.Log("In between rounds");
             inBetweenRounds = true;
+            if (hasPlyedAudio)
+            {
+                audio.Play();
+                hasPlyedAudio = false;
+            }
             return;
         }
         else
@@ -145,6 +150,7 @@ public class SpawnLogic : MonoBehaviour
 
                 nextWave++;
                 countOfGolems = this.waves[nextWave].count;
+            hasPlyedAudio = true;
             }
         
     }
