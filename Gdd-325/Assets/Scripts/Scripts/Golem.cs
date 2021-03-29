@@ -141,7 +141,7 @@ public class Golem : MonoBehaviour
         }
         //MAKE SURE ANIMATIONS NAMES ARE ALL THE SAME 
         Vector2 golemVector = golemPath.desiredVelocity.normalized;
-        Debug.Log(golemVector);
+        //Debug.Log(golemVector);
         if (golemVector.x <= -animationChangeRange)
         {
             anim.ChangeAnimationState(golem_Left);
@@ -282,5 +282,10 @@ public class Golem : MonoBehaviour
         
         
         }
+    }
+    public void ReScanPath() {
+        AstarPath.active = FindObjectOfType<AstarPath>(); AstarPath.active.Scan();
+
+
     }
 }

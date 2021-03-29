@@ -56,23 +56,31 @@ public class SpawnLogic : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         if (this.waves[nextWave].name == "Boss")
         {
             boss.SetActive(true);
         }
         else
         {
+            
             //FOR DEBUG ONLY- GET RID OF THIS LINE IN FINAL BUILD
             // Debug.Log("There are " + GameObject.FindGameObjectsWithTag("enemy").Length + " golems left in the current wave ");
             waveNameText.text = "Current Wave: " + this.waves[nextWave].name;
             numOfGolemText.text = countOfGolems + " Golems";
+            //Debug.Log("In between rounds " + inBetweenRounds);
             if (inBetweenRounds)
             {
+                //Shop.hasAlreadyBoughtItem = true;
                 //do shop system here 
                 shop.activateShopUI();
             }
+            else {
+                Shop.hasBoughItem = false;
+            
+            }
 
-
+           
             if (state == SpawnState.WAITING)
             {
                 //check if enemies are still alive
@@ -120,20 +128,25 @@ public class SpawnLogic : MonoBehaviour
         }
 
         Debug.Log("Wave Completed!");
+       
+            state = SpawnState.COUNTING;
+            waveCountDown = timeBetweenWaves;
+            if (nextWave + 1 > waves.Length - 1)
+            {
+                nextWave = 0;
+                Debug.Log("ALL WAVES COMPLETE! LOOPING");
+                countOfGolems = this.waves[nextWave].count;
+                Shop.hasBoughItem = false;
 
-        state = SpawnState.COUNTING;
-        waveCountDown = timeBetweenWaves;
-        if (nextWave + 1 > waves.Length - 1)
-        {
-            nextWave = 0;
-            Debug.Log("ALL WAVES COMPLETE! LOOPING");
-            countOfGolems = this.waves[nextWave].count;
-        }
-        else
-        {
-            nextWave++;
-            countOfGolems = this.waves[nextWave].count;
-        }
+
+            }
+            else
+            {
+
+                nextWave++;
+                countOfGolems = this.waves[nextWave].count;
+            }
+        
     }
     bool EnemyIsAlive()
     {

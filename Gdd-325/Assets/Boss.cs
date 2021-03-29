@@ -18,6 +18,7 @@ public class Boss : MonoBehaviour
     //spawn logic 
     [SerializeField] private Transform[] spawnPoints;
     [SerializeField] private Transform golem;
+
     [SerializeField] private float count = 5f;
     [SerializeField] private float rate;
     [SerializeField] private float stunAmount = 2f;
@@ -31,7 +32,7 @@ public class Boss : MonoBehaviour
     private bool shitMonkE=false;
     private bool isCurrentlySpawning = false;
     public Transform player;
-    public Transform[] golemsToSpawn;
+   
     private BossStates state = BossStates.none;
     private SpawnLogic spawn;
     [SerializeField]private AnimatorLogic animator;
@@ -70,6 +71,7 @@ public class Boss : MonoBehaviour
        // rb = GetComponent<Rigidbody2D>();
         monkE = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
         Max_Health = health;
+        
         bossText.SetActive(true);
         bar.SetActive(true);
         StartCoroutine(BossIntro());
@@ -172,6 +174,7 @@ public class Boss : MonoBehaviour
             shitMonkE = false;
             audio.Play();
             canDamage = false;
+
         }
     }
     void WaitForSpawn() {
@@ -312,6 +315,7 @@ public class Boss : MonoBehaviour
         Transform randomSpawnPoint = spawnPoints[Random.Range(0, spawnPoints.Length)];
 
         var newGolem = Instantiate(_enemy, randomSpawnPoint.position, randomSpawnPoint.rotation);
+        newGolem.GetComponent<Golem>().ReScanPath();
         newGolem.tag = "enemy";
         //Debug.Log("Spawning Enemy: " + newGolem.name + " At spawn point " + randomSpawnPoint.name);
         newGolem.gameObject.SetActive(true);

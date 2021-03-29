@@ -6,6 +6,7 @@ using UnityEngine;
 
 public class Shop : MonoBehaviour
 {
+    public static bool hasAlreadyBoughtItem = false;
     public static bool hasBoughItem = false;
     private GameObject shopUI;
     private HeathManaBar bar;
@@ -41,6 +42,8 @@ public class Shop : MonoBehaviour
     }
     private void Update()
     {
+        Debug.Log("has bought item " + hasBoughItem);
+
         if (hasBoughItem)
         {
             shopUI.SetActive(false);
@@ -82,6 +85,7 @@ public class Shop : MonoBehaviour
             //Debug.Log("player hp is " + player.health + "current life is " + HeathManaBar.currentLife + "max health is " + HeathManaBar.maxHeath);
             skillPoint = 0;
             hasBoughItem = true;
+        //hasAlreadyBoughtItem = true;
         
 
     }
@@ -95,6 +99,7 @@ public class Shop : MonoBehaviour
             bar.addManaRechargeRate(manaIncreaseRate);
             skillPoint = 0;
             hasBoughItem = true;
+        //hasAlreadyBoughtItem = true;
         
 
 
