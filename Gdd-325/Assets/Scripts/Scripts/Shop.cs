@@ -42,7 +42,11 @@ public class Shop : MonoBehaviour
     }
     private void Update()
     {
-        Debug.Log("has bought item " + hasBoughItem);
+        manaToolTipText.enabled = false;
+        healthToolTipText.enabled = false;
+
+
+        //Debug.Log("has bought item " + hasBoughItem);
 
         if (hasBoughItem)
         {

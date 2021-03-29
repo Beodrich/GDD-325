@@ -94,12 +94,13 @@ public class Golem : MonoBehaviour
         
     }
     private void changeGolem() {
+      
 
-
-        if (nextGolemToTransform != null)
+        if (nextGolemToTransform != null )
         {
 
           var newGolem=  Instantiate(nextGolemToTransform[Random.Range(0, nextGolemToTransform.Length)], this.transform.position, Quaternion.identity);
+          
             newGolem.gameObject.SetActive(true);
 
         }
@@ -131,9 +132,13 @@ public class Golem : MonoBehaviour
         if (health <= 0)
         {
             //Instantiate(deathEffect, transform.position, Quaternion.identity);
+            
+            string name = this.gameObject.name;
             Destroy(this.gameObject);
-
-            changeGolem();
+           
+                changeGolem();
+            
+            
         }
         if (startIce)
         {
