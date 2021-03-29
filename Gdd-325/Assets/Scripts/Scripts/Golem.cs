@@ -167,7 +167,6 @@ public class Golem : MonoBehaviour
          }
         else if (golemVector.y <= -animationChangeRange)
         {
-            Debug.Log("down");
             anim.ChangeAnimationState(golem_Down);
 
         }
