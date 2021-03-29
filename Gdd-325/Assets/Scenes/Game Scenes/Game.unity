@@ -1221,6 +1221,7 @@ MonoBehaviour:
   golemInitEarthDamage: 4
   iceSlowed: 0.75
   maxIceTime: 3
+  numOfGolemText: {fileID: 0}
   animationChangeRange: 0.9
   startDazedTime: 3
 --- !u!114 &214378934
@@ -1477,6 +1478,7 @@ GameObject:
   - component: {fileID: 336511851}
   - component: {fileID: 336511850}
   - component: {fileID: 336511855}
+  - component: {fileID: 336511856}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -1609,6 +1611,19 @@ MonoBehaviour:
   amountOfManaThatIsIncreased: 5
   manaIncreaseRate: 0.01
   skillPoint: 1
+--- !u!114 &336511856
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 336511849}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f8cfd81c79f9834abf02f26806e936e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numOfGolemText: {fileID: 1044746458}
 --- !u!1 &398422752
 GameObject:
   m_ObjectHideFlags: 0

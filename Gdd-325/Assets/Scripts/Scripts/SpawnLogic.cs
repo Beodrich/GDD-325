@@ -35,7 +35,7 @@ public class SpawnLogic : MonoBehaviour
 
     private bool isSpawning = true;
     [SerializeField] private Text waveNameText;
-    [SerializeField] private Text numOfGolemText;
+   // [SerializeField] private Text numOfGolemText;
 
     private Shop shop;
     [SerializeField] private GameObject boss;
@@ -67,7 +67,7 @@ public class SpawnLogic : MonoBehaviour
             //FOR DEBUG ONLY- GET RID OF THIS LINE IN FINAL BUILD
             // Debug.Log("There are " + GameObject.FindGameObjectsWithTag("enemy").Length + " golems left in the current wave ");
             waveNameText.text = "Current Wave: " + this.waves[nextWave].name;
-            numOfGolemText.text = countOfGolems + " Golems";
+            //numOfGolemText.text = countOfGolems + " Golems";
             //Debug.Log("In between rounds " + inBetweenRounds);
             if (inBetweenRounds)
             {

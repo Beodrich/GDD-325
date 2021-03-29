@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Pathfinding;
+using UnityEngine.UI;
 
 [RequireComponent(typeof(AnimatorLogic))]
 public class Golem : MonoBehaviour
@@ -30,7 +31,8 @@ public class Golem : MonoBehaviour
     //for player melee
     private int length;
 
-
+    private static float numOfGolems;
+    [SerializeField] private Text numOfGolemText;
     //GOLEM ANIMATIONS
     private string golem_Right;
     private string golem_Left;
