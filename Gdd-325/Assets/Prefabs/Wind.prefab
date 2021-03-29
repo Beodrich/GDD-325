@@ -50,7 +50,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
-  lifeTime: 0.75
+  lifeTime: 0.5
   distance: 0
   whatIsSolid:
     serializedVersion: 2
