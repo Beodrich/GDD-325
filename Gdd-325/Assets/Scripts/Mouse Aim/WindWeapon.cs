@@ -5,7 +5,7 @@ using UnityEngine;
 public class WindWeapon : MonoBehaviour
 {
     public float offset;
-    //[SerializeField] AudioSource spellShoot;
+    [SerializeField] AudioSource spellShoot;
     public Transform shotPoint;
     public static bool isShoot = false;
     private float timeBTWShots;
@@ -58,7 +58,7 @@ public class WindWeapon : MonoBehaviour
                 timeBTWShots = startTimeBTWShots;
                 isShoot = true;
                 StartCoroutine(WaitForAttackAnimation());
-                // spellShoot.Play();
+                spellShoot.Play();
 
             }
         }
