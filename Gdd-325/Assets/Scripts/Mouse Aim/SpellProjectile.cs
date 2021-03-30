@@ -6,7 +6,6 @@ public class SpellProjectile : MonoBehaviour
 {
     public float speed;
     public float lifeTime;
-    public float distance;
     public LayerMask whatIsSolid;
     private bool isHit;
     private bool isNotHit;
@@ -24,14 +23,13 @@ public class SpellProjectile : MonoBehaviour
 
     private void Update()
     {
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, transform.up, distance);
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, transform.up);
         if (hit.collider != null)
         {
             if(hit.collider.CompareTag("enemy"))
             {  
                 if (isNotHit)
                 {
-                    Debug.Log("Taking Damage");
                     animator.SetBool("Explosion", true);
                     hit.collider.GetComponent<Golem>().TakeDamage();
                     isHit = true;
