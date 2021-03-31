@@ -59,7 +59,7 @@ public class PickUpWand : MonoBehaviour
             WindUI.SetActive(false);
             EarthUI.SetActive(false);
         }
-        if (col.gameObject == Ice)
+        else if (col.gameObject == Ice)
         {
             // Sets GameObjects
             Ice.SetActive(false);
@@ -81,7 +81,7 @@ public class PickUpWand : MonoBehaviour
             WindUI.SetActive(false);
             EarthUI.SetActive(false);
         }
-        if (col.gameObject == Wind)
+        else if (col.gameObject == Wind)
         {
             // Sets GameObjects
             Ice.SetActive(true);
@@ -103,7 +103,7 @@ public class PickUpWand : MonoBehaviour
             WindUI.SetActive(true);
             EarthUI.SetActive(false);
         }
-        if (col.gameObject == Earth)
+        else if (col.gameObject == Earth)
         {
             // Sets GameObjects
             Ice.SetActive(true);
