@@ -8,8 +8,6 @@ public class WindProjectile : MonoBehaviour
     public float lifeTime;
     public float distance;
     public LayerMask whatIsSolid;
-    private bool isHit;
-    private bool isNotHit=true;
     private bool applyWind = false;
     private Animator animator;
     private WindWeapon weapon;
@@ -17,8 +15,6 @@ public class WindProjectile : MonoBehaviour
     {
         animator = GetComponent<Animator>();
         Invoke("DestroySpell", lifeTime);
-        isHit = false;
-        isNotHit = true;
         weapon = GameObject.Find("AirWand").GetComponent<WindWeapon>();
     }
 
@@ -47,11 +43,6 @@ public class WindProjectile : MonoBehaviour
               //DestroySpell(hit.collider.GetComponent<Golem>().getPosition());
               //DestroySpell();
           }*/
-        if (!isHit)
-        {
-            //transform.Translate(Vector2.up * speed * Time.deltaTime);
-
-        }
         if (applyWind) {
             StartCoroutine(WindTime());
         
@@ -61,12 +52,7 @@ public class WindProjectile : MonoBehaviour
     {
         if (other.gameObject.CompareTag("enemy") || other.gameObject.CompareTag("Boss"))
         {
-
-            //Debug.Log("Taking Damage");
             other.gameObject.GetComponent<Golem>().TakeDamage();
-            isHit = true;
-            isNotHit = false;
-                
         }
         else if (other.gameObject.CompareTag("Boss"))
         {

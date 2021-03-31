@@ -23,6 +23,7 @@ public class SpellProjectile : MonoBehaviour
 
     private void Update()
     {
+        /*
         RaycastHit2D hit = Physics2D.Raycast(transform.position, transform.up);
         if (hit.collider != null)
         {
@@ -55,15 +56,53 @@ public class SpellProjectile : MonoBehaviour
             //DestroySpell(hit.collider.GetComponent<Golem>().getPosition());
             //DestroySpell();
         }
+        */
+
         if (!isHit)
         {
             transform.Translate(Vector2.up * speed * Time.deltaTime);
         }
+        
+    }
+    
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.CompareTag("enemy"))
+        {
+            /*
+            if (isNotHit)
+            {
+                animator.SetBool("Explosion", true);
+                other.gameObject.GetComponent<Golem>().TakeDamage();
+                isHit = true;
+                isNotHit = false;
+            }*/
+            Debug.Log("Fireball hit");
+            animator.SetBool("Explosion", true);
+            other.gameObject.GetComponent<Golem>().TakeDamage();
+            isHit = true;
+            isNotHit = false;
+        }
+        else if (other.gameObject.CompareTag("Boss"))
+        {
+            if (isNotHit)
+            {
+                if (other.gameObject.GetComponent<Boss>().isCanDamage())
+                {
+                    other.gameObject.GetComponent<Boss>().TakeDamage();
+                }
+            }
+        }
+        else if (other.gameObject.CompareTag("wall"))
+        {
+            DestroySpell();
+        }
+
     }
         
+
     void DestroySpell()
     {
-        Destroy(gameObject, 0.55f);
-        //animator.SetBool("Explosion", true);
+        Destroy(gameObject);
     }
 }
