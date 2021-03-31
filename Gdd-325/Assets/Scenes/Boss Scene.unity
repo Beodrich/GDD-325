@@ -2551,7 +2551,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5217082572892249720, guid: 2165c8fc0f3a04b469d71d30960f6989, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 2165c8fc0f3a04b469d71d30960f6989, type: 3}
 --- !u!1 &917418971 stripped
 GameObject:
@@ -3134,25 +3135,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2149757986136274338, guid: 04e60accf03549848a01698bdde78b7d, type: 3}
   m_PrefabInstance: {fileID: 1061277513}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1061277515
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1061277514}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6bd42183527a89f41a54fb8967e0e84f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  startTimeBtwAttack: 0.3
-  attackPos: {fileID: 0}
-  attackRange: 1.4
-  whatIsEnemies:
-    serializedVersion: 2
-    m_Bits: 0
-  damage: 0
 --- !u!61 &1061277516
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4327,7 +4309,8 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4174832382152935557, guid: bd72876c0c233854aa05f6750d7b8264, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: bd72876c0c233854aa05f6750d7b8264, type: 3}
 --- !u!1 &1575171351 stripped
 GameObject:
@@ -4601,7 +4584,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ice
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1540970781852823433, guid: 7884ad1f52b44a2408da517a78703d01, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 7884ad1f52b44a2408da517a78703d01, type: 3}
 --- !u!1 &1695486149 stripped
 GameObject:
