@@ -755,7 +755,39 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1768121403876751354, guid: 97e44e40df3b0b04f90c5ae13828e42e, type: 3}
+      propertyPath: iceSlowed
+      value: 0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 1768121403876751354, guid: 97e44e40df3b0b04f90c5ae13828e42e, type: 3}
+      propertyPath: fireDamage
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1768121403876751354, guid: 97e44e40df3b0b04f90c5ae13828e42e, type: 3}
+      propertyPath: maxIceTime
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1768121403876751354, guid: 97e44e40df3b0b04f90c5ae13828e42e, type: 3}
       propertyPath: attackDamage
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1768121403876751354, guid: 97e44e40df3b0b04f90c5ae13828e42e, type: 3}
+      propertyPath: fireDuration
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1768121403876751354, guid: 97e44e40df3b0b04f90c5ae13828e42e, type: 3}
+      propertyPath: startDazedTime
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1768121403876751354, guid: 97e44e40df3b0b04f90c5ae13828e42e, type: 3}
+      propertyPath: golemInitFireDamage
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1768121403876751354, guid: 97e44e40df3b0b04f90c5ae13828e42e, type: 3}
+      propertyPath: golemInitWindDamage
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1768121403876751354, guid: 97e44e40df3b0b04f90c5ae13828e42e, type: 3}
+      propertyPath: golemInitEarthDamage
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1768121403876751354, guid: 97e44e40df3b0b04f90c5ae13828e42e, type: 3}
@@ -775,12 +807,20 @@ PrefabInstance:
       value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 5259785711543859234, guid: 97e44e40df3b0b04f90c5ae13828e42e, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.47674865
+      objectReference: {fileID: 0}
+    - target: {fileID: 5259785711543859234, guid: 97e44e40df3b0b04f90c5ae13828e42e, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.4012993
+      objectReference: {fileID: 0}
+    - target: {fileID: 5259785711543859234, guid: 97e44e40df3b0b04f90c5ae13828e42e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -42.1
+      value: -41.7322
       objectReference: {fileID: 0}
     - target: {fileID: 5259785711543859234, guid: 97e44e40df3b0b04f90c5ae13828e42e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.56
+      value: -0.1775
       objectReference: {fileID: 0}
     - target: {fileID: 5259785711543859234, guid: 97e44e40df3b0b04f90c5ae13828e42e, type: 3}
       propertyPath: m_LocalPosition.z
@@ -826,6 +866,10 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 2035964333}
+    - target: {fileID: 5259785711543859238, guid: 97e44e40df3b0b04f90c5ae13828e42e, type: 3}
+      propertyPath: maxSpeed
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 97e44e40df3b0b04f90c5ae13828e42e, type: 3}
 --- !u!4 &141793441 stripped
@@ -1210,20 +1254,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackDamage: 1
-  health: 10
+  health: 15
   nextGolemToTransform:
   - {fileID: 1844996410}
-  fireDamage: 5
+  fireDamage: 1
   fireDuration: 2
   golemInitFireDamage: 2
-  golemInitIceDamage: 4
-  golemInitWindDamage: 4
-  golemInitEarthDamage: 4
-  iceSlowed: 0.75
-  maxIceTime: 3
+  golemInitIceDamage: 2
+  golemInitWindDamage: 1
+  golemInitEarthDamage: 1
+  iceSlowed: 0.5
+  maxIceTime: 1
   numOfGolemText: {fileID: 0}
   animationChangeRange: 0.9
-  startDazedTime: 3
+  startDazedTime: 1
 --- !u!114 &214378934
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1726,7 +1770,7 @@ MonoBehaviour:
   whatIsEnemies:
     serializedVersion: 2
     m_Bits: 64
-  damage: 5
+  damage: 3
 --- !u!82 &440012376
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2906,7 +2950,7 @@ PrefabInstance:
       objectReference: {fileID: 2061506954}
     - target: {fileID: 2729049941047798196, guid: d0ae4664e91e6cf489cee704caae8fa9, type: 3}
       propertyPath: waves.Array.data[2].count
-      value: 20
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2729049941047798196, guid: d0ae4664e91e6cf489cee704caae8fa9, type: 3}
       propertyPath: waves.Array.data[2].enemy
@@ -2914,11 +2958,11 @@ PrefabInstance:
       objectReference: {fileID: 214378932}
     - target: {fileID: 2729049941047798196, guid: d0ae4664e91e6cf489cee704caae8fa9, type: 3}
       propertyPath: waves.Array.data[3].count
-      value: 20
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2729049941047798196, guid: d0ae4664e91e6cf489cee704caae8fa9, type: 3}
       propertyPath: waves.Array.data[4].count
-      value: 5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2729049941047798196, guid: d0ae4664e91e6cf489cee704caae8fa9, type: 3}
       propertyPath: waves.Array.data[5].count
@@ -2930,7 +2974,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2729049941047798196, guid: d0ae4664e91e6cf489cee704caae8fa9, type: 3}
       propertyPath: waves.Array.data[1].enemy.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2729049941047798196, guid: d0ae4664e91e6cf489cee704caae8fa9, type: 3}
       propertyPath: waves.Array.data[2].enemy.Array.size
@@ -2938,11 +2982,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2729049941047798196, guid: d0ae4664e91e6cf489cee704caae8fa9, type: 3}
       propertyPath: waves.Array.data[3].enemy.Array.size
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2729049941047798196, guid: d0ae4664e91e6cf489cee704caae8fa9, type: 3}
       propertyPath: waves.Array.data[4].enemy.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2729049941047798196, guid: d0ae4664e91e6cf489cee704caae8fa9, type: 3}
       propertyPath: waves.Array.data[5].enemy.Array.size
@@ -2951,7 +2995,7 @@ PrefabInstance:
     - target: {fileID: 2729049941047798196, guid: d0ae4664e91e6cf489cee704caae8fa9, type: 3}
       propertyPath: waves.Array.data[0].enemy.Array.data[0]
       value: 
-      objectReference: {fileID: 2061506954}
+      objectReference: {fileID: 214378932}
     - target: {fileID: 2729049941047798196, guid: d0ae4664e91e6cf489cee704caae8fa9, type: 3}
       propertyPath: waves.Array.data[0].enemy.Array.data[1]
       value: 
@@ -2963,7 +3007,7 @@ PrefabInstance:
     - target: {fileID: 2729049941047798196, guid: d0ae4664e91e6cf489cee704caae8fa9, type: 3}
       propertyPath: waves.Array.data[1].enemy.Array.data[1]
       value: 
-      objectReference: {fileID: 141793441}
+      objectReference: {fileID: 0}
     - target: {fileID: 2729049941047798196, guid: d0ae4664e91e6cf489cee704caae8fa9, type: 3}
       propertyPath: waves.Array.data[2].enemy.Array.data[0]
       value: 
@@ -2975,19 +3019,19 @@ PrefabInstance:
     - target: {fileID: 2729049941047798196, guid: d0ae4664e91e6cf489cee704caae8fa9, type: 3}
       propertyPath: waves.Array.data[3].enemy.Array.data[1]
       value: 
-      objectReference: {fileID: 2061506954}
+      objectReference: {fileID: 0}
     - target: {fileID: 2729049941047798196, guid: d0ae4664e91e6cf489cee704caae8fa9, type: 3}
       propertyPath: waves.Array.data[3].enemy.Array.data[2]
       value: 
-      objectReference: {fileID: 141793441}
+      objectReference: {fileID: 0}
     - target: {fileID: 2729049941047798196, guid: d0ae4664e91e6cf489cee704caae8fa9, type: 3}
       propertyPath: waves.Array.data[4].enemy.Array.data[0]
       value: 
-      objectReference: {fileID: 214378932}
+      objectReference: {fileID: 141793441}
     - target: {fileID: 2729049941047798196, guid: d0ae4664e91e6cf489cee704caae8fa9, type: 3}
       propertyPath: waves.Array.data[4].enemy.Array.data[1]
       value: 
-      objectReference: {fileID: 1844996410}
+      objectReference: {fileID: 0}
     - target: {fileID: 2729049941047798196, guid: d0ae4664e91e6cf489cee704caae8fa9, type: 3}
       propertyPath: waves.Array.data[5].enemy.Array.data[0]
       value: 
@@ -4027,7 +4071,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1768121403876751354, guid: 0f1ada5e37928e9498a00cfee3c550e1, type: 3}
       propertyPath: health
-      value: 1
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 1768121403876751354, guid: 0f1ada5e37928e9498a00cfee3c550e1, type: 3}
       propertyPath: iceSlowed
@@ -4035,7 +4079,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1768121403876751354, guid: 0f1ada5e37928e9498a00cfee3c550e1, type: 3}
       propertyPath: fireDamage
-      value: 5
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1768121403876751354, guid: 0f1ada5e37928e9498a00cfee3c550e1, type: 3}
+      propertyPath: maxIceTime
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 1768121403876751354, guid: 0f1ada5e37928e9498a00cfee3c550e1, type: 3}
       propertyPath: attackDamage
@@ -4043,6 +4091,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1768121403876751354, guid: 0f1ada5e37928e9498a00cfee3c550e1, type: 3}
       propertyPath: fireDuration
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1768121403876751354, guid: 0f1ada5e37928e9498a00cfee3c550e1, type: 3}
+      propertyPath: golemInitFireDamage
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1768121403876751354, guid: 0f1ada5e37928e9498a00cfee3c550e1, type: 3}
+      propertyPath: golemInitWindDamage
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1768121403876751354, guid: 0f1ada5e37928e9498a00cfee3c550e1, type: 3}
@@ -4082,12 +4138,20 @@ PrefabInstance:
       value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 5259785711543859234, guid: 0f1ada5e37928e9498a00cfee3c550e1, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.57621175
+      objectReference: {fileID: 0}
+    - target: {fileID: 5259785711543859234, guid: 0f1ada5e37928e9498a00cfee3c550e1, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.4566399
+      objectReference: {fileID: 0}
+    - target: {fileID: 5259785711543859234, guid: 0f1ada5e37928e9498a00cfee3c550e1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -39.2
+      value: -39.7555
       objectReference: {fileID: 0}
     - target: {fileID: 5259785711543859234, guid: 0f1ada5e37928e9498a00cfee3c550e1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.56
+      value: 0.3474
       objectReference: {fileID: 0}
     - target: {fileID: 5259785711543859234, guid: 0f1ada5e37928e9498a00cfee3c550e1, type: 3}
       propertyPath: m_LocalPosition.z
@@ -4141,6 +4205,10 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 2035964333}
+    - target: {fileID: 5259785711543859238, guid: 0f1ada5e37928e9498a00cfee3c550e1, type: 3}
+      propertyPath: maxSpeed
+      value: 8.5
+      objectReference: {fileID: 0}
     - target: {fileID: 5259785711543859239, guid: 0f1ada5e37928e9498a00cfee3c550e1, type: 3}
       propertyPath: drawGizmos
       value: 1
@@ -4156,24 +4224,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5259785711543859234, guid: 0f1ada5e37928e9498a00cfee3c550e1, type: 3}
   m_PrefabInstance: {fileID: 1844996409}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1844996411 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5259785711543859236, guid: 0f1ada5e37928e9498a00cfee3c550e1, type: 3}
-  m_PrefabInstance: {fileID: 1844996409}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1844996412
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1844996411}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 66ad5f5a9e070114f80db07e27898624, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  animator: {fileID: 0}
 --- !u!1 &1852938323
 GameObject:
   m_ObjectHideFlags: 0
@@ -4888,7 +4938,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1768121403876751354, guid: e5af84247acab834b987f38306537842, type: 3}
       propertyPath: health
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1768121403876751354, guid: e5af84247acab834b987f38306537842, type: 3}
       propertyPath: iceSlowed
@@ -4896,7 +4946,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1768121403876751354, guid: e5af84247acab834b987f38306537842, type: 3}
       propertyPath: fireDamage
-      value: 5
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1768121403876751354, guid: e5af84247acab834b987f38306537842, type: 3}
       propertyPath: attackDamage
@@ -4907,8 +4957,28 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1768121403876751354, guid: e5af84247acab834b987f38306537842, type: 3}
+      propertyPath: startDazedTime
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1768121403876751354, guid: e5af84247acab834b987f38306537842, type: 3}
+      propertyPath: golemInitIceDamage
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1768121403876751354, guid: e5af84247acab834b987f38306537842, type: 3}
+      propertyPath: golemInitFireDamage
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1768121403876751354, guid: e5af84247acab834b987f38306537842, type: 3}
+      propertyPath: golemInitWindDamage
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1768121403876751354, guid: e5af84247acab834b987f38306537842, type: 3}
       propertyPath: animationChangeRange
       value: 0.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1768121403876751354, guid: e5af84247acab834b987f38306537842, type: 3}
+      propertyPath: golemInitEarthDamage
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1768121403876751354, guid: e5af84247acab834b987f38306537842, type: 3}
       propertyPath: nextGolemToTransform
@@ -4919,12 +4989,20 @@ PrefabInstance:
       value: 19
       objectReference: {fileID: 0}
     - target: {fileID: 5259785711543859234, guid: e5af84247acab834b987f38306537842, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.3774012
+      objectReference: {fileID: 0}
+    - target: {fileID: 5259785711543859234, guid: e5af84247acab834b987f38306537842, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.33603725
+      objectReference: {fileID: 0}
+    - target: {fileID: 5259785711543859234, guid: e5af84247acab834b987f38306537842, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -41.98
+      value: -41.7005
       objectReference: {fileID: 0}
     - target: {fileID: 5259785711543859234, guid: e5af84247acab834b987f38306537842, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.56
+      value: -0.2805
       objectReference: {fileID: 0}
     - target: {fileID: 5259785711543859234, guid: e5af84247acab834b987f38306537842, type: 3}
       propertyPath: m_LocalPosition.z
@@ -5459,7 +5537,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5278976977336758317, guid: a3efbba7d81282f49bef76e2f718d23f, type: 3}
       propertyPath: movementSpeed
-      value: 6
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 5278976977336758318, guid: a3efbba7d81282f49bef76e2f718d23f, type: 3}
       propertyPath: m_Name
@@ -5798,6 +5876,18 @@ PrefabInstance:
       propertyPath: damageSound
       value: 
       objectReference: {fileID: 141031273}
+    - target: {fileID: 4172505475406973617, guid: 635d50a47ebcac14f9b4fe793b04c001, type: 3}
+      propertyPath: currentWaveText
+      value: 
+      objectReference: {fileID: 821772722}
+    - target: {fileID: 4172505475406973617, guid: 635d50a47ebcac14f9b4fe793b04c001, type: 3}
+      propertyPath: numOfGolemsLeft
+      value: 
+      objectReference: {fileID: 1044746458}
+    - target: {fileID: 4172505475406973617, guid: 635d50a47ebcac14f9b4fe793b04c001, type: 3}
+      propertyPath: golemInitEarthDamage
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4172505475406973617, guid: 635d50a47ebcac14f9b4fe793b04c001, type: 3}
       propertyPath: spawnPoints.Array.data[0]
       value: 

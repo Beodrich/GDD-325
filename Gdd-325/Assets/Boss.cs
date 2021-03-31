@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Pathfinding;
+using UnityEngine.UI;
+
 enum BossStates { 
     spawning,
     rolling,
@@ -59,7 +61,8 @@ public class Boss : MonoBehaviour
     //ui stuff
     [SerializeField] private GameObject bossText;
     [SerializeField] private GameObject bar;
-
+    [SerializeField] private Text currentWaveText;
+    [SerializeField] private Text numOfGolemsLeft;
     // Start is called before the first frame update
     void Start()
     {
@@ -71,7 +74,8 @@ public class Boss : MonoBehaviour
        // rb = GetComponent<Rigidbody2D>();
         monkE = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
         Max_Health = health;
-        
+        currentWaveText.enabled = false;
+        numOfGolemsLeft.enabled = false;
         bossText.SetActive(true);
         bar.SetActive(true);
         StartCoroutine(BossIntro());

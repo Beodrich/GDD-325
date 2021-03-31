@@ -47,6 +47,7 @@ public class Golem : MonoBehaviour
     [SerializeField] private float startDazedTime;
     private void Start()
     {
+       
         player = GameObject.Find("MonkE").GetComponent<PlayerController>();
         //moveSpeed = GetComponent<AIPath>().maxSpeed;
         golemPath = GetComponent<AIPath>();
@@ -115,6 +116,7 @@ public class Golem : MonoBehaviour
     }
     void Update()
     {
+        Debug.Log(health);
         //for melee
         if (dazedTime <= 0)
         {

@@ -4,9 +4,9 @@ using UnityEngine;
 using Pathfinding;
 public class ShootingEnemy : MonoBehaviour
 {
-    public float speed;
-    public float stoppingDistance;
-    public float retreatDistance;
+    //public float speed;
+    //public float stoppingDistance;
+   // public float retreatDistance;
     public Transform player;
     public float time;
     private float timeBtwShots;
