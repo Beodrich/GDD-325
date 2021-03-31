@@ -116,7 +116,7 @@ public class Golem : MonoBehaviour
     }
     void Update()
     {
-        Debug.Log(health);
+       // Debug.Log(health);
         //for melee
         if (dazedTime <= 0)
         {

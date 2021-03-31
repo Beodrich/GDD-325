@@ -98,7 +98,7 @@ public class ShootingEnemy : MonoBehaviour
               timeBtwShots -= Time.deltaTime;
 
           }*/
-        Debug.Log(timeBtwShots);
+        //Debug.Log(timeBtwShots);
         if (ai.reachedDestination) {
 
             Shoot();

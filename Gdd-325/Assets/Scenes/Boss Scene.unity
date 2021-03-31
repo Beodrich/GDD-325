@@ -2585,24 +2585,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.15, y: 3.13}
   m_EdgeRadius: 0
---- !u!1 &919269365 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5259785711543859236, guid: e5af84247acab834b987f38306537842, type: 3}
-  m_PrefabInstance: {fileID: 1627461952}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &919269374
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 919269365}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 66ad5f5a9e070114f80db07e27898624, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  animator: {fileID: 0}
 --- !u!1001 &920747057
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3921,6 +3903,8 @@ MonoBehaviour:
   initialIceTime: 0
   bossText: {fileID: 513348675}
   bar: {fileID: 269730683}
+  currentWaveText: {fileID: 0}
+  numOfGolemsLeft: {fileID: 0}
 --- !u!114 &1176676145
 MonoBehaviour:
   m_ObjectHideFlags: 0

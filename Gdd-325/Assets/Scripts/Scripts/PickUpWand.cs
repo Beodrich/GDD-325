@@ -49,8 +49,8 @@ public class PickUpWand : MonoBehaviour
             Earthwand.SetActive(false);
             Earth.SetActive(true);
             // Sets Player Bools
-            player.setFire(false);
-            player.setIce(true);
+            player.setFire(true);
+            player.setIce(false);
             player.setWind(false);
             player.setEarth(false);
             // Sets UI Wands
