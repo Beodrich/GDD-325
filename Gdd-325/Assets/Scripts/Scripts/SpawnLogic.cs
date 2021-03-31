@@ -56,7 +56,6 @@ public class SpawnLogic : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
         if (this.waves[nextWave].name == "Boss")
         {
             boss.SetActive(true);

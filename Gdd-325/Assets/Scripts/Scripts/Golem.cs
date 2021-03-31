@@ -178,13 +178,31 @@ public class Golem : MonoBehaviour
         {
         return this.transform;
         }
+    IEnumerator DOT()
+    {
+        float amountDamaged = 0;
+        float damagePerLoop = fireDamage / fireDuration;
+        Debug.Log(amountDamaged + "<- Amount Damaged");
+        Debug.Log(damagePerLoop + "<- Damaged Per Loop");
+        while (amountDamaged < fireDamage)
+        {
+            health -= damagePerLoop;
+
+
+            Debug.Log(health.ToString());
+            amountDamaged += damagePerLoop;
+            yield return new WaitForSeconds(1f);
+        }
+    }
 
     public void TakeDamage()
     {
         if(player.isFire())
         {
             health -= golemInitFireDamage;
-            DamageOverTime(fireDamage,fireDuration);
+            //DamageOverTime(fireDamage,fireDuration);
+            //StartCoroutine(DamageOverTimeCoroutine(fireDamage, fireDuration));
+            StartCoroutine(DOT());
         }
         if (player.isIce())
         {
@@ -215,10 +233,13 @@ public class Golem : MonoBehaviour
     }
     //FIRE
     // Damage Over Time
+
     IEnumerator DamageOverTimeCoroutine(float damageAmount, float time)
     {
         float amountDamaged = 0;
         float damagePerLoop = damageAmount / time;
+        Debug.Log(amountDamaged + "<- Amount Damaged");
+        Debug.Log(damagePerLoop + "<- Damaged Per Loop");
         while(amountDamaged < damageAmount)
         {
             health -= damagePerLoop;
@@ -245,9 +266,9 @@ public class Golem : MonoBehaviour
         {
             initialIceTime += Time.deltaTime;
             golemPath.maxSpeed *= slowAmount;
-            if (golemPath.maxSpeed < 2.5f)
+            if (golemPath.maxSpeed <= 1)
             {
-                golemPath.maxSpeed = 2.5f;
+                golemPath.maxSpeed = 1f;
             }
         }
     }
