@@ -182,7 +182,8 @@ public class Golem : MonoBehaviour
         if(player.isFire())
         {
             health -= golemInitFireDamage;
-            DamageOverTime(fireDamage,fireDuration);
+            //DamageOverTime(fireDamage,fireDuration);
+            StartCoroutine(DamageOverTimeCoroutine(fireDamage, fireDuration));
         }
         if (player.isIce())
         {
@@ -217,6 +218,8 @@ public class Golem : MonoBehaviour
     {
         float amountDamaged = 0;
         float damagePerLoop = damageAmount / time;
+        Debug.Log(amountDamaged + "<- Amount Damaged");
+        Debug.Log(damagePerLoop + "<- Damaged Per Loop");
         while(amountDamaged < damageAmount)
         {
             health -= damagePerLoop;
@@ -243,9 +246,9 @@ public class Golem : MonoBehaviour
         {
             initialIceTime += Time.deltaTime;
             golemPath.maxSpeed *= slowAmount;
-            if (golemPath.maxSpeed < 2.5f)
+            if (golemPath.maxSpeed <= 1)
             {
-                golemPath.maxSpeed = 2.5f;
+                golemPath.maxSpeed = 1f;
             }
         }
     }

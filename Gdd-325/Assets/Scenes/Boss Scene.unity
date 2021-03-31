@@ -2029,6 +2029,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 2729049941047798196, guid: d0ae4664e91e6cf489cee704caae8fa9, type: 3}
+      propertyPath: boss
+      value: 
+      objectReference: {fileID: 1176676135}
+    - target: {fileID: 2729049941047798196, guid: d0ae4664e91e6cf489cee704caae8fa9, type: 3}
       propertyPath: text
       value: 
       objectReference: {fileID: 0}
@@ -2905,6 +2909,7 @@ MonoBehaviour:
   projectile: {fileID: 1246467182731559812, guid: b0fd2466a0ed552449031c61f6044efc, type: 3}
   shotPoint: {fileID: 920747059}
   startTimeBTWShots: 0.25
+  spellShoot: {fileID: 0}
 --- !u!114 &920747067
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2918,6 +2923,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   offset: -90
+  spellShoot: {fileID: 0}
   shotPoint: {fileID: 920747059}
   startTimeBTWShots: 0.25
   Wind: {fileID: 1758474662728603035, guid: 366f1c695b9a46b4f951e4a369789343, type: 3}
@@ -3915,11 +3921,9 @@ MonoBehaviour:
   rate: 1
   stunAmount: 2
   attackDistance: 1.5
-  audio: {fileID: 0}
+  damageSound: {fileID: 0}
   speed: 10
   player: {fileID: 920747058}
-  golemsToSpawn:
-  - {fileID: 1627461953}
   animator: {fileID: 1176676145}
   rb: {fileID: 1176676139}
   monkE: {fileID: 920747090}
@@ -4377,7 +4381,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1768121403876751354, guid: e5af84247acab834b987f38306537842, type: 3}
       propertyPath: fireDamage
-      value: 5
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1768121403876751354, guid: e5af84247acab834b987f38306537842, type: 3}
       propertyPath: attackDamage
@@ -5255,7 +5259,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackDamage: 1
   health: 10
-  nextGolemToTransform: {fileID: 0}
+  nextGolemToTransform:
+  - {fileID: 0}
   fireDamage: 5
   fireDuration: 2
   golemInitFireDamage: 2
@@ -5264,6 +5269,7 @@ MonoBehaviour:
   golemInitEarthDamage: 4
   iceSlowed: 0.75
   maxIceTime: 3
+  numOfGolemText: {fileID: 0}
   animationChangeRange: 0.9
   startDazedTime: 0
 --- !u!61 &1995872455
