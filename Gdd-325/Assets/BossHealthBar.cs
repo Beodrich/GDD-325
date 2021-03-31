@@ -17,8 +17,13 @@ public class BossHealthBar : MonoBehaviour
     private void Update()
     {
         localScale.x = golem.getHP();
-        localScale.x = localScale.x / 4;
+        localScale.x = localScale.x / 8;
         transform.localScale = localScale;
         text.text = "Boss HP " + golem.getHP() + "/ " + golem.getMaxHP();
+
+        if (golem.getHP() <=0)
+        {
+            golem.setHP(0);
+        }
     }
 }

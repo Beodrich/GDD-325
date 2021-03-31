@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Pathfinding;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 enum BossStates { 
     spawning,
@@ -78,7 +79,7 @@ public class Boss : MonoBehaviour
         numOfGolemsLeft.enabled = false;
         bossText.SetActive(true);
         bar.SetActive(true);
-        StartCoroutine(BossIntro());
+         StartCoroutine(BossIntro());
 
     }
     IEnumerator BossIntro() {
@@ -89,6 +90,7 @@ public class Boss : MonoBehaviour
     }
     private void Update()
     {
+        CheckForDeath();
         if (canMove)
         {
             direction = target.position - transform.position;
@@ -115,10 +117,7 @@ public class Boss : MonoBehaviour
         }
         ChangeAnimation();
         BossState();
-
         
-       
-
     }
     private void ChangeAnimation()
     {
@@ -209,6 +208,11 @@ public class Boss : MonoBehaviour
         return health;
     
     }
+    public void setHP(float hp)
+    {
+        this.health = hp;
+
+    }
 
     public void TakeDamage()
     {
@@ -233,13 +237,13 @@ public class Boss : MonoBehaviour
             health -= golemInitEarthDamage;
         }
         damageSound.Play();
-        CheckForDeath();
+        
     }
     public void MeleeDamge() {
         if (canDamage) { 
         health -= meleeDamage;
-        CheckForDeath();
-            }
+        
+        }
     
     }
 
@@ -344,12 +348,20 @@ public class Boss : MonoBehaviour
     void CheckForDeath() {
 
         if (health <= 0) {
-            //play death animation
-            Destroy(this.gameObject);
-        
+
+            canMove = false;
+            StartCoroutine(DeadBoss());
         
         }
     
+    }
+    IEnumerator DeadBoss()
+    {
+        //TODO: play death animation
+
+        yield return new WaitForSeconds(1f);
+        Destroy(this.gameObject);
+        SceneManager.LoadScene("YouWin");
     }
 
     public bool isCanDamage()
@@ -357,29 +369,33 @@ public class Boss : MonoBehaviour
         return canDamage;
     }
     void BossState() { 
-        if(health<41 && health > 31)
-            {
-                speed = 12;
-                count = 3;
-                rate = 2;
-            }
-        else if(health<31 && health > 21)
+        if(health<91 && health > 71)
         {
             speed = 14;
             count = 5;
             rate = 3;
+            stunAmount = 1.75f;
         }
-        else if (health < 21 && health > 11)
+        else if(health<71 && health > 51)
         {
             speed = 16;
             count = 8;
             rate = 4;
+            stunAmount = 1.5f;
         }
-        else if(health < 11 && health > 0)
+        else if (health < 51 && health > 31)
         {
-                speed = 20;
-                count = 15;
-                rate = 5;
+            speed = 20;
+            count = 15;
+            rate = 5;
+            stunAmount = 1.25f;
+        }
+        else if(health < 31 && health > 0)
+        {
+            speed = 22;
+            count = 18;
+            rate = 6;
+            stunAmount = 1f;
         }
 
 
