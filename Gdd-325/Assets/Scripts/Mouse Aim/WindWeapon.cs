@@ -53,8 +53,8 @@ public class WindWeapon : MonoBehaviour
                 currentWind= Instantiate(Wind, shotPoint.position, transform.rotation);
                 //currentWind.AddForce(Vector2.up * 5000, ForceMode2D.Impulse);
                 currentWind.velocity = dif * speed; // speed variable
-                Mana -= 1;
-                HeathManaBar.reduceMana(1);
+                Mana -= 3;
+                HeathManaBar.reduceMana(3);
                 timeBTWShots = startTimeBTWShots;
                 isShoot = true;
                 StartCoroutine(WaitForAttackAnimation());

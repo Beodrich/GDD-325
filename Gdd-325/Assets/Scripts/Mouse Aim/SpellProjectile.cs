@@ -69,19 +69,13 @@ public class SpellProjectile : MonoBehaviour
     {
         if (other.gameObject.CompareTag("enemy"))
         {
-            /*
             if (isNotHit)
             {
                 animator.SetBool("Explosion", true);
                 other.gameObject.GetComponent<Golem>().TakeDamage();
                 isHit = true;
                 isNotHit = false;
-            }*/
-            Debug.Log("Fireball hit");
-            animator.SetBool("Explosion", true);
-            other.gameObject.GetComponent<Golem>().TakeDamage();
-            isHit = true;
-            isNotHit = false;
+            }
         }
         else if (other.gameObject.CompareTag("Boss"))
         {
@@ -89,7 +83,12 @@ public class SpellProjectile : MonoBehaviour
             {
                 if (other.gameObject.GetComponent<Boss>().isCanDamage())
                 {
+                    animator.SetBool("Explosion", true);
                     other.gameObject.GetComponent<Boss>().TakeDamage();
+                    // Destory with animation
+                    Destroy(gameObject);
+                    isHit = true;
+                    isNotHit = false;
                 }
             }
         }
@@ -97,6 +96,7 @@ public class SpellProjectile : MonoBehaviour
         {
             DestroySpell();
         }
+        DestroySpell();
 
     }
         
