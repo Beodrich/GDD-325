@@ -13,9 +13,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   offset: -90
+  spellShoot: {fileID: 0}
   projectile: {fileID: 5654664293995324674, guid: 340971ca4d662bc4bb5e648833c94f7d, type: 3}
   shotPoint: {fileID: 5644029052568913060}
   startTimeBTWShots: 0.25
+  difference: {x: 0, y: 0, z: 0}
 --- !u!114 &2486995918962668676
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29,9 +31,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   offset: -90
+  spellShoot: {fileID: 0}
   projectile: {fileID: 1552088827084958692, guid: 61d2dd5de0ce4d649a89a74d38bf0a58, type: 3}
   shotPoint: {fileID: 5644029052568913060}
   startTimeBTWShots: 0.25
+  difference: {x: 0, y: 0, z: 0}
 --- !u!114 &2988241350330308618
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -45,9 +49,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   offset: -90
+  spellShoot: {fileID: 0}
   projectile: {fileID: 3169737854653633659, guid: f3c785bcde00b8b4fae3f01bca5ff588, type: 3}
   shotPoint: {fileID: 5644029052568913060}
   startTimeBTWShots: 0.25
+  difference: {x: 0, y: 0, z: 0}
 --- !u!114 &720070061829446603
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -61,9 +67,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   offset: -90
+  spellShoot: {fileID: 0}
   projectile: {fileID: 8326796058748656352, guid: 87e2fb3e43c06534b92f188055828d4f, type: 3}
   shotPoint: {fileID: 5644029052568913060}
   startTimeBTWShots: 0.25
+  difference: {x: 0, y: 0, z: 0}
 --- !u!1 &5278976977336758318
 GameObject:
   m_ObjectHideFlags: 0
@@ -79,7 +87,6 @@ GameObject:
   - component: {fileID: 5278976977336758316}
   - component: {fileID: 5278976977336758317}
   - component: {fileID: 5278976977336758311}
-  - component: {fileID: 2556271149891266898}
   - component: {fileID: -5172666851828732762}
   - component: {fileID: 7344305773908303544}
   m_Layer: 0
@@ -222,8 +229,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movementSpeed: 5
   health: 10
-  healthText: {fileID: 0}
   maxTime: 5
+  playerDirection: {x: 0, y: 0}
 --- !u!61 &5278976977336758311
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -250,23 +257,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 8.372045, y: 16.17}
   m_EdgeRadius: 0
---- !u!114 &2556271149891266898
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5278976977336758318}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7696c1e6453ef4d4899ec3f7a0cc0951, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fireball: {fileID: 5071889481588455886, guid: c46e57132fb12224b8b6f41698586323, type: 3}
-  fireballSpeed: 8
-  Player: {fileID: 5278976977336758304}
-  shotPoint: {fileID: 5278976977336758304}
-  spell: 0
 --- !u!114 &-5172666851828732762
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -295,6 +285,14 @@ MonoBehaviour:
   Fire: {fileID: 0}
   Icewand: {fileID: 3716214135970668919}
   Ice: {fileID: 0}
+  Windwand: {fileID: 0}
+  Wind: {fileID: 0}
+  Earthwand: {fileID: 0}
+  Earth: {fileID: 0}
+  FireUI: {fileID: 0}
+  IceUI: {fileID: 0}
+  WindUI: {fileID: 0}
+  EarthUI: {fileID: 0}
 --- !u!1 &5512674645715056014
 GameObject:
   m_ObjectHideFlags: 0
