@@ -27,7 +27,7 @@ public class WindWeapon : MonoBehaviour
     void Update()
     {
         //Debug.Log(isShoot);
-        if (!PauseMenu.GameIsPaused)
+        if (!PauseMenu.GameIsPaused || !SpawnLogic.inBetweenRounds)
         {
             Vector3 difference = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
             float rotZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;
