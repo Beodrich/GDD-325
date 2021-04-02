@@ -33,14 +33,16 @@ public class WindWeapon : MonoBehaviour
             float rotZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;
             transform.rotation = Quaternion.Euler(0f, 0f, rotZ + offset);
             dif = Vector3.Normalize(difference);
-            
+
+            if (player.isWind())
+            {
+                WindSpell();
+            }
+
         }
 
 
-        if (player.isWind())
-        {
-            WindSpell();
-        }
+       
     }
 
     public void WindSpell()
