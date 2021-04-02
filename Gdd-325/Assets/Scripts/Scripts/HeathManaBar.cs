@@ -34,6 +34,7 @@ public class HeathManaBar : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Debug.Log("current manna -------> " + currentMana + "mana recharge rate is ----> " + manaRechargeRate);
         calculateLife = currentLife / maxHeath;
         lifeBar.fillAmount = Mathf.MoveTowards(lifeBar.fillAmount, calculateLife,Time.deltaTime);
         lifeText.text = "" + (int)currentLife;

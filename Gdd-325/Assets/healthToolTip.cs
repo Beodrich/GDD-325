@@ -10,6 +10,6 @@ public class healthToolTip : MonoBehaviour
     public void setIsOverHealth(bool isOverHealthButton) {
 
         isOverHealth = isOverHealthButton;
-        Debug.Log(isOverHealth);
+        //Debug.Log(isOverHealth);
     }
 }
