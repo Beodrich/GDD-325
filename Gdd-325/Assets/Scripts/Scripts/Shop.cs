@@ -89,8 +89,11 @@ public class Shop : MonoBehaviour
             //Debug.Log("player hp is " + player.health + "current life is " + HeathManaBar.currentLife + "max health is " + HeathManaBar.maxHeath);
             skillPoint = 0;
             hasBoughItem = true;
+        healthToolTipText.enabled = false;
+        manaToolTipText.enabled = false;
+
         //hasAlreadyBoughtItem = true;
-        
+
 
     }
     //restore mana, increase by a factor, and increase the mana by a certain factor
@@ -103,8 +106,11 @@ public class Shop : MonoBehaviour
             bar.addManaRechargeRate(manaIncreaseRate);
             skillPoint = 0;
             hasBoughItem = true;
+        manaToolTipText.enabled = false;
+        healthToolTipText.enabled = false;
+
         //hasAlreadyBoughtItem = true;
-        
+
 
 
     }
