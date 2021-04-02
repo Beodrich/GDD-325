@@ -1401,7 +1401,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 701.63525, y: -343.62164}
+  m_AnchoredPosition: {x: 613, y: -343.62164}
   m_SizeDelta: {x: 411.1968, y: 57.1877}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &305357270
@@ -4590,7 +4590,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 705.26514, y: -480.47025}
+  m_AnchoredPosition: {x: 619, y: -480.47025}
   m_SizeDelta: {x: 388.2865, y: 50.6598}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1980764428
@@ -5432,7 +5432,7 @@ MonoBehaviour:
   attackRange: 1.4
   whatIsEnemies:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 64
   damage: 0
 --- !u!1 &2133859851
 GameObject:

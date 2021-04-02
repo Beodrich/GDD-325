@@ -76,6 +76,7 @@ public class HeathManaBar : MonoBehaviour
         maxHeath += amount;
     }
     public void addManaRechargeRate(float amount) {
+        
         manaRechargeRate += amount;
     
     }

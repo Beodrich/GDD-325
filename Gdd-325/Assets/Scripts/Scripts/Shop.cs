@@ -20,7 +20,7 @@ public class Shop : MonoBehaviour
     public float amountOfManaThatIsIncreased = 5f;
     public float manaIncreaseRate = 0.01f;
     public float skillPoint = 1f;
-    
+    private Vector3 localScale;
     private void Awake()
     {
         shopUI = GameObject.Find("ShopSystem");
@@ -31,7 +31,7 @@ public class Shop : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+       
 
         player = GameObject.Find("MonkE").GetComponent<PlayerController>();
         bar = GameObject.Find("Canvas").GetComponent<HeathManaBar>();
@@ -98,13 +98,22 @@ public class Shop : MonoBehaviour
     }
     //restore mana, increase by a factor, and increase the mana by a certain factor
     public void buyMana() {
-        
-            
+
+        if (WeaponWand.Mana < 30)
+        {
             bar.setMaxMana(amountOfManaThatIsIncreased);
             bar.setCurrentMana(amountOfManaThatIsIncreased);
+        }
             WeaponWand.Mana = HeathManaBar.getMana();
             bar.addManaRechargeRate(manaIncreaseRate);
             skillPoint = 0;
+       /* if (WeaponWand.Mana >= 30) {
+            localScale = HeathManaBar.manaBar.transform.localScale;
+            localScale.x += .1f;
+            HeathManaBar.manaBar.transform.localScale = localScale;
+
+
+        }*/
             hasBoughItem = true;
         manaToolTipText.enabled = false;
         healthToolTipText.enabled = false;
