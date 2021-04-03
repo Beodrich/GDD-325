@@ -103,10 +103,14 @@ public class Shop : MonoBehaviour
         {
             bar.setMaxMana(amountOfManaThatIsIncreased);
             bar.setCurrentMana(amountOfManaThatIsIncreased);
+            localScale = HeathManaBar.manaBar.transform.localScale;
+            localScale.x += .1f;
+            HeathManaBar.manaBar.transform.localScale = localScale;
         }
             WeaponWand.Mana = HeathManaBar.getMana();
             bar.addManaRechargeRate(manaIncreaseRate);
             skillPoint = 0;
+
        /* if (WeaponWand.Mana >= 30) {
             localScale = HeathManaBar.manaBar.transform.localScale;
             localScale.x += .1f;

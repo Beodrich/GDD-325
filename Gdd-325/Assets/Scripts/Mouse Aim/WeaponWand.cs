@@ -40,10 +40,10 @@ public class WeaponWand : MonoBehaviour
     {
         if (timeBTWShots <= 0)
         {
-            if (Input.GetMouseButtonDown(0) && Mana > 0.5 && !SpawnLogic.inBetweenRounds)
+            if (Input.GetMouseButtonDown(0) && HeathManaBar.currentMana > 0.5 && !SpawnLogic.inBetweenRounds)
             {
                 Instantiate(projectile, shotPoint.position, transform.rotation);
-                Mana -= 2;
+                //Mana -= 2;
                 HeathManaBar.reduceMana(2);
                 timeBTWShots = startTimeBTWShots;
                 isShoot = true;
@@ -56,7 +56,7 @@ public class WeaponWand : MonoBehaviour
         {
             timeBTWShots -= Time.deltaTime;
         }
-        Mana = HeathManaBar.currentMana;
+        //Mana = HeathManaBar.currentMana;
     }
     IEnumerator WaitForAttackAnimation() {
         yield return new WaitForSeconds(1.5f);

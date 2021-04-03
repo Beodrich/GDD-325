@@ -35,6 +35,7 @@ public class HeathManaBar : MonoBehaviour
     void Update()
     {
         Debug.Log("current manna -------> " + currentMana + "mana recharge rate is ----> " + manaRechargeRate);
+        Debug.Log("MAX manna -------> " + WeaponWand.Mana);
         calculateLife = currentLife / maxHeath;
         lifeBar.fillAmount = Mathf.MoveTowards(lifeBar.fillAmount, calculateLife,Time.deltaTime);
         lifeText.text = "" + (int)currentLife;
@@ -61,7 +62,9 @@ public class HeathManaBar : MonoBehaviour
         currentLife += amount;
         if (currentLife > maxHeath) {
             currentLife = maxHeath;
-        
+            
+            
+
         }
     }
     public static void reduceMana(float m) {
@@ -89,6 +92,7 @@ public class HeathManaBar : MonoBehaviour
     
     }
     public void setMaxMana(float amount) {
+
         mana += amount;
     
     }

@@ -49,13 +49,13 @@ public class WindWeapon : MonoBehaviour
     {
         if (timeBTWShots <= 0)
         {
-            if (Input.GetMouseButtonDown(0) && Mana > 0.5)
+            if (Input.GetMouseButtonDown(0) && HeathManaBar.currentMana > 0.5)
             {
                 
                 currentWind= Instantiate(Wind, shotPoint.position, transform.rotation);
                 //currentWind.AddForce(Vector2.up * 5000, ForceMode2D.Impulse);
                 currentWind.velocity = dif * speed; // speed variable
-                Mana -= 3;
+               // Mana -= 3;
                 HeathManaBar.reduceMana(3);
                 timeBTWShots = startTimeBTWShots;
                 isShoot = true;
@@ -68,7 +68,7 @@ public class WindWeapon : MonoBehaviour
         {
             timeBTWShots -= Time.deltaTime;
         }
-        Mana = HeathManaBar.currentMana;
+        //Mana = HeathManaBar.currentMana;
     }
 
     IEnumerator WaitForAttackAnimation()
