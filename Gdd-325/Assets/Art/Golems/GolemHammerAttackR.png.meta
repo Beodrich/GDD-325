@@ -1,7 +1,28 @@
 fileFormatVersion: 2
 guid: 3b1e9e524cc5d3a45ba25cefd1d6b9f5
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -5368526859015127789
+    second: GolemHammerAttackR_0
+  - first:
+      213: 2743841035296463969
+    second: GolemHammerAttackR_1
+  - first:
+      213: -8829386409155971728
+    second: GolemHammerAttackR_2
+  - first:
+      213: -7298246985599364393
+    second: GolemHammerAttackR_4
+  - first:
+      213: -1030779201890309754
+    second: GolemHammerAttackR_5
+  - first:
+      213: 8991388623395881708
+    second: GolemHammerAttackR_6
+  - first:
+      213: -7191153841645817137
+    second: GolemHammerAttackR_7
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -41,7 +62,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -75,9 +96,168 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: GolemHammerAttackR_0
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 914
+        width: 5
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31d7241f3492f75b0800000000000000
+      internalID: -5368526859015127789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GolemHammerAttackR_1
+      rect:
+        serializedVersion: 2
+        x: 469
+        y: 225
+        width: 631
+        height: 1013
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16c5cf452e4141620800000000000000
+      internalID: 2743841035296463969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GolemHammerAttackR_2
+      rect:
+        serializedVersion: 2
+        x: 1179
+        y: 227
+        width: 617
+        height: 971
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 075b89947d7b77580800000000000000
+      internalID: -8829386409155971728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GolemHammerAttackR_4
+      rect:
+        serializedVersion: 2
+        x: 1915
+        y: 228
+        width: 639
+        height: 1040
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d2d84cc80b67ba90800000000000000
+      internalID: -7298246985599364393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GolemHammerAttackR_5
+      rect:
+        serializedVersion: 2
+        x: 2688
+        y: 227
+        width: 640
+        height: 1039
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 689a775f6cfe1b1f0800000000000000
+      internalID: -1030779201890309754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GolemHammerAttackR_6
+      rect:
+        serializedVersion: 2
+        x: 3471
+        y: 239
+        width: 619
+        height: 972
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce200078054d7cc70800000000000000
+      internalID: 8991388623395881708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GolemHammerAttackR_7
+      rect:
+        serializedVersion: 2
+        x: 4087
+        y: 918
+        width: 12
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc2f38f6ea3e33c90800000000000000
+      internalID: -7191153841645817137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

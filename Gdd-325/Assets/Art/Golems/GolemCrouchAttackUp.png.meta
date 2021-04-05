@@ -1,7 +1,28 @@
 fileFormatVersion: 2
 guid: caa8008ab47a7244ba0765bc368cbaeb
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 7806925654708773555
+    second: GolemCrouchAttackUp_2
+  - first:
+      213: 689802813432729870
+    second: GolemCrouchAttackUp_3
+  - first:
+      213: 6548187668031723218
+    second: GolemCrouchAttackUp_4
+  - first:
+      213: 6078186110840966473
+    second: GolemCrouchAttackUp_5
+  - first:
+      213: 7310206735319655343
+    second: GolemCrouchAttackUp_6
+  - first:
+      213: 8807084975154382416
+    second: GolemCrouchAttackUp_7
+  - first:
+      213: -959848044233796833
+    second: GolemCrouchAttackUp_8
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -41,7 +62,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -75,9 +96,168 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: GolemCrouchAttackUp_2
+      rect:
+        serializedVersion: 2
+        x: 2616
+        y: 397
+        width: 417
+        height: 895
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b2ecc42585c75c60800000000000000
+      internalID: 7806925654708773555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GolemCrouchAttackUp_3
+      rect:
+        serializedVersion: 2
+        x: 3165
+        y: 368
+        width: 450
+        height: 887
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0119bb010ca29900800000000000000
+      internalID: 689802813432729870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GolemCrouchAttackUp_4
+      rect:
+        serializedVersion: 2
+        x: 847
+        y: 260
+        width: 481
+        height: 716
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d6df938df5dfda50800000000000000
+      internalID: 6548187668031723218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GolemCrouchAttackUp_5
+      rect:
+        serializedVersion: 2
+        x: 1460
+        y: 271
+        width: 481
+        height: 679
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94d836f601e0a5450800000000000000
+      internalID: 6078186110840966473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GolemCrouchAttackUp_6
+      rect:
+        serializedVersion: 2
+        x: 2067
+        y: 307
+        width: 450
+        height: 887
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa3656d6b42137560800000000000000
+      internalID: 7310206735319655343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GolemCrouchAttackUp_7
+      rect:
+        serializedVersion: 2
+        x: 3457
+        y: 366
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 056c1ca7f1d093a70800000000000000
+      internalID: 8807084975154382416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GolemCrouchAttackUp_8
+      rect:
+        serializedVersion: 2
+        x: 2359
+        y: 304
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f13571d0a4feda2f0800000000000000
+      internalID: -959848044233796833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

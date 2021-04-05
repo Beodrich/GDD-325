@@ -1,7 +1,28 @@
 fileFormatVersion: 2
 guid: 98a435df60d284b498811db7b08c61dc
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 8570844488304380277
+    second: GolemCrouch 1_0
+  - first:
+      213: 1384474741389870423
+    second: GolemCrouch 1_1
+  - first:
+      213: 3096240369357946394
+    second: GolemCrouch 1_2
+  - first:
+      213: 8049142968395214746
+    second: GolemCrouch 1_3
+  - first:
+      213: -4877058095591499621
+    second: GolemCrouch 1_4
+  - first:
+      213: 4795235921080693737
+    second: GolemCrouch 1_5
+  - first:
+      213: 1712665222815848174
+    second: GolemCrouch 1_6
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -41,7 +62,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -75,9 +96,168 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: GolemCrouch 1_0
+      rect:
+        serializedVersion: 2
+        x: 775
+        y: 1636
+        width: 461
+        height: 618
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5794f7ed6a1c1f670800000000000000
+      internalID: 8570844488304380277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GolemCrouch 1_1
+      rect:
+        serializedVersion: 2
+        x: 1561
+        y: 1611
+        width: 564
+        height: 662
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7554b092174a63310800000000000000
+      internalID: 1384474741389870423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GolemCrouch 1_2
+      rect:
+        serializedVersion: 2
+        x: 883
+        y: 1589
+        width: 12
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1efdca163e08fa20800000000000000
+      internalID: 3096240369357946394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GolemCrouch 1_3
+      rect:
+        serializedVersion: 2
+        x: 773
+        y: 658
+        width: 483
+        height: 715
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9fa78132ec44bf60800000000000000
+      internalID: 8049142968395214746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GolemCrouch 1_4
+      rect:
+        serializedVersion: 2
+        x: 1496
+        y: 634
+        width: 579
+        height: 747
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9853577085315cb0800000000000000
+      internalID: -4877058095591499621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GolemCrouch 1_5
+      rect:
+        serializedVersion: 2
+        x: 1738
+        y: 1369
+        width: 9
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e3353af9a91c8240800000000000000
+      internalID: 4795235921080693737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GolemCrouch 1_6
+      rect:
+        serializedVersion: 2
+        x: 1832
+        y: 1366
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee69a1132fb94c710800000000000000
+      internalID: 1712665222815848174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

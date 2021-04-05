@@ -1,7 +1,22 @@
 fileFormatVersion: 2
 guid: 4c21f92b8e2a20e4e9fad51c62299d62
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -4604685152703126986
+    second: GolemCrouchAttackL_1
+  - first:
+      213: -9111962154000465188
+    second: GolemCrouchAttackL_6
+  - first:
+      213: -7661984093997608020
+    second: GolemCrouchAttackL_7
+  - first:
+      213: -5028724337050744197
+    second: GolemCrouchAttackL_11
+  - first:
+      213: -2177886467434731308
+    second: GolemCrouchAttackL_14
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -41,7 +56,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -75,9 +90,126 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: GolemCrouchAttackL_1
+      rect:
+        serializedVersion: 2
+        x: 3235
+        y: 379
+        width: 589
+        height: 883
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6326d92104fd810c0800000000000000
+      internalID: -4604685152703126986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GolemCrouchAttackL_6
+      rect:
+        serializedVersion: 2
+        x: 2440
+        y: 337
+        width: 694
+        height: 908
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd2cffbb2becb8180800000000000000
+      internalID: -9111962154000465188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GolemCrouchAttackL_7
+      rect:
+        serializedVersion: 2
+        x: 1737
+        y: 271
+        width: 587
+        height: 883
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca3549abf0a2ba590800000000000000
+      internalID: -7661984093997608020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GolemCrouchAttackL_11
+      rect:
+        serializedVersion: 2
+        x: 498
+        y: 260
+        width: 582
+        height: 732
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7a8ab8dbd1663ab0800000000000000
+      internalID: -5028724337050744197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GolemCrouchAttackL_14
+      rect:
+        serializedVersion: 2
+        x: 1102
+        y: 269
+        width: 556
+        height: 694
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d82c6bfbc796c1e0800000000000000
+      internalID: -2177886467434731308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

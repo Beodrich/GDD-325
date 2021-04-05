@@ -1,7 +1,22 @@
 fileFormatVersion: 2
 guid: 73ea83aa7c51797459741d341bbdddd7
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -6251659634005267688
+    second: GolemHammerAttackDown_0
+  - first:
+      213: 731154347592468309
+    second: GolemHammerAttackDown_1
+  - first:
+      213: -3493166246510465575
+    second: GolemHammerAttackDown_3
+  - first:
+      213: 1887398413431496990
+    second: GolemHammerAttackDown_4
+  - first:
+      213: -4506925876509680021
+    second: GolemHammerAttackDown_5
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -41,7 +56,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -75,9 +90,126 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: GolemHammerAttackDown_0
+      rect:
+        serializedVersion: 2
+        x: 362
+        y: 232
+        width: 623
+        height: 1012
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81ba7728fa4ad39a0800000000000000
+      internalID: -6251659634005267688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GolemHammerAttackDown_1
+      rect:
+        serializedVersion: 2
+        x: 1095
+        y: 236
+        width: 622
+        height: 1007
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5574b3c5105952a00800000000000000
+      internalID: 731154347592468309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GolemHammerAttackDown_3
+      rect:
+        serializedVersion: 2
+        x: 1853
+        y: 243
+        width: 675
+        height: 1133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ddeb5f6ec7c58fc0800000000000000
+      internalID: -3493166246510465575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GolemHammerAttackDown_4
+      rect:
+        serializedVersion: 2
+        x: 2660
+        y: 234
+        width: 676
+        height: 1133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e11683e6bd2613a10800000000000000
+      internalID: 1887398413431496990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GolemHammerAttackDown_5
+      rect:
+        serializedVersion: 2
+        x: 3517
+        y: 241
+        width: 622
+        height: 1006
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6edf954bce2471c0800000000000000
+      internalID: -4506925876509680021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

@@ -1,7 +1,25 @@
 fileFormatVersion: 2
 guid: e2f6a2d42e9473d419ef507a99d7b7fa
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -2160756685256517451
+    second: GolemCrouchAttackR_0
+  - first:
+      213: 23295002972522607
+    second: GolemCrouchAttackR_1
+  - first:
+      213: -5040550979429816868
+    second: GolemCrouchAttackR_2
+  - first:
+      213: -2405688760700334114
+    second: GolemCrouchAttackR_3
+  - first:
+      213: 3313989071123697116
+    second: GolemCrouchAttackR_4
+  - first:
+      213: -9192921958777903354
+    second: GolemCrouchAttackR_5
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -41,7 +59,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -75,9 +93,147 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: GolemCrouchAttackR_0
+      rect:
+        serializedVersion: 2
+        x: 779
+        y: 267
+        width: 565
+        height: 665
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b81c313e337302e0800000000000000
+      internalID: -2160756685256517451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GolemCrouchAttackR_1
+      rect:
+        serializedVersion: 2
+        x: 1377
+        y: 271
+        width: 555
+        height: 641
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6808398ea2c25000800000000000000
+      internalID: 23295002972522607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GolemCrouchAttackR_2
+      rect:
+        serializedVersion: 2
+        x: 2042
+        y: 373
+        width: 587
+        height: 746
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd5a6d6179d5c0ab0800000000000000
+      internalID: -5040550979429816868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GolemCrouchAttackR_3
+      rect:
+        serializedVersion: 2
+        x: 2682
+        y: 555
+        width: 6
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edf8e4a61d64d9ed0800000000000000
+      internalID: -2405688760700334114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GolemCrouchAttackR_4
+      rect:
+        serializedVersion: 2
+        x: 2719
+        y: 430
+        width: 633
+        height: 756
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cddcadd7087adfd20800000000000000
+      internalID: 3313989071123697116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GolemCrouchAttackR_5
+      rect:
+        serializedVersion: 2
+        x: 3413
+        y: 364
+        width: 587
+        height: 746
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 607a7274f2e2c6080800000000000000
+      internalID: -9192921958777903354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
