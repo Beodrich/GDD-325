@@ -47,7 +47,10 @@ public class Boss : MonoBehaviour
     [SerializeField] private float health = 50f;
     [SerializeField] private float meleeDamage = 10f;
     //animations states
-    private const string golem_Bowling_State = "BowlingState";
+    private const string golem_Bowling_Down = "BowlingDown"; 
+    private const string golem_Bowling_Up = "BowlingUp";
+    private const string golem_Bowling_Left = "BowlingLeft";
+    private const string golem_Bowling_Right = "BowlingRight";
     private const string golem_Up_State = "Boss_Up";
     private const string golem_Right_State = "Boss_Right";
     private const string golem_Left_State = "Boss_Left";
@@ -126,11 +129,28 @@ public class Boss : MonoBehaviour
 
         if (shitMonkE)
         {
-            animator.ChangeAnimationState(golem_Bowling_State);
+            //animator.ChangeAnimationState(golem_Bowling_Down);
+            if (bossDirection.x <= -0.9f)
+            {
+                animator.ChangeAnimationState(golem_Bowling_Left);
+
+            }
+            else if (bossDirection.x >= 0.9f)
+            {
+                animator.ChangeAnimationState(golem_Bowling_Right);
+
+            }
+            else if (bossDirection.y >= 0.9f)
+            {
+                animator.ChangeAnimationState(golem_Bowling_Up);
+            }
+            else if (bossDirection.y <= -0.9f)
+            {
+                animator.ChangeAnimationState(golem_Bowling_Down);
+            }
         }
         else
         {
-
             if (bossDirection.x <= -0.9f)
             {
                 animator.ChangeAnimationState(golem_Left_State);
@@ -186,7 +206,7 @@ public class Boss : MonoBehaviour
         rb.velocity = direction * speed;
         canMove = false;
         shitMonkE = true;
-        animator.ChangeAnimationState(golem_Bowling_State);
+        //animator.ChangeAnimationState(golem_Bowling_Down);
 
     }
     IEnumerator StunTime() {
