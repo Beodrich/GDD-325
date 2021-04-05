@@ -77,7 +77,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 6732038817613973774, guid: 358895f254a19bb4ea6479c6af6a9723, type: 3}
+  m_Sprite: {fileID: -3870507772175645806, guid: 3f004f8fe3e7b6045a01a773e8c930d1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -176,11 +176,9 @@ MonoBehaviour:
   rate: 1
   stunAmount: 2
   attackDistance: 1.5
-  audio: {fileID: 0}
+  damageSound: {fileID: 0}
   speed: 10
   player: {fileID: 0}
-  golemsToSpawn:
-  - {fileID: 0}
   animator: {fileID: 4172505475406973618}
   rb: {fileID: 4172505475406973622}
   monkE: {fileID: 0}
@@ -196,6 +194,8 @@ MonoBehaviour:
   initialIceTime: 0
   bossText: {fileID: 0}
   bar: {fileID: 0}
+  currentWaveText: {fileID: 0}
+  numOfGolemsLeft: {fileID: 0}
 --- !u!114 &4172505475406973618
 MonoBehaviour:
   m_ObjectHideFlags: 0
