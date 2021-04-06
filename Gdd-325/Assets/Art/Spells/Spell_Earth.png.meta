@@ -1,19 +1,19 @@
 fileFormatVersion: 2
-guid: 163ccc0cf7ee9e740905501b7e63fa57
+guid: 4f1b37f14433efc45a8ebfa2ed01488b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7504692389736754188
-    second: Spell_E_0
+      213: -2495989897513777815
+    second: Spell_Earth_0
   - first:
-      213: 2726647038170728877
-    second: Spell_E_1
+      213: -8131543252273759776
+    second: Spell_Earth_1
   - first:
-      213: 5783086316343145639
-    second: Spell_E_2
+      213: 3332906944096700358
+    second: Spell_Earth_2
   - first:
-      213: 3359866603787454143
-    second: Spell_E_3
+      213: 7274568872108806374
+    second: Spell_Earth_3
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -103,13 +103,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Spell_E_0
+      name: Spell_Earth_0
       rect:
         serializedVersion: 2
-        x: 220
-        y: 1536
-        width: 1322
-        height: 1006
+        x: 314
+        y: 2106
+        width: 1204
+        height: 540
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -117,20 +117,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4f3d929780af9d790800000000000000
-      internalID: -7504692389736754188
+      spriteID: 9654abb99667c5dd0800000000000000
+      internalID: -2495989897513777815
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Spell_E_1
+      name: Spell_Earth_1
       rect:
         serializedVersion: 2
-        x: 2106
-        y: 1482
-        width: 540
-        height: 1204
+        x: 1625
+        y: 2095
+        width: 1278
+        height: 578
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -138,20 +138,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: da9890ae80ff6d520800000000000000
-      internalID: 2726647038170728877
+      spriteID: 0e97f7cae74f62f80800000000000000
+      internalID: -8131543252273759776
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Spell_E_2
+      name: Spell_Earth_2
       rect:
         serializedVersion: 2
-        x: 244
-        y: 98
-        width: 1295
-        height: 1006
+        x: 458
+        y: 220
+        width: 1006
+        height: 1322
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -159,20 +159,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7a43e075d56a14050800000000000000
-      internalID: 5783086316343145639
+      spriteID: 6c70158053dd04e20800000000000000
+      internalID: 3332906944096700358
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Spell_E_3
+      name: Spell_Earth_3
       rect:
         serializedVersion: 2
-        x: 2095
-        y: 97
-        width: 578
-        height: 1278
+        x: 1896
+        y: 244
+        width: 1006
+        height: 1295
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -180,8 +180,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fb60373ffd4a0ae20800000000000000
-      internalID: 3359866603787454143
+      spriteID: 6e0d82cc8d574f460800000000000000
+      internalID: 7274568872108806374
       vertices: []
       indices: 
       edges: []

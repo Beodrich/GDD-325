@@ -5540,6 +5540,14 @@ PrefabInstance:
       propertyPath: startTimeBTWShots
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 1727206166714620584, guid: a3efbba7d81282f49bef76e2f718d23f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1727206166714620584, guid: a3efbba7d81282f49bef76e2f718d23f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 7.07
+      objectReference: {fileID: 0}
     - target: {fileID: 2486995918962668676, guid: a3efbba7d81282f49bef76e2f718d23f, type: 3}
       propertyPath: projectile
       value: 
