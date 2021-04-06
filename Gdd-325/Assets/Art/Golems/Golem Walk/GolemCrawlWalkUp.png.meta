@@ -1,7 +1,25 @@
 fileFormatVersion: 2
 guid: e3456837633232f4f8a6cb37a93d3d6c
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 308220521709264297
+    second: GolemCrawlWalkUp_0
+  - first:
+      213: 6758479060352647128
+    second: GolemCrawlWalkUp_1
+  - first:
+      213: -2409750266699841832
+    second: GolemCrawlWalkUp_3
+  - first:
+      213: 2858329037688180220
+    second: GolemCrawlWalkUp_4
+  - first:
+      213: 5876362779502614173
+    second: GolemCrawlWalkUp_5
+  - first:
+      213: 1745274284152022373
+    second: GolemCrawlWalkUp_7
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -41,7 +59,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -75,9 +93,147 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: GolemCrawlWalkUp_0
+      rect:
+        serializedVersion: 2
+        x: 1262
+        y: 482
+        width: 488
+        height: 586
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ad57f47ee4074400800000000000000
+      internalID: 308220521709264297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GolemCrawlWalkUp_1
+      rect:
+        serializedVersion: 2
+        x: 1877
+        y: 488
+        width: 489
+        height: 559
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8df3c3eb5e0facd50800000000000000
+      internalID: 6758479060352647128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GolemCrawlWalkUp_3
+      rect:
+        serializedVersion: 2
+        x: 2586
+        y: 488
+        width: 398
+        height: 536
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8def3fb56e8de8ed0800000000000000
+      internalID: -2409750266699841832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GolemCrawlWalkUp_4
+      rect:
+        serializedVersion: 2
+        x: 3078
+        y: 482
+        width: 489
+        height: 586
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cfd869e9d13daa720800000000000000
+      internalID: 2858329037688180220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GolemCrawlWalkUp_5
+      rect:
+        serializedVersion: 2
+        x: 3702
+        y: 488
+        width: 486
+        height: 559
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d96949b40d80d8150800000000000000
+      internalID: 5876362779502614173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GolemCrawlWalkUp_7
+      rect:
+        serializedVersion: 2
+        x: 4417
+        y: 488
+        width: 395
+        height: 536
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 565618ee6b5783810800000000000000
+      internalID: 1745274284152022373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

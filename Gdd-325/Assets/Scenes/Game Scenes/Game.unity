@@ -5954,7 +5954,7 @@ PrefabInstance:
       objectReference: {fileID: 2035964328}
     - target: {fileID: 4172505475406973617, guid: 635d50a47ebcac14f9b4fe793b04c001, type: 3}
       propertyPath: health
-      value: 1
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 4172505475406973617, guid: 635d50a47ebcac14f9b4fe793b04c001, type: 3}
       propertyPath: player
@@ -6060,13 +6060,29 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4172505475406973623, guid: 635d50a47ebcac14f9b4fe793b04c001, type: 3}
+      propertyPath: m_Size.x
+      value: 8.180857
+      objectReference: {fileID: 0}
+    - target: {fileID: 4172505475406973623, guid: 635d50a47ebcac14f9b4fe793b04c001, type: 3}
+      propertyPath: m_Size.y
+      value: 9.623196
+      objectReference: {fileID: 0}
+    - target: {fileID: 4172505475406973623, guid: 635d50a47ebcac14f9b4fe793b04c001, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.031606674
+      objectReference: {fileID: 0}
+    - target: {fileID: 4172505475406973623, guid: 635d50a47ebcac14f9b4fe793b04c001, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.23305702
+      objectReference: {fileID: 0}
     - target: {fileID: 4172505475406973628, guid: 635d50a47ebcac14f9b4fe793b04c001, type: 3}
       propertyPath: m_Name
       value: Boss
       objectReference: {fileID: 0}
     - target: {fileID: 4172505475406973628, guid: 635d50a47ebcac14f9b4fe793b04c001, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 4172505475406973619, guid: 635d50a47ebcac14f9b4fe793b04c001, type: 3}

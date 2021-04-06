@@ -32,7 +32,7 @@ public class Boss : MonoBehaviour
     private bool canSpawn = false;
     public float speed = 5f;
     private bool isAttack = false;
-    private bool shitMonkE=false;
+    private bool isBowling=false;
     private bool isCurrentlySpawning = false;
     public Transform player;
    
@@ -62,6 +62,7 @@ public class Boss : MonoBehaviour
     public bool startIce;
     public float initialIceTime = 0;
     private  float Max_Health;
+    private bool hasFoundPath=false;
     //ui stuff
     [SerializeField] private GameObject bossText;
     [SerializeField] private GameObject bar;
@@ -124,32 +125,15 @@ public class Boss : MonoBehaviour
     }
     private void ChangeAnimation()
     {
+
+
         bossDirection = monkE.transform.position - this.transform.position;
         bossDirection = bossDirection.normalized;
 
-        if (shitMonkE)
-        {
-            //animator.ChangeAnimationState(golem_Bowling_Down);
-            if (bossDirection.x <= -0.9f)
-            {
-                animator.ChangeAnimationState(golem_Bowling_Left);
+       // Debug.Log("is bowling -----> " + isBowling);
 
-            }
-            else if (bossDirection.x >= 0.9f)
-            {
-                animator.ChangeAnimationState(golem_Bowling_Right);
 
-            }
-            else if (bossDirection.y >= 0.9f)
-            {
-                animator.ChangeAnimationState(golem_Bowling_Up);
-            }
-            else if (bossDirection.y <= -0.9f)
-            {
-                animator.ChangeAnimationState(golem_Bowling_Down);
-            }
-        }
-        else
+        if (!isBowling)
         {
             if (bossDirection.x <= -0.9f)
             {
@@ -170,6 +154,7 @@ public class Boss : MonoBehaviour
                 animator.ChangeAnimationState(golem_Down_State);
             }
         }
+    
     }
 
         private void OnCollisionEnter2D(Collision2D other)
@@ -180,7 +165,7 @@ public class Boss : MonoBehaviour
             animator.ChangeAnimationState(golem_Up_State);
             rb.velocity = Vector2.zero;
             StartCoroutine(StunTime());
-            shitMonkE = false;
+            isBowling = false;
             canDamage = true;
         }
         else if (other.gameObject.CompareTag("Player"))
@@ -193,7 +178,7 @@ public class Boss : MonoBehaviour
             monkE.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
             // start new wave
             canSpawn = true;
-            shitMonkE = false;
+            isBowling = false;
             canDamage = false;
 
         }
@@ -205,8 +190,30 @@ public class Boss : MonoBehaviour
     public void BowlingAttack() {
         rb.velocity = direction * speed;
         canMove = false;
-        shitMonkE = true;
+        isBowling = true;
         //animator.ChangeAnimationState(golem_Bowling_Down);
+        Debug.Log(direction);
+        
+            //animator.ChangeAnimationState(golem_Bowling_Down);
+            if (direction.x <= -0.9f)
+            {
+                animator.ChangeAnimationState(golem_Bowling_Left);
+
+            }
+            else if (direction.x >= 0.9f)
+            {
+                animator.ChangeAnimationState(golem_Bowling_Right);
+
+            }
+            if (direction.y >= 0.9f)
+            {
+                animator.ChangeAnimationState(golem_Bowling_Up);
+            }
+            else if (direction.y <= -0.9f)
+            {
+                animator.ChangeAnimationState(golem_Bowling_Down);
+            }
+        
 
     }
     IEnumerator StunTime() {

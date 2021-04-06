@@ -1,28 +1,25 @@
 fileFormatVersion: 2
-guid: 65ec78f104d55484f96b15b5b3a20e99
+guid: 84e24db0c33f1b0458d61e49c0911ada
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -9035065235968437097
-    second: GolemCrawlWalkL_0
+      213: -8750534593209048498
+    second: GolemCrawlAttackDown_0
   - first:
-      213: 2429763369140554474
-    second: GolemCrawlWalkL_6
+      213: -3653160302009799559
+    second: GolemCrawlAttackDown_1
   - first:
-      213: 5437363942125319436
-    second: GolemCrawlWalkL_7
+      213: 3911823063325917356
+    second: GolemCrawlAttackDown_2
   - first:
-      213: -1906002753989095875
-    second: GolemCrawlWalkL_8
+      213: 160955394624700643
+    second: GolemCrawlAttackDown_3
   - first:
-      213: -6986351313704266110
-    second: GolemCrawlWalkL_9
+      213: -2742757792848159590
+    second: GolemCrawlAttackDown_5
   - first:
-      213: -283741688292229105
-    second: GolemCrawlWalkL_10
-  - first:
-      213: 1936287451242077629
-    second: GolemCrawlWalkL_11
+      213: -6097613037138647478
+    second: GolemCrawlAttackDown_6
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -112,13 +109,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: GolemCrawlWalkL_0
+      name: GolemCrawlAttackDown_0
       rect:
         serializedVersion: 2
-        x: 708
-        y: 980
-        width: 11
-        height: 9
+        x: 1102
+        y: 445
+        width: 437
+        height: 472
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -126,20 +123,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 794de97a9000d9280800000000000000
-      internalID: -9035065235968437097
+      spriteID: e42e109562bdf8680800000000000000
+      internalID: -8750534593209048498
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GolemCrawlWalkL_6
+      name: GolemCrawlAttackDown_1
       rect:
         serializedVersion: 2
-        x: 482
-        y: 526
-        width: 706
-        height: 454
+        x: 1612
+        y: 467
+        width: 428
+        height: 459
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -147,20 +144,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: aea01e929e048b120800000000000000
-      internalID: 2429763369140554474
+      spriteID: 97ca5238f0e5d4dc0800000000000000
+      internalID: -3653160302009799559
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GolemCrawlWalkL_7
+      name: GolemCrawlAttackDown_2
       rect:
         serializedVersion: 2
-        x: 1376
-        y: 526
-        width: 706
-        height: 454
+        x: 2124
+        y: 548
+        width: 432
+        height: 384
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -168,20 +165,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c05b5ec62b5657b40800000000000000
-      internalID: 5437363942125319436
+      spriteID: ca0c8b1b956994630800000000000000
+      internalID: 3911823063325917356
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GolemCrawlWalkL_8
+      name: GolemCrawlAttackDown_3
       rect:
         serializedVersion: 2
-        x: 2208
-        y: 544
-        width: 749
-        height: 436
+        x: 2631
+        y: 538
+        width: 429
+        height: 402
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -189,20 +186,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d3e409bf7948c85e0800000000000000
-      internalID: -1906002753989095875
+      spriteID: 3e0c9412414db3200800000000000000
+      internalID: 160955394624700643
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GolemCrawlWalkL_9
+      name: GolemCrawlAttackDown_5
       rect:
         serializedVersion: 2
-        x: 3022
-        y: 526
-        width: 706
-        height: 454
+        x: 3130
+        y: 572
+        width: 431
+        height: 384
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -210,20 +207,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 286d296de7e7b0f90800000000000000
-      internalID: -6986351313704266110
+      spriteID: a9cd954b154cfe9d0800000000000000
+      internalID: -2742757792848159590
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GolemCrawlWalkL_10
+      name: GolemCrawlAttackDown_6
       rect:
         serializedVersion: 2
-        x: 3945
-        y: 526
-        width: 709
-        height: 454
+        x: 3565
+        y: 760
+        width: 8
+        height: 7
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -231,29 +228,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f004f551072ff0cf0800000000000000
-      internalID: -283741688292229105
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GolemCrawlWalkL_11
-      rect:
-        serializedVersion: 2
-        x: 4765
-        y: 544
-        width: 700
-        height: 436
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: dbd94529d231fda10800000000000000
-      internalID: 1936287451242077629
+      spriteID: a466f8fcf3de06ba0800000000000000
+      internalID: -6097613037138647478
       vertices: []
       indices: 
       edges: []
