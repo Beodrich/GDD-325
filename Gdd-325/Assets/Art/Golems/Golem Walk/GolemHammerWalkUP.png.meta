@@ -1,0 +1,492 @@
+fileFormatVersion: 2
+guid: d6b452706cf5dc044bc052e7497fc58e
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8876329962647248155
+    second: GolemHammerWalkUP_0
+  - first:
+      213: -5015464496595397394
+    second: GolemHammerWalkUP_1
+  - first:
+      213: 8598645607786033004
+    second: GolemHammerWalkUP_2
+  - first:
+      213: 6417086481448937432
+    second: GolemHammerWalkUP_3
+  - first:
+      213: -1560133492449274027
+    second: GolemHammerWalkUP_4
+  - first:
+      213: 3640965458584720470
+    second: GolemHammerWalkUP_5
+  - first:
+      213: -6678596674608577500
+    second: GolemHammerWalkUP_6
+  - first:
+      213: -1768901043660725252
+    second: GolemHammerWalkUP_7
+  - first:
+      213: 6128143526368322623
+    second: GolemHammerWalkUP_8
+  - first:
+      213: 3071177839521664693
+    second: GolemHammerWalkUP_9
+  - first:
+      213: 496962942001796831
+    second: GolemHammerWalkUP_10
+  - first:
+      213: -6926191452714521189
+    second: GolemHammerWalkUP_11
+  - first:
+      213: -818463606997389818
+    second: GolemHammerWalkUP_12
+  - first:
+      213: -7455558674072542813
+    second: GolemHammerWalkUP_13
+  - first:
+      213: -8420610110202913451
+    second: GolemHammerWalkUP_14
+  - first:
+      213: -5853036397932048649
+    second: GolemHammerWalkUP_15
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: GolemHammerWalkUP_0
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 192
+        width: 626
+        height: 1050
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1ddebc721f0f2b70800000000000000
+      internalID: 8876329962647248155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GolemHammerWalkUP_1
+      rect:
+        serializedVersion: 2
+        x: 918
+        y: 216
+        width: 627
+        height: 1052
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee419d80d9d756ab0800000000000000
+      internalID: -5015464496595397394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GolemHammerWalkUP_2
+      rect:
+        serializedVersion: 2
+        x: 1617
+        y: 819
+        width: 8
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6f2f896f96845770800000000000000
+      internalID: 8598645607786033004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GolemHammerWalkUP_3
+      rect:
+        serializedVersion: 2
+        x: 1618
+        y: 249
+        width: 626
+        height: 1028
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d7a9bbd7221e0950800000000000000
+      internalID: 6417086481448937432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GolemHammerWalkUP_4
+      rect:
+        serializedVersion: 2
+        x: 2357
+        y: 265
+        width: 627
+        height: 1014
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5571f54cada495ae0800000000000000
+      internalID: -1560133492449274027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GolemHammerWalkUP_5
+      rect:
+        serializedVersion: 2
+        x: 3084
+        y: 249
+        width: 626
+        height: 1028
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 654d86e3bce478230800000000000000
+      internalID: 3640965458584720470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GolemHammerWalkUP_6
+      rect:
+        serializedVersion: 2
+        x: 3853
+        y: 212
+        width: 627
+        height: 1050
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 424c9db85bbd053a0800000000000000
+      internalID: -6678596674608577500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GolemHammerWalkUP_7
+      rect:
+        serializedVersion: 2
+        x: 2504
+        y: 252
+        width: 13
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf3e8c17fd99377e0800000000000000
+      internalID: -1768901043660725252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GolemHammerWalkUP_8
+      rect:
+        serializedVersion: 2
+        x: 1749
+        y: 237
+        width: 14
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f342bc5a11a8b0550800000000000000
+      internalID: 6128143526368322623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GolemHammerWalkUP_9
+      rect:
+        serializedVersion: 2
+        x: 3215
+        y: 237
+        width: 14
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5be8db629f30f9a20800000000000000
+      internalID: 3071177839521664693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GolemHammerWalkUP_10
+      rect:
+        serializedVersion: 2
+        x: 1076
+        y: 205
+        width: 13
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd6dc88a92195e600800000000000000
+      internalID: 496962942001796831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GolemHammerWalkUP_11
+      rect:
+        serializedVersion: 2
+        x: 1316
+        y: 198
+        width: 9
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9daa9ef19931ef90800000000000000
+      internalID: -6926191452714521189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GolemHammerWalkUP_12
+      rect:
+        serializedVersion: 2
+        x: 4339
+        y: 177
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60ee5539fab34a4f0800000000000000
+      internalID: -818463606997389818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GolemHammerWalkUP_13
+      rect:
+        serializedVersion: 2
+        x: 4399
+        y: 174
+        width: 5
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a1e2dd13e8888890800000000000000
+      internalID: -7455558674072542813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GolemHammerWalkUP_14
+      rect:
+        serializedVersion: 2
+        x: 678
+        y: 157
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55dda4518bbf32b80800000000000000
+      internalID: -8420610110202913451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GolemHammerWalkUP_15
+      rect:
+        serializedVersion: 2
+        x: 738
+        y: 154
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7fe04d32866d5cea0800000000000000
+      internalID: -5853036397932048649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
