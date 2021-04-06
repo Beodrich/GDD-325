@@ -2620,8 +2620,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 32.369637, y: -2.821798}
-  m_SizeDelta: {x: 35.26073, y: 94.3564}
+  m_AnchoredPosition: {x: 0.000011444, y: 2.1336}
+  m_SizeDelta: {x: 100, y: 104.27}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &912950434
 MonoBehaviour:
@@ -2643,7 +2643,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: e87e5f1816e94044a937bafd0734b0fd, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b240012ceb8bfd14ebbaca0d2713b2a5, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3495,7 +3495,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 1
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -53.86377, w: 0}
+  m_margin: {x: 0, y: 0, z: -77.73645, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -3774,8 +3774,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 35.95254, y: 0}
-  m_SizeDelta: {x: 28.09494, y: 100}
+  m_AnchoredPosition: {x: -0.0000038146973, y: 2.7885}
+  m_SizeDelta: {x: 100, y: 115.15}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1508313831
 MonoBehaviour:
@@ -3797,7 +3797,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: b151d12f301bb2e4bbce21b94d9e5598, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d813675530894b54da0cd35c476a33cf, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4670,8 +4670,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 184, y: 250}
-  m_SizeDelta: {x: 100, y: 109.5709}
+  m_AnchoredPosition: {x: 184, y: 249.27979}
+  m_SizeDelta: {x: 100, y: 108.5347}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2008305669
 MonoBehaviour:
@@ -4686,7 +4686,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.08877712, g: 0.32715356, b: 0.990566, a: 1}
+  m_Color: {r: 0, g: 0.2608695, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -5973,6 +5973,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 141031273}
     - target: {fileID: 4172505475406973617, guid: 635d50a47ebcac14f9b4fe793b04c001, type: 3}
+      propertyPath: animationRange
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4172505475406973617, guid: 635d50a47ebcac14f9b4fe793b04c001, type: 3}
       propertyPath: currentWaveText
       value: 
       objectReference: {fileID: 821772722}
@@ -6082,7 +6086,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4172505475406973628, guid: 635d50a47ebcac14f9b4fe793b04c001, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 4172505475406973619, guid: 635d50a47ebcac14f9b4fe793b04c001, type: 3}

@@ -55,6 +55,9 @@ public class Boss : MonoBehaviour
     private const string golem_Right_State = "Boss_Right";
     private const string golem_Left_State = "Boss_Left";
     private const string golem_Down_State = "Boss_Move";
+    //animator change var
+    [Range(0.1f, 1)]
+    [SerializeField] private float animationRange;
     private Vector2 bossDirection;
     // Player Attack  Damage
     public float golemInitFireDamage = 2, golemInitIceDamage = 3, golemInitWindDamage = 4, golemInitEarthDamage = 3;
@@ -63,6 +66,7 @@ public class Boss : MonoBehaviour
     public float initialIceTime = 0;
     private  float Max_Health;
     private bool hasFoundPath=false;
+    
     //ui stuff
     [SerializeField] private GameObject bossText;
     [SerializeField] private GameObject bar;
@@ -193,7 +197,7 @@ public class Boss : MonoBehaviour
         isBowling = true;
         //animator.ChangeAnimationState(golem_Bowling_Down);
         Debug.Log(direction);
-        
+        Debug.Log("is bowling ------> " + isBowling);
             //animator.ChangeAnimationState(golem_Bowling_Down);
             if (direction.x <= -0.9f)
             {
@@ -205,7 +209,7 @@ public class Boss : MonoBehaviour
                 animator.ChangeAnimationState(golem_Bowling_Right);
 
             }
-            if (direction.y >= 0.9f)
+            else if (direction.y >= 0.9f)
             {
                 animator.ChangeAnimationState(golem_Bowling_Up);
             }
@@ -213,7 +217,34 @@ public class Boss : MonoBehaviour
             {
                 animator.ChangeAnimationState(golem_Bowling_Down);
             }
-        
+        else if (direction.y >= animationRange && direction.x <= -animationRange)
+        {
+            animator.ChangeAnimationState(golem_Bowling_Up);
+
+        }
+
+        else if (direction.y >= animationRange && direction.x >= 0.9f)
+        {
+            animator.ChangeAnimationState(golem_Bowling_Right);
+
+
+        }
+        else if (direction.y <= -animationRange && direction.x <= -animationRange)
+        {
+            animator.ChangeAnimationState(golem_Bowling_Down);
+
+        }
+        else if (direction.y <= animationRange && direction.x >= animationRange)
+        {
+            animator.ChangeAnimationState(golem_Bowling_Right);
+
+        }
+        else
+        {
+            //stop 
+        }
+
+
 
     }
     IEnumerator StunTime() {
