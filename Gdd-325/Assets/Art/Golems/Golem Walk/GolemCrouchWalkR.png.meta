@@ -1,7 +1,31 @@
 fileFormatVersion: 2
 guid: 0f8403af92ae59f478cc892f6d7ad975
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -8515417801317272972
+    second: GolemCrouchWalkR_0
+  - first:
+      213: -2713610206215704177
+    second: GolemCrouchWalkR_1
+  - first:
+      213: -5936243162845545578
+    second: GolemCrouchWalkR_2
+  - first:
+      213: -7437412693295722865
+    second: GolemCrouchWalkR_3
+  - first:
+      213: -485286082199927816
+    second: GolemCrouchWalkR_4
+  - first:
+      213: -5931129082259639064
+    second: GolemCrouchWalkR_5
+  - first:
+      213: -1392352089612028255
+    second: GolemCrouchWalkR_6
+  - first:
+      213: -2165345493156323713
+    second: GolemCrouchWalkR_7
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -41,7 +65,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -75,9 +99,189 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: GolemCrouchWalkR_0
+      rect:
+        serializedVersion: 2
+        x: 428
+        y: 386
+        width: 566
+        height: 665
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 472327650a823d980800000000000000
+      internalID: -8515417801317272972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GolemCrouchWalkR_1
+      rect:
+        serializedVersion: 2
+        x: 1012
+        y: 386
+        width: 567
+        height: 634
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8173af05e1575ad0800000000000000
+      internalID: -2713610206215704177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GolemCrouchWalkR_2
+      rect:
+        serializedVersion: 2
+        x: 1621
+        y: 491
+        width: 568
+        height: 670
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69bff328b4a3e9da0800000000000000
+      internalID: -5936243162845545578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GolemCrouchWalkR_3
+      rect:
+        serializedVersion: 2
+        x: 2247
+        y: 458
+        width: 567
+        height: 725
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8e80208f8009c890800000000000000
+      internalID: -7437412693295722865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GolemCrouchWalkR_4
+      rect:
+        serializedVersion: 2
+        x: 2825
+        y: 386
+        width: 566
+        height: 665
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f3480021eae349f0800000000000000
+      internalID: -485286082199927816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GolemCrouchWalkR_5
+      rect:
+        serializedVersion: 2
+        x: 3451
+        y: 386
+        width: 567
+        height: 634
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e4fcee268560bda0800000000000000
+      internalID: -5931129082259639064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GolemCrouchWalkR_6
+      rect:
+        serializedVersion: 2
+        x: 2426
+        y: 330
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a6f668c62f5dace0800000000000000
+      internalID: -1392352089612028255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GolemCrouchWalkR_7
+      rect:
+        serializedVersion: 2
+        x: 2492
+        y: 327
+        width: 37
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7e9c681fb523f1e0800000000000000
+      internalID: -2165345493156323713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

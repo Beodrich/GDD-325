@@ -1,7 +1,49 @@
 fileFormatVersion: 2
 guid: 3db1baa799145304bb826a13f6484e82
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 3577890832643152454
+    second: GolemCrouchWalkDown_0
+  - first:
+      213: 8773005071703311005
+    second: GolemCrouchWalkDown_1
+  - first:
+      213: 5935394887182696767
+    second: GolemCrouchWalkDown_2
+  - first:
+      213: -5969838244641924373
+    second: GolemCrouchWalkDown_3
+  - first:
+      213: 6284157299162955735
+    second: GolemCrouchWalkDown_4
+  - first:
+      213: 8160400219607893063
+    second: GolemCrouchWalkDown_5
+  - first:
+      213: -384924392062188072
+    second: GolemCrouchWalkDown_6
+  - first:
+      213: 4455410740289485558
+    second: GolemCrouchWalkDown_7
+  - first:
+      213: -8810239400622349825
+    second: GolemCrouchWalkDown_8
+  - first:
+      213: -632182449404049400
+    second: GolemCrouchWalkDown_9
+  - first:
+      213: 6427080372089616765
+    second: GolemCrouchWalkDown_10
+  - first:
+      213: 7235029289091435458
+    second: GolemCrouchWalkDown_11
+  - first:
+      213: 211820400495977317
+    second: GolemCrouchWalkDown_12
+  - first:
+      213: -2359265838696815825
+    second: GolemCrouchWalkDown_13
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -41,7 +83,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -75,9 +117,315 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: GolemCrouchWalkDown_0
+      rect:
+        serializedVersion: 2
+        x: 905
+        y: 434
+        width: 463
+        height: 619
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64a52dc71c837a130800000000000000
+      internalID: 3577890832643152454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GolemCrouchWalkDown_1
+      rect:
+        serializedVersion: 2
+        x: 1421
+        y: 401
+        width: 450
+        height: 621
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d92839f91a9ffb970800000000000000
+      internalID: 8773005071703311005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GolemCrouchWalkDown_2
+      rect:
+        serializedVersion: 2
+        x: 1958
+        y: 450
+        width: 431
+        height: 713
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f31c13ce332ce5250800000000000000
+      internalID: 5935394887182696767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GolemCrouchWalkDown_3
+      rect:
+        serializedVersion: 2
+        x: 2504
+        y: 833
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bea939dfebfd62da0800000000000000
+      internalID: -5969838244641924373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GolemCrouchWalkDown_4
+      rect:
+        serializedVersion: 2
+        x: 2515
+        y: 411
+        width: 421
+        height: 772
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7df3949c4cfc53750800000000000000
+      internalID: 6284157299162955735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GolemCrouchWalkDown_5
+      rect:
+        serializedVersion: 2
+        x: 3011
+        y: 445
+        width: 453
+        height: 621
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7448fba93c09f3170800000000000000
+      internalID: 8160400219607893063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GolemCrouchWalkDown_6
+      rect:
+        serializedVersion: 2
+        x: 3484
+        y: 423
+        width: 463
+        height: 619
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d500c90e4978aaf0800000000000000
+      internalID: -384924392062188072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GolemCrouchWalkDown_7
+      rect:
+        serializedVersion: 2
+        x: 3001
+        y: 742
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fa3a67667cc4dd30800000000000000
+      internalID: 4455410740289485558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GolemCrouchWalkDown_8
+      rect:
+        serializedVersion: 2
+        x: 1409
+        y: 699
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff121cb91fdbbb580800000000000000
+      internalID: -8810239400622349825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GolemCrouchWalkDown_9
+      rect:
+        serializedVersion: 2
+        x: 3593
+        y: 408
+        width: 12
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 808090669690a37f0800000000000000
+      internalID: -632182449404049400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GolemCrouchWalkDown_10
+      rect:
+        serializedVersion: 2
+        x: 3110
+        y: 401
+        width: 12
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d797949db83913950800000000000000
+      internalID: 6427080372089616765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GolemCrouchWalkDown_11
+      rect:
+        serializedVersion: 2
+        x: 1013
+        y: 388
+        width: 13
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2cb87db3eccf76460800000000000000
+      internalID: 7235029289091435458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GolemCrouchWalkDown_12
+      rect:
+        serializedVersion: 2
+        x: 1518
+        y: 388
+        width: 12
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5636ebf288980f200800000000000000
+      internalID: 211820400495977317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GolemCrouchWalkDown_13
+      rect:
+        serializedVersion: 2
+        x: 2017
+        y: 388
+        width: 12
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2323c93834324fd0800000000000000
+      internalID: -2359265838696815825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

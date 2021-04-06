@@ -1131,7 +1131,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4212257572519284704, guid: 13b1e73acc286f74f8b5bba61ae80548, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4212257572519284704, guid: 13b1e73acc286f74f8b5bba61ae80548, type: 3}
       propertyPath: m_TagString
@@ -2839,7 +2839,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2729049941047798196, guid: d0ae4664e91e6cf489cee704caae8fa9, type: 3}
       propertyPath: waves.Array.data[0].name
-      value: Crawler
+      value: Crawlers and Crouchies
       objectReference: {fileID: 0}
     - target: {fileID: 2729049941047798196, guid: d0ae4664e91e6cf489cee704caae8fa9, type: 3}
       propertyPath: waves.Array.data[0].rate
@@ -2847,7 +2847,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2729049941047798196, guid: d0ae4664e91e6cf489cee704caae8fa9, type: 3}
       propertyPath: waves.Array.data[1].name
-      value: Crawlers and Crouchies
+      value: Crawler
       objectReference: {fileID: 0}
     - target: {fileID: 2729049941047798196, guid: d0ae4664e91e6cf489cee704caae8fa9, type: 3}
       propertyPath: waves.Array.data[1].rate
@@ -2995,11 +2995,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2729049941047798196, guid: d0ae4664e91e6cf489cee704caae8fa9, type: 3}
       propertyPath: waves.Array.data[0].enemy.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2729049941047798196, guid: d0ae4664e91e6cf489cee704caae8fa9, type: 3}
       propertyPath: waves.Array.data[1].enemy.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2729049941047798196, guid: d0ae4664e91e6cf489cee704caae8fa9, type: 3}
       propertyPath: waves.Array.data[2].enemy.Array.size
