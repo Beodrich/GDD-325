@@ -1,7 +1,25 @@
 fileFormatVersion: 2
 guid: fe2c111e642ce3640ad67fdec1b224ee
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 7697364346773565673
+    second: GolemCannonWalkDown_0
+  - first:
+      213: 8977053710839317674
+    second: GolemCannonWalkDown_1
+  - first:
+      213: -2107325161128194153
+    second: GolemCannonWalkDown_2
+  - first:
+      213: -811674234292924659
+    second: GolemCannonWalkDown_3
+  - first:
+      213: 8518155543403759129
+    second: GolemCannonWalkDown_4
+  - first:
+      213: -657370689413979662
+    second: GolemCannonWalkDown_5
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -41,7 +59,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -75,9 +93,147 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: GolemCannonWalkDown_0
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 186
+        width: 758
+        height: 1025
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e0f13c471882da60800000000000000
+      internalID: 7697364346773565673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GolemCannonWalkDown_1
+      rect:
+        serializedVersion: 2
+        x: 1176
+        y: 180
+        width: 756
+        height: 1026
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa40e2c99c6e49c70800000000000000
+      internalID: 8977053710839317674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GolemCannonWalkDown_2
+      rect:
+        serializedVersion: 2
+        x: 2038
+        y: 171
+        width: 758
+        height: 1026
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79f06b85ee641c2e0800000000000000
+      internalID: -2107325161128194153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GolemCannonWalkDown_3
+      rect:
+        serializedVersion: 2
+        x: 2946
+        y: 186
+        width: 756
+        height: 1025
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0f02a7959a5cb4f0800000000000000
+      internalID: -811674234292924659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GolemCannonWalkDown_4
+      rect:
+        serializedVersion: 2
+        x: 3775
+        y: 195
+        width: 759
+        height: 1028
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9160b1ae551963670800000000000000
+      internalID: 8518155543403759129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GolemCannonWalkDown_5
+      rect:
+        serializedVersion: 2
+        x: 4633
+        y: 180
+        width: 756
+        height: 1026
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f1e9b347dc80e6f0800000000000000
+      internalID: -657370689413979662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

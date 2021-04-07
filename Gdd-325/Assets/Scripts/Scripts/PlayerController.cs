@@ -101,6 +101,7 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        rb2D.velocity = Vector2.zero;
         if (health <= 0)
         {
             SceneManager.LoadScene("YouLose");

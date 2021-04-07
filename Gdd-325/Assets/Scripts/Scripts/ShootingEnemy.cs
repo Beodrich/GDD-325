@@ -8,6 +8,7 @@ public class ShootingEnemy : MonoBehaviour
     //public float stoppingDistance;
    // public float retreatDistance;
     public Transform player;
+    public bool isShoot = false;
     public float time;
     private float timeBtwShots;
     public float startTimeBtwShots;
@@ -38,6 +39,10 @@ public class ShootingEnemy : MonoBehaviour
         //point.y = 0;
         //point += (Vector2)ai.position;
         return point;
+    }
+    void ChangeAmin()
+    {
+
     }
     void Update()
     {
@@ -134,6 +139,7 @@ public class ShootingEnemy : MonoBehaviour
         
        
         yield return new WaitForSeconds(2f);
+        isShoot = false;
         ai.destination = PickRandomPoint();
 
 
@@ -146,18 +152,24 @@ public class ShootingEnemy : MonoBehaviour
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(point, radius);
     }
-    private void OnCollisionEnter(Collision collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("wall")) {
             Debug.Log("collison");
             ai.destination = PickRandomPoint();
             ai.SearchPath();
         }
+        else if (collision.gameObject.CompareTag("enemy"))
+        {
+            ai.destination = PickRandomPoint();
+            ai.SearchPath();
+        }
+
     }
     //shoot
     public void Shoot() {
-       
-        
+
+        isShoot = true;
         StartCoroutine(ShootTime());
     
     }

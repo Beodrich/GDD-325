@@ -116,7 +116,7 @@ public class Golem : MonoBehaviour
     }
     void Update()
     {
-       // Debug.Log(health);
+        // Debug.Log(health);
         //for melee
         if (dazedTime <= 0)
         {
@@ -136,13 +136,13 @@ public class Golem : MonoBehaviour
         if (health <= 0)
         {
             //Instantiate(deathEffect, transform.position, Quaternion.identity);
-            
+
             string name = this.gameObject.name;
             Destroy(this.gameObject);
-           
-                changeGolem();
-            
-            
+
+            changeGolem();
+
+
         }
         if (startIce)
         {
@@ -151,26 +151,61 @@ public class Golem : MonoBehaviour
         //MAKE SURE ANIMATIONS NAMES ARE ALL THE SAME 
         Vector2 golemVector = golemPath.desiredVelocity.normalized;
         //Debug.Log(golemVector);
-        if (golemVector.x <= -animationChangeRange)
+
+        // This is for shooting enemy so he faces where the player is
+        if (gameObject.name == "shooting enemy (Clone)" && GetComponent<ShootingEnemy>().isShoot)
         {
-            anim.ChangeAnimationState(golem_Left);
+           
+            Debug.Log("IF STATMENT");
+            Vector2 direction = player.transform.position - this.transform.position;
+            direction = direction.normalized;
+
+            if (direction.x <= -animationChangeRange)
+            {
+                anim.ChangeAnimationState(golem_Left);
+
+            }
+            else if (direction.x > animationChangeRange)
+            {
+                anim.ChangeAnimationState(golem_Right);
+
+            }
+            if (direction.y > animationChangeRange)
+            {
+
+                anim.ChangeAnimationState(golem_Up);
+
+            }
+            else if (direction.y <= -animationChangeRange)
+            {
+                anim.ChangeAnimationState(golem_Down);
+
+            }
 
         }
-        else if (golemVector.x > animationChangeRange)
+        else
         {
-            anim.ChangeAnimationState(golem_Right);
+            if (golemVector.x <= -animationChangeRange)
+            {
+                anim.ChangeAnimationState(golem_Left);
 
-        }
-         if (golemVector.y > animationChangeRange)
-         {
+            }
+            else if (golemVector.x > animationChangeRange)
+            {
+                anim.ChangeAnimationState(golem_Right);
 
-            anim.ChangeAnimationState(golem_Up);
+            }
+            if (golemVector.y > animationChangeRange)
+            {
 
-         }
-        else if (golemVector.y <= -animationChangeRange)
-        {
-            anim.ChangeAnimationState(golem_Down);
+                anim.ChangeAnimationState(golem_Up);
 
+            }
+            else if (golemVector.y <= -animationChangeRange)
+            {
+                anim.ChangeAnimationState(golem_Down);
+
+            }
         }
     }
 
