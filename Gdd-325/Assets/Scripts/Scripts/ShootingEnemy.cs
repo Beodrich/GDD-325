@@ -18,12 +18,14 @@ public class ShootingEnemy : MonoBehaviour
     private Vector2 point;
     private bool canShoot = true;
     private bool canMove = true;
+   [SerializeField] private Vector2 min;
+   [SerializeField]private Vector2 max;
     // Start is called before the first frame update
     void Start()
     {
         timeBtwShots = startTimeBtwShots;
         ai = GetComponent<IAstarAI>();
-        ai.destination=GameObject.Find("MonkE").transform.position;
+        ai.destination = PickRandomPoint();
         ai.SearchPath();
 
     }
@@ -31,9 +33,10 @@ public class ShootingEnemy : MonoBehaviour
     // Update is called once per frame
 
     Vector2 PickRandomPoint() {
-         point = Random.insideUnitCircle * radius;
+        point= new Vector2 (Random.Range(min.x, max.x), Random.Range(min.y, max.y));
+        
         //point.y = 0;
-        point += (Vector2)ai.position;
+        //point += (Vector2)ai.position;
         return point;
     }
     void Update()

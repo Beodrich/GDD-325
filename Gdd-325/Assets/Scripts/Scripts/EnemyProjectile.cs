@@ -44,6 +44,10 @@ public class EnemyProjectile : MonoBehaviour
             playerController.TakeDamage(shootDamage);
             DestroyProjectile();
         }
+        else if (collision.CompareTag("wall"))
+        {
+            DestroyProjectile();
+        }
     }
     void DestroyProjectile() {
 
