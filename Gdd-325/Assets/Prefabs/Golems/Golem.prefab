@@ -79,7 +79,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -8067545149307462380, guid: a314a786dddaa254181617caa170d0d4, type: 3}
+  m_Sprite: {fileID: -3278119168319078328, guid: 5649bdb0b1084bc4abc5d468e670d6f7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -247,6 +247,7 @@ MonoBehaviour:
   golemInitEarthDamage: 4
   iceSlowed: 0.5
   maxIceTime: 3
+  numOfGolemText: {fileID: 0}
   animationChangeRange: 0.9
   startDazedTime: 0
 --- !u!114 &7022273869562327962
