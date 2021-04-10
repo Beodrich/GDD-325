@@ -36,7 +36,7 @@ public class PlayerController : MonoBehaviour
     private const string Monke_RA = "MonkE_RightAttack";
 
     //heath
-    public float health=1f;
+    public float health = 1f;
     //[SerializeField]private Text healthText;
     private bool canTakeDamage = true;
     private float timeUntilCanTakeDamge = 0f;
@@ -44,7 +44,7 @@ public class PlayerController : MonoBehaviour
     private Camera camera;
     public Vector2 playerDirection;
     // spell
-    
+
     private bool fire;
     private bool ice;
     private bool earth;
@@ -95,7 +95,7 @@ public class PlayerController : MonoBehaviour
         rb2D = GetComponent<Rigidbody2D>();
         animatorLogic = GetComponent<AnimatorLogic>();
         camera = GameObject.Find("Main Camera").GetComponent<Camera>();
-       
+
     }
 
     // Update is called once per frame
@@ -112,21 +112,21 @@ public class PlayerController : MonoBehaviour
         Vector2 movement = new Vector2(h, v);
         transform.Translate(movement * movementSpeed * Time.deltaTime);
         var mousePos = Input.mousePosition;
-       // var charPos = Camera.WorldToScreenPoint((Vector3)this.gameObject.transform.position);
+        // var charPos = Camera.WorldToScreenPoint((Vector3)this.gameObject.transform.position);
 
         if (PauseMenu.GameIsPaused == false)
         {
             ChangeAnimation(mousePos);
         }
-        
+
 
         //transform.Translate(movement * movementSpeed * Time.deltaTime);
-       /* timer += 1;
-        if (Input.GetKeyDown("space") && timer >= 175)
-        {
-            mySpell.CastSpell((Vector3)movement);
-            timer = 0;
-        }*/
+        /* timer += 1;
+         if (Input.GetKeyDown("space") && timer >= 175)
+         {
+             mySpell.CastSpell((Vector3)movement);
+             timer = 0;
+         }*/
         //invisibility frame timer
         //Debug.Log("Can Take Damage: " + canTakeDamage);
         if (canTakeDamage == false)
@@ -144,11 +144,12 @@ public class PlayerController : MonoBehaviour
 
     }
 
-    private void ChangeAnimation(Vector2 mousePos) {
-        var player= camera.WorldToScreenPoint(gameObject.transform.position);
+    private void ChangeAnimation(Vector2 mousePos)
+    {
+        var player = camera.WorldToScreenPoint(gameObject.transform.position);
         playerDirection = mousePos - (Vector2)player;
         playerDirection = playerDirection.normalized;
-     
+
 
 
         if (playerDirection.x <= -0.9f)
@@ -226,7 +227,8 @@ public class PlayerController : MonoBehaviour
             {
                 animatorLogic.ChangeAnimationState(Monke_BR);
             }
-            else {
+            else
+            {
 
                 animatorLogic.ChangeAnimationState(Monke_BRA);
             }
@@ -238,7 +240,8 @@ public class PlayerController : MonoBehaviour
             {
                 animatorLogic.ChangeAnimationState(Monke_FL);
             }
-            else {
+            else
+            {
 
                 animatorLogic.ChangeAnimationState(Monke_FLA);
             }
@@ -250,9 +253,10 @@ public class PlayerController : MonoBehaviour
             {
                 animatorLogic.ChangeAnimationState(Monke_FR);
             }
-            else {
+            else
+            {
                 animatorLogic.ChangeAnimationState(Monke_FRA);
-            
+
             }
         }
         else
@@ -261,29 +265,41 @@ public class PlayerController : MonoBehaviour
         }
 
 
-        
+
 
         //function to figure out what animation to play 
 
     }
-    
-   
-    public void TakeDamage(float amount) {
+
+
+    public void TakeDamage(float amount)
+    {
         if (canTakeDamage)
         {
-            
-            
-                health -= amount;
-                HeathManaBar.Damage(amount);//update the heath bar
-                canTakeDamage = false;
-            
-            
+
+
+            health -= amount;
+            HeathManaBar.Damage(amount);//update the heath bar
+            canTakeDamage = false;
+
+
         }
         //healthText.text = "Current HP is at :"+ health.ToString();
-        if (health <= 0) {
+        if (health <= 0)
+        {
             Debug.Log("You are dead");
         }
     }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "enemy")
+        {
+            //play golem attack animation here 
+           // TakeDamage(1);
+        }
 
-   
+
+
+    }
 }
+   

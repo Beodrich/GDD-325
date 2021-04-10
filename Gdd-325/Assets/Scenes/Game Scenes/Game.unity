@@ -767,6 +767,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1768121403876751354, guid: 97e44e40df3b0b04f90c5ae13828e42e, type: 3}
+      propertyPath: attackRange
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1768121403876751354, guid: 97e44e40df3b0b04f90c5ae13828e42e, type: 3}
       propertyPath: attackDamage
       value: 3
       objectReference: {fileID: 0}
@@ -2495,7 +2499,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2729049941047798196, guid: d0ae4664e91e6cf489cee704caae8fa9, type: 3}
       propertyPath: waves.Array.data[0].name
-      value: Crawler
+      value: Crawlers and Crouchies
       objectReference: {fileID: 0}
     - target: {fileID: 2729049941047798196, guid: d0ae4664e91e6cf489cee704caae8fa9, type: 3}
       propertyPath: waves.Array.data[0].rate
@@ -2503,7 +2507,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2729049941047798196, guid: d0ae4664e91e6cf489cee704caae8fa9, type: 3}
       propertyPath: waves.Array.data[1].name
-      value: Crawlers and Crouchies
+      value: ' Golems '
       objectReference: {fileID: 0}
     - target: {fileID: 2729049941047798196, guid: d0ae4664e91e6cf489cee704caae8fa9, type: 3}
       propertyPath: waves.Array.data[1].rate
@@ -2511,7 +2515,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2729049941047798196, guid: d0ae4664e91e6cf489cee704caae8fa9, type: 3}
       propertyPath: waves.Array.data[2].name
-      value: ' Golems '
+      value: Crawler
       objectReference: {fileID: 0}
     - target: {fileID: 2729049941047798196, guid: d0ae4664e91e6cf489cee704caae8fa9, type: 3}
       propertyPath: waves.Array.data[2].rate
@@ -2607,7 +2611,7 @@ PrefabInstance:
       objectReference: {fileID: 1844996410}
     - target: {fileID: 2729049941047798196, guid: d0ae4664e91e6cf489cee704caae8fa9, type: 3}
       propertyPath: waves.Array.data[1].count
-      value: 10
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 2729049941047798196, guid: d0ae4664e91e6cf489cee704caae8fa9, type: 3}
       propertyPath: waves.Array.data[1].enemy
@@ -2615,7 +2619,7 @@ PrefabInstance:
       objectReference: {fileID: 2061506954}
     - target: {fileID: 2729049941047798196, guid: d0ae4664e91e6cf489cee704caae8fa9, type: 3}
       propertyPath: waves.Array.data[2].count
-      value: 4
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 2729049941047798196, guid: d0ae4664e91e6cf489cee704caae8fa9, type: 3}
       propertyPath: waves.Array.data[2].enemy
@@ -2651,11 +2655,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2729049941047798196, guid: d0ae4664e91e6cf489cee704caae8fa9, type: 3}
       propertyPath: waves.Array.data[0].enemy.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2729049941047798196, guid: d0ae4664e91e6cf489cee704caae8fa9, type: 3}
       propertyPath: waves.Array.data[1].enemy.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2729049941047798196, guid: d0ae4664e91e6cf489cee704caae8fa9, type: 3}
       propertyPath: waves.Array.data[2].enemy.Array.size
@@ -2700,7 +2704,7 @@ PrefabInstance:
     - target: {fileID: 2729049941047798196, guid: d0ae4664e91e6cf489cee704caae8fa9, type: 3}
       propertyPath: waves.Array.data[1].enemy.Array.data[0]
       value: 
-      objectReference: {fileID: 2061506954}
+      objectReference: {fileID: 1844996410}
     - target: {fileID: 2729049941047798196, guid: d0ae4664e91e6cf489cee704caae8fa9, type: 3}
       propertyPath: waves.Array.data[1].enemy.Array.data[1]
       value: 
@@ -2708,7 +2712,7 @@ PrefabInstance:
     - target: {fileID: 2729049941047798196, guid: d0ae4664e91e6cf489cee704caae8fa9, type: 3}
       propertyPath: waves.Array.data[2].enemy.Array.data[0]
       value: 
-      objectReference: {fileID: 1844996410}
+      objectReference: {fileID: 2061506954}
     - target: {fileID: 2729049941047798196, guid: d0ae4664e91e6cf489cee704caae8fa9, type: 3}
       propertyPath: waves.Array.data[2].enemy.Array.data[1]
       value: 
@@ -3932,6 +3936,10 @@ PrefabInstance:
       value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 1768121403876751354, guid: 0f1ada5e37928e9498a00cfee3c550e1, type: 3}
+      propertyPath: attackRange
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1768121403876751354, guid: 0f1ada5e37928e9498a00cfee3c550e1, type: 3}
       propertyPath: attackDamage
       value: 3
       objectReference: {fileID: 0}
@@ -4041,7 +4049,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5259785711543859236, guid: 0f1ada5e37928e9498a00cfee3c550e1, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5259785711543859236, guid: 0f1ada5e37928e9498a00cfee3c550e1, type: 3}
       propertyPath: m_TagString
@@ -4803,6 +4811,10 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1768121403876751354, guid: e5af84247acab834b987f38306537842, type: 3}
+      propertyPath: attackRange
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1768121403876751354, guid: e5af84247acab834b987f38306537842, type: 3}
       propertyPath: attackDamage
       value: 2
       objectReference: {fileID: 0}
@@ -5385,6 +5397,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5278976977336758311, guid: a3efbba7d81282f49bef76e2f718d23f, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5278976977336758316, guid: a3efbba7d81282f49bef76e2f718d23f, type: 3}
       propertyPath: m_BodyType
       value: 0
@@ -5963,11 +5979,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6336405393342148298, guid: c5c4aeb98e2773c47a7c5fb9e06ab5cd, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 8.070001
+      value: 7.58
       objectReference: {fileID: 0}
     - target: {fileID: 6336405393342148298, guid: c5c4aeb98e2773c47a7c5fb9e06ab5cd, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 11.3
+      value: 10.250001
       objectReference: {fileID: 0}
     - target: {fileID: 6336405393342148299, guid: c5c4aeb98e2773c47a7c5fb9e06ab5cd, type: 3}
       propertyPath: target
