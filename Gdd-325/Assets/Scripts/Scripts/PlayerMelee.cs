@@ -12,39 +12,43 @@ public class PlayerMelee : MonoBehaviour
     [SerializeField] private float attackRange=1.4f;
     [SerializeField] private LayerMask whatIsEnemies;
     [SerializeField] private int damage;
-     private HeathManaBar bar;
 
     void Start()
     {
         player = GameObject.Find("MonkE").GetComponent<PlayerController>();
         wand = GetComponent<WeaponWand>();
-        bar = GameObject.Find("Canvas").GetComponent<HeathManaBar>();
         
     }
 
-    // Update is called once per frame
+    /// <summary>
+    /// the update funcation handles player melee for the player 
+    
+    /// </summary>
     void Update()
     {
-        //attackPos.position = -player.playerDirection + player.gameObject.transform.position;
+       
         if (timeBtwAttack <= 0)
         {
+            //count down timer 
             timeBtwAttack = startTimeBtwAttack;
+            //if the user presses the space bar
             if (Input.GetKey(KeyCode.Space)) {
+                //figure out enemies that are overlaping 
                 Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(attackPos.position, attackRange, whatIsEnemies);
+                //loop through the enemeis array
                 for (int i = 0; i < enemiesToDamage.Length; i++)
                 {
                     var currentGolem = enemiesToDamage[i];
                     if (currentGolem.name == "Boss")
                     {
                         currentGolem.GetComponent<Boss>().MeleeDamge();
-                        bar.setCurrentMana(2f);
                         
 
                     }
                     else
                     {
                         enemiesToDamage[i].GetComponent<Golem>().TakeMeleeDamage(damage);
-                        bar.setCurrentMana(2f);
+                       
 
 
 
@@ -55,6 +59,7 @@ public class PlayerMelee : MonoBehaviour
             }
         }
         else {
+            //decrase the count down timer
             timeBtwAttack -= Time.deltaTime;
         
         
