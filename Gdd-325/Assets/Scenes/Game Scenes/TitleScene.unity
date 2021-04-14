@@ -701,7 +701,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eefc8bb2c6d81a64ca0ad5476beaf7e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioMixer: {fileID: 24100000, guid: 9ecb70529321fe849b36b5497bb426e5, type: 2}
 --- !u!114 &290854377
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1273,7 +1272,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 324.40765, y: -309.15}
+  m_AnchoredPosition: {x: 243, y: -309}
   m_SizeDelta: {x: 492.7692, y: 92.3942}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &595386886
@@ -1406,7 +1405,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -193, y: -149}
+  m_AnchoredPosition: {x: -274.4077, y: -58}
   m_SizeDelta: {x: 492.7692, y: 92.3942}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &606534863
@@ -2056,7 +2055,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -697, y: -149}
+  m_AnchoredPosition: {x: -7.407715, y: -187}
   m_SizeDelta: {x: 492.7692, y: 92.3942}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &770379242
@@ -2782,7 +2781,7 @@ MonoBehaviour:
     Programmers: Cole Woulf and Ben Odrich
 
     Audio:
-    Grayson Dunham and '
+    Grayson Dunham and Matt Anderson'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3815,7 +3814,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -193, y: -309.15}
+  m_AnchoredPosition: {x: -274.4077, y: -309}
   m_SizeDelta: {x: 492.7692, y: 92.3942}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1725973595
@@ -4421,7 +4420,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 324.40765, y: -149}
+  m_AnchoredPosition: {x: 242.99994, y: -58}
   m_SizeDelta: {x: 492.7692, y: 92.3942}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2097180869

@@ -108,7 +108,10 @@ public class Golem : MonoBehaviour
         
     }
 
-        
+    /// <summary>
+    /// Does damage over time depending on how much damage wants to be done and for how long
+    /// and then takes that health away from enemy
+    /// </summary>
     IEnumerator DOT()
     {
         float amountDamaged = 0;
@@ -126,13 +129,14 @@ public class Golem : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Depending on the wand equiped, does that type of damage
+    /// </summary>
     public void TakeDamage()
     {
         if(player.isFire())
         {
             health -= golemInitFireDamage;
-            //DamageOverTime(fireDamage,fireDuration);
-            //StartCoroutine(DamageOverTimeCoroutine(fireDamage, fireDuration));
             StartCoroutine(DOT());
         }
         if (player.isIce())
@@ -156,36 +160,13 @@ public class Golem : MonoBehaviour
     
     }
 
-    // FIRE
-    // Calling Damage over time and assigning amount of damage and how long it burns for
-    public void DamageOverTime(float damage, float damageTime)
-    {
-        StartCoroutine(DamageOverTimeCoroutine(damage, damageTime));
-    }
-    //FIRE
-    // Damage Over Time
-
-    IEnumerator DamageOverTimeCoroutine(float damageAmount, float time)
-    {
-        float amountDamaged = 0;
-        float damagePerLoop = damageAmount / time;
-        Debug.Log(amountDamaged + "<- Amount Damaged");
-        Debug.Log(damagePerLoop + "<- Damaged Per Loop");
-        while(amountDamaged < damageAmount)
-        {
-            health -= damagePerLoop;
-            
-            
-            Debug.Log(health.ToString());
-            amountDamaged += damagePerLoop;
-            yield return new WaitForSeconds(1f);
-        }
-    }
-    //ICE
-    // Calling Slow Golem and assigning time the golem is slowed for
+    /// <summary>
+    /// Calling Slow Golem and assigning time the golem is slowed for
+    /// </summary>
+    /// <param name="slowAmount"></param>
+    /// <param name="maxTime"></param>
     public void SlowGolem(float slowAmount, float maxTime)
     {
-        //Debug.Log(initialIceTime);
 
         if (initialIceTime >= maxTime)
         {
@@ -204,28 +185,6 @@ public class Golem : MonoBehaviour
         }
     }
 
-
-/*    public void TakeDamage(SpellState spell)
-    {
-        switch (spell) {
-            case SpellState.Fire:
-                //code here
-                health -= 5;
-                break;
-            case SpellState.Ice:
-                //code here
-                break;
-            case SpellState.Earth:
-                //code
-                break;
-            case SpellState.Air:
-                //code
-                break;
-            default://none case
-                    //code here
-                break;
-        }
-    }*/
 //when not moving attack?
     public void PlayerDamaged()
     {

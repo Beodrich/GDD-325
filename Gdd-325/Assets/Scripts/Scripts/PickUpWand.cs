@@ -4,13 +4,16 @@ using UnityEngine;
 
 public class PickUpWand : MonoBehaviour
 {
+    // Wands in Hand
     public GameObject Firewand;
-    public GameObject Fire;
     public GameObject Icewand;
-    public GameObject Ice;
     public GameObject Windwand;
-    public GameObject Wind;
     public GameObject Earthwand;
+
+    // Pick Up Wands
+    public GameObject Fire;
+    public GameObject Ice;
+    public GameObject Wind;
     public GameObject Earth;
 
     // UI
@@ -22,6 +25,9 @@ public class PickUpWand : MonoBehaviour
     private bool hasFinished = false;
     private PlayerController player;
 
+    /// <summary>
+    /// Setting the UI wand to false, all ground wands to true so they appear
+    /// </summary>
     private void Start()
     {
         player = GameObject.Find("MonkE").GetComponent<PlayerController>();
@@ -36,6 +42,9 @@ public class PickUpWand : MonoBehaviour
         hasFinished = false;
     }
 
+    /// <summary>
+    /// Depending on what boolean is triggered, set that boolean to true and set wands active to pick up 
+    /// </summary>
     private void Update()
     {
         if (hasFinished && player.isFire())
@@ -71,6 +80,10 @@ public class PickUpWand : MonoBehaviour
             hasFinished = false;
         }
     }
+
+    /// <summary>
+    /// Makes the wands in game diasappear for 8 seconds before player can pick up another
+    /// </summary>
     IEnumerator afterPickup()
     {
         Fire.SetActive(false);
@@ -81,6 +94,11 @@ public class PickUpWand : MonoBehaviour
         hasFinished = true;
     }
 
+    /// <summary>
+    /// sets the wand to true depending on what boolean is set, and sets UI plus starts 
+    /// Coroutine to make wands in game disappear
+    /// </summary>
+    /// <param name="col"></param>
     private void OnTriggerEnter2D(Collider2D col)
     {
         if (col.gameObject == Fire)
