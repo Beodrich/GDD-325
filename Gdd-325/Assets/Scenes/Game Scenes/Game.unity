@@ -5890,7 +5890,7 @@ PrefabInstance:
       objectReference: {fileID: 141031273}
     - target: {fileID: 4172505475406973617, guid: 635d50a47ebcac14f9b4fe793b04c001, type: 3}
       propertyPath: animationRange
-      value: 0.5
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 4172505475406973617, guid: 635d50a47ebcac14f9b4fe793b04c001, type: 3}
       propertyPath: currentWaveText

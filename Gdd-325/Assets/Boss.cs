@@ -57,7 +57,7 @@ public class Boss : MonoBehaviour
     private const string golem_Down_State = "Boss_Move";
     //animator change var
     [Range(0.1f, 1)]
-    [SerializeField] private float animationRange;
+    [SerializeField] private float animationRange=0.1f;
     private Vector2 bossDirection;
     // Player Attack  Damage
     public float golemInitFireDamage = 2, golemInitIceDamage = 3, golemInitWindDamage = 4, golemInitEarthDamage = 3;
@@ -65,7 +65,6 @@ public class Boss : MonoBehaviour
     public bool startIce;
     public float initialIceTime = 0;
     private  float Max_Health;
-    private bool hasFoundPath=false;
     
     //ui stuff
     [SerializeField] private GameObject bossText;
@@ -90,6 +89,7 @@ public class Boss : MonoBehaviour
          StartCoroutine(BossIntro());
 
     }
+
     IEnumerator BossIntro() {
         yield return new WaitForSeconds(5f);
         canMove = true;
@@ -98,6 +98,7 @@ public class Boss : MonoBehaviour
     }
     private void Update()
     {
+        //Debug.Log("is bowling -------> " + isBowling);
         CheckForDeath();
         if (canMove)
         {
@@ -162,31 +163,31 @@ public class Boss : MonoBehaviour
     }
 
         private void OnCollisionEnter2D(Collision2D other)
-    {
-        if (other.gameObject.CompareTag("wall")) {
-
-            //stun state
-            animator.ChangeAnimationState(golem_Up_State);
-            rb.velocity = Vector2.zero;
-            StartCoroutine(StunTime());
-            isBowling = false;
-            canDamage = true;
-        }
-        else if (other.gameObject.CompareTag("Player"))
         {
-            // if the golem hits the player, it damages the player and starts the new wave of enemies
-            //animator.ChangeAnimationState(golem_Up_State);
-            rb.velocity = Vector2.zero;
-            // damage player
-            monkE.TakeDamage(5);
-            monkE.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
-            // start new wave
-            canSpawn = true;
-            isBowling = false;
-            canDamage = false;
+            if (other.gameObject.CompareTag("wall")) {
 
-        }
-    }
+                //stun state
+                animator.ChangeAnimationState(golem_Up_State);
+                rb.velocity = Vector2.zero;
+                StartCoroutine(StunTime());
+                isBowling = false;
+                canDamage = true;
+            }
+            else if (other.gameObject.CompareTag("Player"))
+            {
+                // if the golem hits the player, it damages the player and starts the new wave of enemies
+                //animator.ChangeAnimationState(golem_Up_State);
+                rb.velocity = Vector2.zero;
+                // damage player
+                monkE.TakeDamage(5);
+                monkE.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+                // start new wave
+                canSpawn = true;
+                isBowling = false;
+                canDamage = false;
+
+            }
+       }
     void WaitForSpawn() {
 
         StartCoroutine(SpawnWave());
@@ -197,52 +198,49 @@ public class Boss : MonoBehaviour
         isBowling = true;
         //animator.ChangeAnimationState(golem_Bowling_Down);
         Debug.Log(direction);
-        Debug.Log("is bowling ------> " + isBowling);
+       // Debug.Log("is bowling ------> " + isBowling);
             //animator.ChangeAnimationState(golem_Bowling_Down);
-            if (direction.x <= -0.9f)
+            if (direction.x <= -animationRange)
             {
                 animator.ChangeAnimationState(golem_Bowling_Left);
 
             }
-            else if (direction.x >= 0.9f)
+             if (direction.x >= animationRange)
             {
                 animator.ChangeAnimationState(golem_Bowling_Right);
 
             }
-            else if (direction.y >= 0.9f)
+             if (direction.y >= animationRange)
             {
                 animator.ChangeAnimationState(golem_Bowling_Up);
             }
-            else if (direction.y <= -0.9f)
+             if (direction.y <= -animationRange)
             {
                 animator.ChangeAnimationState(golem_Bowling_Down);
             }
-        else if (direction.y >= animationRange && direction.x <= -animationRange)
+         if (direction.y >= animationRange && direction.x <= -animationRange)
         {
             animator.ChangeAnimationState(golem_Bowling_Up);
 
         }
 
-        else if (direction.y >= animationRange && direction.x >= 0.9f)
+         if (direction.y >= animationRange && direction.x >= animationRange)
         {
             animator.ChangeAnimationState(golem_Bowling_Right);
 
 
         }
-        else if (direction.y <= -animationRange && direction.x <= -animationRange)
+         if (direction.y <= -animationRange && direction.x <= -animationRange)
         {
             animator.ChangeAnimationState(golem_Bowling_Down);
 
         }
-        else if (direction.y <= animationRange && direction.x >= animationRange)
+         if (direction.y <= animationRange && direction.x >= animationRange)
         {
             animator.ChangeAnimationState(golem_Bowling_Right);
 
         }
-        else
-        {
-            //stop 
-        }
+      
 
 
 
