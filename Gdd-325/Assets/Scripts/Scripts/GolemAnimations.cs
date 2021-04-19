@@ -165,7 +165,7 @@ public class GolemAnimations : MonoBehaviour
             }
         }
         //Debug.Log(golemPath.desiredVelocity);
-        Debug.Log(Vector2.Distance(this.gameObject.transform.position, player.gameObject.transform.position));
+       // Debug.Log(Vector2.Distance(this.gameObject.transform.position, player.gameObject.transform.position));
         //attack animations
         if (Vector2.Distance(this.gameObject.transform.position, player.gameObject.transform.position) <= attackRange && gameObject.name != "shooting enemy (Clone))")
         {
