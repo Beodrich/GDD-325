@@ -458,6 +458,10 @@ PrefabInstance:
       propertyPath: m_AnchorMin.x
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2507443139492153061, guid: 3ee7e047c8add784b9625bb9020a9bbe, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2507443139542348580, guid: 3ee7e047c8add784b9625bb9020a9bbe, type: 3}
       propertyPath: m_FontData.m_MaxSize
       value: 100
@@ -2238,7 +2242,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 266.7, y: -121}
+  m_AnchoredPosition: {x: 266.7, y: -122.2}
   m_SizeDelta: {x: 211.3842, y: 48.171}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &772513335
@@ -2263,10 +2267,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 30
+    m_FontSize: 20
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 3
+    m_MinSize: 2
     m_MaxSize: 40
     m_Alignment: 1
     m_AlignByGeometry: 0
@@ -4515,7 +4519,7 @@ MonoBehaviour:
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 0}
+  m_TargetGraphic: {fileID: 1852938326}
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
