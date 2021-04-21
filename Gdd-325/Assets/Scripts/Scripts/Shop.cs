@@ -21,6 +21,7 @@ public class Shop : MonoBehaviour
     public float manaIncreaseRate = 0.01f;
     public float skillPoint = 1f;
     private Vector3 localScale;
+    
     private void Awake()
     {
         shopUI = GameObject.Find("ShopSystem");
@@ -106,6 +107,8 @@ public class Shop : MonoBehaviour
             localScale = HeathManaBar.manaBar.transform.localScale;
             localScale.x += .1f;
             HeathManaBar.manaBar.transform.localScale = localScale;
+            HeathManaBar.manaBarBackRoundImage.transform.localScale = localScale;
+
         }
             WeaponWand.Mana = HeathManaBar.getMana();
             bar.addManaRechargeRate(manaIncreaseRate);

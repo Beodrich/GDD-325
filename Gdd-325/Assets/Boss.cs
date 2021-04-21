@@ -5,14 +5,7 @@ using Pathfinding;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-enum BossStates { 
-    spawning,
-    rolling,
-    waiting,
-    none
 
-
-}
 [RequireComponent(typeof(AnimatorLogic))]
 [RequireComponent(typeof(Rigidbody2D))]
 
@@ -36,7 +29,7 @@ public class Boss : MonoBehaviour
     private bool isCurrentlySpawning = false;
     public Transform player;
    
-    private BossStates state = BossStates.none;
+    
     private SpawnLogic spawn;
     [SerializeField]private AnimatorLogic animator;
     private bool canMove=false;

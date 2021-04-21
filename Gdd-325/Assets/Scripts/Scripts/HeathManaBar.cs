@@ -8,6 +8,7 @@ public class HeathManaBar : MonoBehaviour
     private WeaponWand wand;
     public Image lifeBar;
     public static Image manaBar;
+    public static Image manaBarBackRoundImage;
     public Text lifeText;
     public Text manaText;
 
@@ -23,6 +24,7 @@ public class HeathManaBar : MonoBehaviour
         player = GameObject.Find("MonkE").GetComponent<PlayerController>();
         //wand = GameObject.Find("FireWand").GetComponent<WeaponWand>();
         manaBar = GameObject.Find("manaImage").GetComponent<Image>();
+        manaBarBackRoundImage = GameObject.Find("bar").GetComponent<Image>();
         currentLife = player.health;
         maxHeath = currentLife;
         mana = WeaponWand.Mana;
