@@ -56,7 +56,7 @@ public class Shop : MonoBehaviour
         }
         if (manaToolTip.isOverMana)
         {
-             manaToolTipText.text = "This will increase the max amount of mana  by " + amountOfManaThatIsIncreased + " points. You will also increase your basic recharge rate by " + manaIncreaseRate;
+             manaToolTipText.text = "Your basic recharge rate will be increased by " + manaIncreaseRate;
             //manaToolTipText.text = "This will increase the amount of mana you have to " + amountOfManaThatIsIncreased + HeathManaBar.getMana() + "You're basic mana recharge rate will incrase by " + manaIncreaseRate;
 
             manaToolTipText.enabled = true;
@@ -100,16 +100,18 @@ public class Shop : MonoBehaviour
     //restore mana, increase by a factor, and increase the mana by a certain factor
     public void buyMana() {
 
-        if (WeaponWand.Mana < 30)
+        /*if (WeaponWand.Mana < 30)
         {
             bar.setMaxMana(amountOfManaThatIsIncreased);
             bar.setCurrentMana(amountOfManaThatIsIncreased);
             localScale = HeathManaBar.manaBar.transform.localScale;
             localScale.x += .1f;
             HeathManaBar.manaBar.transform.localScale = localScale;
-            HeathManaBar.manaBarBackRoundImage.transform.localScale = localScale;
+            localScale = HeathManaBar.manaBarBackRoundImage.transform.localScale;
+            //localScale.x += .01f;
+            //HeathManaBar.manaBarBackRoundImage.transform.localScale = localScale;
 
-        }
+        }*/
             WeaponWand.Mana = HeathManaBar.getMana();
             bar.addManaRechargeRate(manaIncreaseRate);
             skillPoint = 0;
