@@ -262,7 +262,9 @@ public class Boss : MonoBehaviour
         this.health = hp;
 
     }
-
+    /// <summary>
+    /// take damamge function 
+    /// </summary>
     public void TakeDamage()
     {
    
