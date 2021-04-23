@@ -116,6 +116,7 @@ public class EarthWall : MonoBehaviour
     void DestroySpell()
     {
         Destroy(gameObject, 0.55f);
+        
         //animator.SetBool("Explosion", true);
     }
   

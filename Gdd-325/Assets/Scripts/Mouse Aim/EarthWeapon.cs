@@ -42,7 +42,6 @@ public class EarthWeapon : MonoBehaviour
             if (Input.GetMouseButtonDown(0) && Mathf.FloorToInt(Mana) >= 5)
             {
                 Instantiate(projectile, shotPoint.position, transform.rotation);
-                AstarPath.active.Scan();
                 //Mana -= 5;
                 HeathManaBar.reduceMana(5);
                 timeBTWShots = startTimeBTWShots;
