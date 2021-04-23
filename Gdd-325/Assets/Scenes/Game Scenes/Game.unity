@@ -700,7 +700,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5994615109056059959, guid: 3ee7e047c8add784b9625bb9020a9bbe, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 74
+      value: 433
       objectReference: {fileID: 0}
     - target: {fileID: 6591487269594101744, guid: 3ee7e047c8add784b9625bb9020a9bbe, type: 3}
       propertyPath: m_IsActive
@@ -1888,8 +1888,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 865.5043, y: 439.58}
-  m_SizeDelta: {x: -1776.1588, y: -941.24}
+  m_AnchoredPosition: {x: 865.5043, y: 434.4}
+  m_SizeDelta: {x: -1776.1588, y: -951.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &594350561
 MonoBehaviour:
@@ -2802,8 +2802,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.0309, y: -44.411568}
-  m_SizeDelta: {x: 134.5484, y: 49.936}
+  m_AnchoredPosition: {x: -1.2, y: 2.624}
+  m_SizeDelta: {x: 134.5484, y: 128.226}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1044746458
 MonoBehaviour:
@@ -2831,8 +2831,8 @@ MonoBehaviour:
     m_FontStyle: 0
     m_BestFit: 1
     m_MinSize: 10
-    m_MaxSize: 20
-    m_Alignment: 0
+    m_MaxSize: 100
+    m_Alignment: 1
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
@@ -2884,11 +2884,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2729049941047798196, guid: d0ae4664e91e6cf489cee704caae8fa9, type: 3}
       propertyPath: waves.Array.data[0].name
-      value: Golem crouchie
+      value: Crawler
       objectReference: {fileID: 0}
     - target: {fileID: 2729049941047798196, guid: d0ae4664e91e6cf489cee704caae8fa9, type: 3}
       propertyPath: waves.Array.data[0].rate
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2729049941047798196, guid: d0ae4664e91e6cf489cee704caae8fa9, type: 3}
       propertyPath: waves.Array.data[1].name
@@ -2908,11 +2908,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2729049941047798196, guid: d0ae4664e91e6cf489cee704caae8fa9, type: 3}
       propertyPath: waves.Array.data[3].name
-      value: Crawler
+      value: Golem crouchie
       objectReference: {fileID: 0}
     - target: {fileID: 2729049941047798196, guid: d0ae4664e91e6cf489cee704caae8fa9, type: 3}
       propertyPath: waves.Array.data[3].rate
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2729049941047798196, guid: d0ae4664e91e6cf489cee704caae8fa9, type: 3}
       propertyPath: waves.Array.data[4].name
@@ -2988,7 +2988,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2729049941047798196, guid: d0ae4664e91e6cf489cee704caae8fa9, type: 3}
       propertyPath: waves.Array.data[0].count
-      value: 20
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 2729049941047798196, guid: d0ae4664e91e6cf489cee704caae8fa9, type: 3}
       propertyPath: waves.Array.data[0].enemy
@@ -3012,7 +3012,7 @@ PrefabInstance:
       objectReference: {fileID: 4212257572456048208}
     - target: {fileID: 2729049941047798196, guid: d0ae4664e91e6cf489cee704caae8fa9, type: 3}
       propertyPath: waves.Array.data[3].count
-      value: 10
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 2729049941047798196, guid: d0ae4664e91e6cf489cee704caae8fa9, type: 3}
       propertyPath: waves.Array.data[4].count
@@ -3040,7 +3040,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2729049941047798196, guid: d0ae4664e91e6cf489cee704caae8fa9, type: 3}
       propertyPath: waves.Array.data[0].enemy.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2729049941047798196, guid: d0ae4664e91e6cf489cee704caae8fa9, type: 3}
       propertyPath: waves.Array.data[1].enemy.Array.size
@@ -3052,7 +3052,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2729049941047798196, guid: d0ae4664e91e6cf489cee704caae8fa9, type: 3}
       propertyPath: waves.Array.data[3].enemy.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2729049941047798196, guid: d0ae4664e91e6cf489cee704caae8fa9, type: 3}
       propertyPath: waves.Array.data[4].enemy.Array.size
@@ -3081,7 +3081,7 @@ PrefabInstance:
     - target: {fileID: 2729049941047798196, guid: d0ae4664e91e6cf489cee704caae8fa9, type: 3}
       propertyPath: waves.Array.data[0].enemy.Array.data[0]
       value: 
-      objectReference: {fileID: 141793441}
+      objectReference: {fileID: 2061506954}
     - target: {fileID: 2729049941047798196, guid: d0ae4664e91e6cf489cee704caae8fa9, type: 3}
       propertyPath: waves.Array.data[0].enemy.Array.data[1]
       value: 
@@ -3101,15 +3101,15 @@ PrefabInstance:
     - target: {fileID: 2729049941047798196, guid: d0ae4664e91e6cf489cee704caae8fa9, type: 3}
       propertyPath: waves.Array.data[2].enemy.Array.data[1]
       value: 
-      objectReference: {fileID: 141793441}
+      objectReference: {fileID: 1844996410}
     - target: {fileID: 2729049941047798196, guid: d0ae4664e91e6cf489cee704caae8fa9, type: 3}
       propertyPath: waves.Array.data[3].enemy.Array.data[0]
       value: 
-      objectReference: {fileID: 2061506954}
+      objectReference: {fileID: 141793441}
     - target: {fileID: 2729049941047798196, guid: d0ae4664e91e6cf489cee704caae8fa9, type: 3}
       propertyPath: waves.Array.data[3].enemy.Array.data[1]
       value: 
-      objectReference: {fileID: 2061506954}
+      objectReference: {fileID: 1844996410}
     - target: {fileID: 2729049941047798196, guid: d0ae4664e91e6cf489cee704caae8fa9, type: 3}
       propertyPath: waves.Array.data[3].enemy.Array.data[2]
       value: 

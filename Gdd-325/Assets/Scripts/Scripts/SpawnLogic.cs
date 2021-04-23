@@ -65,7 +65,7 @@ public class SpawnLogic : MonoBehaviour
             
             //FOR DEBUG ONLY- GET RID OF THIS LINE IN FINAL BUILD
             // Debug.Log("There are " + GameObject.FindGameObjectsWithTag("enemy").Length + " golems left in the current wave ");
-            waveNameText.text = "Current Wave: " + this.waves[nextWave].name;
+            //waveNameText.text = "Wave: " + this.waves[nextWave].name;
             //numOfGolemText.text = countOfGolems + " Golems";
             //Debug.Log("In between rounds " + inBetweenRounds);
             if (inBetweenRounds)
