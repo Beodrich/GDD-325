@@ -6047,6 +6047,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MonkE
       objectReference: {fileID: 0}
+    - target: {fileID: 5644029052568913060, guid: a3efbba7d81282f49bef76e2f718d23f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 6809966469118222710, guid: a3efbba7d81282f49bef76e2f718d23f, type: 3}
       propertyPath: attackRange
       value: 2.38

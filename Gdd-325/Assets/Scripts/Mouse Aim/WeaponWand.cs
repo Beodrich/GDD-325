@@ -40,7 +40,7 @@ public class WeaponWand : MonoBehaviour
     {
         if (timeBTWShots <= 0)
         {
-            if (Input.GetMouseButtonDown(0) && HeathManaBar.currentMana > 0.5 && !SpawnLogic.inBetweenRounds)
+            if (Input.GetMouseButtonDown(0) && HeathManaBar.currentMana > 1 && !SpawnLogic.inBetweenRounds)
             {
                 Instantiate(projectile, shotPoint.position, transform.rotation);
                 //Mana -= 2;

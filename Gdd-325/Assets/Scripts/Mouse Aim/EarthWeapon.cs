@@ -39,7 +39,7 @@ public class EarthWeapon : MonoBehaviour
     {
         if (timeBTWShots <= 0)
         {
-            if (Input.GetMouseButtonDown(0) && Mathf.FloorToInt(Mana) >= 5)
+            if (Input.GetMouseButtonDown(0) && Mathf.FloorToInt(Mana) >= 3 && !SpawnLogic.inBetweenRounds)
             {
                 Instantiate(projectile, shotPoint.position, transform.rotation);
                 //Mana -= 5;

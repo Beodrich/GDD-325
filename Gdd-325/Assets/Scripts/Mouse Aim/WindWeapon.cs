@@ -49,7 +49,7 @@ public class WindWeapon : MonoBehaviour
     {
         if (timeBTWShots <= 0)
         {
-            if (Input.GetMouseButtonDown(0) && HeathManaBar.currentMana > 0.5)
+            if (Input.GetMouseButtonDown(0) && HeathManaBar.currentMana > 3 && !SpawnLogic.inBetweenRounds)
             {
                 
                 currentWind= Instantiate(Wind, shotPoint.position, transform.rotation);
