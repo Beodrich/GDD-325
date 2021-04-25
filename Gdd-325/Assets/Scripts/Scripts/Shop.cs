@@ -45,7 +45,8 @@ public class Shop : MonoBehaviour
     {
         manaToolTipText.enabled = false;
         healthToolTipText.enabled = false;
-
+        Debug.Log("mana tool tip is " + manaToolTipText.enabled);
+        Debug.Log("hp tool tip is " + healthToolTipText.enabled);
 
         //Debug.Log("has bought item " + hasBoughItem);
 
@@ -90,8 +91,8 @@ public class Shop : MonoBehaviour
             //Debug.Log("player hp is " + player.health + "current life is " + HeathManaBar.currentLife + "max health is " + HeathManaBar.maxHeath);
             skillPoint = 0;
             hasBoughItem = true;
-        healthToolTipText.enabled = false;
-        manaToolTipText.enabled = false;
+       // healthToolTipText.enabled = false;
+        //manaToolTipText.enabled = false;
 
         //hasAlreadyBoughtItem = true;
 
@@ -123,11 +124,11 @@ public class Shop : MonoBehaviour
 
 
         }*/
-            hasBoughItem = true;
-        manaToolTipText.enabled = false;
-        healthToolTipText.enabled = false;
+        hasBoughItem = true;
+        //manaToolTipText.enabled = false;
+        //healthToolTipText.enabled = false;
 
-        //hasAlreadyBoughtItem = true;
+      
 
 
 

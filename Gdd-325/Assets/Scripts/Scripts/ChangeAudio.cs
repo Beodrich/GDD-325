@@ -20,10 +20,12 @@ public class ChangeAudio : MonoBehaviour
         if (boss.activeSelf)
         {
             ChangeAudioSource(bossMusic);
+            backRoundMusic.enabled = false;
 
         }
         else {
             ChangeAudioSource(backRoundMusic);
+            
 
         }
     }
@@ -35,6 +37,11 @@ public class ChangeAudio : MonoBehaviour
         currentAudio.Stop();
         currentAudio = audio;
         currentAudio.Play();
+
+    }
+    public AudioSource getCurrentAudio() {
+
+        return currentAudio;
 
     }
 }
