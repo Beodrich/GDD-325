@@ -44,7 +44,7 @@ public class WeaponWand : MonoBehaviour
             {
                 Instantiate(projectile, shotPoint.position, transform.rotation);
                 //Mana -= 2;
-                HeathManaBar.reduceMana(2);
+                HeathManaBar.reduceMana(1);
                 timeBTWShots = startTimeBTWShots;
                 isShoot = true;
                 StartCoroutine(WaitForAttackAnimation());

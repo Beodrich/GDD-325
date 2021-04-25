@@ -58,6 +58,8 @@ public class Boss : MonoBehaviour
     public bool startIce;
     public float initialIceTime = 0;
     private  float Max_Health;
+    Vector2 preVelocity=Vector2.zero;
+
     
     //ui stuff
     [SerializeField] private GameObject bossText;
@@ -120,6 +122,7 @@ public class Boss : MonoBehaviour
         ChangeAnimation();
         BossState();
         
+        
     }
     private void ChangeAnimation()
     {
@@ -157,29 +160,38 @@ public class Boss : MonoBehaviour
 
         private void OnCollisionEnter2D(Collision2D other)
         {
-            if (other.gameObject.CompareTag("wall")) {
+        if (other.gameObject.CompareTag("wall"))
+        {
 
-                //stun state
-                animator.ChangeAnimationState(golem_Up_State);
-                rb.velocity = Vector2.zero;
-                StartCoroutine(StunTime());
-                isBowling = false;
-                canDamage = true;
-            }
-            else if (other.gameObject.CompareTag("Player"))
-            {
-                // if the golem hits the player, it damages the player and starts the new wave of enemies
-                //animator.ChangeAnimationState(golem_Up_State);
-                rb.velocity = Vector2.zero;
-                // damage player
-                monkE.TakeDamage(5);
-                monkE.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
-                // start new wave
-                canSpawn = true;
-                isBowling = false;
-                canDamage = false;
+            //stun state
+            animator.ChangeAnimationState(golem_Up_State);
+            rb.velocity = Vector2.zero;
+            StartCoroutine(StunTime());
+            isBowling = false;
+            canDamage = true;
+        }
+        //this fixes a bug where the boss stoped moving if a projectile hits it while in a bowling state
+        else if (other.gameObject.CompareTag("projectile")&& isBowling) {
+            //keep on moving
+            rb.velocity = preVelocity;
+            
 
-            }
+
+        }
+        else if (other.gameObject.CompareTag("Player"))
+        {
+            // if the golem hits the player, it damages the player and starts the new wave of enemies
+            //animator.ChangeAnimationState(golem_Up_State);
+            rb.velocity = Vector2.zero;
+            // damage player
+            monkE.TakeDamage(3);
+            monkE.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+            // start new wave
+            canSpawn = true;
+            isBowling = false;
+            canDamage = false;
+
+        }
        }
     void WaitForSpawn() {
 
@@ -187,6 +199,7 @@ public class Boss : MonoBehaviour
     }
     public void BowlingAttack() {
         rb.velocity = direction * speed;
+        preVelocity = rb.velocity;
         canMove = false;
         isBowling = true;
         //animator.ChangeAnimationState(golem_Bowling_Down);

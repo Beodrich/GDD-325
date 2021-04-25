@@ -43,7 +43,7 @@ public class EarthWeapon : MonoBehaviour
             {
                 Instantiate(projectile, shotPoint.position, transform.rotation);
                 //Mana -= 5;
-                HeathManaBar.reduceMana(5);
+                HeathManaBar.reduceMana(3);
                 timeBTWShots = startTimeBTWShots;
                 isShoot = true;
                 StartCoroutine(WaitForAttackAnimation());
