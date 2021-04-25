@@ -154,18 +154,17 @@ public class ShootingEnemy : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("wall")) {
+        
+        if (collision.gameObject.CompareTag("wall") || collision.gameObject.CompareTag("enemy")) {
             Debug.Log("collison");
             ai.destination = PickRandomPoint();
             ai.SearchPath();
+
         }
-        else if (collision.gameObject.CompareTag("enemy"))
-        {
-            ai.destination = PickRandomPoint();
-            ai.SearchPath();
-        }
+    
 
     }
+
     //shoot
     public void Shoot() {
 

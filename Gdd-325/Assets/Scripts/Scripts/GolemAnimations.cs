@@ -97,7 +97,6 @@ public class GolemAnimations : MonoBehaviour
             if (gameObject.name == "shooting enemy (Clone)" && GetComponent<ShootingEnemy>().isShoot)
             {
 
-                Debug.Log("IF STATMENT");
                 Vector2 direction = player.transform.position - this.transform.position;
                 direction = direction.normalized;
 

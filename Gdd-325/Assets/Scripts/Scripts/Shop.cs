@@ -45,9 +45,7 @@ public class Shop : MonoBehaviour
     {
         manaToolTipText.enabled = false;
         healthToolTipText.enabled = false;
-        Debug.Log("mana tool tip is " + manaToolTipText.enabled);
-        Debug.Log("hp tool tip is " + healthToolTipText.enabled);
-
+        
         //Debug.Log("has bought item " + hasBoughItem);
 
         if (hasBoughItem)

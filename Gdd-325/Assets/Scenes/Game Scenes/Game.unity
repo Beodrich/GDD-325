@@ -2907,7 +2907,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2729049941047798196, guid: d0ae4664e91e6cf489cee704caae8fa9, type: 3}
       propertyPath: waves.Array.data[5].rate
-      value: 1
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 2729049941047798196, guid: d0ae4664e91e6cf489cee704caae8fa9, type: 3}
       propertyPath: waves.Array.data[6].name
@@ -3080,7 +3080,7 @@ PrefabInstance:
     - target: {fileID: 2729049941047798196, guid: d0ae4664e91e6cf489cee704caae8fa9, type: 3}
       propertyPath: waves.Array.data[2].enemy.Array.data[1]
       value: 
-      objectReference: {fileID: 1844996410}
+      objectReference: {fileID: 141793441}
     - target: {fileID: 2729049941047798196, guid: d0ae4664e91e6cf489cee704caae8fa9, type: 3}
       propertyPath: waves.Array.data[3].enemy.Array.data[0]
       value: 
@@ -3393,6 +3393,22 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7898081004750971183, guid: c5c4aeb98e2773c47a7c5fb9e06ab5cd, type: 3}
   m_PrefabInstance: {fileID: 6336405393152935805}
   m_PrefabAsset: {fileID: 0}
+--- !u!58 &1102263522
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1102263521}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.017304312, y: 0.068095274}
+  serializedVersion: 2
+  m_Radius: 4.731479
 --- !u!114 &1102263532
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6559,9 +6575,13 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1617879948298954599, guid: c5c4aeb98e2773c47a7c5fb9e06ab5cd, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4081884644123614259, guid: c5c4aeb98e2773c47a7c5fb9e06ab5cd, type: 3}
       propertyPath: radius
-      value: 4.73
+      value: 4.84
       objectReference: {fileID: 0}
     - target: {fileID: 6336405393342148296, guid: c5c4aeb98e2773c47a7c5fb9e06ab5cd, type: 3}
       propertyPath: nextGolemToTransform.Array.data[0]
@@ -6569,19 +6589,19 @@ PrefabInstance:
       objectReference: {fileID: 1844996410}
     - target: {fileID: 6336405393342148298, guid: c5c4aeb98e2773c47a7c5fb9e06ab5cd, type: 3}
       propertyPath: m_Size.x
-      value: 9.030342
+      value: 10.363828
       objectReference: {fileID: 0}
     - target: {fileID: 6336405393342148298, guid: c5c4aeb98e2773c47a7c5fb9e06ab5cd, type: 3}
       propertyPath: m_Size.y
-      value: 11.17662
+      value: 15.53472
       objectReference: {fileID: 0}
     - target: {fileID: 6336405393342148298, guid: c5c4aeb98e2773c47a7c5fb9e06ab5cd, type: 3}
       propertyPath: m_Offset.x
-      value: -0.039759636
+      value: -0.3006606
       objectReference: {fileID: 0}
     - target: {fileID: 6336405393342148298, guid: c5c4aeb98e2773c47a7c5fb9e06ab5cd, type: 3}
       propertyPath: m_Offset.y
-      value: 0.3166356
+      value: -0.1600318
       objectReference: {fileID: 0}
     - target: {fileID: 6336405393342148298, guid: c5c4aeb98e2773c47a7c5fb9e06ab5cd, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
@@ -6664,8 +6684,14 @@ PrefabInstance:
       value: 'shooting enemy '
       objectReference: {fileID: 0}
     - target: {fileID: 7898081004750971183, guid: c5c4aeb98e2773c47a7c5fb9e06ab5cd, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7898081004750971183, guid: c5c4aeb98e2773c47a7c5fb9e06ab5cd, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6336405393342148298, guid: c5c4aeb98e2773c47a7c5fb9e06ab5cd, type: 3}
+    - {fileID: 6336405393342148299, guid: c5c4aeb98e2773c47a7c5fb9e06ab5cd, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: c5c4aeb98e2773c47a7c5fb9e06ab5cd, type: 3}
